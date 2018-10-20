@@ -1755,40 +1755,40 @@
   }
   {
     path = "emulator";
-    revision = "28.0.12";
+    revision = "28.0.13";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "linux" = {
-        path = "emulator-linux-5063206.zip";
-        sha1 = "23304704f9eaa12deb388029dd090e8c4c015945";
+        path = "emulator-linux-5075406.zip";
+        sha1 = "71715c414d898676bd21b8f62b03acd9839d42c9";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.12";
+    revision = "28.0.13";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "macosx" = {
-        path = "emulator-darwin-5063206.zip";
-        sha1 = "979810ace362b2d2ff678a0b73d76ea8af7ba1ba";
+        path = "emulator-darwin-5075406.zip";
+        sha1 = "278a44972a84b1c372988fa1e2cf7a5880195d98";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.12";
+    revision = "28.0.13";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "windows" = {
-        path = "emulator-windows-5063206.zip";
-        sha1 = "7ce086fc0a2e7a5e58a3aa36e7facef51ab2201e";
+        path = "emulator-windows-5075406.zip";
+        sha1 = "710f6387174a1d05c5844283be2105a96edf42c6";
       };
     };
   }
