@@ -1,0 +1,3118 @@
+<?xml version="1.0" ?>
+<!--
+ * Copyright (C) 2009 The Android Open Source Project
+ *
+ * Licensed under the Apache License, version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+<addon:sdk-addon xmlns:addon="http://schemas.android.com/sdk/android/repo/addon2/01" xmlns:sdk="http://schemas.android.com/repository/android/common/01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Generated on 2018-09-27 12:07:53.591108 with ADRT.-->
+	<license id="android-sdk-license" type="text">Terms and Conditions
+
+This is the Android Software Development Kit License Agreement
+
+1. Introduction
+
+1.1 The Android Software Development Kit (referred to in the License Agreement as the &quot;SDK&quot; and specifically including the Android system files, packaged APIs, and Google APIs add-ons) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the SDK.
+
+1.2 &quot;Android&quot; means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.3 A &quot;compatible implementation&quot; means any Android device that (i) complies with the Android Compatibility Definition document, which can be found at the Android compatibility website (http://source.android.com/compatibility) and which may be updated from time to time; and (ii) successfully passes the Android Compatibility Test Suite (CTS).
+
+1.4 &quot;Google&quot; means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+
+2. Accepting the License Agreement
+
+2.1 In order to use the SDK, you must first agree to the License Agreement. You may not use the SDK if you do not accept the License Agreement.
+
+2.2 By clicking to accept, you hereby agree to the terms of the License Agreement.
+
+2.3 You may not use the SDK and may not accept the License Agreement if you are a person barred from receiving the SDK under the laws of the United States or other countries, including the country in which you are resident or from which you use the SDK.
+
+2.4 If you are agreeing to be bound by the License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the SDK on behalf of your employer or other entity.
+
+
+3. SDK License from Google
+
+3.1 Subject to the terms of the License Agreement, Google grants you a limited, worldwide, royalty-free, non-assignable, non-exclusive, and non-sublicensable license to use the SDK solely to develop applications for compatible implementations of Android.
+
+3.2 You may not use this SDK to develop applications for other platforms (including non-compatible implementations of Android) or to develop another SDK. You are of course free to develop applications for other platforms, including non-compatible implementations of Android, provided that this SDK is not used for that purpose.
+
+3.3 You agree that Google or third parties own all legal right, title and interest in and to the SDK, including any Intellectual Property Rights that subsist in the SDK. &quot;Intellectual Property Rights&quot; means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.4 You may not use the SDK for any purpose not expressly permitted by the License Agreement.  Except to the extent required by applicable third party licenses, you may not copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the SDK or any part of the SDK.
+
+3.5 Use, reproduction and distribution of components of the SDK licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement.
+
+3.6 You agree that the form and nature of the SDK that Google provides may change without prior notice to you and that future versions of the SDK may be incompatible with applications developed on previous versions of the SDK. You agree that Google may stop (permanently or temporarily) providing the SDK (or any features within the SDK) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in the License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the SDK.
+
+
+4. Use of the SDK by You
+
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the SDK, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the SDK and write applications only for purposes that are permitted by (a) the License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the SDK to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, the user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the SDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google or any mobile communications carrier.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the SDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the SDK are being used and how they are being used. Before any of this information is collected, the SDK will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the SDK and is maintained in accordance with Google's Privacy Policy.
+
+
+7. Third Party Applications
+
+7.1 If you use the SDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, the License Agreement does not affect your legal relationship with these third parties.
+
+
+8. Using Android APIs
+
+8.1 Google Data APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+
+9. Terminating the License Agreement
+
+9.1 The License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the SDK and any relevant developer credentials.
+
+9.3 Google may at any time, terminate the License Agreement with you if:
+(A) you have breached any provision of the License Agreement; or
+(B) Google is required to do so by law; or
+(C) the partner with whom Google offered certain parts of SDK (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the SDK to you; or
+(D) Google decides to no longer provide the SDK or certain parts of the SDK to users in the country in which you are resident or from which you use the service, or the provision of the SDK or certain SDK services to you by Google is, in Google's sole discretion, no longer commercially viable.
+
+9.4 When the License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst the License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+
+10. DISCLAIMER OF WARRANTIES
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the SDK, (b) any application you develop on the SDK that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with the License Agreement.
+
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the SDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the SDK is made available.
+
+
+14. General Legal Terms
+
+14.1 The License Agreement constitutes the whole legal agreement between you and Google and governs your use of the SDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the SDK.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE SDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE SDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The rights granted in the License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under the License Agreement without the prior written approval of the other party.
+
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+
+November 20, 2015</license>
+	<license id="android-sdk-preview-license" type="text">To get started with the Android SDK Preview, you must agree to the following terms and conditions.
+As described below, please note that this is a preview version of the Android SDK, subject to change, that you use at your own risk.  The Android SDK Preview is not a stable release, and may contain errors and defects that can result in serious damage to your computer systems, devices and data.
+
+This is the Android SDK Preview License Agreement (the &quot;License Agreement&quot;).
+
+1. Introduction
+
+1.1 The Android SDK Preview (referred to in the License Agreement as the “Preview” and specifically including the Android system files, packaged APIs, and Preview library files, if and when they are made available) is licensed to you subject to the terms of the License Agreement. The License Agreement forms a legally binding contract between you and Google in relation to your use of the Preview.
+
+1.2 &quot;Android&quot; means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.3 &quot;Google&quot; means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+2. Accepting the License Agreement
+
+2.1 In order to use the Preview, you must first agree to the License Agreement. You may not use the Preview if you do not accept the License Agreement.
+
+2.2 By clicking to accept and/or using the Preview, you hereby agree to the terms of the License Agreement.
+
+2.3 You may not use the Preview and may not accept the License Agreement if you are a person barred from receiving the Preview under the laws of the United States or other countries including the country in which you are resident or from which you use the Preview.
+
+2.4 If you will use the Preview internally within your company or organization you agree to be bound by the License Agreement on behalf of your employer or other entity, and you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the Preview on behalf of your employer or other entity.
+
+3. Preview License from Google
+
+3.1 Subject to the terms of the License Agreement, Google grants you a royalty-free, non-assignable, non-exclusive, non-sublicensable, limited, revocable license to use the Preview, personally or internally within your company or organization, solely to develop applications to run on the Android platform.
+
+3.2 You agree that Google or third parties owns all legal right, title and interest in and to the Preview, including any Intellectual Property Rights that subsist in the Preview. &quot;Intellectual Property Rights&quot; means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.3 You may not use the Preview for any purpose not expressly permitted by the License Agreement. Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the Preview or any part of the Preview; or (b) load any part of the Preview onto a mobile handset or any other hardware device except a personal computer, combine any part of the Preview with other software, or distribute any software or device incorporating a part of the Preview.
+
+3.4 You agree that you will not take any actions that may cause or result in the fragmentation of Android, including but not limited to distributing, participating in the creation of, or promoting in any way a software development kit derived from the Preview.
+
+3.5 Use, reproduction and distribution of components of the Preview licensed under an open source software license are governed solely by the terms of that open source software license and not the License Agreement. You agree to remain a licensee in good standing in regard to such open source software licenses under all the rights granted and to refrain from any actions that may terminate, suspend, or breach such rights.
+
+3.6 You agree that the form and nature of the Preview that Google provides may change without prior notice to you and that future versions of the Preview may be incompatible with applications developed on previous versions of the Preview. You agree that Google may stop (permanently or temporarily) providing the Preview (or any features within the Preview) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in the License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the Preview.
+
+4. Use of the Preview by You
+
+4.1 Google agrees that nothing in the License Agreement gives Google any right, title or interest from you (or your licensors) under the License Agreement in or to any software applications that you develop using the Preview, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the Preview and write applications only for purposes that are permitted by (a) the License Agreement, and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the Preview to develop applications, you will protect the privacy and legal rights of users. If users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If users provide you with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, each user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the Preview, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of Google or any third party.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Android and/or applications for Android, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+4.7 The Preview is in development, and your testing and feedback are an important part of the development process. By using the Preview, you acknowledge that implementation of some features are still under development and that you should not rely on the Preview having the full functionality of a stable release. You agree not to publicly distribute or ship any application using this Preview as this Preview will no longer be supported after the official Android SDK is released.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the Preview, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the Preview are being used and how they are being used. Before any of this information is collected, the Preview will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the Preview and is maintained in accordance with Google's Privacy Policy located at http://www.google.com/policies/privacy/.
+
+7. Third Party Applications
+
+7.1 If you use the Preview to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party.
+
+8. Using Google APIs
+
+8.1 Google APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+9. Terminating the License Agreement
+
+9.1 the License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate the License Agreement, you may do so by ceasing your use of the Preview and any relevant developer credentials.
+
+9.3 Google may at any time, terminate the License Agreement, with or without cause, upon notice to you.
+
+9.4 The License Agreement will automatically terminate without notice or other action upon the earlier of:
+(A) when Google ceases to provide the Preview or certain parts of the Preview to users in the country in which you are resident or from which you use the service; and
+(B) Google issues a final release version of the Android SDK.
+
+9.5 When the License Agreement is terminated, the license granted to you in the License Agreement will terminate, you will immediately cease all use of the Preview, and the provisions of paragraphs 10, 11, 12 and 14 shall survive indefinitely.
+
+10. DISCLAIMERS
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE PREVIEW IS AT YOUR SOLE RISK AND THAT THE PREVIEW IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE PREVIEW AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE PREVIEW IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE. WITHOUT LIMITING THE FOREGOING, YOU UNDERSTAND THAT THE PREVIEW IS NOT A STABLE RELEASE AND MAY CONTAIN ERRORS, DEFECTS AND SECURITY VULNERABILITIES THAT CAN RESULT IN SIGNIFICANT DAMAGE, INCLUDING THE COMPLETE, IRRECOVERABLE LOSS OF USE OF YOUR COMPUTER SYSTEM OR OTHER DEVICE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys’ fees) arising out of or accruing from (a) your use of the Preview, (b) any application you develop on the Preview that infringes any Intellectual Property Rights of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you of the License Agreement.
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the Preview. When these changes are made, Google will make a new version of the License Agreement available on the website where the Preview is made available.
+
+14. General Legal Terms
+
+14.1 the License Agreement constitutes the whole legal agreement between you and Google and governs your use of the Preview (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the Preview.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in the License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of the License Agreement is invalid, then that provision will be removed from the License Agreement without affecting the rest of the License Agreement. The remaining provisions of the License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to the License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of the License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to the License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE PREVIEW IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE PREVIEW. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The License Agreement may not be assigned or transferred by you without the prior written approval of Google, and any attempted assignment without such approval will be void. You shall not delegate your responsibilities or obligations under the License Agreement without the prior written approval of Google.
+
+14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+June 2014.</license>
+	<license id="android-googletv-license" type="text">Terms and Conditions
+
+This is the Google TV Add-on for the Android Software Development Kit License Agreement.
+
+1. Introduction
+
+1.1 The Google TV Add-on for the Android Software Development Kit (referred to in this License Agreement as the &quot;Google TV Add-on&quot; and specifically including the Android system files, packaged APIs, and Google APIs add-ons) is licensed to you subject to the terms of this License Agreement. This License Agreement forms a legally binding contract between you and Google in relation to your use of the Google TV Add-on.
+
+1.2 &quot;Google&quot; means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+2. Accepting this License Agreement
+
+2.1 In order to use the Google TV Add-on, you must first agree to this License Agreement. You may not use the Google TV Add-on if you do not accept this License Agreement.
+
+2.2 You can accept this License Agreement by:
+
+(A) clicking to accept or agree to this License Agreement, where this option is made available to you; or
+
+(B) by actually using the Google TV Add-on.  In this case, you agree that use of the Google TV Add-on constitutes acceptance of the License Agreement from that point onwards.
+
+2.3 You may not use the Google TV Add-on and may not accept the Licensing Agreement if you are a person barred from receiving the Google TV Add-on under the laws of the United States or other countries including the country in which you are resident or from which you use the Google TV Add-on.
+
+2.4 If you are agreeing to be bound by this License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to this License Agreement. If you do not have the requisite authority, you may not accept the Licensing Agreement or use the Google TV Add-on on behalf of your employer or other entity.
+
+3. Google TV Add-on License from Google
+
+3.1 Subject to the terms of this License Agreement, Google grants you a limited, worldwide, royalty-free, non- assignable and non-exclusive license to use the Google TV Add-on solely to develop applications to run on the Google TV platform.
+
+3.2 You agree that Google or third parties own all legal right, title and interest in and to the Google TV Add-on, including any Intellectual Property Rights that subsist in the Google TV Add-on. &quot;Intellectual Property Rights&quot; means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.3 Except to the extent required by applicable third party licenses, you may not copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the Google TV Add-on or any part of the Google TV Add-on. Except to the extent required by applicable third party licenses, you may not load any part of the Google TV Add-on onto a mobile handset, television, or any other hardware device except a personal computer, combine any part of the Google TV Add-on with other software, or distribute any software or device incorporating a part of the Google TV Add-on.
+
+3.4 Use, reproduction and distribution of components of the Google TV Add-on licensed under an open source software license are governed solely by the terms of that open source software license and not this License Agreement.
+
+3.5 You agree that the form and nature of the Google TV Add-on that Google provides may change without prior notice to you and that future versions of the Google TV Add-on may be incompatible with applications developed on previous versions of the Google TV Add-on. You agree that Google may stop (permanently or temporarily) providing the Google TV Add-on (or any features within the Google TV Add-on) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.6 Nothing in this License Agreement gives you a right to use any of Google's or it’s licensors’ trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.7 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the Google TV Add-on.
+
+4. Use of the Google TV Add-on by You
+
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under this License Agreement in or to any software applications that you develop using the Google TV Add-on, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the Google TV Add-on and write applications only for purposes that are permitted by (a) this License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the Google TV Add-on to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, your must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, the user has given you explicit permission to do so.
+
+4.4 You agree that you will not engage in any activity with the Google TV Add-on, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google, Multichannel Video Program Distributors or any mobile communications carrier.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through the Google TV platform and/or applications for the Google TV platform, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under this License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+6.1 In order to continually innovate and improve the Google TV Add-on, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the Google TV Add-on are being used and how they are being used. Before any of this information is collected, the Google TV Add-on will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the Google TV Add-on and is maintained in accordance with Google's Privacy Policy.
+
+7. Third Party Applications for the Google TV Platform
+
+7.1 If you use the Google TV Add-on to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, this License Agreement does not affect your legal relationship with these third parties.
+
+8. Using Google TV APIs
+
+8.1 If you use any Google TV API to retrieve data from Google, you acknowledge that the data (“Google TV API Content”) may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.  Some portions of the Google TV API Content are licensed to Google by third parties, including but not limited to Tribune Media Services
+
+8.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+8.3 Except as explicitly permitted in Section 3 (Google TV Add-on License from Google), you must:
+
+(a) not modify nor format the Google TV API Content except to the extent reasonably and technically necessary to optimize the display such Google TV API Content in your application;
+
+(b) not edit the Google TV API Content in a manner that renders the Google TV API Content inaccurate of alters its inherent meaning (provided that displaying excerpts will not violate the foregoing); or
+
+(c)  not create any commercial audience measurement tool or service using the Google TV API Content
+
+9. Terminating this License Agreement
+
+9.1 This License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate this License Agreement, you may do so by ceasing your use of the Google TV Add-on and any relevant developer credentials.
+
+9.3 Google may at any time, terminate this License Agreement with you if:
+
+(A) you have breached any provision of this License Agreement; or
+
+(B) Google is required to do so by law; or
+
+(C) the partner with whom Google offered certain parts of Google TV Add-on (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the Google TV Add-on to you; or
+
+(D) Google decides to no longer providing the Google TV Add-on or certain parts of the Google TV Add-on to users in the country in which you are resident or from which you use the service, or the provision of the Google TV Add-on or certain Google TV Add-on services to you by Google is, in Google's sole discretion, no longer commercially viable.
+
+9.4 When this License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst this License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+10. DISCLAIMER OF WARRANTIES
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE GOOGLE TV ADD-ON IS AT YOUR SOLE RISK AND THAT THE GOOGLE TV ADD-ON IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE GOOGLE TV ADD-ON AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE GOOGLE TV ADD-ON IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the Google TV Add-on, (b) any application you develop on the Google TV Add-on that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with this License Agreement.
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the Google TV Add-on.
+
+14. General Legal Terms
+
+14.1 This License Agreement constitute the whole legal agreement between you and Google and govern your use of the Google TV Add-on (excluding any services which Google may provide to you under a separate written agreement), and completely replace any prior agreements between you and Google in relation to the Google TV Add-on.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in this License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of this License Agreement is invalid, then that provision will be removed from this License Agreement without affecting the rest of this License Agreement. The remaining provisions of this License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that Google’s API data licensors and each member of the group of companies of which Google is the parent shall be third party beneficiaries to this License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of this License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to this License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE GOOGLE TV ADD-ON IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE GOOGLE TV ADD-ON. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The rights granted in this License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under this License Agreement without the prior written approval of the other party.
+
+14.7 This License Agreement, and your relationship with Google under this License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from this License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+
+August 15, 2011</license>
+	<license id="google-gdk-license" type="text">This is a Developer Preview of the GDK that is subject to change.
+
+Terms and Conditions
+
+This is the Glass Development Kit License Agreement.
+
+1. Introduction
+
+1.1 The Glass Development Kit (referred to in this License Agreement as the &quot;GDK&quot; and specifically including the Android system files, packaged APIs, and GDK library files, if and when they are made available) is licensed to you subject to the terms of this License Agreement. This License Agreement forms a legally binding contract between you and Google in relation to your use of the GDK.
+
+1.2 &quot;Glass&quot; means Glass devices and the Glass software stack for use on Glass devices.
+
+
+1.3 &quot;Android&quot; means the Android software stack for devices, as made available under the Android Open Source Project, which is located at the following URL: http://source.android.com/, as updated from time to time.
+
+1.4 &quot;Google&quot; means Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.
+
+2. Accepting this License Agreement
+
+2.1 In order to use the GDK, you must first agree to this License Agreement. You may not use the GDK if you do not accept this License Agreement.
+
+2.2 By clicking to accept, you hereby agree to the terms of this License Agreement.
+
+2.3 You may not use the GDK and may not accept the License Agreement if you are a person barred from receiving the GDK under the laws of the United States or other countries including the country in which you are resident or from which you use the GDK.
+
+2.4 If you are agreeing to be bound by this License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to this License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the GDK on behalf of your employer or other entity.
+
+3. GDK License from Google
+
+3.1 Subject to the terms of this License Agreement, Google grants you a limited, worldwide, royalty-free, non-assignable and non-exclusive license to use the GDK solely to develop applications to run on the Glass platform for Glass devices.
+
+3.2 You agree that Google or third parties own all legal right, title and interest in and to the GDK, including any Intellectual Property Rights that subsist in the GDK. &quot;Intellectual Property Rights&quot; means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Google reserves all rights not expressly granted to you.
+
+3.3 You may not use the GDK for any purpose not expressly permitted by this License Agreement.  Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the GDK or any part of the GDK; or (b) load any part of the GDK onto a mobile handset or wearable computing device or any other hardware device except a Glass device personal computer, combine any part of the GDK with other software, or distribute any software or device incorporating a part of the GDK.
+
+3.4 You agree that you will not take any actions that may cause or result in the fragmentation of Glass, including but not limited to distributing, participating in the creation of, or promoting in any way a software development kit derived from the GDK.
+
+3.5 Use, reproduction and distribution of components of the GDK licensed under an open source software license are governed solely by the terms of that open source software license and not this License Agreement.
+
+3.6 You agree that the form and nature of the GDK that Google provides may change without prior notice to you and that future versions of the GDK may be incompatible with applications developed on previous versions of the GDK. You agree that Google may stop (permanently or temporarily) providing the GDK (or any features within the GDK) to you or to users generally at Google's sole discretion, without prior notice to you.
+
+3.7 Nothing in this License Agreement gives you a right to use any of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+3.8 You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within the GDK.
+
+
+3.9 Your use of any Android system files, packaged APIs, or other components of the GDK which are part of the Android Software Development Kit is subject to the terms of the Android Software Development Kit License Agreement located at http://developer.android.com/sdk/terms.html. These terms are hereby incorporated by reference into this License Agreement.
+
+4. Use of the GDK by You
+
+4.1 Google agrees that it obtains no right, title or interest from you (or your licensors) under this License Agreement in or to any software applications that you develop using the GDK, including any intellectual property rights that subsist in those applications.
+
+4.2 You agree to use the GDK and write applications only for purposes that are permitted by (a) this License Agreement, (b) the Glass Platform Developer Policies (located at https://developers.google.com/glass/policies, and hereby incorporated into this License Agreement by reference), and (c) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions (including any laws regarding the export of data or software to and from the United States or other relevant countries).
+
+4.3 You agree that if you use the GDK to develop applications for general public users, you will protect the privacy and legal rights of those users. If the users provide you with user names, passwords, or other login information or personal information, you must make the users aware that the information will be available to your application, and you must provide legally adequate privacy notice and protection for those users. If your application stores personal or sensitive information provided by users, it must do so securely. If the user provides your application with Google Account information, your application may only use that information to access the user's Google Account when, and for the limited purposes for which, the user has given you permission to do so.
+
+4.4 You agree that you will not engage in any activity with the GDK, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses in an unauthorized manner the servers, networks, or other properties or services of any third party including, but not limited to, Google.
+
+4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through Glass and/or applications for Glass, and for the consequences of your actions (including any loss or damage which Google may suffer) by doing so.
+
+4.6 You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) any breach of your obligations under this License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Google or any third party may suffer) of any such breach.
+
+
+4.7 The GDK is in development, and your testing and feedback are an important part of the development process. By using the GDK, you acknowledge that implementation of some features are still under development and that you should not rely on the GDK, Glass devices, Glass system software, Google Mirror API, or Glass services having the full functionality of a stable release.
+
+5. Your Developer Credentials
+
+5.1 You agree that you are responsible for maintaining the confidentiality of any developer credentials that may be issued to you by Google or which you may choose yourself and that you will be solely responsible for all applications that are developed under your developer credentials.
+
+6. Privacy and Information
+
+
+6.1 In order to continually innovate and improve the GDK, Google may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in the GDK are being used and how they are being used. Before any of this information is collected, the GDK will notify you and seek your consent. If you withhold consent, the information will not be collected.
+
+6.2 The data collected is examined in the aggregate to improve the GDK and is maintained in accordance with Google's Privacy Policy.
+
+7. Third Party Applications
+
+7.1 If you use the GDK to run applications developed by a third party or that access data, content or resources provided by a third party, you agree that Google is not responsible for those applications, data, content, or resources. You understand that all data, content or resources which you may access through such third party applications are the sole responsibility of the person from which they originated and that Google is not liable for any loss or damage that you may experience as a result of the use or access of any of those third party applications, data, content, or resources.
+
+7.2 You should be aware the data, content, and resources presented to you through such a third party application may be protected by intellectual property rights which are owned by the providers (or by other persons or companies on their behalf). You may not modify, rent, lease, loan, sell, distribute or create derivative works based on these data, content, or resources (either in whole or in part) unless you have been specifically given permission to do so by the relevant owners.
+
+7.3 You acknowledge that your use of such third party applications, data, content, or resources may be subject to separate terms between you and the relevant third party. In that case, this License Agreement does not affect your legal relationship with these third parties.
+
+8. Using Google APIs
+
+8.1 Google APIs
+
+8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
+
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+
+9. Terminating this License Agreement
+
+9.1 This License Agreement will continue to apply until terminated by either you or Google as set out below.
+
+9.2 If you want to terminate this License Agreement, you may do so by ceasing your use of the GDK and any relevant developer credentials.
+
+9.3 Google may at any time, terminate this License Agreement with you if:
+(A) you have breached any provision of this License Agreement; or
+(B) Google is required to do so by law; or
+(C) the partner with whom Google offered certain parts of GDK (such as APIs) to you has terminated its relationship with Google or ceased to offer certain parts of the GDK to you; or
+(D) Google decides to no longer provide the GDK or certain parts of the GDK to users in the country in which you are resident or from which you use the service, or the provision of the GDK or certain GDK services to you by Google is, in Google's sole discretion, no longer commercially viable.
+
+9.4 When this License Agreement comes to an end, all of the legal rights, obligations and liabilities that you and Google have benefited from, been subject to (or which have accrued over time whilst this License Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 14.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+10. DISCLAIMER OF WARRANTIES
+
+10.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE GDK IS AT YOUR SOLE RISK AND THAT THE GDK IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTY OF ANY KIND FROM GOOGLE.
+
+10.2 YOUR USE OF THE GDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE GDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+10.3 GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+11. LIMITATION OF LIABILITY
+
+11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+
+12. Indemnification
+
+12.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the GDK, (b) any application you develop on the GDK that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with this License Agreement.
+
+13. Changes to the License Agreement
+
+13.1 Google may make changes to the License Agreement as it distributes new versions of the GDK. When these changes are made, Google will make a new version of the License Agreement available on the website where the GDK is made available.
+
+14. General Legal Terms
+
+14.1 This License Agreement constitutes the whole legal agreement between you and Google and governs your use of the GDK (excluding any services which Google may provide to you under a separate written agreement), and completely replaces any prior agreements between you and Google in relation to the GDK.
+
+14.2 You agree that if Google does not exercise or enforce any legal right or remedy which is contained in this License Agreement (or which Google has the benefit of under any applicable law), this will not be taken to be a formal waiver of Google's rights and that those rights or remedies will still be available to Google.
+
+14.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of this License Agreement is invalid, then that provision will be removed from this License Agreement without affecting the rest of this License Agreement. The remaining provisions of this License Agreement will continue to be valid and enforceable.
+
+14.4 You acknowledge and agree that each member of the group of companies of which Google is the parent shall be third party beneficiaries to this License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of this License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to this License Agreement.
+
+14.5 EXPORT RESTRICTIONS. THE GDK IS SUBJECT TO UNITED STATES EXPORT LAWS AND REGULATIONS. YOU MUST COMPLY WITH ALL DOMESTIC AND INTERNATIONAL EXPORT LAWS AND REGULATIONS THAT APPLY TO THE GDK. THESE LAWS INCLUDE RESTRICTIONS ON DESTINATIONS, END USERS AND END USE.
+
+14.6 The rights granted in this License Agreement may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google shall be permitted to delegate their responsibilities or obligations under this License Agreement without the prior written approval of the other party.
+
+14.7 This License Agreement, and your relationship with Google under this License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from this License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
+
+November 19, 2013</license>
+	<license id="intel-android-extra-license" type="text">Intel (R) Hardware Accelerated Execution Manager
+End-User License Agreement
+
+Copyright (c) 2012 Intel Corporation.
+All rights reserved.
+
+Redistribution. Redistribution and use in binary form, without modification, are permitted provided that the following conditions are met:
+
+1.Redistributions must reproduce the above copyright notice and the following disclaimer in the  documentation and/or other materials provided with the distribution.
+
+2.Neither the name of Intel Corporation nor the names of its suppliers may be used to endorse or promote  products derived from this software without specific prior written permission.
+
+3.No reverse engineering, de-compilation, or disassembly of this software is permitted. Limited patent license. Intel Corporation grants a world-wide, royalty-free, non-exclusive license under  patents it now or hereafter owns or controls to make, have made, use, import, offer to sell and sell (&quot;Utilize&quot;) this software, but solely to the extent that any such patent is necessary to Utilize the  software alone. The patent license shall not apply to any combinations which include this software. No  hardware per se is licensed hereunder.
+
+DISCLAIMER.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE  POSSIBILITY OF SUCH DAMAGE.</license>
+	<channel id="channel-0">stable</channel>
+	<channel id="channel-1">beta</channel>
+	<channel id="channel-2">dev</channel>
+	<channel id="channel-3">canary</channel>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-3">
+		<!--Generated from p4 cl:12617722-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>3</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>3</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sat May 19 22:41:19 2018.-->
+				<complete>
+					<size>34908058</size>
+					<checksum>1f92abf3a76be66ae8032257fc7620acbd2b2e3a</checksum>
+					<url>google_apis-3-r03.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-4">
+		<!--Generated from p4 cl:13752552-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>4</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun  3 14:03:04 2018.-->
+				<complete>
+					<size>42435735</size>
+					<checksum>9b6e86d8568558de4d606a7debc4f6049608dbd0</checksum>
+					<url>google_apis-4_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-5">
+		<!--Generated from p4 cl:13245770-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>5</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun  5 17:50:33 2018.-->
+				<complete>
+					<size>49123776</size>
+					<checksum>46eaeb56b645ee7ffa24ede8fa17f3df70db0503</checksum>
+					<url>google_apis-5_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-6">
+		<!--Generated from p4 cl:13752552-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>6</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 10 12:37:49 2018.-->
+				<complete>
+					<size>53382941</size>
+					<checksum>5ff545d96e031e09580a6cf55713015c7d4936b2</checksum>
+					<url>google_apis-6_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-7">
+		<!--Generated from p4 cl:14140606-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>7</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed May 30 22:32:20 2018.-->
+				<complete>
+					<size>53691339</size>
+					<checksum>2e7f91e0fe34fef7f58aeced973c6ae52361b5ac</checksum>
+					<url>google_apis-7_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-8">
+		<!--Generated from p4 cl:16286500-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>8</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 03:39:55 2018.-->
+				<complete>
+					<size>59505020</size>
+					<checksum>3079958e7ec87222cac1e6b27bc471b27bf2c352</checksum>
+					<url>google_apis-8_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-9">
+		<!--Generated from p4 cl:19092731-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>9</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed May 23 15:52:14 2018.-->
+				<complete>
+					<size>63401546</size>
+					<checksum>78664645a1e9accea4430814f8694291a7f1ea5d</checksum>
+					<url>google_apis-9_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-10">
+		<!--Generated from p4 cl:21121559-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>10</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue May 29 03:55:38 2018.-->
+				<complete>
+					<size>65781578</size>
+					<checksum>cc0711857c881fa7534f90cf8cc09b8fe985484d</checksum>
+					<url>google_apis-10_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-11">
+		<!--Generated from p4 cl:19633933-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>11</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Jun 14 15:13:30 2018.-->
+				<complete>
+					<size>83477179</size>
+					<checksum>5eab5e81addee9f3576d456d205208314b5146a5</checksum>
+					<url>google_apis-11_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-12">
+		<!--Generated from p4 cl:21121559-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>12</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 10:52:20 2018.-->
+				<complete>
+					<size>86099835</size>
+					<checksum>e9999f4fa978812174dfeceec0721c793a636e5d</checksum>
+					<url>google_apis-12_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-13">
+		<!--Generated from p4 cl:22531000-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>13</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun May 27 03:09:43 2018.-->
+				<complete>
+					<size>88615525</size>
+					<checksum>3b153edd211c27dc736c893c658418a4f9041417</checksum>
+					<url>google_apis-13_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_apis-google-14">
+		<!--Generated from p4 cl:26085354-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>14</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed Jun 13 22:44:43 2018.-->
+				<complete>
+					<size>106533714</size>
+					<checksum>f8eb4d96ad0492b4c0db2d7e4f1a1a3836664d39</checksum>
+					<url>google_apis-14_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-15">
+		<!--Generated from p4 cl:95160078-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>15</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>3</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun 15 19:37:58 2018.-->
+				<complete>
+					<size>106624396</size>
+					<checksum>d0d2bf26805eb271693570a1aaec33e7dc3f45e9</checksum>
+					<url>google_apis-15_r03.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-16">
+		<!--Generated from p4 cl:95160078-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>16</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>4</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 10 20:07:39 2018.-->
+				<complete>
+					<size>127341982</size>
+					<checksum>ee6acf1b01020bfa8a8e24725dbc4478bee5e792</checksum>
+					<url>google_apis-16_r04.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-17">
+		<!--Generated from p4 cl:94805340-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>17</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>4</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed May 30 17:17:51 2018.-->
+				<complete>
+					<size>137231243</size>
+					<checksum>a076be0677f38df8ca5536b44dfb411a0c808c4f</checksum>
+					<url>google_apis-17_r04.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-18">
+		<!--Generated from p4 cl:94805340-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>18</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>4</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun May 27 23:13:56 2018.-->
+				<complete>
+					<size>143195183</size>
+					<checksum>6109603409debdd40854d4d4a92eaf8481462c8b</checksum>
+					<url>google_apis-18_r04.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-19">
+		<!--Generated from bid:2884604, branch:git_klp-emu-release-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>19</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>20</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sat Jun  2 14:21:02 2018.-->
+				<complete>
+					<size>147081</size>
+					<checksum>5b933abe830b2f25b4c0f171d45e9e0651e56311</checksum>
+					<url>google_apis-19_r20.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-24">
+		<!--Generated from bid:3249234, branch:git_nyc-emu-release-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>24</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun  1 04:12:18 2018.-->
+				<complete>
+					<size>154865</size>
+					<checksum>31361c2868f27343ee917fbd259c1463821b6145</checksum>
+					<url>google_apis-24_r1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-23">
+		<!--Generated from bid:3756122, branch:git_nyc-mr1-emu-release-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>23</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun 12 20:09:06 2018.-->
+				<complete>
+					<size>154871</size>
+					<checksum>550e83eea9513ab11c44919ac6da54b36084a9f3</checksum>
+					<url>google_apis-25_r1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-21">
+		<!--Generated from p4 cl:77907680-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>21</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 05:08:59 2018.-->
+				<complete>
+					<size>179499</size>
+					<checksum>66a754efb24e9bb07cc51648426443c7586c9d4a</checksum>
+					<url>google_apis-21_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-22">
+		<!--Generated from p4 cl:87569863-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>22</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun 15 06:11:24 2018.-->
+				<complete>
+					<size>179259</size>
+					<checksum>5def0f42160cba8acff51b9c0c7e8be313de84f5</checksum>
+					<url>google_apis-22_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="add-ons;addon-google_apis-google-23">
+		<!--Generated from p4 cl:100722913-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>23</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_apis</id>
+				<display>Google APIs</display>
+			</tag>
+			<libraries>
+				<library localJarPath="maps.jar" name="com.google.android.maps">
+					<description>API for Google Maps</description>
+				</library>
+				<library localJarPath="usb.jar" name="com.android.future.usb.accessory">
+					<description>API for USB Accessories</description>
+				</library>
+				<library localJarPath="effects.jar" name="com.google.android.media.effects">
+					<description>Collection of video effects</description>
+				</library>
+			</libraries>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google APIs</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 10 08:57:09 2018.-->
+				<complete>
+					<size>179900</size>
+					<checksum>04c5cc1a7c88967250ebba9561d81e24104167db</checksum>
+					<url>google_apis-23_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_tv_addon-google-12">
+		<!--Generated from p4 cl:24379226-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>12</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_tv_addon</id>
+				<display>Google TV Addon</display>
+			</tag>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google TV Addon</display-name>
+		<uses-license ref="android-googletv-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun May 27 03:16:19 2018.-->
+				<complete>
+					<size>78266751</size>
+					<checksum>92128a12e7e8b0fb5bac59153d7779b717e7b840</checksum>
+					<url>google_tv-12_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="add-ons;addon-google_tv_addon-google-13">
+		<!--Generated from p4 cl:41196280-->
+		<type-details xsi:type="addon:addonDetailsType">
+			<api-level>13</api-level>
+			<codename></codename>
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+			<tag>
+				<id>google_tv_addon</id>
+				<display>Google TV Addon</display>
+			</tag>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google TV Addon</display-name>
+		<uses-license ref="android-googletv-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun 19 05:04:20 2018.-->
+				<complete>
+					<size>87721879</size>
+					<checksum>b73f7c66011ac8180b44aa4e83b8d78c66ea9a09</checksum>
+					<url>google_tv-13_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;android;m2repository">
+		<!--Generated from bid:3841166, branch:git_nyc-support-release-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>47</major>
+			<minor>0</minor>
+			<micro>0</micro>
+		</revision>
+		<display-name>Android Support Repository</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 04:51:54 2018.-->
+				<complete>
+					<size>355529608</size>
+					<checksum>a0d22beacc106a6977321f2b07d692ce4979e96a</checksum>
+					<url>android_m2repository_r47.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;m2repository">
+		<!--Generated from p4 cl:167710051-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>58</major>
+		</revision>
+		<display-name>Google Repository</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 11:10:27 2018.-->
+				<complete>
+					<size>215426029</size>
+					<checksum>05086add9e3a0eb1b67111108d7757a4337c3f10</checksum>
+					<url>google_m2repository_gms_v11_3_rc05_wear_2_0_5.zip</url>
+				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>56</major>
+						</based-on>
+						<size>7310057</size>
+						<checksum>43473012a84baaf93546d9c02999c9751dfc6b04</checksum>
+						<url>extra_p4-162760272-P-daf14b2edb7f7868d016dc8705898c287f04cfde-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>46</major>
+						</based-on>
+						<size>44405502</size>
+						<checksum>90ec0765151c8f700ba11ef703f5f2472c1577e3</checksum>
+						<url>extra_p4-150920218-P-13c171b07a0e50e85e02ef3f9c2688ad841fc6c0-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>52</major>
+						</based-on>
+						<size>21665751</size>
+						<checksum>a89ccd854f297e31aef5aa24a6c53dc7d13d5248</checksum>
+						<url>extra_p4-158301569-P-f3ead9efa098ae63cca8f2d579d7cc35eb549de7-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>35</major>
+						</based-on>
+						<size>84927295</size>
+						<checksum>fae5e4985df8637e82066b53a2a4eedcfeacf1de</checksum>
+						<url>extra_p4-134127039-P-ba1f946bfdab58acd291c70157e023868bcdbcc7-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>32</major>
+						</based-on>
+						<size>100242545</size>
+						<checksum>1c879e9458d8107371c4439524265890e371ffe2</checksum>
+						<url>extra_p4-128809501-P-ab7afdd4af28d8663e777b7076c3151183d7d637-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>47</major>
+						</based-on>
+						<size>36737597</size>
+						<checksum>d45b84aa8e489700951cfe9b86058a2ef9c9fbd5</checksum>
+						<url>extra_p4-154288509-P-52dd3536b46672812c58f92bdb6fc86d35a6587b-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>34</major>
+						</based-on>
+						<size>92649367</size>
+						<checksum>2f4f349df2563fcc5b5990d6f880ddbae2e1efeb</checksum>
+						<url>extra_p4-133861716-P-be3838ffc850f6e30a9603fdab4e3d09da564b0a-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>42</major>
+						</based-on>
+						<size>60891632</size>
+						<checksum>a3a867a9066f21399bc02515ee3e88d90d6bcf46</checksum>
+						<url>extra_p4-144789539-P-9dfe8133d1243ddd64d93bfe500ea4d6548b0c8a-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>45</major>
+						</based-on>
+						<size>44943696</size>
+						<checksum>8bca5b9a21377f9f753e565e9e1559911fd278c7</checksum>
+						<url>extra_p4-150146370-P-3dc9e4eff97df7e3779be67cac63b62442020173-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>44</major>
+						</based-on>
+						<size>52650079</size>
+						<checksum>0a39267d117ff06a17ed5c331effb9e18c860124</checksum>
+						<url>extra_p4-147594020-P-87ac18dc383d9573641bcf82bd12f80852495efe-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>53</major>
+						</based-on>
+						<size>21077482</size>
+						<checksum>e33b9dfbea23f2c39c6f981ab268355e64856e05</checksum>
+						<url>extra_p4-158324354-P-04ff4f58c1852062829a4810500c02eaded54110-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>51</major>
+						</based-on>
+						<size>28369743</size>
+						<checksum>66bfbe0ab78b5a6973036828ace24d82b7964223</checksum>
+						<url>extra_p4-155833037-P-84c5d0d29dca40d5ab82dcb28d10f8b249dacde3-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>38</major>
+						</based-on>
+						<size>76915648</size>
+						<checksum>6f7bded6aa5b905ef8974cf1167508d52f905e5e</checksum>
+						<url>extra_p4-137063810-P-3c8c030cb7f7bc343a28ddfcdfc2019cdaa0be31-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>55</major>
+						</based-on>
+						<size>7895087</size>
+						<checksum>728cba8b7d2fda03d80315fdbb4079926c0347ee</checksum>
+						<url>extra_p4-160539699-P-ab51d36b511077f02bbafa0d68bfb420e1c4791e-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>41</major>
+						</based-on>
+						<size>61417361</size>
+						<checksum>08347f2d733e893f8e1dfc73daeef5d433f285ae</checksum>
+						<url>extra_p4-141567089-P-1eb5f3a01f61ab95e7fefa59a021fc92e8494472-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>36</major>
+						</based-on>
+						<size>84491918</size>
+						<checksum>43bc339b3484465fcd0e21eda51558b9c760324d</checksum>
+						<url>extra_p4-134454089-P-81ffd14786e17d41ca0789fbbdb01a5023220aff-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>57</major>
+						</based-on>
+						<size>695322</size>
+						<checksum>a9beaa6e758739cf079a39bbd08b6f77ce56daa6</checksum>
+						<url>extra_p4-163087974-P-207479700b708afecd2dec6d421dfcd74fcb9fca-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>43</major>
+						</based-on>
+						<size>60360193</size>
+						<checksum>6dc171b7c4b70f6db107bc060a92f2ce4c83060b</checksum>
+						<url>extra_p4-146833429-P-4e03147937f2b40ac0ae2bbdc07c363ac8973828-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>40</major>
+						</based-on>
+						<size>61915450</size>
+						<checksum>8bdaddee9a33c65d6c52c74fa8454e8614194730</checksum>
+						<url>extra_p4-140037564-P-a8cdfeee379466b129d6a86627e8f5549339529e-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>54</major>
+						</based-on>
+						<size>14412118</size>
+						<checksum>ca2135cdfbfddcce9df0e5c881f7f73b64067c82</checksum>
+						<url>extra_p4-158745890-P-4b5e2bf3c8ab3e3891cc94877aa483d70af7466f-167710051-P-c7e12199134871e77a62f57dbb988c087a0ca722-patch.jar</url>
+					</patch>
+				</patches>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;market_licensing">
+		<!--Generated from p4 cl:28113395-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display></display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google Play Licensing Library</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 10 01:20:16 2018.-->
+				<complete>
+					<size>75109</size>
+					<checksum>355e8dc304a92a5616db235af8ee7bd554356254</checksum>
+					<url>market_licensing-r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;market_apk_expansion">
+		<!--Generated from p4 cl:42096985-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Google Play APK Expansion library</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 17 19:31:02 2018.-->
+				<complete>
+					<size>110201</size>
+					<checksum>5305399dc1a56814e86b8459ce24871916f78b8c</checksum>
+					<url>market_apk_expansion-r03.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="extras;google;google_play_services_froyo">
+		<!--Generated from p4 cl:52571120-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>12</major>
+		</revision>
+		<display-name>Google Play services for Froyo</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun May 27 10:44:16 2018.-->
+				<complete>
+					<size>5265389</size>
+					<checksum>92558dbc380bba3d55d0ec181167fb05ce7c79d9</checksum>
+					<url>google_play_services_3265130_r12.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;google_play_services">
+		<!--Generated from p4 cl:189640690-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>49</major>
+		</revision>
+		<display-name>Google Play services</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 08:08:54 2018.-->
+				<complete>
+					<size>15456884</size>
+					<checksum>f95bf19634e2ab0430923247fe2c50246432d2e9</checksum>
+					<url>google_play_services_v16_1_rc09.zip</url>
+				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>40</major>
+						</based-on>
+						<size>4512762</size>
+						<checksum>b5f758fa9f045f24973dd4004ac93c0d5ecc6e96</checksum>
+						<url>extra_p4-155764852-P-168f7b7067bae5fbd53bd4a7fb9d63aa44159a3a-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>45</major>
+						</based-on>
+						<size>1795493</size>
+						<checksum>8e4a321e4058348e9d97c8722d74d691d0cdf451</checksum>
+						<url>extra_p4-169238238-P-63b7c4c45c1eec93b08818991e27f0428ff98681-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>46</major>
+						</based-on>
+						<size>1638400</size>
+						<checksum>32492dfa1ba192b028a58aaa4b12d038fb19aefc</checksum>
+						<url>extra_p4-170731283-P-ec8aaeebcaf870040886da67ea87b6804105e470-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>38</major>
+						</based-on>
+						<size>4735690</size>
+						<checksum>c58eb41fb038189efcb03c4734d626da782d5d6f</checksum>
+						<url>extra_p4-139489718-P-f12672e37cee4c56560b577e7fc6c0c933ced4e6-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>33</major>
+						</based-on>
+						<size>4878834</size>
+						<checksum>9a9168c4b143d2a5e3f048bb9cd42b2ffcdf8d85</checksum>
+						<url>extra_p4-133732498-P-a6d08d49ebaf69c970aa4959bafc80e2e6e87f38-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>41</major>
+						</based-on>
+						<size>3225323</size>
+						<checksum>25681f76f0286df2915dc946d5413d0ebe24532d</checksum>
+						<url>extra_p4-158051086-P-b003f2b00b126a38678ce27960742ae801f4a1f5-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>42</major>
+						</based-on>
+						<size>3225038</size>
+						<checksum>1c61153d9c618ce593109c407ffe7115daf8a79e</checksum>
+						<url>extra_p4-160539626-P-6a036603161f18f401675d4918fdae8a91f3d668-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>44</major>
+						</based-on>
+						<size>2132340</size>
+						<checksum>7c78cae682580b2d064613712826448696a845c2</checksum>
+						<url>extra_p4-164902609-P-c01dd9720b82d4789e99657a811dcbdfebf5d736-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>43</major>
+						</based-on>
+						<size>3226742</size>
+						<checksum>8f3384c53f67f0586fb91362e633fb52835705ea</checksum>
+						<url>extra_p4-163088463-P-73dc9a3644d2006c08b1df493bd00d908d784fc0-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>48</major>
+						</based-on>
+						<size>673768</size>
+						<checksum>375130a5401e4d2a9d20efbd64569254e1a187b3</checksum>
+						<url>extra_p4-179554859-P-c8e04d9adda776efd28abcf4441382d73d6dd44a-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>39</major>
+						</based-on>
+						<size>4573819</size>
+						<checksum>ed237ae8c52a273fd7d8780d45828f88beda1b13</checksum>
+						<url>extra_p4-147468501-P-0dce31245da1afff5d14deeebcf8543bdf04127e-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>37</major>
+						</based-on>
+						<size>4784664</size>
+						<checksum>3aac39cf6d84f4cd02819e5674063b889068fbb1</checksum>
+						<url>extra_p4-136165186-P-4ae73670499a9d3bd2bab87731b92586e0cf6ff1-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+					<patch>
+						<based-on>
+							<major>32</major>
+						</based-on>
+						<size>5196950</size>
+						<checksum>33dc66e89843c3b21fa4ec7ee5405b0fc9b8b10e</checksum>
+						<url>extra_p4-128810771-P-f1b6e291399d2dc8115d0f6d6c7a4a1a1f4f64a7-189640690-P-06966e5c2a345f5f1abe401e95b827f1ad0b82c4-patch.jar</url>
+					</patch>
+				</patches>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;usb_driver">
+		<!--Generated from p4 cl:75820409-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>11</major>
+		</revision>
+		<display-name>Google USB Driver</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Jun  7 01:53:27 2018.-->
+				<complete>
+					<size>8682859</size>
+					<checksum>dc8a2ed2fbd7246d4caf9ab10ffe7749dc35d1cc</checksum>
+					<url>usb_driver_r11-windows.zip</url>
+				</complete>
+				<host-os>windows</host-os>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="extras;google;admob_ads_sdk">
+		<!--Generated from p4 cl:45484492-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>11</major>
+		</revision>
+		<display-name>Google AdMob Ads SDK</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Jun  7 11:48:51 2018.-->
+				<complete>
+					<size>704512</size>
+					<checksum>0102859d9575baa0bf4fd5eb422af2ad0fe6cb82</checksum>
+					<url>GoogleAdMobAdsSdkAndroid-6.4.1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="extras;google;analytics_sdk_v2">
+		<!--Generated from p4 cl:44867123-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>3</major>
+		</revision>
+		<display-name>Google Analytics App Tracking SDK</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun  5 05:29:27 2018.-->
+				<complete>
+					<size>211432</size>
+					<checksum>dc14026bf0ce78315cb5dd00552607de0894de83</checksum>
+					<url>GoogleAnalyticsAndroid_2.0beta5.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;webdriver">
+		<!--Generated from p4 cl:25118237-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>2</major>
+		</revision>
+		<display-name>Google Web Driver</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu May 31 20:21:33 2018.-->
+				<complete>
+					<size>4055193</size>
+					<checksum>13f3a3b2670a5fc04a7342861644be9a01b07e38</checksum>
+					<url>webdriver_r02.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage obsolete="true" path="extras;google;gcm">
+		<!--Generated from p4 cl:32432700-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>3</major>
+		</revision>
+		<display-name>Google Cloud Messaging for Android Library</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun May 27 10:27:10 2018.-->
+				<complete>
+					<size>5901400</size>
+					<checksum>ad066fd0dc7fc99d8aadac09c65a3c2519fbc7bf</checksum>
+					<url>gcm_r03.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;simulators">
+		<!--Generated from p4 cl:80165500-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Android Auto API Simulators</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun  5 14:06:56 2018.-->
+				<complete>
+					<size>2167286</size>
+					<checksum>4fb5344e34e8faab4db18af07dace44c50db26a7</checksum>
+					<url>simulator_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;auto">
+		<!--Generated from p4 cl:107062527-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+			<minor>1</minor>
+		</revision>
+		<display-name>Android Auto Desktop Head Unit emulator</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sat Jun 16 20:44:31 2018.-->
+				<complete>
+					<size>1346009</size>
+					<checksum>202a6e1b3009a0eb815f8c672d2d5b3717de6169</checksum>
+					<url>desktop-head-unit-linux_r01.1.zip</url>
+				</complete>
+				<host-os>linux</host-os>
+			</archive>
+			<archive>
+				<!--Built on: Tue Jun 12 06:56:07 2018.-->
+				<complete>
+					<size>2375533</size>
+					<checksum>8179cbb3914493ebc5eb65b731cba061582f2e84</checksum>
+					<url>desktop-head-unit-macosx_r01.1.zip</url>
+				</complete>
+				<host-os>macosx</host-os>
+			</archive>
+			<archive>
+				<!--Built on: Tue Jun 12 13:47:09 2018.-->
+				<complete>
+					<size>2691901</size>
+					<checksum>99c4a7172d73673552119347bc24c58b47da177b</checksum>
+					<url>desktop-head-unit-windows_r01.1.zip</url>
+				</complete>
+				<host-os>windows</host-os>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;google;instantapps">
+		<!--Generated from p4 cl:214678223-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>google</id>
+				<display>Google Inc.</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+			<minor>5</minor>
+			<micro>0</micro>
+		</revision>
+		<display-name>Google Play Instant Development SDK</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed Sep 26 15:20:22 2018.-->
+				<complete>
+					<size>33351418</size>
+					<checksum>6c282b9c686e819fe7f5ac8f2249d2479acb63b4</checksum>
+					<url>iasdk-1.5.0-1538000167.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;android;gapid;1">
+		<!--Generated from p4 cl:108530044-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+			<minor>0</minor>
+			<micro>3</micro>
+		</revision>
+		<display-name>GPU Debugging tools</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue May 29 13:20:34 2018.-->
+				<complete>
+					<size>12968916</size>
+					<checksum>7c9ef7544cf0aea030bcc29bd8e12c04fd53e653</checksum>
+					<url>gapid_r01_linux.zip</url>
+				</complete>
+				<host-os>linux</host-os>
+			</archive>
+			<archive>
+				<!--Built on: Sat May 19 08:47:48 2018.-->
+				<complete>
+					<size>15824058</size>
+					<checksum>597eb271349d890566274861eba2770a84ee4c69</checksum>
+					<url>gapid_r01_osx.zip</url>
+				</complete>
+				<host-os>macosx</host-os>
+			</archive>
+			<archive>
+				<!--Built on: Fri Jun  8 16:55:53 2018.-->
+				<complete>
+					<size>13220091</size>
+					<checksum>82c9b3eb1b281f27f58fe55025227148b3deb12e</checksum>
+					<url>gapid_r01_windows.zip</url>
+				</complete>
+				<host-os>windows</host-os>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;android;gapid;3">
+		<!--Generated from bid:2994895, branch:git_studio-master-dev-->
+		<type-details xsi:type="addon:extraDetailsType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>3</major>
+			<minor>1</minor>
+			<micro>0</micro>
+		</revision>
+		<display-name>GPU Debugging tools</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun  8 01:05:42 2018.-->
+				<complete>
+					<size>31528127</size>
+					<checksum>e40371ba191f617e4e79bc760d0ab2948ba8cf46</checksum>
+					<url>gapid_2994895_linux.zip</url>
+				</complete>
+				<host-os>linux</host-os>
+			</archive>
+			<archive>
+				<!--Built on: Fri Jun  1 13:07:53 2018.-->
+				<complete>
+					<size>32388467</size>
+					<checksum>ad86a2350b7b9908300277bf03d41649659de384</checksum>
+					<url>gapid_2994895_osx.zip</url>
+				</complete>
+				<host-os>macosx</host-os>
+			</archive>
+			<archive>
+				<!--Built on: Tue May 22 01:10:55 2018.-->
+				<complete>
+					<size>31656325</size>
+					<checksum>0383903a9a9e61ecb3a339f7981857ddb667cc61</checksum>
+					<url>gapid_2994895_windows.zip</url>
+				</complete>
+				<host-os>windows</host-os>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha2">
+		<!--Generated from bid:2, branch:constraint-2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>com.android.support.constraint:constraint-layout:1.0.0-alpha2</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha2"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed May 30 11:33:02 2018.-->
+				<complete>
+					<size>18249</size>
+					<checksum>2edb4fc33745cc9d69d985f29fd48fefcd0aa9f0</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha2.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha2">
+		<!--Generated from bid:2, branch:constraint-2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>com.android.support.constraint:constraint-layout-solver:1.0.0-alpha2</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri May 18 06:00:30 2018.-->
+				<complete>
+					<size>86115</size>
+					<checksum>2e7fd5d8d158f4517ba52af824f84466ffede879</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha2.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha3">
+		<!--Generated from bid:86, branch:constraint-2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>com.android.support.constraint:constraint-layout:1.0.0-alpha3</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha3"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 17 13:50:00 2018.-->
+				<complete>
+					<size>18288</size>
+					<checksum>1a26fb79d98421f315ead7ad15be167727533026</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha3.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha3">
+		<!--Generated from bid:86, branch:constraint-2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>com.android.support.constraint:constraint-layout-solver:1.0.0-alpha3</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue May 22 15:30:39 2018.-->
+				<complete>
+					<size>86365</size>
+					<checksum>cd1cbbb2621c9034b835e9b69243dc558cdee4dc</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha3.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha4">
+		<!--Generated from bid:9630, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>com.android.support.constraint:constraint-layout:1.0.0-alpha4</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun May 20 18:33:09 2018.-->
+				<complete>
+					<size>15554</size>
+					<checksum>645a9be1f0c1177301e71cd0ddccf1dd67c554fe</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha4.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4">
+		<!--Generated from bid:9630, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>com.android.support.constraint:constraint-layout-solver:1.0.0-alpha4</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 18 05:27:08 2018.-->
+				<complete>
+					<size>95406</size>
+					<checksum>2aa2aceecc6ba172742d0af0b43f11d03924eeb8</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha4.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha5">
+		<!--Generated from bid:9745, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-alpha5</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha5"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon May 21 01:45:05 2018.-->
+				<complete>
+					<size>16125</size>
+					<checksum>24f78daf491dcad74bcb2acfa79ea2d8e906f53b</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha5.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha5">
+		<!--Generated from bid:9745, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-alpha5</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri May 18 17:40:48 2018.-->
+				<complete>
+					<size>95430</size>
+					<checksum>7ba6c82c7645ac023cf45c1e27a6ae3added308a</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha5.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha6">
+		<!--Generated from bid:9762, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-alpha6</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha6"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu May 24 22:39:11 2018.-->
+				<complete>
+					<size>16378</size>
+					<checksum>cb60e9ad4f6d3cc3c5b1b98cd3610c8d3204e651</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha6.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha6">
+		<!--Generated from bid:9762, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-alpha6</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun  1 16:34:05 2018.-->
+				<complete>
+					<size>95488</size>
+					<checksum>b7e390f940704f4f78e1eaa5f5a5dba3bc3e81ad</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha6.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha7">
+		<!--Generated from bid:9780, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-alpha7</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha7"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun  1 04:07:48 2018.-->
+				<complete>
+					<size>16186</size>
+					<checksum>17ac210c85d24d7e8ace62847f05e4e45b640b73</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha7.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha7">
+		<!--Generated from bid:9780, branch:constraint_2.2-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-alpha7</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 21:54:52 2018.-->
+				<complete>
+					<size>95487</size>
+					<checksum>f08be3c306bf878de31c465e46a266c52014a13f</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha7.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8">
+		<!--Generated from bid:4552, branch:studio_master-dev-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-alpha8</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Jun 14 20:39:27 2018.-->
+				<complete>
+					<size>24797</size>
+					<checksum>7912ba03b04831f918f523648f118c4ee4da7604</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha8.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8">
+		<!--Generated from bid:4552, branch:studio_master-dev-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-alpha8</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 11:49:59 2018.-->
+				<complete>
+					<size>97549</size>
+					<checksum>cd13d16a8f0198c1d6040ec8b1d0d4e5bb7feb6a</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha8.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha9">
+		<!--Generated from bid:4942, branch:studio_master-dev-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-alpha9</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha9"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sat May 26 04:32:37 2018.-->
+				<complete>
+					<size>31754</size>
+					<checksum>89c2bbc005d4731c7a830a4d5aa98dae121a46a4</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-alpha9.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha9">
+		<!--Generated from bid:4942, branch:studio_master-dev-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-alpha9</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Jun  7 00:18:28 2018.-->
+				<complete>
+					<size>103824</size>
+					<checksum>2c52ddd883d83230a17042b8f4ba03669f0f5f40</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-alpha9.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta1">
+		<!--Generated from bid:3367812, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-beta1</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 18 05:57:31 2018.-->
+				<complete>
+					<size>31750</size>
+					<checksum>11f2f5cec4ff02986bad75435e5be77b704b4c64</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-beta1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1">
+		<!--Generated from bid:3367812, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-beta1</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 10 06:06:23 2018.-->
+				<complete>
+					<size>104706</size>
+					<checksum>042c25575e7650e96f0f5f5d1d3c54ed38eb821a</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-beta1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta2">
+		<!--Generated from bid:3408861, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-beta2</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun 12 19:23:55 2018.-->
+				<complete>
+					<size>31812</size>
+					<checksum>623939865ede2e5c2c975dc55963e0d182bcce95</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-beta2.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2">
+		<!--Generated from bid:3408861, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-beta2</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun  3 03:12:13 2018.-->
+				<complete>
+					<size>107335</size>
+					<checksum>28492fd42b20ae1586591ff906556d459cfdaae8</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-beta2.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta3">
+		<!--Generated from bid:3433553, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-beta3</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue Jun 12 19:32:43 2018.-->
+				<complete>
+					<size>32622</size>
+					<checksum>d78bb6a8ce92005fb1e4ed55d892a65b4258c60b</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-beta3.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3">
+		<!--Generated from bid:3433553, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-beta3</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Wed May 23 13:00:16 2018.-->
+				<complete>
+					<size>107593</size>
+					<checksum>268e763fa64bd217d8d830e59ce76be19aaba631</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-beta3.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4">
+		<!--Generated from bid:3490876, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-beta4</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue May 22 02:28:03 2018.-->
+				<complete>
+					<size>32687</size>
+					<checksum>dc60844aab93a09a54a3c107685a77b18d7c1c39</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-beta4.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4">
+		<!--Generated from bid:3490876, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-beta4</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Tue May 29 07:11:26 2018.-->
+				<complete>
+					<size>109361</size>
+					<checksum>2213bf37e7a2869db2635895b8e90ca6841e79d2</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-beta4.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5">
+		<!--Generated from bid:3720770, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0-beta5</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Jun 14 19:27:43 2018.-->
+				<complete>
+					<size>39266</size>
+					<checksum>4660f6c7a576ea1364f0c3225db71c29ca660d9a</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0-beta5.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5">
+		<!--Generated from bid:3720770, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0-beta5</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 17 07:33:52 2018.-->
+				<complete>
+					<size>92284</size>
+					<checksum>3918cfef73e64048d0b3e048068e208b414e7e91</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0-beta5.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0">
+		<!--Generated from bid:3756563, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.0</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri May 18 20:41:02 2018.-->
+				<complete>
+					<size>39153</size>
+					<checksum>70acf99689b933bc6735645d5c3d92b91954b6cb</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.0.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0">
+		<!--Generated from bid:3756563, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.0</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun  4 22:35:06 2018.-->
+				<complete>
+					<size>91207</size>
+					<checksum>b621b9d5adf273bb0725948589863e60e96eeaf1</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.0.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1">
+		<!--Generated from bid:3775610, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.1</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sun Jun 10 19:19:18 2018.-->
+				<complete>
+					<size>39547</size>
+					<checksum>342b0894b8651fff37586f80f383733e97aba9f9</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1">
+		<!--Generated from bid:3775610, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.1</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Mon Jun 11 08:44:59 2018.-->
+				<complete>
+					<size>91823</size>
+					<checksum>76f8823def9a6da8954a54737762a6820bc1d043</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.1.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2">
+		<!--Generated from bid:3788585, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>ConstraintLayout for Android 1.0.2</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Jun 15 18:25:12 2018.-->
+				<complete>
+					<size>39625</size>
+					<checksum>3d9688a50fe0ed7348275f85d1b02278f616d8a4</checksum>
+					<url>com.android.support.constraint-constraint-layout-1.0.2.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2">
+		<!--Generated from bid:3788585, branch:constraintlayout-1.0-release-->
+		<type-details xsi:type="addon:mavenType">
+			<vendor>
+				<id>android</id>
+				<display>Android</display>
+			</vendor>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Solver for ConstraintLayout 1.0.2</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Sat May 26 10:48:16 2018.-->
+				<complete>
+					<size>91961</size>
+					<checksum>96d7ff669f0e808e9833b2c2e320702826ccc8be</checksum>
+					<url>com.android.support.constraint-constraint-layout-solver-1.0.2.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+</addon:sdk-addon>

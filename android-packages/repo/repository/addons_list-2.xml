@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<sdk:sdk-addons-list xmlns:sdk="http://schemas.android.com/sdk/android/addons-list/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--Generated on 2018-10-12 09:02:04.263613 with ADRT.-->
+	<sdk:addon-site>
+		<sdk:name>Google Inc.</sdk:name>
+		<sdk:url>addon.xml</sdk:url>
+	</sdk:addon-site>
+	<sdk:addon-site>
+		<sdk:name>Glass Development Kit, Google Inc.</sdk:name>
+		<sdk:url>glass/addon.xml</sdk:url>
+	</sdk:addon-site>
+	<sdk:addon-site>
+		<sdk:name>Intel HAXM</sdk:name>
+		<sdk:url>extras/intel/addon.xml</sdk:url>
+	</sdk:addon-site>
+	<sdk:sys-img-site>
+		<sdk:name>Android System Images</sdk:name>
+		<sdk:url>sys-img/android/sys-img.xml</sdk:url>
+	</sdk:sys-img-site>
+	<sdk:sys-img-site>
+		<sdk:name>Android Wear System Images</sdk:name>
+		<sdk:url>sys-img/android-wear/sys-img.xml</sdk:url>
+	</sdk:sys-img-site>
+	<sdk:sys-img-site>
+		<sdk:name>Android TV System Images</sdk:name>
+		<sdk:url>sys-img/android-tv/sys-img.xml</sdk:url>
+	</sdk:sys-img-site>
+	<sdk:sys-img-site>
+		<sdk:name>Google API add-on System Images</sdk:name>
+		<sdk:url>sys-img/google_apis/sys-img.xml</sdk:url>
+	</sdk:sys-img-site>
+	<sdk:sys-img-site>
+		<sdk:name>Google API with Playstore System Images</sdk:name>
+		<sdk:url>sys-img/google_apis_playstore/sys-img.xml</sdk:url>
+	</sdk:sys-img-site>
+</sdk:sdk-addons-list>
