@@ -1,7 +1,14 @@
 { stdenv, mkGeneric, autoPatchelfHook
-, libGL, libX11, libpulseaudio, zlib }:
+, libGL, libX11, libXext, libpulseaudio, zlib }:
 
-package: mkGeneric {
+package:
+
+let
+  libdir = if stdenv.is64bit then "lib64" else "lib";
+
+in
+
+mkGeneric {
   inherit package;
 
   nativeBuildInputs = [
@@ -11,6 +18,7 @@ package: mkGeneric {
   buildInputs = [
     libGL
     libX11
+    libXext
     libpulseaudio
     zlib
   ];
@@ -20,6 +28,7 @@ package: mkGeneric {
   ];
 
   postInstall = ''
-    mkdir -p $out/bin
+    # for emulator-27
+    rm -r $out/emulator/${libdir}/gles_mesa 2>/dev/null || true
   '';
 }
