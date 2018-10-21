@@ -3,7 +3,7 @@
 { stdenv, lib, callPackage, fetchurl, androidRepository }:
 
 let
-  inherit (builtins) filter hasAttr head match length listToAttrs
+  inherit (builtins) any filter hasAttr head match length listToAttrs
     replaceStrings split;
 
   inherit (lib) concatStringsSep foldr hasPrefix init last
@@ -26,13 +26,17 @@ let
   mkBuildTools = callPackage ./build-tools.nix { inherit mkGeneric; };
   mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };
   mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
+  mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
   mkTools = callPackage ./tools.nix { inherit mkGeneric; };
+
+  prebuilts = [ "cmake" "lldb" ];
 
   findBuilder = path: package:
     if (hasPrefix "build-tools;" package.path) then mkBuildTools
     else if (package.path == "emulator") then mkEmulator
     else if (package.path == "platform-tools") then mkPlatformTools
     else if (package.path == "tools") then mkTools
+    else if (any (prebuilt: hasPrefix prebuilt package.path) prebuilts) then mkPrebuilt
     else (p: mkGeneric { package = p; });
 
 in

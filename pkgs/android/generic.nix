@@ -60,8 +60,6 @@ in
 stdenv.mkDerivation ({
   inherit pname version name src;
 
-  unpackCmd = "unzip $curSrc";
-
   nativeBuildInputs = [ unzip ] ++ (args.nativeBuildInputs or []);
 
   installPhase = ''
