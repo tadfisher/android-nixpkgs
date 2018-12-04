@@ -40,14 +40,14 @@
     };
   }
   {
-    path = "system-images;android-P;android-wear-cn;x86";
+    path = "system-images;android-28;android-wear-cn;x86";
     apiLevel = "28";
-    revision = "2";
+    revision = "3";
     displayName = "China version of Wear OS Intel x86 Atom System Image";
-    license = "android-sdk-preview-license";
+    license = "android-sdk-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-P_r02.zip";
-      sha1 = "a61a2e453a11f77ab15b3e0bf1e017e0bb9d1bcc";
+      path = "x86-28_r03.zip";
+      sha1 = "2099d87709c5e064273925dbf2cf1fd081bf0262";
     };
   }]

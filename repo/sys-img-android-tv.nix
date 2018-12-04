@@ -45,7 +45,7 @@
     dependencies = [ "patcher;v4" ];
     source = {
       path = "x86-23_r17.zip";
-      sha1 = "8ac93a8d2867d568c06ee5ace493c917a420ee49";
+      sha1 = "6d42eb8f07e1c49c000e530fdb7de894144ea19b";
     };
   }
   {
@@ -62,60 +62,60 @@
   {
     path = "system-images;android-24;android-tv;x86";
     apiLevel = "24";
-    revision = "18";
+    revision = "19";
     displayName = "Android TV Intel x86 Atom System Image";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-24_r18.zip";
-      sha1 = "159aac1decde0583313e6ad87b5f6856d7cb887e";
+      path = "x86-24_r19.zip";
+      sha1 = "478e7073f9fcd588bcce89946aa632fbf302ac6a";
     };
   }
   {
     path = "system-images;android-25;android-tv;x86";
     apiLevel = "25";
-    revision = "12";
+    revision = "13";
     displayName = "Android TV Intel x86 Atom System Image";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-25_r12.zip";
-      sha1 = "601e9347dede68d14ab549ae9893a0890dcb7b16";
+      path = "x86-25_r13.zip";
+      sha1 = "fda1743a87331b43b1ff35cd70f3276ae0b1836d";
     };
   }
   {
     path = "system-images;android-26;android-tv;x86";
     apiLevel = "26";
-    revision = "10";
+    revision = "11";
     displayName = "Android TV Intel x86 Atom System Image";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "emulator" ];
     source = {
-      path = "x86-26_r10.zip";
-      sha1 = "cae5a211131168bb9b1945db9922a1ba30f096e6";
+      path = "x86-26_r11.zip";
+      sha1 = "5c4b0b3c0b9d04a3364956a7ba31d30c33ea57e7";
     };
   }
   {
     path = "system-images;android-27;android-tv;x86";
     apiLevel = "27";
-    revision = "5";
+    revision = "6";
     displayName = "Android TV Intel x86 Atom System Image";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-27_r05.zip";
-      sha1 = "50a8102e41dc9231532da122e3b53e61675c7957";
+      path = "x86-27_r06.zip";
+      sha1 = "6b69f1e95a3db3d973e19a95ab5da1adc7750d54";
     };
   }
   {
     path = "system-images;android-28;android-tv;x86";
     apiLevel = "28";
-    revision = "5";
+    revision = "7";
     displayName = "Android TV Intel x86 Atom System Image";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-28_r05.zip";
-      sha1 = "1e41da42407ca8db8dc47c652df99784c6a0d262";
+      path = "x86-28_r07.zip";
+      sha1 = "3ed7e51036957cf350db7fa128cb485b61cbd061";
     };
   }]

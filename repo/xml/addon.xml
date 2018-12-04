@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdk:sdk-addon xmlns:sdk="http://schemas.android.com/sdk/android/addon/7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!--Generated on 2018-09-27 12:07:52.862255 with ADRT.-->
+	<!--Generated on 2018-11-05 12:39:22.007988 with ADRT.-->
 	<sdk:license id="android-sdk-license" type="text">Terms and Conditions
 
 This is the Android Software Development Kit License Agreement
@@ -1589,18 +1589,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&
 		<sdk:path>auto</sdk:path>
 	</sdk:extra>
 	<sdk:extra>
-		<!--Generated from bid:214678223, branch:perforce-->
+		<!--Generated from bid:219840029, branch:perforce-->
 		<sdk:revision>
 			<sdk:major>1</sdk:major>
-			<sdk:minor>5</sdk:minor>
+			<sdk:minor>6</sdk:minor>
 			<sdk:micro>0</sdk:micro>
 		</sdk:revision>
 		<sdk:archives>
 			<sdk:archive>
-				<!--Built on: Wed Sep 26 15:20:22 2018.-->
-				<sdk:size>33351418</sdk:size>
-				<sdk:checksum type="sha1">6c282b9c686e819fe7f5ac8f2249d2479acb63b4</sdk:checksum>
-				<sdk:url>iasdk-1.5.0-1538000167.zip</sdk:url>
+				<!--Built on: Fri Nov  2 13:23:45 2018.-->
+				<sdk:size>36423636</sdk:size>
+				<sdk:checksum type="sha1">0bb546a846815f5b5ccd2ed00549c9912d1d48cb</sdk:checksum>
+				<sdk:url>iasdk-1.6.0-1540933685.zip</sdk:url>
 			</sdk:archive>
 		</sdk:archives>
 		<sdk:uses-license ref="android-sdk-license"/>

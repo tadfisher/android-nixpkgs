@@ -544,6 +544,31 @@
   }
   {
     path = "ndk-bundle";
+    revision = "19.0.5106443.1";
+    displayName = "NDK";
+    license = "android-sdk-preview-license";
+    dependencies = [ "patcher;v4" ];
+    sources = {
+      "macosx-64" = {
+        path = "android-ndk-r19-beta1-darwin-x86_64.zip";
+        sha1 = "1d87704cc57627a76645db3b7f951510ca8809f6";
+      };
+      "linux-64" = {
+        path = "android-ndk-r19-beta1-linux-x86_64.zip";
+        sha1 = "73e750310ad695ac937e2fd3026ce60338a2ff94";
+      };
+      "windows-32" = {
+        path = "android-ndk-r19-beta1-windows-x86.zip";
+        sha1 = "d57eeafae6083ef5db5e1e30ce89dcef069d74cc";
+      };
+      "windows-64" = {
+        path = "android-ndk-r19-beta1-windows-x86_64.zip";
+        sha1 = "13a97040b9e2e1f117eb4b7b3be7fe8f962cb7d7";
+      };
+    };
+  }
+  {
+    path = "ndk-bundle";
     revision = "18.1.5063045";
     displayName = "NDK";
     license = "android-sdk-license";
@@ -1678,7 +1703,7 @@
     path = "cmake;3.10.2.4988404";
     revision = "3.10.2";
     displayName = "CMake 3.10.2.4988404";
-    license = "android-sdk-preview-license";
+    license = "android-sdk-license";
     sources = {
       "macosx-64" = {
         path = "cmake-3.10.2-darwin-x86_64.zip";
@@ -1716,79 +1741,79 @@
   }
   {
     path = "emulator";
-    revision = "27.3.10";
+    revision = "28.0.16";
     displayName = "Android Emulator";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "linux" = {
-        path = "emulator-linux-4969155.zip";
-        sha1 = "5b037b25bc6567fda3071457f0009c057670d9e8";
+        path = "emulator-linux-5112988.zip";
+        sha1 = "b5973367e6d40e5e455bbaf537758ccb9df34ed3";
       };
     };
   }
   {
     path = "emulator";
-    revision = "27.3.10";
+    revision = "28.0.16";
     displayName = "Android Emulator";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "macosx" = {
-        path = "emulator-darwin-4969155.zip";
-        sha1 = "28d2b51ee5c84bc544deee433419f33dc9e05b66";
+        path = "emulator-darwin-5112988.zip";
+        sha1 = "8554efbd1e5735bacb5bb0f1ffd6a2da90059168";
       };
     };
   }
   {
     path = "emulator";
-    revision = "27.3.10";
+    revision = "28.0.16";
     displayName = "Android Emulator";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "windows" = {
-        path = "emulator-windows-4969155.zip";
-        sha1 = "dc53ccf7c2e51cb639dc6327030ff588f9d78faa";
+        path = "emulator-windows-5112988.zip";
+        sha1 = "8a21d174a517859fa00c999f139b11256ecbe5f6";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.13";
+    revision = "28.0.18";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "linux" = {
-        path = "emulator-linux-5075406.zip";
-        sha1 = "71715c414d898676bd21b8f62b03acd9839d42c9";
+        path = "emulator-linux-5148482.zip";
+        sha1 = "f2353fef9e1f1a705ee181fdd47d1ad3f3a1a0bb";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.13";
+    revision = "28.0.18";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "macosx" = {
-        path = "emulator-darwin-5075406.zip";
-        sha1 = "278a44972a84b1c372988fa1e2cf7a5880195d98";
+        path = "emulator-darwin-5148482.zip";
+        sha1 = "89c03f3962f8b4266ab75ee0a99f4c5fb5f811a4";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.13";
+    revision = "28.0.18";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "windows" = {
-        path = "emulator-windows-5075406.zip";
-        sha1 = "710f6387174a1d05c5844283be2105a96edf42c6";
+        path = "emulator-windows-5148482.zip";
+        sha1 = "fa800779eabaafa40fa5b3b733eb58e81acf4966";
       };
     };
   }

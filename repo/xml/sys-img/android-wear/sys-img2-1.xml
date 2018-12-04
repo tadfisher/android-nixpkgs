@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sys-img:sdk-sys-img xmlns:sys-img="http://schemas.android.com/sdk/android/repo/sys-img2/01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!--Generated on 2018-09-27 12:07:52.010403 with ADRT.-->
+	<!--Generated on 2018-11-15 16:18:50.518499 with ADRT.-->
 	<license id="android-sdk-license" type="text">Terms and Conditions
 
 This is the Android Software Development Kit License Agreement
@@ -790,11 +790,10 @@ August 15, 2011</license>
 			</archive>
 		</archives>
 	</remotePackage>
-	<remotePackage path="system-images;android-P;android-wear;x86">
-		<!--Generated from bid:4766717, branch:git_pi-wear-release-->
+	<remotePackage path="system-images;android-28;android-wear;x86">
+		<!--Generated from bid:5049978, branch:git_pi-wear-dr-shiner-release-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
 			<api-level>28</api-level>
-			<codename>P</codename>
 			<tag>
 				<id>android-wear</id>
 				<display>Wear OS</display>
@@ -802,21 +801,21 @@ August 15, 2011</license>
 			<abi>x86</abi>
 		</type-details>
 		<revision>
-			<major>2</major>
+			<major>3</major>
 		</revision>
 		<display-name>Wear OS Intel x86 Atom System Image</display-name>
-		<uses-license ref="android-sdk-preview-license"/>
+		<uses-license ref="android-sdk-license"/>
 		<dependencies>
 			<dependency path="patcher;v4"/>
 		</dependencies>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Mon May  7 17:35:27 2018.-->
+				<!--Built on: Fri Oct  5 11:20:37 2018.-->
 				<complete>
-					<size>415195356</size>
-					<checksum>cd0d3a56e114dbb0a2a77d58942d344db464b514</checksum>
-					<url>x86-P_r02.zip</url>
+					<size>413547080</size>
+					<checksum>b80bd53ab69f19441714bff2e4d55931e6d3f7be</checksum>
+					<url>x86-28_r03.zip</url>
 				</complete>
 			</archive>
 		</archives>

@@ -54,24 +54,24 @@
   {
     path = "system-images;android-28;google_apis_playstore;x86";
     apiLevel = "28";
-    revision = "5";
+    revision = "8";
     displayName = "Google Play Intel x86 Atom System Image";
-    license = "android-sdk-preview-license";
+    license = "android-sdk-license";
     dependencies = [ "patcher;v4" "emulator" ];
     source = {
-      path = "x86-28_r05.zip";
-      sha1 = "4c570d259e93b0b27f97bad1aca2ac47f1e9b51a";
+      path = "x86-28_r08.zip";
+      sha1 = "5381f9d52a3bf1967c9c92a25b20012cd68764c8";
     };
   }
   {
     path = "system-images;android-28;google_apis_playstore;x86_64";
     apiLevel = "28";
-    revision = "5";
+    revision = "8";
     displayName = "Google Play Intel x86 Atom_64 System Image";
-    license = "android-sdk-preview-license";
+    license = "android-sdk-license";
     dependencies = [ "patcher;v4" "emulator" ];
     source = {
-      path = "x86_64-28_r05.zip";
-      sha1 = "5f6b238e4c7de41fd2a1c66841093bcf517255a1";
+      path = "x86_64-28_r08.zip";
+      sha1 = "a767da996fdea7a1f5632a9206fa5c009d6e580c";
     };
   }]
