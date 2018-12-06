@@ -23,5 +23,5 @@ let
   });
 
 in androidPackages // {
-  androidSdk = callPackage ./pkgs/android/sdk.nix { inherit androidPackages; };
+  sdk = callPackage ./pkgs/android/sdk.nix { inherit androidPackages; };
 }

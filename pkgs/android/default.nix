@@ -37,17 +37,19 @@ let
   mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };
   mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
   mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
+  mkSystemImage = callPackage ./sys-img.nix { inherit mkGeneric; };
   mkTools = callPackage ./tools.nix { inherit mkGeneric; };
 
   prebuilts = [ "cmake" "lldb" ];
 
   findBuilder = path: package:
-    if (hasPrefix "build-tools;" package.path) then mkBuildTools
-    else if (package.path == "emulator") then mkEmulator
-    else if (package.path == "platform-tools") then mkPlatformTools
-    else if (package.path == "tools") then mkTools
-    else if (any (prebuilt: hasPrefix prebuilt package.path) prebuilts) then mkPrebuilt
-    else (p: mkGeneric { package = p; });
+    /**/ if hasPrefix "build-tools;" package.path then mkBuildTools
+    else if package.path == "emulator" then mkEmulator
+    else if package.path == "platform-tools" then mkPlatformTools
+    else if package.path == "tools" then mkTools
+    else if hasPrefix "system-images" package.path then mkSystemImage
+    else if any (prebuilt: hasPrefix prebuilt package.path) prebuilts then mkPrebuilt
+    else p: mkGeneric { package = p; };
 
   androidPackages = mapAttrsRecursiveCond
     (as: !(as ? path))
