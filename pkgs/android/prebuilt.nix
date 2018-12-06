@@ -11,7 +11,7 @@ let
 
   buildArgs =
     if (hasPrefix "cmake" package.path) then rec {
-      name = "android-prebuild-cmake-${package.revision}";
+      name = "android-prebuilt-cmake-${package.revision}";
       unpackCmd = singleRootUnzip;
       buildInputs = [ stdenv.cc.cc.lib ];
     }

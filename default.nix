@@ -1,13 +1,7 @@
 {
   pkgs ? import <nixpkgs> {
     overlays = [(self: super: {
-      autoPatchelfHook = super.makeSetupHook {
-        name = "auto-patchelf-hook";
-        substitutions = rec {
-          ld = "${super.stdenv.cc}/nix-support/dynamic-linker";
-          ld32 = if super.stdenv.hostPlatform.is32bit then ld
-            else "${super.stdenv_32bit.cc}/nix-support/dynamic-linker-m32";
-        }; }
+      autoPatchelfHook = super.makeSetupHook { name = "auto-patchelf-hook"; }
         ./pkgs/build-support/setup-hooks/auto-patchelf.sh;
       lib = super.stdenv.lib.extend (import ./lib);
     })];

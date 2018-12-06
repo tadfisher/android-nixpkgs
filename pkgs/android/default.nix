@@ -1,6 +1,6 @@
 # TODO ndk
 
-{ stdenv, lib, callPackage, fetchurl, androidRepository }:
+{ stdenv, lib, callPackage, fetchurl, androidRepository, pkgsi686Linux }:
 
 let
   inherit (builtins) any attrValues elem filter hasAttr head match length listToAttrs
@@ -38,7 +38,17 @@ let
   mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
   mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
   mkSystemImage = callPackage ./sys-img.nix { inherit mkGeneric; };
-  mkTools = callPackage ./tools.nix { inherit mkGeneric; };
+
+  mkTools =
+    let
+      pkgs32bit = with pkgsi686Linux; {
+        fontconfig-32 = fontconfig;
+        freetype-32 = freetype;
+        libX11-32 = xorg.libX11;
+        libXrender-32 = xorg.libXrender;
+        zlib-32 = zlib;
+      };
+    in callPackage ./tools.nix ({ inherit mkGeneric; } // pkgs32bit);
 
   prebuilts = [ "cmake" "lldb" ];
 

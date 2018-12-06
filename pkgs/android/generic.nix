@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, unzip }:
+{ stdenv, stdenv_32bit, fetchurl, unzip }:
 
 { package
 , repoUrl ? https://dl.google.com/android/repository
@@ -57,7 +57,7 @@ let
 
 in
 
-stdenv.mkDerivation ({
+(if support32bit then stdenv_32bit else stdenv).mkDerivation ({
   inherit pname version name src;
 
   nativeBuildInputs = [ unzip ] ++ (args.nativeBuildInputs or []);

@@ -2,6 +2,7 @@ declare -a autoPatchelfLibs
 
 gatherLibraries() {
     autoPatchelfLibs+=("$1/lib")
+    echo "gatherLibraries: $1/lib" >&2
 }
 
 addEnvHooks "$targetOffset" gatherLibraries
@@ -17,11 +18,6 @@ isExecutable() {
     # is DYN.
     LANG=C readelf -h -l "$1" 2> /dev/null \
         | grep -q '^ *Type: *EXEC\>\|^ *INTERP\>'
-}
-
-getElfClass() {
-    LANG=C readelf -h "$1" 2> /dev/null \
-        | grep '^ *Class:' | tr -s ' ' | cut -d ' ' -f 3
 }
 
 # We cache dependencies so that we don't need to search through all of them on
@@ -59,7 +55,7 @@ populateCacheWithRecursiveDeps() {
 }
 
 getSoArch() {
-    objdump -f "$1" | sed -ne 's/^architecture: *\([^,]\+\).*/\1/p'
+    objdump -f "$1" 2> /dev/null | sed -ne 's/^architecture: *\([^,]\+\).*/\1/p'
 }
 
 # NOTE: If you want to use this function outside of the autoPatchelf function,
@@ -101,17 +97,51 @@ findDependency() {
     return 1
 }
 
-autoPatchelfFile() {
-    local dep interpreter rpath="" toPatch="$1"
+# As with dependencies, we also cache interpreters per-architecture to avoid
+# extra searches.
+declare -gA interpCache
+declare -gi interpCacheInitialised=0
+declare -g foundInterpreter
 
-    if [ "$(getElfClass "$toPatch")" = "ELF32" ]; then
-        interpreter=$(< "@ld32@")
-    else
-        interpreter=$(< "@ld@")
+# Search through the interpreters declared by $NIX_CC for one matching a given
+# machine architecture. For multilib stdenvs, $NIX_CC contains mutiple
+# 'nix-support/dynamic-linker*' entries, each pointing to an interpreter for a
+# supported architecture.
+findInterpreter() {
+    local arch="$1" ld interp interpArch
+
+    if [ $interpCacheInitialised -eq 0 ]; then
+        for ld in "$NIX_CC/nix-support/dynamic-linker"*; do
+            interp="$(< "$ld")" || return 1
+            interpArch="$(getSoArch "$interp")"
+            interpCache["$interpArch"]="$interp"
+        done
+        interpCacheInitialised=1
     fi
 
+    foundInterpreter="${interpCache["$arch"]}"
+    [ ! -z "$foundInterpreter" ]
+}
+
+autoPatchelfFile() {
+    local dep rpath="" toPatch="$1"
+    local arch="$(getSoArch "$toPatch")"
+
+    local -i interpNotFound=0
+
     if isExecutable "$toPatch"; then
-        patchelf --set-interpreter "$interpreter" "$toPatch"
+        # In case the executable is for a non-native architecture, search
+        # for a suitable interpreter to patch.
+        echo "searching for interpreter of $toPatch" >&2
+        echo -n "  $arch -> "
+        if findInterpreter "$arch"; then
+            echo "found: $foundInterpreter"
+            patchelf --set-interpreter "$foundInterpreter" "$toPatch"
+        else
+            echo "not found (in ${!interpCache[@]})" >&2
+            interpNotFound=1
+        fi
+
         if [ -n "$runtimeDependencies" ]; then
             for dep in $runtimeDependencies; do
                 rpath="$rpath${rpath:+:}$dep/lib"
@@ -137,7 +167,7 @@ autoPatchelfFile() {
 
     for dep in $missing; do
         echo -n "  $dep -> " >&2
-        if findDependency "$dep" "$(getSoArch "$toPatch")"; then
+        if findDependency "$dep" "$arch"; then
             rpath="$rpath${rpath:+:}${foundDependency%/*}"
             echo "found: $foundDependency" >&2
         else
@@ -150,6 +180,7 @@ autoPatchelfFile() {
     # the stdenv setup script is run with set -e. The actual error is emitted
     # earlier in the previous loop.
     [ $depNotFound -eq 0 ]
+    [ $interpNotFound -eq 0 ]
 
     if [ -n "$rpath" ]; then
         echo "setting RPATH to: $rpath" >&2

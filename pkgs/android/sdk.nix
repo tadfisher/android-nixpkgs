@@ -1,8 +1,12 @@
-{ stdenv, buildEnv, androidPackages }:
+{ stdenv, runCommand, symlinkJoin, androidPackages, jdk }:
 
 pkgsFun:
 
-buildEnv {
+symlinkJoin {
   name = "android-sdk-env";
   paths = pkgsFun androidPackages;
+  postBuild = ''
+    mkdir -p $out/licenses
+    cp -r ${../../repo/licenses}/* $out/licenses/
+  '';
 }
