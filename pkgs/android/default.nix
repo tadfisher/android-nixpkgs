@@ -3,13 +3,21 @@
 { stdenv, lib, callPackage, fetchurl, androidRepository }:
 
 let
-  inherit (builtins) any filter hasAttr head match length listToAttrs
-    replaceStrings split;
+  inherit (builtins) any attrValues elem filter hasAttr head match length listToAttrs
+    replaceStrings split compareVersions;
 
-  inherit (lib) concatStringsSep foldr hasPrefix init last
-    prefixedBy suffixedBy versionAsPath
+  inherit (lib) concatStringsSep count foldr hasPrefix init last
+    prefixedBy range suffixedBy versionAsPath
     mapAttrsRecursiveCond
     recursiveUpdate removePrefix setAttrByPath sublist;
+
+  standalonePaths =
+    let
+      withoutVersions =
+        filter (path: match "[[:digit:]].*" (last (split ";" path)) == null)
+               (map (p: p.path) androidRepository);
+    in
+      filter (path: count (x: x == path) withoutVersions == 1) withoutVersions;
 
   packages = foldr (p: attrs:
     let
@@ -18,7 +26,9 @@ let
         then (sublist 0 ((length path) - 2) path) ++ [ "${last (init path)}-${versionAsPath (last path)}"]
         else (init path) ++ [ "${last path}-${versionAsPath p.revision}"];
     in
-      recursiveUpdate attrs (setAttrByPath merged p)
+      if elem p.path standalonePaths
+      then recursiveUpdate attrs (setAttrByPath path p)
+      else recursiveUpdate attrs (setAttrByPath merged p)
   ) {} androidRepository;
 
   mkGeneric = callPackage ./generic.nix {};
@@ -39,9 +49,26 @@ let
     else if (any (prebuilt: hasPrefix prebuilt package.path) prebuilts) then mkPrebuilt
     else (p: mkGeneric { package = p; });
 
-in
+  androidPackages = mapAttrsRecursiveCond
+    (as: !(as ? path))
+    (path: package: let build = findBuilder path package; in build package)
+    packages;
 
-mapAttrsRecursiveCond
-  (as: !(hasAttr "path" as))
-  (path: package: let build = findBuilder path package; in build package)
-  packages
+  findLatest = prefix: packages:
+    foldr (a: b: if compareVersions a.version b.version > 0 then a else b)
+          { version = "0"; }
+          (filter (p: p ? name && hasPrefix prefix p.name) (attrValues packages));
+
+  findLatestMajors = prefix: majors: packages:
+    foldr (v: attrs: attrs // { "${prefix}-${toString v}" = findLatest "${prefix}-${toString v}" packages; }) {} majors;
+
+in recursiveUpdate androidPackages ({
+  build-tools = findLatest "build-tools" androidPackages;
+  emulator = findLatest "emulator" androidPackages;
+  ndk-bundle = findLatest "ndk-bundle" androidPackages;
+  platform-tools = findLatest "platform-tools" androidPackages;
+  platforms = androidPackages.platforms // {
+    android = findLatest "android" androidPackages.platforms;
+  };
+  tools = findLatest "tools" androidPackages;
+} // (findLatestMajors "build-tools" (range 17 28) androidPackages))
