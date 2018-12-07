@@ -33,7 +33,11 @@ let
 
   mkGeneric = callPackage ./generic.nix {};
 
-  mkBuildTools = callPackage ./build-tools.nix { inherit mkGeneric; };
+  mkBuildTools = callPackage ./build-tools.nix {
+    inherit mkGeneric;
+    zlib-32 = pkgsi686Linux.zlib;
+  };
+
   mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };
   mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
   mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
