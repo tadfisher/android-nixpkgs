@@ -1,5 +1,5 @@
 { stdenv, mkGeneric, autoPatchelfHook
-, libGL, libX11, libXext, libpulseaudio, zlib }:
+, fontconfig, freetype, libGL, libX11, libXext, libpulseaudio, libxkbcommon, zlib }:
 
 package:
 
@@ -16,10 +16,13 @@ mkGeneric {
   ];
 
   buildInputs = [
+    fontconfig
+    freetype
     libGL
     libX11
     libXext
     libpulseaudio
+    libxkbcommon
     zlib
   ];
 

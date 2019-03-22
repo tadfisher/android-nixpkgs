@@ -15,6 +15,9 @@ let
   androidPackages = recurseIntoAttrs (callPackage ./pkgs/android {
     inherit androidRepository;
   });
+  writePackageXml = callPackage ./pkgs/android/xml.nix {
+    licenses = import ./repo/licenses/licenses.nix;
+  };
 
 in androidPackages // {
   sdk = callPackage ./pkgs/android/sdk.nix { inherit androidPackages; };

@@ -2,9 +2,15 @@
 
 pkgsFun:
 
-symlinkJoin {
+let
+  packages = pkgsFun androidPackages;
+  xml = map (p: p.packageXml) packages;
+
+in symlinkJoin {
   name = "android-sdk-env";
-  paths = pkgsFun androidPackages;
+
+  paths = packages ++ xml;
+
   postBuild = ''
     mkdir -p $out/licenses
     cp -r ${../../repo/licenses}/* $out/licenses/

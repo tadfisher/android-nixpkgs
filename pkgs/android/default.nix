@@ -31,7 +31,11 @@ let
       else recursiveUpdate attrs (setAttrByPath merged p)
   ) {} androidRepository;
 
-  mkGeneric = callPackage ./generic.nix {};
+  writePackageXml = callPackage ./xml.nix {
+    licenses = import ../../repo/licenses/licenses.nix;
+  };
+
+  mkGeneric = callPackage ./generic.nix { inherit writePackageXml; };
 
   mkBuildTools = callPackage ./build-tools.nix {
     inherit mkGeneric;
@@ -39,8 +43,11 @@ let
   };
 
   mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };
+
   mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
+
   mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
+
   mkSystemImage = callPackage ./sys-img.nix { inherit mkGeneric; };
 
   mkTools =

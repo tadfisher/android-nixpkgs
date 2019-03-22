@@ -1,4 +1,4 @@
-{ stdenv, stdenv_32bit, fetchurl, unzip }:
+{ stdenv, stdenv_32bit, fetchurl, unzip, writePackageXml }:
 
 { package
 , repoUrl ? https://dl.google.com/android/repository
@@ -67,6 +67,10 @@ in
     cp -r * $out/${outdir}/
     runHook postInstall
   '';
+
+  passthru = {
+    packageXml = writePackageXml name outdir package;
+  };
 
   meta = with stdenv.lib; {
     description = package.displayName;
