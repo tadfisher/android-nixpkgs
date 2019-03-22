@@ -25,6 +25,17 @@
     };
   }
   {
+    path = "platforms;android-Q";
+    apiLevel = "28";
+    revision = "1";
+    displayName = "Android SDK Platform Q";
+    license = "android-sdk-license";
+    source = {
+      path = "platform-Q_r01.zip";
+      sha1 = "aa7696570651e7f6e2f414fdff0eaeeec3c0ebed";
+    };
+  }
+  {
     path = "platforms;android-28";
     apiLevel = "28";
     revision = "6";
@@ -544,51 +555,51 @@
   }
   {
     path = "ndk-bundle";
-    revision = "19.0.5106443.1";
+    revision = "20.0.5344622.1";
     displayName = "NDK";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" ];
     sources = {
       "macosx-64" = {
-        path = "android-ndk-r19-beta1-darwin-x86_64.zip";
-        sha1 = "1d87704cc57627a76645db3b7f951510ca8809f6";
+        path = "android-ndk-r20-beta1-darwin-x86_64.zip";
+        sha1 = "81128edb666af06cd0668d40a0be731bb4ba85a8";
       };
       "linux-64" = {
-        path = "android-ndk-r19-beta1-linux-x86_64.zip";
-        sha1 = "73e750310ad695ac937e2fd3026ce60338a2ff94";
+        path = "android-ndk-r20-beta1-linux-x86_64.zip";
+        sha1 = "8aff5c9079bff4f7cf77c34d3795cf498aced8cb";
       };
       "windows-32" = {
-        path = "android-ndk-r19-beta1-windows-x86.zip";
-        sha1 = "d57eeafae6083ef5db5e1e30ce89dcef069d74cc";
+        path = "android-ndk-r20-beta1-windows-x86.zip";
+        sha1 = "38c295e53e24200ce042ed8f715fd1ec85faa4d1";
       };
       "windows-64" = {
-        path = "android-ndk-r19-beta1-windows-x86_64.zip";
-        sha1 = "13a97040b9e2e1f117eb4b7b3be7fe8f962cb7d7";
+        path = "android-ndk-r20-beta1-windows-x86_64.zip";
+        sha1 = "8be070e0539c6e251164edc0912dd5fb293a73c7";
       };
     };
   }
   {
     path = "ndk-bundle";
-    revision = "18.1.5063045";
+    revision = "19.2.5345600";
     displayName = "NDK";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" ];
     sources = {
       "macosx-64" = {
-        path = "android-ndk-r18b-darwin-x86_64.zip";
-        sha1 = "98cb9909aa8c2dab32db188bbdc3ac6207e09440";
+        path = "android-ndk-r19c-darwin-x86_64.zip";
+        sha1 = "f46b8193109bba8a58e0461c1a48f4534051fb25";
       };
       "linux-64" = {
-        path = "android-ndk-r18b-linux-x86_64.zip";
-        sha1 = "500679655da3a86aecf67007e8ab230ea9b4dd7b";
+        path = "android-ndk-r19c-linux-x86_64.zip";
+        sha1 = "fd94d0be6017c6acbd193eb95e09cf4b6f61b834";
       };
       "windows-32" = {
-        path = "android-ndk-r18b-windows-x86.zip";
-        sha1 = "4b8b6a4edc0fa967b429c1d6d25adf69acc28803";
+        path = "android-ndk-r19c-windows-x86.zip";
+        sha1 = "132cc0c9e31b9e58ad6505b0816ff9e524422ed2";
       };
       "windows-64" = {
-        path = "android-ndk-r18b-windows-x86_64.zip";
-        sha1 = "6b6d4138aaaad7166679fdfa4780e177f95cee6f";
+        path = "android-ndk-r19c-windows-x86_64.zip";
+        sha1 = "c4cd8c0b6e7618ca0a871a5f24102e40c239f6a3";
       };
     };
   }
@@ -721,6 +732,26 @@
       "windows-64" = {
         path = "lldb-2.0.2558144-windows-x86_64.zip";
         sha1 = "86fd4676dfb587efe8e84face780d6e8241c0b3a";
+      };
+    };
+  }
+  {
+    path = "build-tools;29.0.0-rc1";
+    revision = "29.0.0.1";
+    displayName = "Android SDK Build-Tools 29-rc1";
+    license = "android-sdk-license";
+    sources = {
+      "linux" = {
+        path = "build-tools_r29-rc1-linux.zip";
+        sha1 = "1c897f5885ac5468613e40e1ea598c21c05d345d";
+      };
+      "macosx" = {
+        path = "build-tools_r29-rc1-macosx.zip";
+        sha1 = "f066c0d9ea2f0d8a0a9cc7b2ca0a467a570ab034";
+      };
+      "windows" = {
+        path = "build-tools_r29-rc1-windows.zip";
+        sha1 = "8887ee791a143f92694a0908130354142a903b17";
       };
     };
   }
@@ -1721,99 +1752,138 @@
   }
   {
     path = "platform-tools";
-    revision = "28.0.1";
+    revision = "28.0.2";
     displayName = "Android SDK Platform-Tools";
     license = "android-sdk-license";
     sources = {
       "macosx" = {
-        path = "platform-tools_r28.0.1-darwin.zip";
-        sha1 = "ed1edad4a48c27655ce98d0a5821e7296e9de145";
+        path = "platform-tools_r28.0.2-darwin.zip";
+        sha1 = "f5d0b6ff6b83bee72dc680c63a6dc8a203a8476a";
       };
       "linux" = {
-        path = "platform-tools_r28.0.1-linux.zip";
-        sha1 = "74ff83bc203f01c4f04bd9316ab5a2573f023fd1";
+        path = "platform-tools_r28.0.2-linux.zip";
+        sha1 = "46a4c02a9b8e4e2121eddf6025da3c979bf02e28";
       };
       "windows" = {
-        path = "platform-tools_r28.0.1-windows.zip";
-        sha1 = "5a44d10d41725aa718c71b6e44bc2dea6f1a7f49";
+        path = "platform-tools_r28.0.2-windows.zip";
+        sha1 = "484e1b6d27b3f484c2865d0d0f36c1d4e204d03d";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.16";
+    revision = "28.0.23";
     displayName = "Android Emulator";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "linux" = {
-        path = "emulator-linux-5112988.zip";
-        sha1 = "b5973367e6d40e5e455bbaf537758ccb9df34ed3";
+        path = "emulator-linux-5264690.zip";
+        sha1 = "48c1cda2bdf3095d9d9d5c010fbfb3d6d673e3ea";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.16";
+    revision = "28.0.23";
     displayName = "Android Emulator";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "macosx" = {
-        path = "emulator-darwin-5112988.zip";
-        sha1 = "8554efbd1e5735bacb5bb0f1ffd6a2da90059168";
+        path = "emulator-darwin-5264690.zip";
+        sha1 = "ce29b4111cb770de98b9c3b16695b015999e7629";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.16";
+    revision = "28.0.23";
     displayName = "Android Emulator";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "windows" = {
-        path = "emulator-windows-5112988.zip";
-        sha1 = "8a21d174a517859fa00c999f139b11256ecbe5f6";
+        path = "emulator-windows-5264690.zip";
+        sha1 = "cbd411bf7553b35d9b6f1204641819fb133286e2";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.18";
+    revision = "28.1.12";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "linux" = {
-        path = "emulator-linux-5148482.zip";
-        sha1 = "f2353fef9e1f1a705ee181fdd47d1ad3f3a1a0bb";
+        path = "emulator-linux-5395469.zip";
+        sha1 = "03548255d677b501383a3cb116ba50c1ef42d3ba";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.18";
+    revision = "28.1.12";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "macosx" = {
-        path = "emulator-darwin-5148482.zip";
-        sha1 = "89c03f3962f8b4266ab75ee0a99f4c5fb5f811a4";
+        path = "emulator-darwin-5395469.zip";
+        sha1 = "30edcabcd88dbd1a5ebbe388de19a8ac5937efa1";
       };
     };
   }
   {
     path = "emulator";
-    revision = "28.0.18";
+    revision = "28.1.12";
     displayName = "Android Emulator";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "tools" ];
     sources = {
       "windows" = {
-        path = "emulator-windows-5148482.zip";
-        sha1 = "fa800779eabaafa40fa5b3b733eb58e81acf4966";
+        path = "emulator-windows-5395469.zip";
+        sha1 = "41844b2921ba8d613a7520c1bf212c9fe3191c54";
+      };
+    };
+  }
+  {
+    path = "emulator";
+    revision = "28.0.25";
+    displayName = "Android Emulator";
+    license = "android-sdk-license";
+    dependencies = [ "patcher;v4" "tools" ];
+    sources = {
+      "linux" = {
+        path = "emulator-linux-5395263.zip";
+        sha1 = "8475f848934b55bb609790f82e764ef36ccbe682";
+      };
+    };
+  }
+  {
+    path = "emulator";
+    revision = "28.0.25";
+    displayName = "Android Emulator";
+    license = "android-sdk-license";
+    dependencies = [ "patcher;v4" "tools" ];
+    sources = {
+      "macosx" = {
+        path = "emulator-darwin-5395263.zip";
+        sha1 = "c4d1f58b18502c3ae291a649ad19dc79c97a1847";
+      };
+    };
+  }
+  {
+    path = "emulator";
+    revision = "28.0.25";
+    displayName = "Android Emulator";
+    license = "android-sdk-license";
+    dependencies = [ "patcher;v4" "tools" ];
+    sources = {
+      "windows" = {
+        path = "emulator-windows-5395263.zip";
+        sha1 = "6004fd05db29f8088ec89ba85c273c0bf86ef0be";
       };
     };
   }

@@ -6,69 +6,85 @@
   {
     path = "system-images;android-10;google_apis;armeabi-v7a";
     apiLevel = "10";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs ARM EABI v7a System Image";
     license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
     source = {
-      path = "armeabi-v7a-10_r05.zip";
-      sha1 = "cb60221d4ff6686ae96560970d48d9aa60e80b3f";
+      path = "armeabi-v7a-10_r06.zip";
+      sha1 = "970abf3a2a9937a43576afd9bb56e4a8191947f8";
     };
   }
   {
     path = "system-images;android-10;google_apis;x86";
     apiLevel = "10";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs Intel x86 Atom System Image";
     license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-10_r05.zip";
-      sha1 = "b8e8a4ab26890c4a395fb796bf9cb7ceb51c880e";
-    };
-  }
-  {
-    path = "system-images;android-15;google_apis;armeabi-v7a";
-    apiLevel = "15";
-    revision = "5";
-    displayName = "Google APIs ARM EABI v7a System Image";
-    license = "android-sdk-license";
-    source = {
-      path = "armeabi-v7a-15_r05.zip";
-      sha1 = "1ec4e6f9014fcbe694511280f5b497aaf7dd750f";
+      path = "x86-10_r06.zip";
+      sha1 = "070a9552e3d358d8e72e8b2042e539e2b7a1b035";
     };
   }
   {
     path = "system-images;android-15;google_apis;x86";
     apiLevel = "15";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs Intel x86 Atom System Image";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-15_r05.zip";
-      sha1 = "f2b98baaf847ff5b82b82fdc6c396b229067307b";
+      path = "x86-15_r06.zip";
+      sha1 = "a7deb32c12396b6c4fd60ad14a62e19f8bdcae20";
+    };
+  }
+  {
+    path = "system-images;android-15;google_apis;armeabi-v7a";
+    apiLevel = "15";
+    revision = "6";
+    displayName = "Google APIs ARM EABI v7a System Image";
+    license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
+    source = {
+      path = "armeabi-v7a-15_r06.zip";
+      sha1 = "6deb76cf34760a6037cb18d89772c9e986d07497";
+    };
+  }
+  {
+    path = "system-images;android-16;google_apis;armeabi-v7a";
+    apiLevel = "16";
+    revision = "6";
+    displayName = "Google APIs ARM EABI v7a System Image";
+    license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
+    source = {
+      path = "armeabi-v7a-16_r06.zip";
+      sha1 = "5a5ff097680c6dae473c8719296ce6d7b70edb2d";
     };
   }
   {
     path = "system-images;android-16;google_apis;x86";
     apiLevel = "16";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs Intel x86 Atom System Image";
     license = "android-sdk-license";
     dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-16_r05.zip";
-      sha1 = "7edc5c0836fa32f8d453788c002ca0ee1bc5a0a2";
+      path = "x86-16_r06.zip";
+      sha1 = "b57adef2f43dd176b8c02c980c16a796021b2071";
     };
   }
   {
     path = "system-images;android-17;google_apis;armeabi-v7a";
     apiLevel = "17";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs ARM EABI v7a System Image";
     license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
     source = {
-      path = "armeabi-v7a-17_r05.zip";
-      sha1 = "c990f2a81c24a61f9f1da5d5d205f2924ce548ae";
+      path = "armeabi-v7a-17_r06.zip";
+      sha1 = "a59f26cb5707da97e869a27d87b83477204ac594";
     };
   }
   {
@@ -86,23 +102,25 @@
   {
     path = "system-images;android-18;google_apis;armeabi-v7a";
     apiLevel = "18";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs ARM EABI v7a System Image";
     license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
     source = {
-      path = "armeabi-v7a-18_r05.zip";
-      sha1 = "c4e69a96d4584f7e311e358fe4ad0e5d1bf1605b";
+      path = "armeabi-v7a-18_r06.zip";
+      sha1 = "7faaccabbcc5f08e410436d3f63eea42521ea974";
     };
   }
   {
     path = "system-images;android-18;google_apis;x86";
     apiLevel = "18";
-    revision = "5";
+    revision = "6";
     displayName = "Google APIs Intel x86 Atom System Image";
     license = "android-sdk-license";
+    dependencies = [ "patcher;v4" ];
     source = {
-      path = "x86-18_r05.zip";
-      sha1 = "2b34741693eba9419cb6bf1a467596783234d37a";
+      path = "x86-18_r06.zip";
+      sha1 = "dd674d719cad61602702be4b3d98edccfbfea53e";
     };
   }
   {
@@ -372,24 +390,48 @@
   {
     path = "system-images;android-28;google_apis;x86";
     apiLevel = "28";
-    revision = "7";
+    revision = "8";
     displayName = "Google APIs Intel x86 Atom System Image";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "emulator" ];
     source = {
-      path = "x86-28_r07.zip";
-      sha1 = "fe5d58355545ae82b0e6a55adc1d41573ac7dec1";
+      path = "x86-28_r08.zip";
+      sha1 = "41e3b854d7987a3d8b7500631dae1f1d32d3db4e";
     };
   }
   {
     path = "system-images;android-28;google_apis;x86_64";
     apiLevel = "28";
-    revision = "7";
+    revision = "8";
     displayName = "Google APIs Intel x86 Atom_64 System Image";
     license = "android-sdk-preview-license";
     dependencies = [ "patcher;v4" "emulator" ];
     source = {
-      path = "x86_64-28_r07.zip";
-      sha1 = "068468683a56725326f741f75b6913ee1e7955ff";
+      path = "x86_64-28_r08.zip";
+      sha1 = "d8901fdfab7410a4c2fa492dd3ce528e4dbcdfd6";
+    };
+  }
+  {
+    path = "system-images;android-Q;google_apis;x86";
+    apiLevel = "28";
+    revision = "1";
+    displayName = "Google APIs Intel x86 Atom System Image";
+    license = "android-sdk-preview-license";
+    dependencies = [ "patcher;v4" "emulator" ];
+    source = {
+      path = "x86-Q_r01.zip";
+      sha1 = "11233b66b891ce7b3e8e26eaef2f2e35e80d401b";
+    };
+  }
+  {
+    path = "system-images;android-Q;google_apis;x86_64";
+    apiLevel = "28";
+    revision = "1";
+    displayName = "Google APIs Intel x86 Atom_64 System Image";
+    license = "android-sdk-preview-license";
+    dependencies = [ "patcher;v4" "emulator" ];
+    source = {
+      path = "x86_64-Q_r01.zip";
+      sha1 = "fa3578811a52cadf2535da7b64d0a67889c8edb3";
     };
   }]

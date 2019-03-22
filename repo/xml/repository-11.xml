@@ -15,7 +15,7 @@
  * limitations under the License.
 -->
 <sdk:sdk-repository xmlns:sdk="http://schemas.android.com/sdk/android/repository/11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!--Generated on 2018-11-29 00:35:02.273562 with ADRT.-->
+	<!--Generated on 2019-03-22 08:18:01.692560 with ADRT.-->
 	<sdk:license id="android-sdk-license" type="text">Terms and Conditions
 
 This is the Android Software Development Kit License Agreement
@@ -101,7 +101,7 @@ This is the Android Software Development Kit License Agreement
 
 8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
 
-8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so. If you use the Android Recognition Service API, documented at the following URL: https://developer.android.com/reference/android/speech/RecognitionService, as updated from time to time, you acknowledge that the use of the API is subject to the Data Processing Addendum for Products where Google is a Data Processor, which is located at the following URL: https://privacy.google.com/businesses/gdprprocessorterms/, as updated from time to time. By clicking to accept, you hereby agree to the terms of the Data Processing Addendum for Products where Google is a Data Processor.
 
 
 9. Terminating the License Agreement
@@ -160,7 +160,7 @@ This is the Android Software Development Kit License Agreement
 14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
 
 
-November 20, 2015</sdk:license>
+January 16, 2019</sdk:license>
 	<sdk:license id="android-sdk-preview-license" type="text">To get started with the Android SDK Preview, you must agree to the following terms and conditions.
 As described below, please note that this is a preview version of the Android SDK, subject to change, that you use at your own risk.  The Android SDK Preview is not a stable release, and may contain errors and defects that can result in serious damage to your computer systems, devices and data.
 
@@ -296,45 +296,70 @@ This is the Android SDK Preview License Agreement (the &quot;License Agreement&q
 
 June 2014.</sdk:license>
 	<sdk:ndk>
-		<!--Generated from bid:5063045, branch:aosp-ndk-release-r18-->
+		<!--Generated from bid:5345600, branch:aosp-ndk-release-r19-->
 		<sdk:description>NDK</sdk:description>
-		<sdk:revision>18</sdk:revision>
+		<sdk:revision>19</sdk:revision>
 		<sdk:archives>
 			<sdk:archive>
-				<!--Built on: Thu Oct 11 14:06:10 2018.-->
-				<sdk:size>542911996</sdk:size>
-				<sdk:checksum type="sha1">98cb9909aa8c2dab32db188bbdc3ac6207e09440</sdk:checksum>
-				<sdk:url>android-ndk-r18b-darwin-x86_64.zip</sdk:url>
+				<!--Built on: Fri Mar  1 02:13:13 2019.-->
+				<sdk:size>807630656</sdk:size>
+				<sdk:checksum type="sha1">f46b8193109bba8a58e0461c1a48f4534051fb25</sdk:checksum>
+				<sdk:url>android-ndk-r19c-darwin-x86_64.zip</sdk:url>
 				<sdk:host-os>macosx</sdk:host-os>
 				<sdk:host-bits>64</sdk:host-bits>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Thu Oct 11 14:06:26 2018.-->
-				<sdk:size>557038702</sdk:size>
-				<sdk:checksum type="sha1">500679655da3a86aecf67007e8ab230ea9b4dd7b</sdk:checksum>
-				<sdk:url>android-ndk-r18b-linux-x86_64.zip</sdk:url>
+				<!--Built on: Fri Mar  1 02:13:43 2019.-->
+				<sdk:size>823376982</sdk:size>
+				<sdk:checksum type="sha1">fd94d0be6017c6acbd193eb95e09cf4b6f61b834</sdk:checksum>
+				<sdk:url>android-ndk-r19c-linux-x86_64.zip</sdk:url>
 				<sdk:host-os>linux</sdk:host-os>
 				<sdk:host-bits>64</sdk:host-bits>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Thu Oct 11 14:05:37 2018.-->
-				<sdk:size>504605336</sdk:size>
-				<sdk:checksum type="sha1">4b8b6a4edc0fa967b429c1d6d25adf69acc28803</sdk:checksum>
-				<sdk:url>android-ndk-r18b-windows-x86.zip</sdk:url>
+				<!--Built on: Fri Mar  1 02:12:19 2019.-->
+				<sdk:size>778598286</sdk:size>
+				<sdk:checksum type="sha1">132cc0c9e31b9e58ad6505b0816ff9e524422ed2</sdk:checksum>
+				<sdk:url>android-ndk-r19c-windows-x86.zip</sdk:url>
 				<sdk:host-os>windows</sdk:host-os>
 				<sdk:host-bits>32</sdk:host-bits>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Thu Oct 11 14:05:53 2018.-->
-				<sdk:size>522489470</sdk:size>
-				<sdk:checksum type="sha1">6b6d4138aaaad7166679fdfa4780e177f95cee6f</sdk:checksum>
-				<sdk:url>android-ndk-r18b-windows-x86_64.zip</sdk:url>
+				<!--Built on: Fri Mar  1 02:12:45 2019.-->
+				<sdk:size>796051997</sdk:size>
+				<sdk:checksum type="sha1">c4cd8c0b6e7618ca0a871a5f24102e40c239f6a3</sdk:checksum>
+				<sdk:url>android-ndk-r19c-windows-x86_64.zip</sdk:url>
 				<sdk:host-os>windows</sdk:host-os>
 				<sdk:host-bits>64</sdk:host-bits>
 			</sdk:archive>
 		</sdk:archives>
 		<sdk:uses-license ref="android-sdk-license"/>
 	</sdk:ndk>
+	<sdk:platform>
+		<!--Generated from bid:5345599, branch:qt-preview1-release-->
+		<sdk:version>Q</sdk:version>
+		<sdk:codename>Q</sdk:codename>
+		<sdk:api-level>28</sdk:api-level>
+		<sdk:description>Android SDK Platform Q</sdk:description>
+		<sdk:revision>1</sdk:revision>
+		<sdk:archives>
+			<sdk:archive>
+				<!--Built on: Fri Mar  1 15:00:21 2019.-->
+				<sdk:size>78552721</sdk:size>
+				<sdk:checksum type="sha1">aa7696570651e7f6e2f414fdff0eaeeec3c0ebed</sdk:checksum>
+				<sdk:url>platform-Q_r01.zip</sdk:url>
+			</sdk:archive>
+		</sdk:archives>
+		<sdk:uses-license ref="android-sdk-license"/>
+		<sdk:min-tools-rev>
+			<sdk:major>22</sdk:major>
+		</sdk:min-tools-rev>
+		<sdk:desc-url>http://developer.android.com/sdk/</sdk:desc-url>
+		<sdk:layoutlib>
+			<sdk:api>15</sdk:api>
+			<sdk:revision>1</sdk:revision>
+		</sdk:layoutlib>
+	</sdk:platform>
 	<sdk:platform>
 		<!--Generated from bid:4913185, branch:pi-sdk-release-->
 		<sdk:version>9</sdk:version>
@@ -1259,6 +1284,39 @@ June 2014.</sdk:license>
 		</sdk:archives>
 		<sdk:uses-license ref="android-sdk-license"/>
 	</sdk:source>
+	<sdk:build-tool>
+		<!--Generated from bid:5345599, branch:qt-preview1-release-->
+		<sdk:revision>
+			<sdk:major>29</sdk:major>
+			<sdk:minor>0</sdk:minor>
+			<sdk:micro>0</sdk:micro>
+			<sdk:preview>1</sdk:preview>
+		</sdk:revision>
+		<sdk:archives>
+			<sdk:archive>
+				<!--Built on: Fri Mar  1 15:00:06 2019.-->
+				<sdk:size>58516671</sdk:size>
+				<sdk:checksum type="sha1">1c897f5885ac5468613e40e1ea598c21c05d345d</sdk:checksum>
+				<sdk:url>build-tools_r29-rc1-linux.zip</sdk:url>
+				<sdk:host-os>linux</sdk:host-os>
+			</sdk:archive>
+			<sdk:archive>
+				<!--Built on: Fri Mar  1 15:00:03 2019.-->
+				<sdk:size>57704927</sdk:size>
+				<sdk:checksum type="sha1">f066c0d9ea2f0d8a0a9cc7b2ca0a467a570ab034</sdk:checksum>
+				<sdk:url>build-tools_r29-rc1-macosx.zip</sdk:url>
+				<sdk:host-os>macosx</sdk:host-os>
+			</sdk:archive>
+			<sdk:archive>
+				<!--Built on: Fri Mar  1 15:00:00 2019.-->
+				<sdk:size>56933956</sdk:size>
+				<sdk:checksum type="sha1">8887ee791a143f92694a0908130354142a903b17</sdk:checksum>
+				<sdk:url>build-tools_r29-rc1-windows.zip</sdk:url>
+				<sdk:host-os>windows</sdk:host-os>
+			</sdk:archive>
+		</sdk:archives>
+		<sdk:uses-license ref="android-sdk-license"/>
+	</sdk:build-tool>
 	<sdk:build-tool>
 		<!--Generated from bid:5016651, branch:pi-sdk-release-->
 		<sdk:revision>
@@ -2751,32 +2809,32 @@ June 2014.</sdk:license>
 		<sdk:uses-license ref="android-sdk-license"/>
 	</sdk:build-tool>
 	<sdk:platform-tool>
-		<!--Generated from bid:4986621, branch:aosp-sdk-release-->
+		<!--Generated from bid:5303910, branch:aosp-sdk-release-->
 		<sdk:revision>
 			<sdk:major>28</sdk:major>
 			<sdk:minor>0</sdk:minor>
-			<sdk:micro>1</sdk:micro>
+			<sdk:micro>2</sdk:micro>
 		</sdk:revision>
 		<sdk:archives>
 			<sdk:archive>
-				<!--Built on: Fri Aug 31 09:51:45 2018.-->
-				<sdk:size>6848749</sdk:size>
-				<sdk:checksum type="sha1">ed1edad4a48c27655ce98d0a5821e7296e9de145</sdk:checksum>
-				<sdk:url>platform-tools_r28.0.1-darwin.zip</sdk:url>
+				<!--Built on: Wed Feb 13 13:38:36 2019.-->
+				<sdk:size>11756457</sdk:size>
+				<sdk:checksum type="sha1">f5d0b6ff6b83bee72dc680c63a6dc8a203a8476a</sdk:checksum>
+				<sdk:url>platform-tools_r28.0.2-darwin.zip</sdk:url>
 				<sdk:host-os>macosx</sdk:host-os>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Fri Aug 31 09:51:40 2018.-->
-				<sdk:size>6843966</sdk:size>
-				<sdk:checksum type="sha1">74ff83bc203f01c4f04bd9316ab5a2573f023fd1</sdk:checksum>
-				<sdk:url>platform-tools_r28.0.1-linux.zip</sdk:url>
+				<!--Built on: Wed Feb 13 13:38:28 2019.-->
+				<sdk:size>11850727</sdk:size>
+				<sdk:checksum type="sha1">46a4c02a9b8e4e2121eddf6025da3c979bf02e28</sdk:checksum>
+				<sdk:url>platform-tools_r28.0.2-linux.zip</sdk:url>
 				<sdk:host-os>linux</sdk:host-os>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Fri Aug 31 09:51:43 2018.-->
-				<sdk:size>6183783</sdk:size>
-				<sdk:checksum type="sha1">5a44d10d41725aa718c71b6e44bc2dea6f1a7f49</sdk:checksum>
-				<sdk:url>platform-tools_r28.0.1-windows.zip</sdk:url>
+				<!--Built on: Wed Feb 13 13:38:31 2019.-->
+				<sdk:size>11067637</sdk:size>
+				<sdk:checksum type="sha1">484e1b6d27b3f484c2865d0d0f36c1d4e204d03d</sdk:checksum>
+				<sdk:url>platform-tools_r28.0.2-windows.zip</sdk:url>
 				<sdk:host-os>windows</sdk:host-os>
 			</sdk:archive>
 		</sdk:archives>
@@ -2791,21 +2849,21 @@ June 2014.</sdk:license>
 		</sdk:revision>
 		<sdk:archives>
 			<sdk:archive>
-				<!--Built on: Mon May 21 14:06:04 2018.-->
+				<!--Built on: Wed Mar 20 22:36:01 2019.-->
 				<sdk:size>277894900</sdk:size>
 				<sdk:checksum type="sha1">72df3aa1988c0a9003ccdfd7a13a7b8bd0f47fc1</sdk:checksum>
 				<sdk:url>tools_r25.2.5-linux.zip</sdk:url>
 				<sdk:host-os>linux</sdk:host-os>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Thu May 31 17:55:03 2018.-->
+				<!--Built on: Wed Mar 20 22:35:47 2019.-->
 				<sdk:size>200529982</sdk:size>
 				<sdk:checksum type="sha1">d2168d963ac5b616e3d3ddaf21511d084baf3659</sdk:checksum>
 				<sdk:url>tools_r25.2.5-macosx.zip</sdk:url>
 				<sdk:host-os>macosx</sdk:host-os>
 			</sdk:archive>
 			<sdk:archive>
-				<!--Built on: Thu Jun  7 09:09:48 2018.-->
+				<!--Built on: Wed Mar 20 22:35:36 2019.-->
 				<sdk:size>306785944</sdk:size>
 				<sdk:checksum type="sha1">a7f7ebeae1c8d8f62d3a8466e9c81baee7cc31ca</sdk:checksum>
 				<sdk:url>tools_r25.2.5-windows.zip</sdk:url>
@@ -2823,7 +2881,7 @@ June 2014.</sdk:license>
 		<sdk:revision>1</sdk:revision>
 		<sdk:archives>
 			<sdk:archive>
-				<!--Built on: Thu Jun 14 09:35:24 2018.-->
+				<!--Built on: Wed Mar 20 22:36:44 2019.-->
 				<sdk:size>419477967</sdk:size>
 				<sdk:checksum type="sha1">eef58238949ee9544876cb3e002f2d58e4ee7b5d</sdk:checksum>
 				<sdk:url>docs-24_r01.zip</sdk:url>

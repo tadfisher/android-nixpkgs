@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sys-img:sdk-sys-img xmlns:sys-img="http://schemas.android.com/sdk/android/repo/sys-img2/01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!--Generated on 2018-11-16 08:12:32.620135 with ADRT.-->
+	<!--Generated on 2019-03-12 17:08:33.756828 with ADRT.-->
 	<license id="android-sdk-license" type="text">Terms and Conditions
 
 This is the Android Software Development Kit License Agreement
@@ -86,7 +86,7 @@ This is the Android Software Development Kit License Agreement
 
 8.1.1 If you use any API to retrieve data from Google, you acknowledge that the data may be protected by intellectual property rights which are owned by Google or those parties that provide the data (or by other persons or companies on their behalf). Your use of any such API may be subject to additional Terms of Service. You may not modify, rent, lease, loan, sell, distribute or create derivative works based on this data (either in whole or in part) unless allowed by the relevant Terms of Service.
 
-8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so.
+8.1.2 If you use any API to retrieve a user's data from Google, you acknowledge and agree that you shall retrieve data only with the user's explicit consent and only when, and for the limited purposes for which, the user has given you permission to do so. If you use the Android Recognition Service API, documented at the following URL: https://developer.android.com/reference/android/speech/RecognitionService, as updated from time to time, you acknowledge that the use of the API is subject to the Data Processing Addendum for Products where Google is a Data Processor, which is located at the following URL: https://privacy.google.com/businesses/gdprprocessorterms/, as updated from time to time. By clicking to accept, you hereby agree to the terms of the Data Processing Addendum for Products where Google is a Data Processor.
 
 
 9. Terminating the License Agreement
@@ -145,7 +145,7 @@ This is the Android Software Development Kit License Agreement
 14.7 The License Agreement, and your relationship with Google under the License Agreement, shall be governed by the laws of the State of California without regard to its conflict of laws provisions. You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from the License Agreement. Notwithstanding this, you agree that Google shall still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.
 
 
-November 20, 2015</license>
+January 16, 2019</license>
 	<license id="android-sdk-preview-license" type="text">To get started with the Android SDK Preview, you must agree to the following terms and conditions.
 As described below, please note that this is a preview version of the Android SDK, subject to change, that you use at your own risk.  The Android SDK Preview is not a stable release, and may contain errors and defects that can result in serious damage to your computer systems, devices and data.
 
@@ -551,7 +551,7 @@ August 15, 2011</license>
 	<channel id="channel-2">dev</channel>
 	<channel id="channel-3">canary</channel>
 	<remotePackage path="system-images;android-10;default;armeabi-v7a">
-		<!--Generated from bid:3093079, branch:git_gb-emu-release-->
+		<!--Generated from bid:3644351, branch:gb-emu-release-arm-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
 			<api-level>10</api-level>
 			<tag>
@@ -561,19 +561,32 @@ August 15, 2011</license>
 			<abi>armeabi-v7a</abi>
 		</type-details>
 		<revision>
-			<major>4</major>
+			<major>5</major>
 		</revision>
 		<display-name>ARM EABI v7a System Image</display-name>
 		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Fri Jul 27 08:50:45 2018.-->
+				<!--Built on: Thu Feb 21 12:04:09 2019.-->
 				<complete>
-					<size>67918042</size>
-					<checksum>54680383118eb5c95a11e1cc2a14aa572c86ee69</checksum>
-					<url>armv7-10_r04.zip</url>
+					<size>67927049</size>
+					<checksum>8537616a7add47cce24c60f18bc2429e3dc90ae3</checksum>
+					<url>armeabi-v7a-10_r05.zip</url>
 				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>4</major>
+						</based-on>
+						<size>242085</size>
+						<checksum>db38ab3439aa7774c22e6143980378ade70ef8b4</checksum>
+						<url>sys-img-3093079-sdk-3644351-sdk-patch.jar</url>
+					</patch>
+				</patches>
 			</archive>
 		</archives>
 	</remotePackage>
@@ -605,66 +618,9 @@ August 15, 2011</license>
 		</archives>
 	</remotePackage>
 	<remotePackage path="system-images;android-15;default;armeabi-v7a">
-		<!--Generated from bid:3462039, branch:git_ics-mr1-emu-release-->
+		<!--Generated from bid:3876239, branch:ics-mr1-emu-release-arm-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
 			<api-level>15</api-level>
-			<tag>
-				<id>default</id>
-				<display></display>
-			</tag>
-			<abi>armeabi-v7a</abi>
-		</type-details>
-		<revision>
-			<major>4</major>
-		</revision>
-		<display-name>ARM EABI v7a System Image</display-name>
-		<uses-license ref="android-sdk-license"/>
-		<dependencies>
-			<dependency path="patcher;v4"/>
-		</dependencies>
-		<channelRef ref="channel-0"/>
-		<archives>
-			<archive>
-				<!--Built on: Fri Jul 27 08:53:17 2018.-->
-				<complete>
-					<size>102079727</size>
-					<checksum>363223bd62f5afc0b2bd760b54ce9d26b31eacf1</checksum>
-					<url>armeabi-v7a-15_r04.zip</url>
-				</complete>
-			</archive>
-		</archives>
-	</remotePackage>
-	<remotePackage path="system-images;android-16;default;armeabi-v7a">
-		<!--Generated from bid:1741836, branch:git_jb-dev-->
-		<type-details xsi:type="sys-img:sysImgDetailsType">
-			<api-level>16</api-level>
-			<tag>
-				<id>default</id>
-				<display></display>
-			</tag>
-			<abi>armeabi-v7a</abi>
-		</type-details>
-		<revision>
-			<major>4</major>
-		</revision>
-		<display-name>ARM EABI v7a System Image</display-name>
-		<uses-license ref="android-sdk-license"/>
-		<channelRef ref="channel-0"/>
-		<archives>
-			<archive>
-				<!--Built on: Thu Jul 26 16:01:22 2018.-->
-				<complete>
-					<size>112608076</size>
-					<checksum>39c093ea755098f0ee79f607be7df9e54ba4943f</checksum>
-					<url>sysimg_armv7a-16_r04.zip</url>
-				</complete>
-			</archive>
-		</archives>
-	</remotePackage>
-	<remotePackage path="system-images;android-17;default;armeabi-v7a">
-		<!--Generated from bid:3453820, branch:git_jb-mr1.1-emu-release-->
-		<type-details xsi:type="sys-img:sysImgDetailsType">
-			<api-level>17</api-level>
 			<tag>
 				<id>default</id>
 				<display></display>
@@ -682,29 +638,29 @@ August 15, 2011</license>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Fri Jul 27 08:53:02 2018.-->
+				<!--Built on: Thu Feb 21 12:04:44 2019.-->
 				<complete>
-					<size>124238679</size>
-					<checksum>7460e8110f4a87f9644f1bdb5511a66872d50fd9</checksum>
-					<url>armeabi-v7a-17_r05.zip</url>
+					<size>102452069</size>
+					<checksum>03d7ed95a9d3b107e3f2e5b166d017ea12529e70</checksum>
+					<url>armeabi-v7a-15_r05.zip</url>
 				</complete>
 				<patches>
 					<patch>
 						<based-on>
-							<major>3</major>
+							<major>4</major>
 						</based-on>
-						<size>8466361</size>
-						<checksum>6778c476f51555f8b9ae7fdea2665293c8a00a16</checksum>
-						<url>sys-img-1742939-sdk_phone_armv7-3453820-sdk-patch.jar</url>
+						<size>6087663</size>
+						<checksum>aa3abebb66fe8216084f2eb47959cb6a92d2019d</checksum>
+						<url>sys-img-3462039-sdk-3876239-sdk-patch.jar</url>
 					</patch>
 				</patches>
 			</archive>
 		</archives>
 	</remotePackage>
-	<remotePackage path="system-images;android-18;default;armeabi-v7a">
-		<!--Generated from bid:3462034, branch:git_jb-mr2-emu-release-->
+	<remotePackage path="system-images;android-16;default;armeabi-v7a">
+		<!--Generated from bid:4875369, branch:jb-emu-release-arm-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
-			<api-level>18</api-level>
+			<api-level>16</api-level>
 			<tag>
 				<id>default</id>
 				<display></display>
@@ -712,7 +668,7 @@ August 15, 2011</license>
 			<abi>armeabi-v7a</abi>
 		</type-details>
 		<revision>
-			<major>4</major>
+			<major>6</major>
 		</revision>
 		<display-name>ARM EABI v7a System Image</display-name>
 		<uses-license ref="android-sdk-license"/>
@@ -722,20 +678,100 @@ August 15, 2011</license>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Fri Jul 27 08:53:09 2018.-->
+				<!--Built on: Thu Feb 21 12:05:27 2019.-->
 				<complete>
-					<size>130394401</size>
-					<checksum>0bf34ecf4ddd53f6b1b7fe7dfa12f2887c17e642</checksum>
-					<url>armeabi-v7a-18_r04.zip</url>
+					<size>118646340</size>
+					<checksum>69b944b0d5a18c8563fa80d7d229af64890f724e</checksum>
+					<url>armeabi-v7a-16_r06.zip</url>
 				</complete>
 				<patches>
 					<patch>
 						<based-on>
-							<major>3</major>
+							<major>4</major>
 						</based-on>
-						<size>7750991</size>
-						<checksum>f9edf2e5d3de74368f0f219ec500cacd684142fb</checksum>
-						<url>sys-img-1743067-sdk_phone_armv7-3462034-sdk-patch.jar</url>
+						<size>10674598</size>
+						<checksum>b3b4dc483b2af73f86b5c5adb2c7365dd4728a9e</checksum>
+						<url>sys-img-1741836-sdk_phone_armv7-4875369-sdk-patch.jar</url>
+					</patch>
+				</patches>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="system-images;android-17;default;armeabi-v7a">
+		<!--Generated from bid:4875371, branch:jb-mr1.1-emu-release-arm-->
+		<type-details xsi:type="sys-img:sysImgDetailsType">
+			<api-level>17</api-level>
+			<tag>
+				<id>default</id>
+				<display></display>
+			</tag>
+			<abi>armeabi-v7a</abi>
+		</type-details>
+		<revision>
+			<major>6</major>
+		</revision>
+		<display-name>ARM EABI v7a System Image</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Feb 21 12:05:56 2019.-->
+				<complete>
+					<size>124437041</size>
+					<checksum>a18a3fd0958ec4ef52507f58e414fc5c7dfd59d6</checksum>
+					<url>armeabi-v7a-17_r06.zip</url>
+				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>5</major>
+						</based-on>
+						<size>7230085</size>
+						<checksum>75b83c85a45a8ea3eca3b6258733e8d3222facf0</checksum>
+						<url>sys-img-3453820-sdk-4875371-sdk-patch.jar</url>
+					</patch>
+				</patches>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="system-images;android-18;default;armeabi-v7a">
+		<!--Generated from bid:3876170, branch:jb-mr2-emu-release-arm-->
+		<type-details xsi:type="sys-img:sysImgDetailsType">
+			<api-level>18</api-level>
+			<tag>
+				<id>default</id>
+				<display></display>
+			</tag>
+			<abi>armeabi-v7a</abi>
+		</type-details>
+		<revision>
+			<major>5</major>
+		</revision>
+		<display-name>ARM EABI v7a System Image</display-name>
+		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Thu Feb 21 12:06:37 2019.-->
+				<complete>
+					<size>130590545</size>
+					<checksum>580b583720f7de671040d5917c8c9db0c7aa03fd</checksum>
+					<url>armeabi-v7a-18_r05.zip</url>
+				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>4</major>
+						</based-on>
+						<size>6849609</size>
+						<checksum>761b2fcf650e5aa4ed2d6d47e086680aac152998</checksum>
+						<url>sys-img-3462034-sdk-3876170-sdk-patch.jar</url>
 					</patch>
 				</patches>
 			</archive>
@@ -1004,7 +1040,7 @@ August 15, 2011</license>
 		</archives>
 	</remotePackage>
 	<remotePackage path="system-images;android-10;default;x86">
-		<!--Generated from bid:3093079, branch:git_gb-emu-release-->
+		<!--Generated from bid:3644351, branch:gb-emu-release-x86-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
 			<api-level>10</api-level>
 			<tag>
@@ -1014,24 +1050,37 @@ August 15, 2011</license>
 			<abi>x86</abi>
 		</type-details>
 		<revision>
-			<major>4</major>
+			<major>5</major>
 		</revision>
 		<display-name>Intel x86 Atom System Image</display-name>
 		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Fri Jul 27 08:50:47 2018.-->
+				<!--Built on: Thu Feb 21 12:07:12 2019.-->
 				<complete>
-					<size>75382637</size>
-					<checksum>655ffc5cc89dd45a3aca154b254009016e473aeb</checksum>
-					<url>x86-10_r04.zip</url>
+					<size>75386095</size>
+					<checksum>a166d5ccbb165e1dd5464fbfeec30a61f77790d8</checksum>
+					<url>x86-10_r05.zip</url>
 				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>4</major>
+						</based-on>
+						<size>350782</size>
+						<checksum>3e04d4a46671c17f00263bd08da9f6f069bc35c2</checksum>
+						<url>sys-img-3093079-sdk_x86-sdk-3644351-sdk_x86-sdk-patch.jar</url>
+					</patch>
+				</patches>
 			</archive>
 		</archives>
 	</remotePackage>
 	<remotePackage path="system-images;android-15;default;x86">
-		<!--Generated from bid:3462039, branch:git_ics-mr1-emu-release-->
+		<!--Generated from bid:3876239, branch:ics-mr1-emu-release-x86-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
 			<api-level>15</api-level>
 			<tag>
@@ -1041,19 +1090,32 @@ August 15, 2011</license>
 			<abi>x86</abi>
 		</type-details>
 		<revision>
-			<major>4</major>
+			<major>5</major>
 		</revision>
 		<display-name>Intel x86 Atom System Image</display-name>
 		<uses-license ref="android-sdk-license"/>
+		<dependencies>
+			<dependency path="patcher;v4"/>
+		</dependencies>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Fri Jul 27 08:53:18 2018.-->
+				<!--Built on: Thu Feb 21 11:37:54 2019.-->
 				<complete>
-					<size>115324561</size>
-					<checksum>e45c728b64881c0e86529a8f7ea9c103a3cd14c1</checksum>
-					<url>x86-15_r04.zip</url>
+					<size>115699956</size>
+					<checksum>c387e0efed2cdc610e5944eea67b7b692d03760c</checksum>
+					<url>x86-15_r05.zip</url>
 				</complete>
+				<patches>
+					<patch>
+						<based-on>
+							<major>4</major>
+						</based-on>
+						<size>7419360</size>
+						<checksum>10af8b30f81ba241d84bbc6a450851e05b981196</checksum>
+						<url>sys-img-3462039-sdk_x86-sdk-3876239-sdk_x86-sdk-patch.jar</url>
+					</patch>
+				</patches>
 			</archive>
 		</archives>
 	</remotePackage>
@@ -1078,7 +1140,7 @@ August 15, 2011</license>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Tue Jul 17 16:27:13 2018.-->
+				<!--Built on: Thu Feb 21 12:08:43 2019.-->
 				<complete>
 					<size>134926152</size>
 					<checksum>bf1bf8c5591346118d2235da1ad20e7be8a3e9cd</checksum>
@@ -1138,7 +1200,7 @@ August 15, 2011</license>
 		</archives>
 	</remotePackage>
 	<remotePackage path="system-images;android-18;default;x86">
-		<!--Generated from bid:3462034, branch:git_jb-mr2-emu-release-->
+		<!--Generated from bid:3876170, branch:jb-mr2-emu-release-x86-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
 			<api-level>18</api-level>
 			<tag>
@@ -1148,7 +1210,7 @@ August 15, 2011</license>
 			<abi>x86</abi>
 		</type-details>
 		<revision>
-			<major>3</major>
+			<major>4</major>
 		</revision>
 		<display-name>Intel x86 Atom System Image</display-name>
 		<uses-license ref="android-sdk-license"/>
@@ -1158,20 +1220,20 @@ August 15, 2011</license>
 		<channelRef ref="channel-0"/>
 		<archives>
 			<archive>
-				<!--Built on: Fri Jul 27 08:53:12 2018.-->
+				<!--Built on: Thu Feb 21 12:08:54 2019.-->
 				<complete>
-					<size>149657535</size>
-					<checksum>03a0cb23465c3de15215934a1dbc9715b56e9458</checksum>
-					<url>x86-18_r03.zip</url>
+					<size>150097655</size>
+					<checksum>7a4ced4d9b0ab48047825491b4072dc2eb9b610e</checksum>
+					<url>x86-18_r04.zip</url>
 				</complete>
 				<patches>
 					<patch>
 						<based-on>
-							<major>2</major>
+							<major>3</major>
 						</based-on>
-						<size>11076777</size>
-						<checksum>a9a4f5b7d49b9c84f4c8718996119adfdbf7ec64</checksum>
-						<url>sys-img-1743067-sdk_phone_x86-3462034-sdk_x86-sdk-patch.jar</url>
+						<size>12761851</size>
+						<checksum>94b263e4a34fff298ca45506b06927ab25a4f8ec</checksum>
+						<url>sys-img-3462034-sdk_x86-sdk-3876170-sdk_x86-sdk-patch.jar</url>
 					</patch>
 				</patches>
 			</archive>
@@ -1494,6 +1556,34 @@ August 15, 2011</license>
 			</archive>
 		</archives>
 	</remotePackage>
+	<remotePackage path="system-images;android-Q;default;x86">
+		<!--Generated from bid:5345599, branch:git_qt-preview1-release-->
+		<type-details xsi:type="sys-img:sysImgDetailsType">
+			<api-level>28</api-level>
+			<codename>Q</codename>
+			<tag>
+				<id>default</id>
+				<display>Default Android System Image</display>
+			</tag>
+			<abi>x86</abi>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Intel x86 Atom System Image</display-name>
+		<uses-license ref="android-sdk-preview-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Mar  1 15:02:15 2019.-->
+				<complete>
+					<size>521102057</size>
+					<checksum>79c1b96055c2dbef3618bb4664214d993a031b18</checksum>
+					<url>x86-Q_r01.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
 	<remotePackage path="system-images;android-21;default;x86_64">
 		<!--Generated from bid:4174711, branch:git_lmp-emu-release-->
 		<type-details xsi:type="sys-img:sysImgDetailsType">
@@ -1767,6 +1857,34 @@ August 15, 2011</license>
 					<size>564792723</size>
 					<checksum>d47a85c8f4e9fd57df97814ad8884eeb0f3a0ef0</checksum>
 					<url>x86_64-28_r04.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+	<remotePackage path="system-images;android-Q;default;x86_64">
+		<!--Generated from bid:5345599, branch:git_qt-preview1-release-->
+		<type-details xsi:type="sys-img:sysImgDetailsType">
+			<api-level>28</api-level>
+			<codename>Q</codename>
+			<tag>
+				<id>default</id>
+				<display>Default Android System Image</display>
+			</tag>
+			<abi>x86_64</abi>
+		</type-details>
+		<revision>
+			<major>1</major>
+		</revision>
+		<display-name>Intel x86 Atom_64 System Image</display-name>
+		<uses-license ref="android-sdk-preview-license"/>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<!--Built on: Fri Mar  1 15:03:17 2019.-->
+				<complete>
+					<size>691315995</size>
+					<checksum>cd1480475d4dcf5d26311cc8599bce417392033d</checksum>
+					<url>x86_64-Q_r01.zip</url>
 				</complete>
 			</archive>
 		</archives>

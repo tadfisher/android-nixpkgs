@@ -15,7 +15,7 @@
  * limitations under the License.
 -->
 <common:site-list xmlns:common="http://schemas.android.com/repository/android/sites-common/1" xmlns:sdk="http://schemas.android.com/sdk/android/addons-list/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<!--Generated on 2018-11-16 08:11:40.116912 with ADRT.-->
+	<!--Generated on 2019-03-12 17:08:28.586186 with ADRT.-->
 	<site xsi:type="sdk:sysImgSiteType">
 		<displayName>Android System Images</displayName>
 		<url>sys-img/android/sys-img2-1.xml</url>

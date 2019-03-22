@@ -118,4 +118,16 @@
       path = "x86-28_r07.zip";
       sha1 = "3ed7e51036957cf350db7fa128cb485b61cbd061";
     };
+  }
+  {
+    path = "system-images;android-Q;android-tv;x86";
+    apiLevel = "28";
+    revision = "1";
+    displayName = "Android TV Intel x86 Atom System Image";
+    license = "android-sdk-preview-license";
+    dependencies = [ "patcher;v4" ];
+    source = {
+      path = "x86-Q_r01.zip";
+      sha1 = "80c66ddce0dbe53fe6fedcade230d518112fffb1";
+    };
   }]
