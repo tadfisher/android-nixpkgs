@@ -1,1 +1,5 @@
 result
+*.iml
+**/.gradle/
+**/.idea/
+**/build/

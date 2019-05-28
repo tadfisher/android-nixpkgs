@@ -10,9 +10,7 @@ package:
 let
   inherit (builtins) listToAttrs replaceStrings;
 
-in mkGeneric {
-  inherit package;
-
+in mkGeneric (package // {
   support32bit = true;
 
   nativeBuildInputs = [
@@ -46,4 +44,4 @@ in mkGeneric {
 
     wrapProgram $out/tools/bin/sdkmanager --set JAVA_HOME ${jdk8}
   '';
-}
+})

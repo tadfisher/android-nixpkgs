@@ -1,5 +1,6 @@
 { stdenv, mkGeneric, autoPatchelfHook
-, fontconfig, freetype, libGL, libX11, libXext, libpulseaudio, libxkbcommon, zlib }:
+, fontconfig, freetype, libGL, libX11, libXext, libpulseaudio, libxkbcommon, zlib
+, sqlite, nss, nspr }:
 
 package:
 
@@ -8,9 +9,7 @@ let
 
 in
 
-mkGeneric {
-  inherit package;
-
+mkGeneric (package // {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
@@ -23,6 +22,9 @@ mkGeneric {
     libXext
     libpulseaudio
     libxkbcommon
+    nss
+    nspr
+    sqlite.out
     zlib
   ];
 
@@ -34,4 +36,4 @@ mkGeneric {
     # for emulator-27
     rm -r $out/emulator/${libdir}/gles_mesa 2>/dev/null || true
   '';
-}
+})

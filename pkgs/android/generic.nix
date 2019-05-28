@@ -1,76 +1,60 @@
-{ stdenv, stdenv_32bit, fetchurl, unzip, writePackageXml }:
+{ stdenv, stdenv_32bit, fetchurl, unzip, packageXml }:
 
-{ package
+{ id
+, pname
+, version
+, sources
+, displayName
 , repoUrl ? https://dl.google.com/android/repository
 , support32bit ? false
 , ...
-} @ args:
+} @ package:
 
 let
   inherit (builtins) attrNames concatStringsSep filter hasAttr head listToAttrs replaceStrings;
   inherit (stdenv.lib) hasPrefix findFirst flatten groupBy mapAttrs nameValuePair optionalString;
 
-  pname = args.pname or (replaceStrings [";" "."] ["-" "-"] package.path);
-  version = args.version or package.revision;
-  name = args.name or (concatStringsSep "-" (filter (s: s != "") [pname version]));
+  name = concatStringsSep "-" (filter (s: s != "") [package.pname package.version]);
 
   src =
     let
       # Keys by which to search the package's "sources" set for the host platform.
-      hostOsKeys = {
-        i686-linux = [ "linux-32" "linux" ];
-        x86_64-linux = [ "linux-64" "linux" ];
-        i686-darwin = [ "macosx-32" "macosx" ];
-        x86_64-darwin = [ "macosx-64" "macosx" ];
-      }.${stdenv.hostPlatform.system} or [];
+      hostOsKeys = with stdenv.hostPlatform; [
+        system
+        parsed.kernel.name
+        parsed.cpu.name
+        "all"
+      ];
 
       hostSrc =
-        if hasAttr "sources" package then
-          let key = findFirst
-            (k: hasAttr k package.sources)
-            (throw "Unsupported system: ${stdenv.hostPlatform.system}")
-            hostOsKeys;
-          in package.sources.${key}
-        else package.source;
+        let key = findFirst
+          (k: hasAttr k package.sources)
+          (throw "Unsupported system: ${stdenv.hostPlatform.system}")
+          hostOsKeys;
+        in package.sources.${key};
 
     in fetchurl {
-      url = "${repoUrl}/${hostSrc.path}";
+      url = "${repoUrl}/${hostSrc.url}";
       inherit (hostSrc) sha1;
     };
 
-  platforms =
-    with stdenv.lib.platforms; let
-      toPlatform = os: {
-        "linux" = [ linux ];
-        "linux-32" = [ "i686-linux" ];
-        "linux-64" = [ "x86_64-linux" ];
-        "macosx" = [ darwin ];
-        "macosx-32" = [ "i686-darwin" ];
-        "macosx-64" = [ "x86_64-darwin" ];
-      }.${os} or [];
-    in
-      if hasAttr "sources" package
-      then flatten (map toPlatform (attrNames package.sources))
-      else linux ++ darwin;
+  platforms = flatten (map (name:
+    if (hasAttr name stdenv.lib.platforms) then stdenv.lib.platforms.${name} else name
+  ) (attrNames package.sources));
 
-  outdir = replaceStrings [";"] ["/"] package.path;
+  outdir = replaceStrings [";"] ["/"] package.id;
 
-in
+in (if support32bit then stdenv_32bit else stdenv).mkDerivation ({
+  inherit name src;
 
-(if support32bit then stdenv_32bit else stdenv).mkDerivation ({
-  inherit pname version name src;
-
-  nativeBuildInputs = [ unzip ] ++ (args.nativeBuildInputs or []);
+  nativeBuildInputs = [ unzip ] ++ (package.nativeBuildInputs or []);
 
   installPhase = ''
     mkdir -p $out/${outdir}
     cp -r * $out/${outdir}/
+    cp ${packageXml}/${package.pname}.xml $out/${outdir}/package.xml
     runHook postInstall
   '';
-
-  passthru = {
-    packageXml = writePackageXml name outdir package;
-  };
 
   meta = with stdenv.lib; {
     description = package.displayName;
@@ -78,5 +62,5 @@ in
     license = licenses.asl20;
     maintainers = with maintainers; [ tadfisher ];
     inherit platforms;
-  } // (args.meta or {});
-} // removeAttrs args [ "package" "support32bit" "repoUrl" "nativeBuildInputs" "meta" ])
+  } // (package.meta or {});
+} // removeAttrs package [ "displayName" "sources" "support32bit" "repoUrl" "nativeBuildInputs" "meta" ])

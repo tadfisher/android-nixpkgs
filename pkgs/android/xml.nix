@@ -16,7 +16,7 @@ in writeTextFile {
         xmlns:sdk="http://schemas.android.com/sdk/android/repo/repository2/01"
         xmlns:sys-img="http://schemas.android.com/sdk/android/repo/sys-img2/01">
       <license id="${package.license}" type="text">${licenses.${package.license}}</license>
-      ${package.packageXml}
+
     </sdk:repository>"
   '';
 }

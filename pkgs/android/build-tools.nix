@@ -1,9 +1,7 @@
 { mkGeneric, autoPatchelfHook
 , ncurses5, zlib, zlib-32}:
 
-package: mkGeneric {
-  inherit package;
-  pname = "build-tools";
+package: mkGeneric (package // {
   support32bit = true;
 
   nativeBuildInputs = [
@@ -15,4 +13,4 @@ package: mkGeneric {
     zlib
     zlib-32
   ];
-}
+})

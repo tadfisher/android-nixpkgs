@@ -11,14 +11,19 @@
 with pkgs;
 
 let
-  androidRepository = import ./repo;
-  androidPackages = recurseIntoAttrs (callPackage ./pkgs/android {
-    inherit androidRepository;
-  });
-  writePackageXml = callPackage ./pkgs/android/xml.nix {
-    licenses = import ./repo/licenses/licenses.nix;
-  };
+  pkgsFun = channel:
+    let
+      repoPath = ./channels + "/${channel}";
+    in
+      recurseIntoAttrs (callPackage ./pkgs/android {
+        androidRepository = import repoPath;
+        packageXml = repoPath;
+      });
+
+  androidPackages =
+    lib.genAttrs ["stable" "beta" "preview" "canary"] (channel: pkgsFun channel);
 
 in androidPackages // {
+  aapt2 = callPackage ./pkgs/aapt2 {};
   sdk = callPackage ./pkgs/android/sdk.nix { inherit androidPackages; };
 }

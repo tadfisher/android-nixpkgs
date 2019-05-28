@@ -1,9 +1,6 @@
 { stdenv, mkGeneric, autoPatchelfHook, python }:
 
-package: mkGeneric {
-  inherit package;
-  pname = "platform-tools";
-
+package: mkGeneric (package // {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
@@ -20,4 +17,4 @@ package: mkGeneric {
     mkdir -p $out/bin
     ln -s $out/platform-tools/{adb,fastboot} $out/bin/
   '';
-}
+})
