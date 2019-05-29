@@ -11,6 +11,8 @@
 with pkgs;
 
 let
+  channels = [ "stable" "beta" "preview" "canary" ];
+
   pkgsFun = channel:
     let
       repoPath = ./channels + "/${channel}";
@@ -21,9 +23,12 @@ let
       });
 
   androidPackages =
-    lib.genAttrs ["stable" "beta" "preview" "canary"] (channel: pkgsFun channel);
+    lib.genAttrs channels (channel: pkgsFun channel);
+
+  sdkChannels = lib.genAttrs channels
+    (channel: callPackage ./pkgs/android/sdk.nix { androidPackages = androidPackages.${channel}; });
 
 in androidPackages // {
   aapt2 = callPackage ./pkgs/aapt2 {};
-  sdk = callPackage ./pkgs/android/sdk.nix { inherit androidPackages; };
+  sdk = sdkChannels;
 }

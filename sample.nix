@@ -1,11 +1,11 @@
 { pkgs ? import <nixpkgs> }:
 
 let
-  androidPkgs = import ../. {};
+  androidPkgs = import ./. {};
 
 in
 
-androidPkgs.sdk (p: with p.stable; [
+androidPkgs.sdk.stable (p: with p; [
   tools
   build-tools-28-0-3
   platform-tools

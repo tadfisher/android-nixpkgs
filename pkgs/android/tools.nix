@@ -43,5 +43,8 @@ in mkGeneric (package // {
     done
 
     wrapProgram $out/tools/bin/sdkmanager --set JAVA_HOME ${jdk8}
+
+    mkdir -p $out/bin
+    ln -s $out/tools/bin/* $out/bin
   '';
 })

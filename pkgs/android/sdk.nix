@@ -1,4 +1,4 @@
-{ stdenv, lib, runCommand, androidPackages }:
+{ stdenv, lib, buildEnv, runCommand, androidPackages }:
 
 pkgsFun:
 
@@ -7,12 +7,16 @@ let
 
   packages = pkgsFun androidPackages;
 
-in runCommand "android-sdk-env" {} ''
-  mkdir -p $out/share/android-sdk/licenses
-  cp -rL --reflink=auto ${../../repo/licenses}/* $out/share/android-sdk/licenses
-  ${concatMapStringsSep "\n" (pkg: ''
-    cd ${pkg}/
-    find . -type d -exec mkdir -p $out/share/android-sdk/{} \;
-    cp -rL --reflink=auto ${pkg}/* $out/share/android-sdk/
-  '') packages}
-''
+in buildEnv {
+  name = "android-sdk-env";
+  paths = packages;
+  extraPrefix = "/share/android-sdk";
+  postBuild = ''
+    mkdir -p $out/share/android-sdk/licenses
+    cp -rL ${../../repo/licenses}/* $out/share/android-sdk/licenses
+
+    $out/share/android-sdk/tools/bin/sdkmanager --sdk_root=$out/share/android-sdk --list --verbose
+
+    mv $out/share/android-sdk/bin $out/bin
+  '';
+}

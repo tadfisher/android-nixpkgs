@@ -1,21 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-buildscript {
-    repositories {
-        if (gradle.startParameter.isOffline) {
-            flatDir { dir("gradle/offlineRepo") }
-        } else {
-            jcenter()
-        }
-    }
-    dependencies {
-        classpath(embeddedKotlin("compiler-embeddable"))
-        classpath(embeddedKotlin("reflect"))
-    }
-}
-
 plugins {
-    kotlin("jvm") version(embeddedKotlinVersion)
+    kotlin("jvm") version "1.3.31"
     application
 }
 
@@ -26,14 +12,15 @@ application {
 repositories {
     jcenter()
     google()
-    if (gradle.startParameter.isOffline) {
-        flatDir { dir("gradle/offlineRepo") }
-    }
+}
+
+dependencyLocking {
+    lockAllConfigurations()
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("com.android.tools:sdklib:26.6.0-alpha01")
+    implementation("com.android.tools:sdklib:latest.release")
 }
 
 tasks {
@@ -41,12 +28,6 @@ tasks {
         kotlinOptions {
             jvmTarget = "1.8"
         }
-    }
-
-    register("offlineRepo", Copy::class) {
-        configurations.all { if (isCanBeResolved) from(copyRecursive()) }
-        buildscript.configurations.all { from(copyRecursive()) }
-        into("gradle/offlineRepo")
     }
 
     withType<Wrapper> {
