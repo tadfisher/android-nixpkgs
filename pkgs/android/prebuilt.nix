@@ -10,18 +10,15 @@ let
   singleRootUnzip = "unzip $curSrc -d src";
 
   buildArgs =
-    if (hasPrefix "cmake" package.path) then rec {
-      name = "android-prebuilt-cmake-${package.revision}";
+    if (hasPrefix "cmake;" package.id) then rec {
       unpackCmd = singleRootUnzip;
       buildInputs = [ stdenv.cc.cc.lib ];
     }
 
-    else if (hasPrefix "lldb" package.path) then
+    else if (hasPrefix "lldb" package.id) then
       let
-        outdir = replaceStrings [";"] ["/"] package.path;
+        outdir = replaceStrings [";"] ["/"] package.id;
       in rec {
-        name = "android-prebuilt-lldb-${package.revision}";
-
         unpackCmd = singleRootUnzip;
 
         setSourceRoot = ''
