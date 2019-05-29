@@ -1,4 +1,4 @@
-{ mkGeneric, autoPatchelfHook
+{ stdenv_32bit, mkGeneric, autoPatchelfHook
 , ncurses5, zlib, zlib-32}:
 
 package: mkGeneric (package // {
@@ -9,6 +9,7 @@ package: mkGeneric (package // {
   ];
 
   buildInputs = [
+    stdenv_32bit.cc.cc.lib
     ncurses5
     zlib
     zlib-32
