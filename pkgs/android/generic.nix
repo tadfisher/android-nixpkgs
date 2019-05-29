@@ -50,9 +50,10 @@ in (if support32bit then stdenv_32bit else stdenv).mkDerivation ({
   nativeBuildInputs = [ unzip ] ++ (package.nativeBuildInputs or []);
 
   installPhase = ''
-    mkdir -p $out/${outdir}
-    cp -r * $out/${outdir}/
-    cp ${packageXml}/${package.pname}.xml $out/${outdir}/package.xml
+    packageBase="$out/${outdir}"
+    mkdir -p "$packageBase"
+    cp -r * "$packageBase"
+    cp ${packageXml}/${package.pname}.xml "$packageBase"/package.xml
     runHook postInstall
   '';
 

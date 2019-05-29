@@ -6,6 +6,7 @@
     mkGeneric = callPackage ./generic.nix { inherit packageXml; };
     mkBuildTools = callPackage ./build-tools.nix {
       inherit mkGeneric;
+      ncurses5-32 = pkgsi686Linux.ncurses5;
       zlib-32 = pkgsi686Linux.zlib;
     };
     mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };

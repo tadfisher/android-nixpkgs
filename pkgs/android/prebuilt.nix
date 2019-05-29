@@ -15,10 +15,7 @@ let
       buildInputs = [ stdenv.cc.cc.lib ];
     }
 
-    else if (hasPrefix "lldb" package.id) then
-      let
-        outdir = replaceStrings [";"] ["/"] package.id;
-      in rec {
+    else if (hasPrefix "lldb" package.id) then rec {
         unpackCmd = singleRootUnzip;
 
         setSourceRoot = ''
@@ -38,13 +35,18 @@ let
           zlib
         ];
 
+        dontAutoPatchelf = true;
+
         runtimeDependencies = [ zlib ];
 
-        installPhase = ''
-          mkdir -p $out/${outdir}
-          cp -r * $out/${outdir}
-          rm -r $out/${outdir}/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
-          ln -s ${zlib}/lib/libz.so.1 $out/${outdir}/lib/libz.so.1
+        postInstall = ''
+          rm -r $packageBase/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
+          ln -s ${zlib}/lib/libz.so.1 $packageBase/lib/libz.so.1
+
+          addAutoPatchelfSearchPath "$packageBase/lib"
+          addAutoPatchelfSearchPath "$packageBase/bin"
+          autoPatchelf --no-recurse "$packageBase/lib"
+          autoPatchelf --no-recurse "$packageBase/bin"
           '';
       }
 
