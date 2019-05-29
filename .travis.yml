@@ -5,14 +5,8 @@ env:
   global:
     secure: ZCe1fOk0IxqkL+smORR1BOE8EipldNvwc+UvqDlw+xbKf5rexnBEwhn0kYUUxiGoq93g5Hudlo9llY012RCnKgrx0zKAcHaDDlt8gLjo23l/SZxTCt0jTFikdOBeTNEEOZOAKlkCyilrx6RGLXT2hwKs4agZuuWTktHpYV9ae/l7rEbDwjivI4c5CVHvdrIQY/42LalTIwqW+0Std+/ZW+mzXQUVCvqXKHSlzNiPotjU7Vfo7yGRV5bcNQ3r6S5BpLYiY2VABuVdaZmShvauRw5j3tWS5Ycj04VQv2DfPApURm1iKLJH+1FbYwNeY3KrMILGLBgqAN2KGRlaVceWarnhu2lBDoxNVRXd6t/cXI0quAcx3drIN4l1/BBdA1OmP3TvUWKbtt9AhWMw/2D+X1UwUROmT+Y1KZfyrn32qRJjglrh/mPNQKOAQHWUw8vSmrBdUYckhgOxmwO0058T1VrboVbTEVaJT4vajEmt8Kd2rB/3zUAzbNVHelsFFhrMdMbCGwt+hrSmj7ZcFN7w1A+zUC3WBb3IiM/+c8J1AF8vaJXs5dzLZJK5mX0hs2gLOmEC7A+73USX0hkTsSXU4eBcUmGZ0CYT3GGZBbhqY2CJA7tH5bBolq+VKyGqRi3VflsryO2ktzNIg51BmItdH9PCHCJLV+ZDoDouf5cisQk=
 git:
+  depth: 1
   quiet: true
   submodules: false
 
-jobs:
-  include:
-    - stage: update
-      script: ./update.sh
-    - stage: test
-      script: nix build -f sample.nix
-    - stage: deploy
-      script: ./deploy.sh
+script: ./test.sh
