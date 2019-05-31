@@ -1,7 +1,14 @@
 language: nix
 nix: 2.2.2
 git:
-  depth: 1
+  depth: 3
   quiet: true
   submodules: false
-script: "./test.sh"
+jobs:
+  include:
+    - stage: test
+      script: ./test.sh
+      if: type != cron
+    - stage: deploy
+      script: ./deploy.sh
+      if: branch = master AND type = cron
