@@ -8,7 +8,7 @@ git checkout master
 
 ./test.sh
 
-git add *
+git add channels/\*\*
 tag="$(date --utc --iso-8601)"
 git commit -m "Repo update: $tag"
 git tag --annotate --message="Version $tag" "$tag"

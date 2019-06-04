@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-nix build -f sample.nix
+nix-build sample.nix
