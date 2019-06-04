@@ -3409,11 +3409,11 @@
     system-images.android-26.google_apis.x86 = mkSystemImage {
       id = "system-images;android-26;google_apis;x86";
       pname = "system-images-android-26-google_apis-x86";
-      version = "13";
+      version = "14";
       sources = {
         all = {
-          url = "x86-26_r13.zip";
-          sha1 = "a80b92b345e124c73eeb79e1027b4672a28f5658";
+          url = "x86-26_r14.zip";
+          sha1 = "935da6794d5f64f7ae20a1f352929cb7e3b20cba";
         };
       };
       displayName = "Google APIs Intel x86 Atom System Image";
@@ -3421,11 +3421,11 @@
     system-images.android-26.google_apis.x86_64 = mkSystemImage {
       id = "system-images;android-26;google_apis;x86_64";
       pname = "system-images-android-26-google_apis-x86_64";
-      version = "13";
+      version = "14";
       sources = {
         all = {
-          url = "x86_64-26_r13.zip";
-          sha1 = "21117bd6536c865c1d3bf1e8ccb7a30ffc6b1454";
+          url = "x86_64-26_r14.zip";
+          sha1 = "965631f0554ca9027ac465ba147baa6a6a22fcce";
         };
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
