@@ -1178,6 +1178,26 @@
       };
       displayName = "Android SDK Build-Tools 28.0.3";
     };
+    build-tools-29-0-0 = mkBuildTools {
+      id = "build-tools;29.0.0";
+      pname = "build-tools-29.0.0";
+      version = "29";
+      sources = {
+        linux = {
+          url = "build-tools_r29-linux.zip";
+          sha1 = "ad314caf1802209c4b00a5f3517af5ceb0d48eae";
+        };
+        darwin = {
+          url = "build-tools_r29-macosx.zip";
+          sha1 = "35dc6bc7a53bd9d206847e72f02cab21cfdaa869";
+        };
+        windows = {
+          url = "build-tools_r29-windows.zip";
+          sha1 = "1799f7f975416098e5a5bf280eb97c8f77cf7f79";
+        };
+      };
+      displayName = "Android SDK Build-Tools 29";
+    };
     build-tools-29-0-0-rc1 = mkBuildTools {
       id = "build-tools;29.0.0-rc1";
       pname = "build-tools-29.0.0-rc1";
@@ -1897,19 +1917,19 @@
     platform-tools = mkPlatformTools {
       id = "platform-tools";
       pname = "platform-tools";
-      version = "28.0.3";
+      version = "29";
       sources = {
         darwin = {
-          url = "platform-tools_r28.0.3-darwin.zip";
-          sha1 = "763a4070c2557f78882a0f511b6f73e28f367e3b";
+          url = "platform-tools_r29.0.0-darwin.zip";
+          sha1 = "00e1975211ed8128d34ffba8b3d15d22905b87df";
         };
         linux = {
-          url = "platform-tools_r28.0.3-linux.zip";
-          sha1 = "3d39beebda1ee919520077ebc8f7694e1c6d6e41";
+          url = "platform-tools_r29.0.0-linux.zip";
+          sha1 = "0561e28beb79b93cb46babeccf42be41ee2b4553";
         };
         windows = {
-          url = "platform-tools_r28.0.3-windows.zip";
-          sha1 = "6d2db43c69a71bcd7b897b5386e065dfa713b340";
+          url = "platform-tools_r29.0.0-windows.zip";
+          sha1 = "cab7dbee69814654f9c8a9859919354c07a8de1d";
         };
       };
       displayName = "Android SDK Platform-Tools";
@@ -2162,6 +2182,18 @@
       };
       displayName = "Android SDK Platform 28";
     };
+    platforms.android-29 = mkGeneric {
+      id = "platforms;android-29";
+      pname = "platforms-android-29";
+      version = "1";
+      sources = {
+        all = {
+          url = "platform-29_r01.zip";
+          sha1 = "b1e10d134ac69f5e746e9be8015122b18d43c235";
+        };
+      };
+      displayName = "Android SDK Platform 29";
+    };
     platforms.android-3 = mkGeneric {
       id = "platforms;android-3";
       pname = "platforms-android-3";
@@ -2277,18 +2309,6 @@
         };
       };
       displayName = "Android SDK Platform 9";
-    };
-    platforms.android-Q = mkGeneric {
-      id = "platforms;android-Q";
-      pname = "platforms-android-Q";
-      version = "3";
-      sources = {
-        all = {
-          url = "platform-Q_r03.zip";
-          sha1 = "1f0682961077d72c4ae8debe861f7bf3bc46a813";
-        };
-      };
-      displayName = "Android SDK Platform Q";
     };
     sources.android-14 = mkGeneric {
       id = "sources;android-14";
@@ -3622,6 +3642,78 @@
       };
       displayName = "Google Play Intel x86 Atom_64 System Image";
     };
+    system-images.android-29.default.x86 = mkSystemImage {
+      id = "system-images;android-29;default;x86";
+      pname = "system-images-android-29-default-x86";
+      version = "5";
+      sources = {
+        all = {
+          url = "x86-29_r05.zip";
+          sha1 = "dd656492a1e91132d44d7fdda69c00e1a5cb4211";
+        };
+      };
+      displayName = "Intel x86 Atom System Image";
+    };
+    system-images.android-29.default.x86_64 = mkSystemImage {
+      id = "system-images;android-29;default;x86_64";
+      pname = "system-images-android-29-default-x86_64";
+      version = "5";
+      sources = {
+        all = {
+          url = "x86_64-29_r05.zip";
+          sha1 = "d79df6337805e222c07411da048487de2695e8d5";
+        };
+      };
+      displayName = "Intel x86 Atom_64 System Image";
+    };
+    system-images.android-29.google_apis.x86 = mkSystemImage {
+      id = "system-images;android-29;google_apis;x86";
+      pname = "system-images-android-29-google_apis-x86";
+      version = "5";
+      sources = {
+        all = {
+          url = "x86-29_r05.zip";
+          sha1 = "58bb9ae62d61bebeb1e318336fb2445e30f4ee82";
+        };
+      };
+      displayName = "Google APIs Intel x86 Atom System Image";
+    };
+    system-images.android-29.google_apis.x86_64 = mkSystemImage {
+      id = "system-images;android-29;google_apis;x86_64";
+      pname = "system-images-android-29-google_apis-x86_64";
+      version = "5";
+      sources = {
+        all = {
+          url = "x86_64-29_r05.zip";
+          sha1 = "d390fadd2a72df9dd7d998211628c61a38d19c86";
+        };
+      };
+      displayName = "Google APIs Intel x86 Atom_64 System Image";
+    };
+    system-images.android-29.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-29;google_apis_playstore;x86";
+      pname = "system-images-android-29-google_apis_playstore-x86";
+      version = "5";
+      sources = {
+        all = {
+          url = "x86-29_r05.zip";
+          sha1 = "e445b813181b11679ae703e019447e677197185f";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
+    system-images.android-29.google_apis_playstore.x86_64 = mkSystemImage {
+      id = "system-images;android-29;google_apis_playstore;x86_64";
+      pname = "system-images-android-29-google_apis_playstore-x86_64";
+      version = "5";
+      sources = {
+        all = {
+          url = "x86_64-29_r05.zip";
+          sha1 = "0819a6f4de285af4bcf7ab6ddab239db64f104af";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom_64 System Image";
+    };
     system-images.android-Q.android-tv.x86 = mkSystemImage {
       id = "system-images;android-Q;android-tv;x86";
       pname = "system-images-android-Q-android-tv-x86";
@@ -3633,78 +3725,6 @@
         };
       };
       displayName = "Android TV Intel x86 Atom System Image";
-    };
-    system-images.android-Q.default.x86 = mkSystemImage {
-      id = "system-images;android-Q;default;x86";
-      pname = "system-images-android-Q-default-x86";
-      version = "4";
-      sources = {
-        all = {
-          url = "x86-Q_r04.zip";
-          sha1 = "6169ab748481ee2fd7a38f31853f119af6040093";
-        };
-      };
-      displayName = "Intel x86 Atom System Image";
-    };
-    system-images.android-Q.default.x86_64 = mkSystemImage {
-      id = "system-images;android-Q;default;x86_64";
-      pname = "system-images-android-Q-default-x86_64";
-      version = "4";
-      sources = {
-        all = {
-          url = "x86_64-Q_r04.zip";
-          sha1 = "ab9520dabe0fe5c21867a10954e6b13a68fff8c1";
-        };
-      };
-      displayName = "Intel x86 Atom_64 System Image";
-    };
-    system-images.android-Q.google_apis.x86 = mkSystemImage {
-      id = "system-images;android-Q;google_apis;x86";
-      pname = "system-images-android-Q-google_apis-x86";
-      version = "4";
-      sources = {
-        all = {
-          url = "x86-Q_r04.zip";
-          sha1 = "1c786551cc460eda5bffa8f8f1756472386a19e9";
-        };
-      };
-      displayName = "Google APIs Intel x86 Atom System Image";
-    };
-    system-images.android-Q.google_apis.x86_64 = mkSystemImage {
-      id = "system-images;android-Q;google_apis;x86_64";
-      pname = "system-images-android-Q-google_apis-x86_64";
-      version = "4";
-      sources = {
-        all = {
-          url = "x86_64-Q_r04.zip";
-          sha1 = "2310e9d0f6b7afc9719b61f7ffcc8bc45ddd3419";
-        };
-      };
-      displayName = "Google APIs Intel x86 Atom_64 System Image";
-    };
-    system-images.android-Q.google_apis_playstore.x86 = mkSystemImage {
-      id = "system-images;android-Q;google_apis_playstore;x86";
-      pname = "system-images-android-Q-google_apis_playstore-x86";
-      version = "4";
-      sources = {
-        all = {
-          url = "x86-Q_r04.zip";
-          sha1 = "a50dbc5dc5c824d4ca079511274f494494328732";
-        };
-      };
-      displayName = "Google Play Intel x86 Atom System Image";
-    };
-    system-images.android-Q.google_apis_playstore.x86_64 = mkSystemImage {
-      id = "system-images;android-Q;google_apis_playstore;x86_64";
-      pname = "system-images-android-Q-google_apis_playstore-x86_64";
-      version = "4";
-      sources = {
-        all = {
-          url = "x86_64-Q_r04.zip";
-          sha1 = "3ef387f69cea6a38b9f7fae337df85534649e60c";
-        };
-      };
-      displayName = "Google Play Intel x86 Atom_64 System Image";
     };
     tools = mkTools {
       id = "tools";
