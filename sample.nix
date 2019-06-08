@@ -7,7 +7,7 @@ in
 
 androidPkgs.sdk.stable (p: with p; [
   tools
-  build-tools-29
+  build-tools-29-0-0
   platform-tools
   platforms.android-29
   emulator
