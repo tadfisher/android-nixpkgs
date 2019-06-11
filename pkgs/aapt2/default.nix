@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   name = "aapt2-${version}";
-  version = "3.5.0-alpha13-5435860";
+  version = "3.5.0-beta04-5435860";
 
   src = fetchurl {
     url = "https://maven.google.com/com/android/tools/build/aapt2/${version}/aapt2-${version}-linux.jar";
-    sha256 = "0d373bih9nzkw8ng1hs6g7l1322njf0knnkx78j5dss6ai3g3vi0";
+    sha256 = "01vj6q3g72x42kznbl03kgm1l991n8xasgl3zqvi2fiv988jc4r9";
   };
 
   nativeBuildInputs = [ autoPatchelfHook patchelf unzip ];
