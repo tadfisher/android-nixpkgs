@@ -10,7 +10,7 @@ git checkout master
 
 git add channels/\*\*
 tag="$(date --utc --iso-8601)"
-git commit -m "Repo update: $tag"
+git commit -m "Repo update: $tag" || exit 0
 git tag --annotate --message="Version $tag" "$tag"
 
 echo "Deploying $tag to master"
