@@ -7,10 +7,12 @@ git:
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  - nix-collect-garbage --delete-older-than 30d
 cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+    - /nix/store/
 jobs:
   include:
     - stage: test
@@ -18,4 +20,14 @@ jobs:
       if: type != cron
     - stage: deploy
       script: ./deploy.sh
+      if: branch = master AND type = cron
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GH_TOKEN
+        local_dir: build
+        on:
+          branch: master
+    - stage: cachix
+      script: ./cachix.sh
       if: branch = master AND type = cron
