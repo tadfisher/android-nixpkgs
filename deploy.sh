@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -e -o pipefail
 
 git checkout master
 
@@ -22,3 +22,5 @@ if [ -n "$TRAVIS" ]; then
 fi
 
 git push --follow-tags origin master
+
+./cachix.sh

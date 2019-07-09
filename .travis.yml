@@ -19,13 +19,3 @@ jobs:
     - stage: deploy
       script: ./deploy.sh
       if: branch = master AND type = cron
-    - stage: channels
-      script: ./channels.sh
-      if: branch = master AND type = cron
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: "$GH_TOKEN"
-        local_dir: build
-        on:
-          branch: master
