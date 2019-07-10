@@ -1,4 +1,4 @@
-{ stdenv, stdenv_32bit, lib, mkGeneric, autoPatchelfHook, makeSetupHook, writeShellScript
+{ stdenv, stdenv_32bit, lib, mkGeneric, autoPatchelfHook, makeSetupHook
 , ncurses5, ncurses5-32, zlib, zlib-32}:
 
 package: mkGeneric (package // rec {

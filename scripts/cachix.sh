@@ -1,17 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p cachix
 
-set -e -o pipefail
+set -e -x -o pipefail
 
-build_and_push() {
-    channel=$1
+channel=${1?Usage: $0 channel}
 
-    # Build
-    nix-channel --remove nixpkgs
-    nix-channel --add "https://nixos.org/channels/$channel" nixpkgs
-    nix-channel --update
-    nix-build
-}
-
-build_and_push nixpkgs-unstable
-build_and_push nixos-unstable
-build_and_push nixos-19.03
+nix-build -Q -I nixpkgs="channel:$channel" | cachix push android

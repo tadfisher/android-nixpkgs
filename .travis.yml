@@ -4,15 +4,21 @@ git:
   depth: 3
   quiet: true
   submodules: false
+cache:
+  directories:
+    - $HOME/.gradle/caches
+    - $HOME/.gradle/wrapper
+    - $HOME/nix.store
+before_install:
+  - sudo mkdir -p /etc/nix
+  - echo 'sandbox = true' | sudo tee -a /etc/nix/nix.conf > /dev/null
+  - echo "substituters = https://cache.nixos.org/ file://$HOME/nix.store" | sudo tee -a /etc/nix/nix.conf > /dev/null
+  - echo 'require-sigs = false' | sudo tee -a /etc/nix/nix.conf > /dev/null
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-  - nix-collect-garbage --delete-older-than 30d
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - /nix/store/
+  - mkdir -p $HOME/nix.store
+  - nix copy --to file://$HOME/nix.store -f default.nix
 jobs:
   include:
     - stage: test
@@ -32,5 +38,12 @@ jobs:
         on:
           branch: master
     - stage: cachix
-      script: scripts/cachix.sh
-      if: branch = master AND type = cron
+      name: "Cachix nixos-19.03"
+      script: scripts/cachix.sh nixos-19.03
+      if: branch = master
+    - name: "Cachix nixos-unstable"
+      script: scripts/cachix.sh nixos-unstable
+      if: branch = master
+    - name: "Cachix nixpkgs-unstable"
+      script: scripts/cachix.sh nixpkgs-unstable
+      if: branch = master
