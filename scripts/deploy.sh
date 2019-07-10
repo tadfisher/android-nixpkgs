@@ -2,11 +2,13 @@
 
 set -e -o pipefail
 
+scriptDir="$(dirname "$0")"
+
 git checkout master
 
-./update.sh
+"$scriptDir/update.sh"
 
-./test.sh
+"$scriptDir/test.sh"
 
 git add channels/\*\*
 tag="$(date --utc --iso-8601)"
