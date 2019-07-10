@@ -16,11 +16,14 @@ cache:
 jobs:
   include:
     - stage: test
-      script: ./test.sh
+      script: scripts/test.sh
       if: type != cron
     - stage: deploy
-      script: ./deploy.sh
+      script: scripts/deploy.sh
       if: branch = master AND type = cron
+    - stage: channel
+      script: scripts/channel.sh
+      if: branch = master
       deploy:
         provider: pages
         skip_cleanup: true
@@ -29,5 +32,5 @@ jobs:
         on:
           branch: master
     - stage: cachix
-      script: ./cachix.sh
+      script: scripts/cachix.sh
       if: branch = master AND type = cron
