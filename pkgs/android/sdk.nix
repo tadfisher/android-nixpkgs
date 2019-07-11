@@ -12,6 +12,9 @@ in buildEnv {
   paths = packages;
   extraPrefix = "/share/android-sdk";
   postBuild = ''
+    export ANDROID_SDK_HOME=$(mktemp -d)
+    touch $ANDROID_SDK_HOME/repositories.cfg
+
     mkdir -p $out/share/android-sdk/licenses
     cp -rL ${../../repo/licenses}/* $out/share/android-sdk/licenses
 
