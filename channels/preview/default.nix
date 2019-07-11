@@ -3705,11 +3705,11 @@
     system-images.android-29.default.x86 = mkSystemImage {
       id = "system-images;android-29;default;x86";
       pname = "system-images-android-29-default-x86";
-      version = "6";
+      version = "5";
       sources = {
         all = {
-          url = "x86-29_r06.zip";
-          sha1 = "145a1a267e29e442928d10bcad7358b1f60687e2";
+          url = "x86-29_r05.zip";
+          sha1 = "dd656492a1e91132d44d7fdda69c00e1a5cb4211";
         };
       };
       displayName = "Intel x86 Atom System Image";
@@ -3717,11 +3717,11 @@
     system-images.android-29.default.x86_64 = mkSystemImage {
       id = "system-images;android-29;default;x86_64";
       pname = "system-images-android-29-default-x86_64";
-      version = "6";
+      version = "5";
       sources = {
         all = {
-          url = "x86_64-29_r06.zip";
-          sha1 = "e0ec776698a560e4a573322f247328d26dfa52fd";
+          url = "x86_64-29_r05.zip";
+          sha1 = "d79df6337805e222c07411da048487de2695e8d5";
         };
       };
       displayName = "Intel x86 Atom_64 System Image";
@@ -3729,11 +3729,11 @@
     system-images.android-29.google_apis.x86 = mkSystemImage {
       id = "system-images;android-29;google_apis;x86";
       pname = "system-images-android-29-google_apis-x86";
-      version = "6";
+      version = "5";
       sources = {
         all = {
-          url = "x86-29_r06.zip";
-          sha1 = "c5abf27f7682f58e54aa07acbf98cf753718bcf4";
+          url = "x86-29_r05.zip";
+          sha1 = "58bb9ae62d61bebeb1e318336fb2445e30f4ee82";
         };
       };
       displayName = "Google APIs Intel x86 Atom System Image";
@@ -3741,11 +3741,11 @@
     system-images.android-29.google_apis.x86_64 = mkSystemImage {
       id = "system-images;android-29;google_apis;x86_64";
       pname = "system-images-android-29-google_apis-x86_64";
-      version = "6";
+      version = "5";
       sources = {
         all = {
-          url = "x86_64-29_r06.zip";
-          sha1 = "8a726cefc422ea737a4408c71df229476913e3cc";
+          url = "x86_64-29_r05.zip";
+          sha1 = "d390fadd2a72df9dd7d998211628c61a38d19c86";
         };
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
@@ -3753,11 +3753,11 @@
     system-images.android-29.google_apis_playstore.x86 = mkSystemImage {
       id = "system-images;android-29;google_apis_playstore;x86";
       pname = "system-images-android-29-google_apis_playstore-x86";
-      version = "6";
+      version = "5";
       sources = {
         all = {
-          url = "x86-29_r06.zip";
-          sha1 = "f609e9b8a8931740874228b572947c5e34cd3609";
+          url = "x86-29_r05.zip";
+          sha1 = "e445b813181b11679ae703e019447e677197185f";
         };
       };
       displayName = "Google Play Intel x86 Atom System Image";
@@ -3765,11 +3765,11 @@
     system-images.android-29.google_apis_playstore.x86_64 = mkSystemImage {
       id = "system-images;android-29;google_apis_playstore;x86_64";
       pname = "system-images-android-29-google_apis_playstore-x86_64";
-      version = "6";
+      version = "5";
       sources = {
         all = {
-          url = "x86_64-29_r06.zip";
-          sha1 = "9896be205e353b525a2e088e36516c35947b1efc";
+          url = "x86_64-29_r05.zip";
+          sha1 = "0819a6f4de285af4bcf7ab6ddab239db64f104af";
         };
       };
       displayName = "Google Play Intel x86 Atom_64 System Image";
