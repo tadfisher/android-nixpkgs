@@ -1373,19 +1373,19 @@
     emulator = mkEmulator {
       id = "emulator";
       pname = "emulator";
-      version = "29.1.5";
+      version = "29.1.6";
       sources = {
         x86_64-darwin = {
-          url = "emulator-darwin-5724458.zip";
-          sha1 = "284616cf2f66ad5c3658afde7ce734875deeceef";
+          url = "emulator-darwin-5729755.zip";
+          sha1 = "f578cded152ca43db168fe0d2d1a2253d789f113";
         };
         x86_64-linux = {
-          url = "emulator-linux-5724458.zip";
-          sha1 = "b61d6bd6346e410a7c932128193da69a3391aa79";
+          url = "emulator-linux-5729755.zip";
+          sha1 = "f44df78c530fcb3e16b9c0aef97a5f64b419d3f8";
         };
         x86_64-windows = {
-          url = "emulator-windows-5724458.zip";
-          sha1 = "0c808b7cad17585e9fa3706781d4e06d82bdb183";
+          url = "emulator-windows-5729755.zip";
+          sha1 = "d100e10197b436db084c45ae1cc99cc68beb86e4";
         };
       };
       displayName = "Android Emulator";
