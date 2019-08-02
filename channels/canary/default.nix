@@ -1373,19 +1373,19 @@
     emulator = mkEmulator {
       id = "emulator";
       pname = "emulator";
-      version = "29.1.7";
+      version = "29.1.8";
       sources = {
         x86_64-darwin = {
-          url = "emulator-darwin-5754585.zip";
-          sha1 = "c73880cbd49e826200fb76136112df26e265744e";
+          url = "emulator-darwin-5771857.zip";
+          sha1 = "d504841999a78171308c9cbe4c208dcf44f0d5fc";
         };
         x86_64-linux = {
-          url = "emulator-linux-5754585.zip";
-          sha1 = "a7e7e7409043e59f07db3eab23b0237ee2ffa3fa";
+          url = "emulator-linux-5771857.zip";
+          sha1 = "fed6e2d206f3cbae8e9161558efd84b998d72996";
         };
         x86_64-windows = {
-          url = "emulator-windows-5754585.zip";
-          sha1 = "654a82eecf464e4afbc572c9bc6e7ba59d915d05";
+          url = "emulator-windows-5771857.zip";
+          sha1 = "66ba921de233838b63c7f4cd909aa4e03cde9ae6";
         };
       };
       displayName = "Android Emulator";
@@ -1977,19 +1977,19 @@
     platform-tools = mkPlatformTools {
       id = "platform-tools";
       pname = "platform-tools";
-      version = "29.0.1";
+      version = "29.0.2";
       sources = {
         darwin = {
-          url = "platform-tools_r29.0.1-darwin.zip";
-          sha1 = "30ffb0416e0a1204bc181d7270ecc93dd367c799";
+          url = "platform-tools_r29.0.2-darwin.zip";
+          sha1 = "7e4e8bc9faf40ca4967ccd1f2369a33fece196cb";
         };
         linux = {
-          url = "platform-tools_r29.0.1-linux.zip";
-          sha1 = "698e43552531f92f7662f7cb1a47d0fd89adfb21";
+          url = "platform-tools_r29.0.2-linux.zip";
+          sha1 = "d9ec5649a286a5af8220eea495572a5c4c49cb03";
         };
         windows = {
-          url = "platform-tools_r29.0.1-windows.zip";
-          sha1 = "1d188363d7f30751c60805885cc5c4924c363927";
+          url = "platform-tools_r29.0.2-windows.zip";
+          sha1 = "8d67f715bf800d7f477749320fff32022a1891e1";
         };
       };
       displayName = "Android SDK Platform-Tools";
