@@ -1525,11 +1525,11 @@
     extras.google.instantapps = mkGeneric {
       id = "extras;google;instantapps";
       pname = "extras-google-instantapps";
-      version = "1.7";
+      version = "1.8";
       sources = {
         all = {
-          url = "iasdk-1.7.0-1553898687.zip";
-          sha1 = "d05e1aa15fcc9c8c69189452ab1724c82aedfcce";
+          url = "iasdk-1.8.0-1564693671.zip";
+          sha1 = "5eacaec918ff12a14d95fa6219dc1a58df371a87";
         };
       };
       displayName = "Google Play Instant Development SDK";
