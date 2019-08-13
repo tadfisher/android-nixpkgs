@@ -3577,11 +3577,11 @@
     system-images.android-28.android-automotive.x86 = mkSystemImage {
       id = "system-images;android-28;android-automotive;x86";
       pname = "system-images-android-28-android-automotive-x86";
-      version = "1";
+      version = "2";
       sources = {
         all = {
-          url = "x86-28_r01.zip";
-          sha1 = "c71e35eab4eb1e5d182778b6663ddf55124989d4";
+          url = "x86-28_r02.zip";
+          sha1 = "c459be6fec8cae7c420d614c7411124ea53d49b7";
         };
       };
       displayName = "Automotive Intel x86 Atom System Image";
