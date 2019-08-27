@@ -2225,11 +2225,11 @@
     platforms.android-29 = mkGeneric {
       id = "platforms;android-29";
       pname = "platforms-android-29";
-      version = "1";
+      version = "3";
       sources = {
         all = {
-          url = "platform-29_r01.zip";
-          sha1 = "b1e10d134ac69f5e746e9be8015122b18d43c235";
+          url = "platform-29_r03.zip";
+          sha1 = "670e2e104333dae90e16ea3b615f0b63da5883ae";
         };
       };
       displayName = "Android SDK Platform 29";
