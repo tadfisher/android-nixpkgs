@@ -1393,19 +1393,19 @@
     emulator = mkEmulator {
       id = "emulator";
       pname = "emulator";
-      version = "29.1.12";
+      version = "29.1.13";
       sources = {
         x86_64-darwin = {
-          url = "emulator-darwin-5839083.zip";
-          sha1 = "829050419b3180878e179703771a4538dbc7a19b";
+          url = "emulator-darwin-5855239.zip";
+          sha1 = "8fa18901b3adb39f87b985fbf9e0e2d6ef6afb9a";
         };
         x86_64-linux = {
-          url = "emulator-linux-5839083.zip";
-          sha1 = "a0774a3b64d25a809bf8eedb8f93d735f0e83a92";
+          url = "emulator-linux-5855239.zip";
+          sha1 = "33b172e313bf2261007e0511c91430cfd30127ad";
         };
         x86_64-windows = {
-          url = "emulator-windows-5839083.zip";
-          sha1 = "a17d979b50f596d25ed083df4f05fcaa8d8dc321";
+          url = "emulator-windows-5855239.zip";
+          sha1 = "72a3702650d511834c6d4481fa1ba2d0809fa062";
         };
       };
       displayName = "Android Emulator";
@@ -1545,11 +1545,11 @@
     extras.google.instantapps = mkGeneric {
       id = "extras;google;instantapps";
       pname = "extras-google-instantapps";
-      version = "1.8";
+      version = "1.9";
       sources = {
         all = {
-          url = "iasdk-1.8.0-1564693671.zip";
-          sha1 = "5eacaec918ff12a14d95fa6219dc1a58df371a87";
+          url = "iasdk-1.9.0-1566514721.zip";
+          sha1 = "c498367dcd7db30154b3e70c4ddbb1b0ea4b8d20";
         };
       };
       displayName = "Google Play Instant Development SDK";
