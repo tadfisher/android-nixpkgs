@@ -1,11 +1,26 @@
-{ stdenv, mkGeneric, autoPatchelfHook
-, fontconfig, freetype, libGL, libX11, libXext, libpulseaudio, libxkbcommon, zlib
-, sqlite, nss, nspr }:
+{ stdenv, mkGeneric, runCommand, srcOnly, autoPatchelfHook
+, fontconfig, freetype, gperftools, libGL, libX11, libXext, libcxx
+, libpulseaudio, libunwind, libxkbcommon, sqlite, nss, nspr, vulkan-loader, zlib
+}:
 
 package:
 
 let
-  libdir = if stdenv.is64bit then "lib64" else "lib";
+  systemLibs = [
+    "libc++.so"
+    "libc++.so.1"
+    "libtcmalloc_minimal.so.4"
+    "libunwind.so.8"
+    "libunwind-x86_64.so.8"
+    "qt/lib/libfreetype.so.6"
+    "qt/lib/libsoftokn3.so"
+    "qt/lib/libsqlite3.so"
+    "qt/lib/libxkbcommon.so"
+    "qt/lib/libxkbcommon.so.0"
+    "qt/lib/libxkbcommon.so.0.0.0"
+    "vulkan/libvulkan.so"
+    "vulkan/libvulkan.so.1"
+  ];
 
 in
 
@@ -17,23 +32,31 @@ mkGeneric (package // {
   buildInputs = [
     fontconfig
     freetype
+    gperftools
     libGL
     libX11
     libXext
+    libcxx
     libpulseaudio
     libxkbcommon
+    libunwind
     nss
     nspr
-    sqlite.out
+    sqlite
+    vulkan-loader
     zlib
   ];
 
-  runtimeDependencies = [
-    stdenv.cc.cc.lib
-  ];
+  dontWrapQtApps = true;
 
   postInstall = ''
-    # for emulator-27
-    rm -r $out/emulator/${libdir}/gles_mesa 2>/dev/null || true
+    rm -r $out/emulator/lib64/gles_mesa
+
+    for f in ${toString systemLibs}; do
+      rm $out/emulator/lib64/$f
+    done
+
+    # silence LD_PRELOAD warning
+    ln -s ${freetype}/lib/libfreetype.so.6 $out/emulator/lib64/qt/lib
   '';
 })
