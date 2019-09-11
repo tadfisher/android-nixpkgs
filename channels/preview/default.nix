@@ -1997,19 +1997,19 @@
     platform-tools = mkPlatformTools {
       id = "platform-tools";
       pname = "platform-tools";
-      version = "29.0.2";
+      version = "29.0.3";
       sources = {
         darwin = {
-          url = "platform-tools_r29.0.2-darwin.zip";
-          sha1 = "7e4e8bc9faf40ca4967ccd1f2369a33fece196cb";
+          url = "platform-tools_r29.0.3-darwin.zip";
+          sha1 = "3ee57b34a401dd139cee5df80b68949c0456c8d0";
         };
         linux = {
-          url = "platform-tools_r29.0.2-linux.zip";
-          sha1 = "d9ec5649a286a5af8220eea495572a5c4c49cb03";
+          url = "platform-tools_r29.0.3-linux.zip";
+          sha1 = "9a4ca208b5ddfdfc542922f0ce21063a9e4af595";
         };
         windows = {
-          url = "platform-tools_r29.0.2-windows.zip";
-          sha1 = "8d67f715bf800d7f477749320fff32022a1891e1";
+          url = "platform-tools_r29.0.3-windows.zip";
+          sha1 = "50df3ab2e2df54cebc130ebb3361a3dd43f916e9";
         };
       };
       displayName = "Android SDK Platform-Tools";
@@ -2569,6 +2569,18 @@
         };
       };
       displayName = "Sources for Android 28";
+    };
+    sources.android-29 = mkGeneric {
+      id = "sources;android-29";
+      pname = "sources-android-29";
+      version = "1";
+      sources = {
+        all = {
+          url = "sources-29_r01.zip";
+          sha1 = "d0ad249e152b3a8fe3cb7c4a329453a048be29e4";
+        };
+      };
+      displayName = "Sources for Android 29";
     };
     system-images.android-10.default.armeabi-v7a = mkSystemImage {
       id = "system-images;android-10;default;armeabi-v7a";
