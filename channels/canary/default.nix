@@ -1378,6 +1378,46 @@
       };
       displayName = "CMake 3.6.4111459";
     };
+    cmdline-tools-1-0-alpha01 = mkGeneric {
+      id = "cmdline-tools;1.0-alpha01";
+      pname = "cmdline-tools-1.0-alpha01";
+      version = "1-rc1";
+      sources = {
+        linux = {
+          url = "commandlinetools-linux-5842447_latest.zip";
+          sha1 = "f331fcfae47e0d0a478e3f2d30ce70b4a69439bc";
+        };
+        darwin = {
+          url = "commandlinetools-mac-5842447_latest.zip";
+          sha1 = "65e2c7b86b48a3d43d27a9c936fc1ccf7ba01055";
+        };
+        windows = {
+          url = "commandlinetools-win-5842447_latest.zip";
+          sha1 = "b3b576331f0ee76afc87fcf9e0d277e807e856a0";
+        };
+      };
+      displayName = "Android SDK Command-line Tools";
+    };
+    cmdline-tools.latest = mkGeneric {
+      id = "cmdline-tools;latest";
+      pname = "cmdline-tools-latest";
+      version = "1-rc1";
+      sources = {
+        linux = {
+          url = "commandlinetools-linux-5842447_latest.zip";
+          sha1 = "f331fcfae47e0d0a478e3f2d30ce70b4a69439bc";
+        };
+        darwin = {
+          url = "commandlinetools-mac-5842447_latest.zip";
+          sha1 = "65e2c7b86b48a3d43d27a9c936fc1ccf7ba01055";
+        };
+        windows = {
+          url = "commandlinetools-win-5842447_latest.zip";
+          sha1 = "b3b576331f0ee76afc87fcf9e0d277e807e856a0";
+        };
+      };
+      displayName = "Android SDK Command-line Tools (latest)";
+    };
     docs = mkGeneric {
       id = "docs";
       pname = "docs";
