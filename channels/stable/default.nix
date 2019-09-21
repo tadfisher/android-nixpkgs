@@ -10,6 +10,258 @@
 }:
 {
   packages = {
+    add-ons.addon-google_apis-google-10 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-10";
+      pname = "add-ons-addon-google_apis-google-10";
+      version = "2";
+      sources = {
+        all = {
+          url = "google_apis-10_r02.zip";
+          sha1 = "cc0711857c881fa7534f90cf8cc09b8fe985484d";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-11 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-11";
+      pname = "add-ons-addon-google_apis-google-11";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-11_r01.zip";
+          sha1 = "5eab5e81addee9f3576d456d205208314b5146a5";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-12 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-12";
+      pname = "add-ons-addon-google_apis-google-12";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-12_r01.zip";
+          sha1 = "e9999f4fa978812174dfeceec0721c793a636e5d";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-13 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-13";
+      pname = "add-ons-addon-google_apis-google-13";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-13_r01.zip";
+          sha1 = "3b153edd211c27dc736c893c658418a4f9041417";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-14 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-14";
+      pname = "add-ons-addon-google_apis-google-14";
+      version = "2";
+      sources = {
+        all = {
+          url = "google_apis-14_r02.zip";
+          sha1 = "f8eb4d96ad0492b4c0db2d7e4f1a1a3836664d39";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-15 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-15";
+      pname = "add-ons-addon-google_apis-google-15";
+      version = "3";
+      sources = {
+        all = {
+          url = "google_apis-15_r03.zip";
+          sha1 = "d0d2bf26805eb271693570a1aaec33e7dc3f45e9";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-16 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-16";
+      pname = "add-ons-addon-google_apis-google-16";
+      version = "4";
+      sources = {
+        all = {
+          url = "google_apis-16_r04.zip";
+          sha1 = "ee6acf1b01020bfa8a8e24725dbc4478bee5e792";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-17 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-17";
+      pname = "add-ons-addon-google_apis-google-17";
+      version = "4";
+      sources = {
+        all = {
+          url = "google_apis-17_r04.zip";
+          sha1 = "a076be0677f38df8ca5536b44dfb411a0c808c4f";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-18 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-18";
+      pname = "add-ons-addon-google_apis-google-18";
+      version = "4";
+      sources = {
+        all = {
+          url = "google_apis-18_r04.zip";
+          sha1 = "6109603409debdd40854d4d4a92eaf8481462c8b";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-19 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-19";
+      pname = "add-ons-addon-google_apis-google-19";
+      version = "20";
+      sources = {
+        all = {
+          url = "google_apis-19_r20.zip";
+          sha1 = "5b933abe830b2f25b4c0f171d45e9e0651e56311";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-21 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-21";
+      pname = "add-ons-addon-google_apis-google-21";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-21_r01.zip";
+          sha1 = "66a754efb24e9bb07cc51648426443c7586c9d4a";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-22 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-22";
+      pname = "add-ons-addon-google_apis-google-22";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-22_r01.zip";
+          sha1 = "5def0f42160cba8acff51b9c0c7e8be313de84f5";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-23 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-23";
+      pname = "add-ons-addon-google_apis-google-23";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-23_r01.zip";
+          sha1 = "04c5cc1a7c88967250ebba9561d81e24104167db";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-24 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-24";
+      pname = "add-ons-addon-google_apis-google-24";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-24_r1.zip";
+          sha1 = "31361c2868f27343ee917fbd259c1463821b6145";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-3 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-3";
+      pname = "add-ons-addon-google_apis-google-3";
+      version = "3";
+      sources = {
+        all = {
+          url = "google_apis-3-r03.zip";
+          sha1 = "1f92abf3a76be66ae8032257fc7620acbd2b2e3a";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-4 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-4";
+      pname = "add-ons-addon-google_apis-google-4";
+      version = "2";
+      sources = {
+        all = {
+          url = "google_apis-4_r02.zip";
+          sha1 = "9b6e86d8568558de4d606a7debc4f6049608dbd0";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-5 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-5";
+      pname = "add-ons-addon-google_apis-google-5";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-5_r01.zip";
+          sha1 = "46eaeb56b645ee7ffa24ede8fa17f3df70db0503";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-6 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-6";
+      pname = "add-ons-addon-google_apis-google-6";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-6_r01.zip";
+          sha1 = "5ff545d96e031e09580a6cf55713015c7d4936b2";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-7 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-7";
+      pname = "add-ons-addon-google_apis-google-7";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_apis-7_r01.zip";
+          sha1 = "2e7f91e0fe34fef7f58aeced973c6ae52361b5ac";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-8 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-8";
+      pname = "add-ons-addon-google_apis-google-8";
+      version = "2";
+      sources = {
+        all = {
+          url = "google_apis-8_r02.zip";
+          sha1 = "3079958e7ec87222cac1e6b27bc471b27bf2c352";
+        };
+      };
+      displayName = "Google APIs";
+    };
+    add-ons.addon-google_apis-google-9 = mkGeneric {
+      id = "add-ons;addon-google_apis-google-9";
+      pname = "add-ons-addon-google_apis-google-9";
+      version = "2";
+      sources = {
+        all = {
+          url = "google_apis-9_r02.zip";
+          sha1 = "78664645a1e9accea4430814f8694291a7f1ea5d";
+        };
+      };
+      displayName = "Google APIs";
+    };
     add-ons.addon-google_gdk-google-19 = mkGeneric {
       id = "add-ons;addon-google_gdk-google-19";
       pname = "add-ons-addon-google_gdk-google-19";
@@ -21,6 +273,30 @@
         };
       };
       displayName = "Glass Development Kit Preview";
+    };
+    add-ons.addon-google_tv_addon-google-12 = mkGeneric {
+      id = "add-ons;addon-google_tv_addon-google-12";
+      pname = "add-ons-addon-google_tv_addon-google-12";
+      version = "2";
+      sources = {
+        all = {
+          url = "google_tv-12_r02.zip";
+          sha1 = "92128a12e7e8b0fb5bac59153d7779b717e7b840";
+        };
+      };
+      displayName = "Google TV Addon";
+    };
+    add-ons.addon-google_tv_addon-google-13 = mkGeneric {
+      id = "add-ons;addon-google_tv_addon-google-13";
+      pname = "add-ons-addon-google_tv_addon-google-13";
+      version = "1";
+      sources = {
+        all = {
+          url = "google_tv-13_r01.zip";
+          sha1 = "b73f7c66011ac8180b44aa4e83b8d78c66ea9a09";
+        };
+      };
+      displayName = "Google TV Addon";
     };
     build-tools-17-0-0 = mkBuildTools {
       id = "build-tools;17.0.0";
@@ -1093,6 +1369,450 @@
         };
       };
       displayName = "Android Emulator";
+    };
+    android.gapid.gapid-1 = mkGeneric {
+      id = "extras;android;gapid;1";
+      pname = "extras-android-gapid-1";
+      version = "1.0.3";
+      sources = {
+        linux = {
+          url = "gapid_r01_linux.zip";
+          sha1 = "7c9ef7544cf0aea030bcc29bd8e12c04fd53e653";
+        };
+        darwin = {
+          url = "gapid_r01_osx.zip";
+          sha1 = "597eb271349d890566274861eba2770a84ee4c69";
+        };
+        windows = {
+          url = "gapid_r01_windows.zip";
+          sha1 = "82c9b3eb1b281f27f58fe55025227148b3deb12e";
+        };
+      };
+      displayName = "GPU Debugging tools";
+    };
+    android.gapid.gapid-3 = mkGeneric {
+      id = "extras;android;gapid;3";
+      pname = "extras-android-gapid-3";
+      version = "3.1";
+      sources = {
+        linux = {
+          url = "gapid_2994895_linux.zip";
+          sha1 = "e40371ba191f617e4e79bc760d0ab2948ba8cf46";
+        };
+        darwin = {
+          url = "gapid_2994895_osx.zip";
+          sha1 = "ad86a2350b7b9908300277bf03d41649659de384";
+        };
+        windows = {
+          url = "gapid_2994895_windows.zip";
+          sha1 = "0383903a9a9e61ecb3a339f7981857ddb667cc61";
+        };
+      };
+      displayName = "GPU Debugging tools";
+    };
+    extras.android.m2repository = mkGeneric {
+      id = "extras;android;m2repository";
+      pname = "extras-android-m2repository";
+      version = "47";
+      sources = {
+        all = {
+          url = "android_m2repository_r47.zip";
+          sha1 = "a0d22beacc106a6977321f2b07d692ce4979e96a";
+        };
+      };
+      displayName = "Android Support Repository";
+    };
+    extras.google.admob_ads_sdk = mkGeneric {
+      id = "extras;google;admob_ads_sdk";
+      pname = "extras-google-admob_ads_sdk";
+      version = "11";
+      sources = {
+        all = {
+          url = "GoogleAdMobAdsSdkAndroid-6.4.1.zip";
+          sha1 = "0102859d9575baa0bf4fd5eb422af2ad0fe6cb82";
+        };
+      };
+      displayName = "Google AdMob Ads SDK";
+    };
+    extras.google.analytics_sdk_v2 = mkGeneric {
+      id = "extras;google;analytics_sdk_v2";
+      pname = "extras-google-analytics_sdk_v2";
+      version = "3";
+      sources = {
+        all = {
+          url = "GoogleAnalyticsAndroid_2.0beta5.zip";
+          sha1 = "dc14026bf0ce78315cb5dd00552607de0894de83";
+        };
+      };
+      displayName = "Google Analytics App Tracking SDK";
+    };
+    extras.google.auto = mkGeneric {
+      id = "extras;google;auto";
+      pname = "extras-google-auto";
+      version = "1.1";
+      sources = {
+        linux = {
+          url = "desktop-head-unit-linux_r01.1.zip";
+          sha1 = "202a6e1b3009a0eb815f8c672d2d5b3717de6169";
+        };
+        darwin = {
+          url = "desktop-head-unit-macosx_r01.1.zip";
+          sha1 = "8179cbb3914493ebc5eb65b731cba061582f2e84";
+        };
+        windows = {
+          url = "desktop-head-unit-windows_r01.1.zip";
+          sha1 = "99c4a7172d73673552119347bc24c58b47da177b";
+        };
+      };
+      displayName = "Android Auto Desktop Head Unit emulator";
+    };
+    extras.google.gcm = mkGeneric {
+      id = "extras;google;gcm";
+      pname = "extras-google-gcm";
+      version = "3";
+      sources = {
+        all = {
+          url = "gcm_r03.zip";
+          sha1 = "ad066fd0dc7fc99d8aadac09c65a3c2519fbc7bf";
+        };
+      };
+      displayName = "Google Cloud Messaging for Android Library";
+    };
+    extras.google.google_play_services = mkGeneric {
+      id = "extras;google;google_play_services";
+      pname = "extras-google-google_play_services";
+      version = "49";
+      sources = {
+        all = {
+          url = "google_play_services_v16_1_rc09.zip";
+          sha1 = "f95bf19634e2ab0430923247fe2c50246432d2e9";
+        };
+      };
+      displayName = "Google Play services";
+    };
+    extras.google.google_play_services_froyo = mkGeneric {
+      id = "extras;google;google_play_services_froyo";
+      pname = "extras-google-google_play_services_froyo";
+      version = "12";
+      sources = {
+        all = {
+          url = "google_play_services_3265130_r12.zip";
+          sha1 = "92558dbc380bba3d55d0ec181167fb05ce7c79d9";
+        };
+      };
+      displayName = "Google Play services for Froyo";
+    };
+    extras.google.instantapps = mkGeneric {
+      id = "extras;google;instantapps";
+      pname = "extras-google-instantapps";
+      version = "1.9";
+      sources = {
+        all = {
+          url = "iasdk-1.9.0-1566514721.zip";
+          sha1 = "c498367dcd7db30154b3e70c4ddbb1b0ea4b8d20";
+        };
+      };
+      displayName = "Google Play Instant Development SDK";
+    };
+    extras.google.m2repository = mkGeneric {
+      id = "extras;google;m2repository";
+      pname = "extras-google-m2repository";
+      version = "58";
+      sources = {
+        all = {
+          url = "google_m2repository_gms_v11_3_rc05_wear_2_0_5.zip";
+          sha1 = "05086add9e3a0eb1b67111108d7757a4337c3f10";
+        };
+      };
+      displayName = "Google Repository";
+    };
+    extras.google.market_apk_expansion = mkGeneric {
+      id = "extras;google;market_apk_expansion";
+      pname = "extras-google-market_apk_expansion";
+      version = "1";
+      sources = {
+        all = {
+          url = "market_apk_expansion-r03.zip";
+          sha1 = "5305399dc1a56814e86b8459ce24871916f78b8c";
+        };
+      };
+      displayName = "Google Play APK Expansion library";
+    };
+    extras.google.market_licensing = mkGeneric {
+      id = "extras;google;market_licensing";
+      pname = "extras-google-market_licensing";
+      version = "1";
+      sources = {
+        all = {
+          url = "market_licensing-r02.zip";
+          sha1 = "355e8dc304a92a5616db235af8ee7bd554356254";
+        };
+      };
+      displayName = "Google Play Licensing Library";
+    };
+    extras.google.simulators = mkGeneric {
+      id = "extras;google;simulators";
+      pname = "extras-google-simulators";
+      version = "1";
+      sources = {
+        all = {
+          url = "simulator_r01.zip";
+          sha1 = "4fb5344e34e8faab4db18af07dace44c50db26a7";
+        };
+      };
+      displayName = "Android Auto API Simulators";
+    };
+    extras.google.webdriver = mkGeneric {
+      id = "extras;google;webdriver";
+      pname = "extras-google-webdriver";
+      version = "2";
+      sources = {
+        all = {
+          url = "webdriver_r02.zip";
+          sha1 = "13f3a3b2670a5fc04a7342861644be9a01b07e38";
+        };
+      };
+      displayName = "Google Web Driver";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0.zip";
+          sha1 = "b621b9d5adf273bb0725948589863e60e96eeaf1";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-alpha4 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-alpha4";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-alpha4.zip";
+          sha1 = "2aa2aceecc6ba172742d0af0b43f11d03924eeb8";
+        };
+      };
+      displayName = "com.android.support.constraint:constraint-layout-solver:1.0.0-alpha4";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-alpha8 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-alpha8";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-alpha8.zip";
+          sha1 = "cd13d16a8f0198c1d6040ec8b1d0d4e5bb7feb6a";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0-alpha8";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta1 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-beta1";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-beta1.zip";
+          sha1 = "042c25575e7650e96f0f5f5d1d3c54ed38eb821a";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0-beta1";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta2 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-beta2";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-beta2.zip";
+          sha1 = "28492fd42b20ae1586591ff906556d459cfdaae8";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0-beta2";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta3 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-beta3";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-beta3.zip";
+          sha1 = "268e763fa64bd217d8d830e59ce76be19aaba631";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0-beta3";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta4 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-beta4";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-beta4.zip";
+          sha1 = "2213bf37e7a2869db2635895b8e90ca6841e79d2";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0-beta4";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta5 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.0-beta5";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.0-beta5.zip";
+          sha1 = "3918cfef73e64048d0b3e048068e208b414e7e91";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.0-beta5";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-1 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.1";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.1.zip";
+          sha1 = "76f8823def9a6da8954a54737762a6820bc1d043";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.1";
+    };
+    m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-2 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1.0.2";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-solver-1.0.2.zip";
+          sha1 = "96d7ff669f0e808e9833b2c2e320702826ccc8be";
+        };
+      };
+      displayName = "Solver for ConstraintLayout 1.0.2";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0.zip";
+          sha1 = "70acf99689b933bc6735645d5c3d92b91954b6cb";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-alpha4 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha4";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-alpha4";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-alpha4.zip";
+          sha1 = "645a9be1f0c1177301e71cd0ddccf1dd67c554fe";
+        };
+      };
+      displayName = "com.android.support.constraint:constraint-layout:1.0.0-alpha4";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-alpha8 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-alpha8";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-alpha8.zip";
+          sha1 = "7912ba03b04831f918f523648f118c4ee4da7604";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0-alpha8";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta1 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta1";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-beta1";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-beta1.zip";
+          sha1 = "11f2f5cec4ff02986bad75435e5be77b704b4c64";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0-beta1";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta2 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta2";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-beta2";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-beta2.zip";
+          sha1 = "623939865ede2e5c2c975dc55963e0d182bcce95";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0-beta2";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta3 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta3";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-beta3";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-beta3.zip";
+          sha1 = "d78bb6a8ce92005fb1e4ed55d892a65b4258c60b";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0-beta3";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta4 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-beta4";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-beta4.zip";
+          sha1 = "dc60844aab93a09a54a3c107685a77b18d7c1c39";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0-beta4";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta5 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.0-beta5";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.0-beta5.zip";
+          sha1 = "4660f6c7a576ea1364f0c3225db71c29ca660d9a";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.0-beta5";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-1 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.1";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.1.zip";
+          sha1 = "342b0894b8651fff37586f80f383733e97aba9f9";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.1";
+    };
+    m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-2 = mkGeneric {
+      id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2";
+      pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1.0.2";
+      version = "1";
+      sources = {
+        all = {
+          url = "com.android.support.constraint-constraint-layout-1.0.2.zip";
+          sha1 = "3d9688a50fe0ed7348275f85d1b02278f616d8a4";
+        };
+      };
+      displayName = "ConstraintLayout for Android 1.0.2";
     };
     lldb-2-0 = mkPrebuilt {
       id = "lldb;2.0";
@@ -3104,6 +3824,11 @@
     };
   };
   licenses = {
+    android-googletv-license = {
+      id = "android-googletv-license";
+      hash = "601085b94cd77f0b54ff86406957099ebe79c4d6";
+      text = ''todo'';
+    };
     android-sdk-license = {
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
