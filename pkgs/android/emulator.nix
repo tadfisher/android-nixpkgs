@@ -1,6 +1,8 @@
 { stdenv, mkGeneric, runCommand, srcOnly, autoPatchelfHook
-, fontconfig, freetype, gperftools, libGL, libX11, libXext, libcxx
-, libpulseaudio, libunwind, libxkbcommon, sqlite, nss, nspr, vulkan-loader, zlib
+, alsaLib, fontconfig, freetype, gperftools, libGL, libX11, libXcomposite
+, libXcursor, libXdamage, libXext, libXfixes, libXi, libXrender, libXtst
+, libcxx, libpulseaudio, libunwind, libxkbcommon, sqlite, nss, nspr
+, vulkan-loader, zlib
 }:
 
 package:
@@ -30,12 +32,20 @@ mkGeneric (package // {
   ];
 
   buildInputs = [
+    alsaLib
     fontconfig
     freetype
     gperftools
     libGL
     libX11
+    libXcomposite
+    libXcursor
+    libXdamage
     libXext
+    libXfixes
+    libXi
+    libXrender
+    libXtst
     libcxx
     libpulseaudio
     libxkbcommon
@@ -53,7 +63,7 @@ mkGeneric (package // {
     rm -r $out/emulator/lib64/gles_mesa
 
     for f in ${toString systemLibs}; do
-      rm $out/emulator/lib64/$f
+      rm $out/emulator/lib64/$f || true
     done
 
     # silence LD_PRELOAD warning
