@@ -3354,6 +3354,18 @@
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
     };
+    system-images.android-24.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-24;google_apis_playstore;x86";
+      pname = "system-images-android-24-google_apis_playstore-x86";
+      version = "19";
+      sources = {
+        all = {
+          url = "x86-24_r19.zip";
+          sha1 = "b52e9593ffdde65c1a0970256a32e8967c89cc22";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
     system-images.android-25.android-tv.x86 = mkSystemImage {
       id = "system-images;android-25;android-tv;x86";
       pname = "system-images-android-25-android-tv-x86";
@@ -3365,6 +3377,30 @@
         };
       };
       displayName = "Android TV Intel x86 Atom System Image";
+    };
+    system-images.android-25.android-wear-cn.armeabi-v7a = mkSystemImage {
+      id = "system-images;android-25;android-wear-cn;armeabi-v7a";
+      pname = "system-images-android-25-android-wear-cn-armeabi-v7a";
+      version = "4";
+      sources = {
+        all = {
+          url = "armeabi-v7a-25_r04.zip";
+          sha1 = "02d7bc86df054d1e89fe5856b3af1d2c142cab41";
+        };
+      };
+      displayName = "China version of Android Wear ARM EABI v7a System Image";
+    };
+    system-images.android-25.android-wear-cn.x86 = mkSystemImage {
+      id = "system-images;android-25;android-wear-cn;x86";
+      pname = "system-images-android-25-android-wear-cn-x86";
+      version = "4";
+      sources = {
+        all = {
+          url = "x86-25_r04.zip";
+          sha1 = "73eab14c7cf2f6941e1fee61e0038ead7a2c7f4d";
+        };
+      };
+      displayName = "China version of Android Wear Intel x86 Atom System Image";
     };
     system-images.android-25.android-wear.armeabi-v7a = mkSystemImage {
       id = "system-images;android-25;android-wear;armeabi-v7a";
@@ -3462,6 +3498,18 @@
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
     };
+    system-images.android-25.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-25;google_apis_playstore;x86";
+      pname = "system-images-android-25-google_apis_playstore-x86";
+      version = "9";
+      sources = {
+        all = {
+          url = "x86-25_r09.zip";
+          sha1 = "6f6668954f7fd52f896fe7528aa122028c9b026c";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
     system-images.android-26.android-tv.x86 = mkSystemImage {
       id = "system-images;android-26;android-tv;x86";
       pname = "system-images-android-26-android-tv-x86";
@@ -3473,6 +3521,18 @@
         };
       };
       displayName = "Android TV Intel x86 Atom System Image";
+    };
+    system-images.android-26.android-wear-cn.x86 = mkSystemImage {
+      id = "system-images;android-26;android-wear-cn;x86";
+      pname = "system-images-android-26-android-wear-cn-x86";
+      version = "4";
+      sources = {
+        all = {
+          url = "x86-26_r04.zip";
+          sha1 = "fdc8a313f889a2d6522de1fbc00ee9e13547d096";
+        };
+      };
+      displayName = "China version of Android Wear Intel x86 Atom System Image";
     };
     system-images.android-26.android-wear.x86 = mkSystemImage {
       id = "system-images;android-26;android-wear;x86";
@@ -3534,6 +3594,18 @@
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
     };
+    system-images.android-26.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-26;google_apis_playstore;x86";
+      pname = "system-images-android-26-google_apis_playstore-x86";
+      version = "7";
+      sources = {
+        all = {
+          url = "x86-26_r07.zip";
+          sha1 = "2c8bee7b97a309f099941532e63c42a7d4a06e19";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
     system-images.android-27.android-tv.x86 = mkSystemImage {
       id = "system-images;android-27;android-tv;x86";
       pname = "system-images-android-27-android-tv-x86";
@@ -3582,6 +3654,18 @@
       };
       displayName = "Google APIs Intel x86 Atom System Image";
     };
+    system-images.android-27.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-27;google_apis_playstore;x86";
+      pname = "system-images-android-27-google_apis_playstore-x86";
+      version = "3";
+      sources = {
+        all = {
+          url = "x86-27_r03.zip";
+          sha1 = "eb5a944ceb691ca0648d0a6f0d93893a47223b5d";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
     system-images.android-28.android-automotive.x86 = mkSystemImage {
       id = "system-images;android-28;android-automotive;x86";
       pname = "system-images-android-28-android-automotive-x86";
@@ -3605,6 +3689,18 @@
         };
       };
       displayName = "Android TV Intel x86 Atom System Image";
+    };
+    system-images.android-28.android-wear-cn.x86 = mkSystemImage {
+      id = "system-images;android-28;android-wear-cn;x86";
+      pname = "system-images-android-28-android-wear-cn-x86";
+      version = "3";
+      sources = {
+        all = {
+          url = "x86-28_r03.zip";
+          sha1 = "2099d87709c5e064273925dbf2cf1fd081bf0262";
+        };
+      };
+      displayName = "China version of Wear OS Intel x86 Atom System Image";
     };
     system-images.android-28.android-wear.x86 = mkSystemImage {
       id = "system-images;android-28;android-wear;x86";
@@ -3666,6 +3762,30 @@
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
     };
+    system-images.android-28.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-28;google_apis_playstore;x86";
+      pname = "system-images-android-28-google_apis_playstore-x86";
+      version = "9";
+      sources = {
+        all = {
+          url = "x86-28_r09.zip";
+          sha1 = "97d9d4f4a2afa8b0f5d52e90748e19c10406ca93";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
+    system-images.android-28.google_apis_playstore.x86_64 = mkSystemImage {
+      id = "system-images;android-28;google_apis_playstore;x86_64";
+      pname = "system-images-android-28-google_apis_playstore-x86_64";
+      version = "8";
+      sources = {
+        all = {
+          url = "x86_64-28_r08.zip";
+          sha1 = "a767da996fdea7a1f5632a9206fa5c009d6e580c";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom_64 System Image";
+    };
     system-images.android-29.default.x86 = mkSystemImage {
       id = "system-images;android-29;default;x86";
       pname = "system-images-android-29-default-x86";
@@ -3701,15 +3821,15 @@
     system-images.android-29.google_apis.x86 = mkSystemImage {
       id = "system-images;android-29;google_apis;x86";
       pname = "system-images-android-29-google_apis-x86";
-      version = "7";
+      version = "8";
       sources = {
         darwin = {
-          url = "x86-29_r07-darwin.zip";
-          sha1 = "d07c160db6c74083e27b42dbac73fae9421082f7";
+          url = "x86-29_r08-darwin.zip";
+          sha1 = "3aeb4fb035040ee244f450f27e4f87cf6bc7318f";
         };
         linux = {
-          url = "x86-29_r07-linux.zip";
-          sha1 = "d07c160db6c74083e27b42dbac73fae9421082f7";
+          url = "x86-29_r08-linux.zip";
+          sha1 = "3aeb4fb035040ee244f450f27e4f87cf6bc7318f";
         };
       };
       displayName = "Google APIs Intel x86 Atom System Image";
@@ -3729,6 +3849,38 @@
         };
       };
       displayName = "Google APIs Intel x86 Atom_64 System Image";
+    };
+    system-images.android-29.google_apis_playstore.x86 = mkSystemImage {
+      id = "system-images;android-29;google_apis_playstore;x86";
+      pname = "system-images-android-29-google_apis_playstore-x86";
+      version = "8";
+      sources = {
+        darwin = {
+          url = "x86-29_r08-darwin.zip";
+          sha1 = "1c45e690e9ee6a44f40549e9fb68d3fd52ba4970";
+        };
+        linux = {
+          url = "x86-29_r08-linux.zip";
+          sha1 = "1c45e690e9ee6a44f40549e9fb68d3fd52ba4970";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom System Image";
+    };
+    system-images.android-29.google_apis_playstore.x86_64 = mkSystemImage {
+      id = "system-images;android-29;google_apis_playstore;x86_64";
+      pname = "system-images-android-29-google_apis_playstore-x86_64";
+      version = "7";
+      sources = {
+        darwin = {
+          url = "x86_64-29_r07-darwin.zip";
+          sha1 = "0e030319bfb3921027b3f28c4190a73d84ddb923";
+        };
+        linux = {
+          url = "x86_64-29_r07-linux.zip";
+          sha1 = "0e030319bfb3921027b3f28c4190a73d84ddb923";
+        };
+      };
+      displayName = "Google Play Intel x86 Atom_64 System Image";
     };
     system-images.android-Q.android-tv.x86 = mkSystemImage {
       id = "system-images;android-Q;android-tv;x86";
