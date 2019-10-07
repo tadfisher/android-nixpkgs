@@ -7,6 +7,7 @@
 , displayName
 , repoUrl ? https://dl.google.com/android/repository
 , support32bit ? false
+, builder ? stdenv.mkDerivation
 , ...
 } @ package:
 
@@ -44,7 +45,7 @@ let
 
   outdir = replaceStrings [";"] ["/"] package.id;
 
-in (if support32bit then stdenv_32bit else stdenv).mkDerivation ({
+in builder ({
   inherit name src;
 
   nativeBuildInputs = [ unzip ] ++ (package.nativeBuildInputs or []);

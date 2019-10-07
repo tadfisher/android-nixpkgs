@@ -34,6 +34,7 @@ data class Repo(
             , mkPlatformTools
             , mkPrebuilt
             , mkTools
+            , mkSrcOnly
             , mkSystemImage
             }:
             {
@@ -172,7 +173,7 @@ fun RemotePackage.builder(): String {
         is DetailsTypes.PlatformDetailsType,
         is DetailsTypes.ExtraDetailsType,
         is DetailsTypes.AddonDetailsType,
-        is DetailsTypes.MavenType-> "mkGeneric"
+        is DetailsTypes.MavenType-> "mkSrcOnly"
         is DetailsTypes.SysImgDetailsType -> "mkSystemImage"
 
         else -> when (path.split(";").first()) {

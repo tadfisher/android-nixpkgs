@@ -12,6 +12,7 @@
     mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };
     mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
     mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
+    mkSrcOnly = callPackage ./src-only.nix { inherit mkGeneric; };
     mkSystemImage = callPackage ./sys-img.nix { inherit mkGeneric; };
     mkTools =
       let
