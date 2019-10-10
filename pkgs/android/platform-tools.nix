@@ -1,6 +1,6 @@
 { stdenv, mkGeneric, autoPatchelfHook, python }:
 
-package: mkGeneric (package // {
+mkGeneric {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
@@ -17,4 +17,4 @@ package: mkGeneric (package // {
     mkdir -p $out/bin
     ln -s $out/platform-tools/{adb,fastboot} $out/bin/
   '';
-})
+}

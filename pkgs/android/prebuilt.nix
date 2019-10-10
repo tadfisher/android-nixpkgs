@@ -52,6 +52,4 @@ let
 
     else {};
 
-in mkGeneric (package
-  // { nativeBuildInputs = [ autoPatchelfHook ]; }
-  // buildArgs)
+in mkGeneric ({ nativeBuildInputs = [ autoPatchelfHook ]; } // buildArgs) package

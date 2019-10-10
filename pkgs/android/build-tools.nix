@@ -1,15 +1,13 @@
-{ stdenv, stdenv_32bit, lib, mkGeneric, autoPatchelfHook, makeSetupHook
+{ stdenv, lib, mkGeneric, autoPatchelfHook, makeSetupHook
 , ncurses5, ncurses5-32, zlib, zlib-32}:
 
-package: mkGeneric (package // rec {
-  support32bit = true;
-
+package: mkGeneric (rec {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
 
   buildInputs = [
-    stdenv_32bit.cc.cc.lib
+    stdenv.cc.cc.lib
     ncurses5
     ncurses5-32
     zlib
@@ -24,4 +22,4 @@ package: mkGeneric (package // rec {
     addAutoPatchelfSearchPath "$packageBase"
     autoPatchelf --no-recurse "$packageBase"
   '';
-})
+}) package

@@ -5,11 +5,11 @@ let
 
 in
 
-androidPkgs.sdk.stable (p: with p; [
+androidPkgs.sdk (p: with p.stable; [
   tools
   build-tools-29-0-0
   platform-tools
   platforms.android-29
   emulator
-  system-images.android-29.google_apis_playstore.x86
+  system-images.android-29.google-apis-playstore.x86
 ])

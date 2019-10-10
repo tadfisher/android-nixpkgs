@@ -1,4 +1,4 @@
-{ mkGeneric, srcOnly }:
+{ mkGeneric }:
 
 package:
 
@@ -7,8 +7,7 @@ let
 
   sysImgPath = elemAt (filter (x: x != [])  (split ";" package.id)) 2;
 
-in mkGeneric (package // {
-  builder = srcOnly;
-
+in mkGeneric {
+  phases = [ "unpackPhase" "installPhase" ];
   repoUrl = "https://dl.google.com/android/repository/sys-img/${sysImgPath}";
-})
+} package

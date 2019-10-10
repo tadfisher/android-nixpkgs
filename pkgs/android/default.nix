@@ -1,27 +1,33 @@
 # TODO ndk
 
-{ stdenv, lib, callPackage, fetchurl, androidRepository, packageXml, pkgsi686Linux }:
+{ pkgs, pkgsi686Linux, lib }:
 
-(androidRepository rec {
-    mkGeneric = callPackage ./generic.nix { inherit packageXml; };
-    mkBuildTools = callPackage ./build-tools.nix {
-      inherit mkGeneric;
-      ncurses5-32 = pkgsi686Linux.ncurses5;
-      zlib-32 = pkgsi686Linux.zlib;
+lib.makeScope pkgs.newScope (self: with self; rec {
+  fontconfig-32 = pkgsi686Linux.fontconfig;
+  freetype-32 = pkgsi686Linux.freetype;
+  libX11-32 = pkgsi686Linux.xorg.libX11;
+  libXrender-32 = pkgsi686Linux.xorg.libXrender;
+  ncurses5-32 = pkgsi686Linux.ncurses5;
+  zlib-32 = pkgsi686Linux.zlib;
+
+  fetchandroid = callPackage ./fetch.nix {};
+
+  mkGeneric = callPackage ./generic.nix {};
+  mkBuildTools = callPackage ./build-tools.nix {
+    stdenv = pkgs.stdenv_32bit;
+    mkGeneric = mkGeneric.override {
+      stdenv = pkgs.stdenv_32bit;
     };
-    mkEmulator = callPackage ./emulator.nix { inherit mkGeneric; };
-    mkPlatformTools = callPackage ./platform-tools.nix { inherit mkGeneric; };
-    mkPrebuilt = callPackage ./prebuilt.nix { inherit mkGeneric; };
-    mkSrcOnly = callPackage ./src-only.nix { inherit mkGeneric; };
-    mkSystemImage = callPackage ./sys-img.nix { inherit mkGeneric; };
-    mkTools =
-      let
-        pkgs32bit = with pkgsi686Linux; {
-          fontconfig-32 = fontconfig;
-          freetype-32 = freetype;
-          libX11-32 = xorg.libX11;
-          libXrender-32 = xorg.libXrender;
-          zlib-32 = zlib;
-        };
-      in callPackage ./tools.nix ({ inherit mkGeneric; } // pkgs32bit);
-}).packages
+  };
+  mkEmulator = callPackage ./emulator.nix {};
+  mkPlatformTools = callPackage ./platform-tools.nix {};
+  mkPrebuilt = callPackage ./prebuilt.nix {};
+  mkSrcOnly = callPackage ./src-only.nix {};
+  mkSystemImage = callPackage ./sys-img.nix {};
+  mkTools = callPackage ./tools.nix {
+    stdenv = pkgs.stdenv_32bit;
+    mkGeneric = mkGeneric.override {
+      stdenv = pkgs.stdenv_32bit;
+    };
+  };
+})

@@ -1,18 +1,11 @@
-{ stdenv_32bit, pkgsi686Linux, mkGeneric, autoPatchelfHook, makeWrapper, file, findutils
+{ stdenv, mkGeneric, autoPatchelfHook, makeWrapper, findutils
 , coreutils, fontconfig, freetype, libX11, libXdamage, libXrender
 , libXext, libpulseaudio, ncurses5, zlib, jdk8
 # 32-bit dependencies
 , fontconfig-32, freetype-32, libX11-32, libXrender-32, zlib-32
 }:
 
-package:
-
-let
-  inherit (builtins) listToAttrs replaceStrings;
-
-in mkGeneric (package // {
-  support32bit = true;
-
+mkGeneric {
   nativeBuildInputs = [
     autoPatchelfHook
     findutils
@@ -47,4 +40,4 @@ in mkGeneric (package // {
     mkdir -p $out/bin
     ln -s $out/tools/bin/* $out/bin
   '';
-})
+}

@@ -1,43 +1,13 @@
-{ stdenv, stdenv_32bit, fetchurl, unzip, packageXml }:
+{ stdenv, fetchandroid, writeText, unzip }:
 
-{ id
-, pname
-, version
-, sources
-, displayName
-, repoUrl ? https://dl.google.com/android/repository
-, support32bit ? false
-, builder ? stdenv.mkDerivation
-, ...
-} @ package:
+{ repoUrl ? https://dl.google.com/android/repository
+, ... } @ args:
+
+package:
 
 let
   inherit (builtins) attrNames concatStringsSep filter hasAttr head listToAttrs replaceStrings;
   inherit (stdenv.lib) hasPrefix findFirst flatten groupBy mapAttrs nameValuePair optionalString;
-
-  name = concatStringsSep "-" (filter (s: s != "") [package.pname package.version]);
-
-  src =
-    let
-      # Keys by which to search the package's "sources" set for the host platform.
-      hostOsKeys = with stdenv.hostPlatform; [
-        system
-        parsed.kernel.name
-        parsed.cpu.name
-        "all"
-      ];
-
-      hostSrc =
-        let key = findFirst
-          (k: hasAttr k package.sources)
-          (throw "Unsupported system: ${stdenv.hostPlatform.system}")
-          hostOsKeys;
-        in package.sources.${key};
-
-    in fetchurl {
-      url = "${repoUrl}/${hostSrc.url}";
-      inherit (hostSrc) sha1;
-    };
 
   platforms = flatten (map (name:
     if (hasAttr name stdenv.lib.platforms) then stdenv.lib.platforms.${name} else name
@@ -45,18 +15,30 @@ let
 
   outdir = replaceStrings [";"] ["/"] package.id;
 
-in builder ({
-  inherit name src;
+  packageXml = writeText "${package.pname}-${package.version}-package-xml" package.xml;
 
-  nativeBuildInputs = [ unzip ] ++ (package.nativeBuildInputs or []);
+in stdenv.mkDerivation ({
+
+  inherit (package) pname version;
+
+  nativeBuildInputs = [ unzip ] ++ (args.nativeBuildInputs or []);
+
+  src = fetchandroid {
+    inherit (package) sources;
+    inherit repoUrl;
+  };
 
   installPhase = ''
     packageBase="$out/${outdir}"
     mkdir -p "$packageBase"
     cp -r * "$packageBase"
-    cp ${packageXml}/${package.pname}.xml "$packageBase"/package.xml
+    ln -s ${packageXml} "$packageBase/package.xml"
     runHook postInstall
   '';
+
+  passthru = {
+    license = package.license;
+  } // (args.passthru or {});
 
   meta = with stdenv.lib; {
     description = package.displayName;
@@ -64,5 +46,5 @@ in builder ({
     license = licenses.asl20;
     maintainers = with maintainers; [ tadfisher ];
     inherit platforms;
-  } // (package.meta or {});
-} // removeAttrs package [ "displayName" "sources" "support32bit" "repoUrl" "nativeBuildInputs" "meta" ])
+  } // (args.meta or {});
+} // removeAttrs args [ "nativeBuildInputs" "passthru" "meta" ])

@@ -11,24 +11,13 @@
 with pkgs;
 
 let
-  channels = [ "stable" "beta" "preview" "canary" ];
+  channelNames = [ "stable" "beta" "preview" "canary" ];
 
-  pkgsFun = channel:
-    let
-      repoPath = ./channels + "/${channel}";
-    in
-      recurseIntoAttrs (callPackage ./pkgs/android {
-        androidRepository = import repoPath;
-        packageXml = repoPath;
-      });
+  androidSdk = recurseIntoAttrs (callPackage ./pkgs/android {});
 
-  androidPackages =
-    lib.genAttrs channels (channel: pkgsFun channel);
+  channels = lib.genAttrs channelNames (channel: androidSdk.callPackage (./channels + "/${channel}") {});
 
-  sdkChannels = lib.genAttrs channels
-    (channel: callPackage ./pkgs/android/sdk.nix { androidPackages = androidPackages.${channel}; });
-
-in androidPackages // {
-  aapt2 = callPackage ./pkgs/aapt2 {};
-  sdk = sdkChannels;
+in rec {
+  packages = recurseIntoAttrs channels;
+  sdk = callPackage ./pkgs/android/sdk.nix { inherit packages; };
 }

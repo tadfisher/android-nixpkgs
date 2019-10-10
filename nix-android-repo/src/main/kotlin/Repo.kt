@@ -19,10 +19,6 @@ import java.io.InputStream
 import java.io.PrintStream
 import java.net.URL
 import java.nio.file.Path
-import com.android.sdklib.repository.installer.SdkInstallerUtil
-import com.android.repository.api.Installer
-import com.android.repository.api.PackageOperation
-import com.android.repository.io.FileOp
 
 class NixDownloader(localPath: Path) : Downloader {
     override fun downloadFully(url: URL, indicator: ProgressIndicator): Path? {

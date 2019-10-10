@@ -1,7 +1,5 @@
-{ mkGeneric, srcOnly }:
+{ mkGeneric }:
 
-package:
-
-mkGeneric (package // {
-  builder = srcOnly;
-})
+mkGeneric {
+  phases = [ "unpackPhase" "installPhase" ];
+}

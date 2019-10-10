@@ -5,8 +5,6 @@
 , vulkan-loader, zlib
 }:
 
-package:
-
 let
   systemLibs = [
     "libc++.so"
@@ -26,7 +24,7 @@ let
 
 in
 
-mkGeneric (package // {
+mkGeneric {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
@@ -69,4 +67,4 @@ mkGeneric (package // {
     # silence LD_PRELOAD warning
     ln -s ${freetype}/lib/libfreetype.so.6 $out/emulator/lib64/qt/lib
   '';
-})
+}

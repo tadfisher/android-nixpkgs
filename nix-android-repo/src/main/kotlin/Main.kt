@@ -62,7 +62,7 @@ fun main(args: Array<String>) {
 
     print("writing package xml... ")
     for (pkg in packages.remotePackages.values) {
-        xml.resolve(pkg.path.replace(";", "-") + ".xml").writeText(repo.packageXml(pkg))
+        xml.resolve(pkg.path.pname() + ".xml").writeText(repo.packageXml(pkg))
     }
     println("done")
 

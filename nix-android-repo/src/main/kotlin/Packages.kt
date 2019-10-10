@@ -6,9 +6,6 @@ import com.android.repository.impl.meta.Archive
 import com.android.repository.impl.meta.RemotePackageImpl
 import com.android.repository.impl.meta.RepositoryPackages
 import com.android.sdklib.repository.meta.DetailsTypes
-import java.time.LocalDateTime
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
 
 interface NixExpr {
     fun nix(): String
@@ -36,14 +33,9 @@ data class Repo(
             , mkTools
             , mkSrcOnly
             , mkSystemImage
-            }:
-            {
-            ⇥packages = %s;
-            ⇥licenses = %s;
-            }
+            }: %s
         """.trimIndent().format(
-            packages.nixSet { it.path.joinToString(".") }.indentMiddle(),
-            licenses.nixSet { it.license.id }.indentMiddle()
+            packages.nixSet { it.path.joinToString(".") }
         )
     }
 }
@@ -55,7 +47,8 @@ data class Package(
     val version: String,
     val builder: String,
     val sources: List<Source>,
-    val displayName: String
+    val displayName: String,
+    val license: AndroidLicense
 ) : NixExpr {
     override fun nix(): String {
         return """
@@ -65,8 +58,10 @@ data class Package(
         ⇥version = "$version";
         ⇥sources = %s;
         ⇥displayName = "$displayName";
+        ⇥license = %s;
+        ⇥xml = builtins.readFile ./$pname.xml;
         }
-    """.trimIndent().format(sources.nixSet { it.platform }.indentMiddle())
+    """.trimIndent().format(sources.nixSet { it.platform }.indentMiddle(), license.nix().indentMiddle())
     }
 }
 
@@ -85,13 +80,12 @@ data class Source(
     }
 }
 
-class AndroidLicense(val license: License) : NixExpr {
+class AndroidLicense(private val license: License) : NixExpr {
     override fun nix(): String {
         return """
             {
             ⇥id = "${license.id}";
             ⇥hash = "${license.licenseHash}";
-            ⇥text = ''todo'';
             }
         """.trimIndent()
     }
@@ -105,7 +99,7 @@ fun RepositoryPackages.nixPackages(): List<Package> {
             Package(
                 id = pkg.path,
                 path = pkg.attrpath(),
-                pname = pkg.path.replace(";", "-"),
+                pname = pkg.path.pname(),
                 version = pkg.revision(),
                 builder = pkg.builder(),
                 sources = pkg.allArchives.map { archive ->
@@ -115,7 +109,8 @@ fun RepositoryPackages.nixPackages(): List<Package> {
                         sha1 = archive.complete.checksum
                     )
                 },
-                displayName = pkg.displayName
+                displayName = pkg.displayName,
+                license = AndroidLicense(pkg.license)
             )
         }
 }
@@ -141,7 +136,7 @@ fun Archive.platform(): String {
 
 fun RemotePackage.attrpath(): List<String> {
     return path.split(";").fold(mutableListOf()) { acc, p ->
-        val sanitized = p.replace(".", "-")
+        val sanitized = p.pname()
         if (acc.isNotEmpty() && sanitized.first().isDigit()) {
             acc.drop(1) + "${acc.last()}-$sanitized"
         } else {
@@ -173,7 +168,8 @@ fun RemotePackage.builder(): String {
         is DetailsTypes.PlatformDetailsType,
         is DetailsTypes.ExtraDetailsType,
         is DetailsTypes.AddonDetailsType,
-        is DetailsTypes.MavenType-> "mkSrcOnly"
+        is DetailsTypes.MavenType -> "mkSrcOnly"
+
         is DetailsTypes.SysImgDetailsType -> "mkSystemImage"
 
         else -> when (path.split(";").first()) {
@@ -196,3 +192,7 @@ fun RepositoryPackages.nixRepo(): Repo {
             .map { AndroidLicense(it) }
     )
 }
+
+private val symbols = Regex("""[ _.;]""")
+
+fun String.pname(): String = symbols.replace(this, "-")
