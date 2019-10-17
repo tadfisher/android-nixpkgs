@@ -2589,23 +2589,19 @@
   ndk-bundle = mkGeneric {
     id = "ndk-bundle";
     pname = "ndk-bundle";
-    version = "20.0.5594570";
+    version = "21.0.5935234";
     sources = {
       x86_64-darwin = {
-        url = "android-ndk-r20-darwin-x86_64.zip";
-        sha1 = "96d5f1c50452596912d1982439c514194b5751e6";
+        url = "android-ndk-r21-darwin-x86_64.zip";
+        sha1 = "14b45877e6e09d1c88c75709b3dcaf8055f16efd";
       };
       x86_64-linux = {
-        url = "android-ndk-r20-linux-x86_64.zip";
-        sha1 = "8665fc84a1b1f0d6ab3b5fdd1e30200cc7b9adff";
-      };
-      i686-windows = {
-        url = "android-ndk-r20-windows-x86.zip";
-        sha1 = "b605f7e2e7585af2fc9d59fe9ddad86b64b2bf03";
+        url = "android-ndk-r21-linux-x86_64.zip";
+        sha1 = "9c20b1095124f15a8ed3f7349f1ccb69ec66e891";
       };
       x86_64-windows = {
-        url = "android-ndk-r20-windows-x86_64.zip";
-        sha1 = "36e1dc77fad08ad2498fb94b13ad8caf26bbd9df";
+        url = "android-ndk-r21-windows-x86_64.zip";
+        sha1 = "b06620b1fbc5c9be93ab6d34e2051cf72c08b56d";
       };
     };
     displayName = "NDK";
@@ -2701,6 +2697,35 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = builtins.readFile ./ndk-18-1-5063045.xml;
+  };
+  ndk-19-0-5232133 = mkGeneric {
+    id = "ndk;19.0.5232133";
+    pname = "ndk-19-0-5232133";
+    version = "19.0.5232133";
+    sources = {
+      x86_64-darwin = {
+        url = "android-ndk-r19-darwin-x86_64.zip";
+        sha1 = "86c1a962601b23b8a6d3d535c93b4b0bc4f29249";
+      };
+      x86_64-linux = {
+        url = "android-ndk-r19-linux-x86_64.zip";
+        sha1 = "f02ad84cb5b6e1ff3eea9e6168037c823408c8ac";
+      };
+      i686-windows = {
+        url = "android-ndk-r19-windows-x86.zip";
+        sha1 = "281175a42b312d630f864a02a31c5806ada5663b";
+      };
+      x86_64-windows = {
+        url = "android-ndk-r19-windows-x86_64.zip";
+        sha1 = "37906e8e79a9dddf6805325f706a072055e4136c";
+      };
+    };
+    displayName = "NDK (Side by side) 19.0.5232133";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = builtins.readFile ./ndk-19-0-5232133.xml;
   };
   ndk-19-2-5345600 = mkGeneric {
     id = "ndk;19.2.5345600";
@@ -2817,6 +2842,31 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = builtins.readFile ./ndk-20-0-5594570.xml;
+  };
+  ndk-21-0-5935234 = mkGeneric {
+    id = "ndk;21.0.5935234";
+    pname = "ndk-21-0-5935234";
+    version = "21.0.5935234";
+    sources = {
+      x86_64-darwin = {
+        url = "android-ndk-r21-darwin-x86_64.zip";
+        sha1 = "14b45877e6e09d1c88c75709b3dcaf8055f16efd";
+      };
+      x86_64-linux = {
+        url = "android-ndk-r21-linux-x86_64.zip";
+        sha1 = "9c20b1095124f15a8ed3f7349f1ccb69ec66e891";
+      };
+      x86_64-windows = {
+        url = "android-ndk-r21-windows-x86_64.zip";
+        sha1 = "b06620b1fbc5c9be93ab6d34e2051cf72c08b56d";
+      };
+    };
+    displayName = "NDK (Side by side) 21.0.5935234";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = builtins.readFile ./ndk-21-0-5935234.xml;
   };
   patcher.v4 = mkGeneric {
     id = "patcher;v4";
