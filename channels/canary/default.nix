@@ -3476,6 +3476,31 @@
     };
     xml = builtins.readFile ./platforms-android-9.xml;
   };
+  skiaparser-1 = mkGeneric {
+    id = "skiaparser;1";
+    pname = "skiaparser-1";
+    version = "1-rc1";
+    sources = {
+      linux = {
+        url = "skiaparser-5924912-linux.zip";
+        sha1 = "562006934072f422770992af853884f7dd0f8d59";
+      };
+      darwin = {
+        url = "skiaparser-5924912-mac.zip";
+        sha1 = "ebf045c257633980e48dac43b7da400f960956c8";
+      };
+      windows = {
+        url = "skiaparser-5924912-win.zip";
+        sha1 = "1f7f5ee841b6dd1c1841090c3df221fba2410a38";
+      };
+    };
+    displayName = "Skia Parser Server";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = builtins.readFile ./skiaparser-1.xml;
+  };
   sources.android-14 = mkSrcOnly {
     id = "sources;android-14";
     pname = "sources-android-14";
