@@ -5165,17 +5165,17 @@
   system-images.android-28.google-apis.x86 = mkSystemImage {
     id = "system-images;android-28;google_apis;x86";
     pname = "system-images-android-28-google-apis-x86";
-    version = "9";
+    version = "10";
     sources = {
       all = {
-        url = "x86-28_r09.zip";
-        sha1 = "7c84ba5cbc009132ce38df52830c17b9bffc54bb";
+        url = "x86-28_r10.zip";
+        sha1 = "075e2253f1e93b49c134142a9717180dc7636685";
       };
     };
     displayName = "Google APIs Intel x86 Atom System Image";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = builtins.readFile ./system-images-android-28-google-apis-x86.xml;
   };
@@ -5199,17 +5199,17 @@
   system-images.android-28.google-apis-playstore.x86 = mkSystemImage {
     id = "system-images;android-28;google_apis_playstore;x86";
     pname = "system-images-android-28-google-apis-playstore-x86";
-    version = "8";
+    version = "9";
     sources = {
       all = {
-        url = "x86-28_r08.zip";
-        sha1 = "5381f9d52a3bf1967c9c92a25b20012cd68764c8";
+        url = "x86-28_r09.zip";
+        sha1 = "97d9d4f4a2afa8b0f5d52e90748e19c10406ca93";
       };
     };
     displayName = "Google Play Intel x86 Atom System Image";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = builtins.readFile ./system-images-android-28-google-apis-playstore-x86.xml;
   };
