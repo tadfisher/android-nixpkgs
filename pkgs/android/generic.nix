@@ -1,7 +1,6 @@
 { stdenv, fetchandroid, writeText, unzip }:
 
-{ repoUrl ? https://dl.google.com/android/repository
-, ... } @ args:
+{ repoUrl ? "https://dl.google.com/android/repository", ... } @ args:
 
 package:
 
@@ -39,6 +38,8 @@ in stdenv.mkDerivation ({
   passthru = {
     license = package.license;
   } // (args.passthru or {});
+
+  preferLocalBuild = true;
 
   meta = with stdenv.lib; {
     description = package.displayName;
