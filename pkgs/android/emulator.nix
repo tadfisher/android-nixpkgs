@@ -1,7 +1,7 @@
 { stdenv, mkGeneric, runCommand, srcOnly, autoPatchelfHook
 , alsaLib, fontconfig, freetype, gperftools, libGL, libX11, libXcomposite
 , libXcursor, libXdamage, libXext, libXfixes, libXi, libXrender, libXtst
-, libcxx, libpulseaudio, libunwind, libxkbcommon, sqlite, nss, nspr
+, libcxx, libpulseaudio, libunwind, libuuid, libxkbcommon, sqlite, nss, nspr
 , vulkan-loader, zlib
 }:
 
@@ -48,6 +48,7 @@ mkGeneric {
     libpulseaudio
     libxkbcommon
     libunwind
+    libuuid
     nss
     nspr
     sqlite
