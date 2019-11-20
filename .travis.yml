@@ -37,13 +37,3 @@ jobs:
         local_dir: build
         on:
           branch: master
-    - stage: cachix
-      name: "Cachix nixos-19.03"
-      script: scripts/cachix.sh nixos-19.03
-      if: branch = master
-    - name: "Cachix nixos-unstable"
-      script: scripts/cachix.sh nixos-unstable
-      if: branch = master
-    - name: "Cachix nixpkgs-unstable"
-      script: scripts/cachix.sh nixpkgs-unstable
-      if: branch = master
