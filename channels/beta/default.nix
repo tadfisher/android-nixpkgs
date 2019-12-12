@@ -1737,19 +1737,19 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "29.2.1";
+    version = "29.3";
     sources = {
       x86_64-darwin = {
-        url = "emulator-darwin-5889189.zip";
-        sha1 = "ccee1a25339c8f5c059abf7297625a6e91fe137c";
+        url = "emulator-darwin-6061023.zip";
+        sha1 = "bcf0b0c2dfb0c80281d16b34a4387f97297e657d";
       };
       x86_64-linux = {
-        url = "emulator-linux-5889189.zip";
-        sha1 = "ebbaff0512ef72ba69d83fbc700c58f25e9edc9d";
+        url = "emulator-linux-6061023.zip";
+        sha1 = "695266452db37235ed53a9a665e63b71562f2989";
       };
       x86_64-windows = {
-        url = "emulator-windows-5889189.zip";
-        sha1 = "d8d418642d2837af6037b84cf36baaf8073837ae";
+        url = "emulator-windows-6061023.zip";
+        sha1 = "8444f861c758e25c24fed254909744913a754e1e";
       };
     };
     displayName = "Android Emulator";
@@ -3265,11 +3265,11 @@
   platforms.android-29 = mkSrcOnly {
     id = "platforms;android-29";
     pname = "platforms-android-29";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "platform-29_r03.zip";
-        sha1 = "670e2e104333dae90e16ea3b615f0b63da5883ae";
+        url = "platform-29_r04.zip";
+        sha1 = "8d644c39902038e0bd529165d5ba4f5a8607daea";
       };
     };
     displayName = "Android SDK Platform 29";
