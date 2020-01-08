@@ -30,7 +30,7 @@ in stdenv.mkDerivation ({
   installPhase = ''
     packageBase="$out/${outdir}"
     mkdir -p "$packageBase"
-    cp -r * "$packageBase"
+    cp -r --reflink=auto * "$packageBase"
     ln -s ${packageXml} "$packageBase/package.xml"
     runHook postInstall
   '';

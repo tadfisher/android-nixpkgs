@@ -108,13 +108,22 @@ declare -g foundInterpreter
 # 'nix-support/dynamic-linker*' entries, each pointing to an interpreter for a
 # supported architecture.
 findInterpreter() {
-    local arch="$1" ld interp interpArch
+    local arch="$1" ld interp interpArch existing ccWrappers
 
     if [ $interpCacheInitialised -eq 0 ]; then
-        for ld in "$NIX_CC/nix-support/dynamic-linker"*; do
-            interp="$(< "$ld")" || return 1
-            interpArch="$(getSoArch "$interp")"
-            interpCache["$interpArch"]="$interp"
+        if [ -n "$autoPatchelfCCWrappers" ]; then
+            ccWrappers=$autoPatchelfCCWrappers
+        else
+            ccWrappers=("$NIX_CC")
+        fi
+        for ccWrapper in $ccWrappers; do
+            for ld in "$ccWrapper/nix-support/dynamic-linker"*; do
+                interp="$(< "$ld")" || return 1
+                interpArch="$(getSoArch "$interp")"
+                if [ -z "${interpCache["$interpArch"]}" ]; then
+                    interpCache["$interpArch"]="$interp"
+                fi
+            done
         done
         interpCacheInitialised=1
     fi
