@@ -37,3 +37,6 @@ jobs:
         local_dir: build
         on:
           branch: master
+    - stage: cachix-unstable
+      script: scripts/cachix.sh nixos-unstable
+      if: branch = master
