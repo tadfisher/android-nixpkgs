@@ -1837,25 +1837,25 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "29.3.4";
+    version = "29.3.5";
     sources = {
       x86_64-darwin = {
-        url = "emulator-darwin-6110076.zip";
-        sha1 = "de54c4b95752da06b2621b11ad4cdaa3a4d1a522";
+        url = "emulator-darwin-6120838.zip";
+        sha1 = "24fa40a27558d05d3b4ca1b0568644c77400c9d8";
       };
       x86_64-linux = {
-        url = "emulator-linux-6110076.zip";
-        sha1 = "87c035c616cc05deb9251c990bf43731f65e84da";
+        url = "emulator-linux-6120838.zip";
+        sha1 = "af743d671b1e14734bf812397fd07e0dc7b9c6f4";
       };
       x86_64-windows = {
-        url = "emulator-windows-6110076.zip";
-        sha1 = "409be0080f48c1c7c858d700d6aac78397efe6c0";
+        url = "emulator-windows-6120838.zip";
+        sha1 = "d8bfa66b41a8e54ec0f486f3ffbb401f7e9358ca";
       };
     };
     displayName = "Android Emulator";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = builtins.readFile ./emulator.xml;
   };
