@@ -3558,19 +3558,19 @@
   skiaparser-1 = mkGeneric {
     id = "skiaparser;1";
     pname = "skiaparser-1";
-    version = "1-rc1";
+    version = "1-rc2";
     sources = {
       linux = {
-        url = "skiaparser-5924912-linux.zip";
-        sha1 = "562006934072f422770992af853884f7dd0f8d59";
+        url = "skiaparser-6172737-linux.zip";
+        sha1 = "d2eac6deff2c257d47853251bda5528c96a41720";
       };
       darwin = {
-        url = "skiaparser-5924912-mac.zip";
-        sha1 = "ebf045c257633980e48dac43b7da400f960956c8";
+        url = "skiaparser-6172737-mac.zip";
+        sha1 = "1e3b8da7a4f5e9887479b4e4186db3cb22422c82";
       };
       windows = {
-        url = "skiaparser-5924912-win.zip";
-        sha1 = "1f7f5ee841b6dd1c1841090c3df221fba2410a38";
+        url = "skiaparser-6172737-win.zip";
+        sha1 = "a1091ad3b369f69aad108bf16ed37a6b1459204d";
       };
     };
     displayName = "Skia Parser Server";
