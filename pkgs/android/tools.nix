@@ -36,7 +36,7 @@ mkGeneric {
     stdenv_32bit.cc
   ];
 
-  postInstall = ''
+  postUnpack = ''
     for f in $(grep -l -a -r "/bin/ls" $packageBase); do
       substituteInPlace $f --replace "/bin/ls" "${coreutils}/bin/ls"
     done

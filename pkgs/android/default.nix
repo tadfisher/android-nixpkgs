@@ -21,6 +21,5 @@ lib.makeScope pkgs.newScope (self: with self; rec {
   mkPlatformTools = callPackage ./platform-tools.nix {};
   mkPrebuilt = callPackage ./prebuilt.nix {};
   mkSrcOnly = callPackage ./src-only.nix {};
-  mkSystemImage = callPackage ./sys-img.nix {};
   mkTools = callPackage ./tools.nix {};
 })

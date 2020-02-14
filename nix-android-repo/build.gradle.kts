@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.3.31"
+    kotlin("jvm")
     application
 }
 
@@ -31,6 +31,6 @@ tasks {
     }
 
     withType<Wrapper> {
-        gradleVersion = "5.6.2"
+        gradleVersion = "6.1.1"
     }
 }

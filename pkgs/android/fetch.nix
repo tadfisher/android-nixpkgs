@@ -1,8 +1,6 @@
 { stdenv, fetchurl, unzip }:
 
-{ sources
-, repoUrl ? https://dl.google.com/android/repository
-, ... } @ args:
+{ sources, ... } @ args:
 
 let
 
@@ -22,6 +20,5 @@ let
   src = sources.${platformKey};
 
 in (fetchurl ({
-  url = "${repoUrl}/${src.url}";
-  inherit (src) sha1;
-} // removeAttrs args [ "sources" "repoUrl" ]))
+  inherit (src) url sha1;
+} // removeAttrs args [ "sources" ]))

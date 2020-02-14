@@ -13,8 +13,8 @@ mkGeneric {
     stdenv.cc.cc.lib
   ];
 
-  postInstall = ''
+  postUnpack = ''
     mkdir -p $out/bin
-    ln -s $out/platform-tools/{adb,fastboot} $out/bin/
+    ln -s $packageBase/{adb,fastboot} $out/bin/
   '';
 }

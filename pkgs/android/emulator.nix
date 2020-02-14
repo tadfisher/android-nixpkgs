@@ -58,14 +58,14 @@ mkGeneric {
 
   dontWrapQtApps = true;
 
-  postInstall = ''
-    rm -r $out/emulator/lib64/gles_mesa
+  postUnpack = ''
+    rm -r $packageBase/lib64/gles_mesa
 
     for f in ${toString systemLibs}; do
       rm $out/emulator/lib64/$f || true
     done
 
     # silence LD_PRELOAD warning
-    ln -s ${freetype}/lib/libfreetype.so.6 $out/emulator/lib64/qt/lib
+    ln -s ${freetype}/lib/libfreetype.so.6 $packageBase/lib64/qt/lib
   '';
 }

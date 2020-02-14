@@ -1,5 +1,5 @@
 { mkGeneric }:
 
 mkGeneric {
-  phases = [ "unpackPhase" "installPhase" ];
+  phases = [ "unpackPhase" ];
 }

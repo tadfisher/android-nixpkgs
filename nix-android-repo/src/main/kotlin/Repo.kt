@@ -77,9 +77,9 @@ class NixDownloader(localPath: Path) : Downloader {
     }
 }
 
-class NixProgressIndicator(
-    private val err: PrintStream = System.err
-) : ProgressIndicatorAdapter() {
+object NixProgressIndicator : ProgressIndicatorAdapter() {
+    var err: PrintStream = System.err
+
     override fun logWarning(s: String, e: Throwable?) {
         err.println("Warning: %s")
         e?.let { err.println(it.message) }
@@ -118,7 +118,7 @@ class NixRepoManager(
     localPath: Path,
     channelId: Int
 ) {
-    private val progress = NixProgressIndicator()
+    private val progress = NixProgressIndicator
     private val sdk = AndroidSdkHandler.getInstance(localPath.toFile())
     private val repoManager = sdk.getSdkManager(progress)
     private val settings = NixSettings(channelId)

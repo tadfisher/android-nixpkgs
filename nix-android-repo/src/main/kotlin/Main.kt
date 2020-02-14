@@ -27,13 +27,13 @@ fun main(args: Array<String>) {
     }
 
     val out = try {
-        File(options["out"]).also { it.parentFile.mkdirs() }
+        File(options.getValue("out")).also { it.parentFile.mkdirs() }
     } catch (e: Exception) {
         usage(System.err, "out: Not a file: ${options["out"]}")
     }
 
     val xml = try {
-        File(options["xml"]).also { it.mkdirs() }
+        File(options.getValue("xml")).also { it.mkdirs() }
     } catch (e: Exception) {
         usage(System.err, "xml: Not a directory: ${options["xml"]}")
     }

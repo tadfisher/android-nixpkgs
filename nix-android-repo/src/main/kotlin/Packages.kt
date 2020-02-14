@@ -2,10 +2,13 @@ package codes.tad.nixandroidrepo
 
 import com.android.repository.api.License
 import com.android.repository.api.RemotePackage
+import com.android.repository.api.RepoPackage
 import com.android.repository.impl.meta.Archive
 import com.android.repository.impl.meta.RemotePackageImpl
 import com.android.repository.impl.meta.RepositoryPackages
+import com.android.repository.util.InstallerUtil
 import com.android.sdklib.repository.meta.DetailsTypes
+import java.io.File
 
 interface NixExpr {
     fun nix(): String
@@ -32,7 +35,6 @@ data class Repo(
             , mkPrebuilt
             , mkTools
             , mkSrcOnly
-            , mkSystemImage
             }: %s
         """.trimIndent().format(
             packages.nixSet { it.path.joinToString(".") }
@@ -48,6 +50,7 @@ data class Package(
     val builder: String,
     val sources: List<Source>,
     val displayName: String,
+    val packageDir: String,
     val license: AndroidLicense
 ) : NixExpr {
     override fun nix(): String {
@@ -58,6 +61,7 @@ data class Package(
         ⇥version = "$version";
         ⇥sources = %s;
         ⇥displayName = "$displayName";
+        ⇥path = "$packageDir";
         ⇥license = %s;
         ⇥xml = builtins.readFile ./$pname.xml;
         }
@@ -105,11 +109,12 @@ fun RepositoryPackages.nixPackages(): List<Package> {
                 sources = pkg.allArchives.map { archive ->
                     Source(
                         platform = archive.platform(),
-                        url = archive.complete.url,
+                        url = InstallerUtil.resolveUrl(archive.complete.url, pkg, NixProgressIndicator)!!.toString(),
                         sha1 = archive.complete.checksum
                     )
                 },
                 displayName = pkg.displayName,
+                packageDir = pkg.path.replace(RepoPackage.PATH_SEPARATOR, File.separatorChar),
                 license = AndroidLicense(pkg.license)
             )
         }
@@ -168,9 +173,8 @@ fun RemotePackage.builder(): String {
         is DetailsTypes.PlatformDetailsType,
         is DetailsTypes.ExtraDetailsType,
         is DetailsTypes.AddonDetailsType,
-        is DetailsTypes.MavenType -> "mkSrcOnly"
-
-        is DetailsTypes.SysImgDetailsType -> "mkSystemImage"
+        is DetailsTypes.MavenType,
+        is DetailsTypes.SysImgDetailsType -> "mkSrcOnly"
 
         else -> when (path.split(";").first()) {
             "build-tools" -> "mkBuildTools"

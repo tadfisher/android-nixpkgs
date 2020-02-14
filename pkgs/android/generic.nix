@@ -1,8 +1,6 @@
 { stdenv, fetchandroid, writeText, unzip }:
 
-{ repoUrl ? "https://dl.google.com/android/repository", ... } @ args:
-
-package:
+args: package:
 
 let
   inherit (builtins) attrNames concatStringsSep filter hasAttr head listToAttrs replaceStrings;
@@ -12,11 +10,9 @@ let
     if (hasAttr name stdenv.lib.platforms) then stdenv.lib.platforms.${name} else name
   ) (attrNames package.sources));
 
-  outdir = replaceStrings [";"] ["/"] package.id;
-
   packageXml = writeText "${package.pname}-${package.version}-package-xml" package.xml;
 
-in stdenv.mkDerivation ({
+in stdenv.mkDerivation (rec {
 
   inherit (package) pname version;
 
@@ -24,14 +20,33 @@ in stdenv.mkDerivation ({
 
   src = fetchandroid {
     inherit (package) sources;
-    inherit repoUrl;
   };
 
-  installPhase = ''
-    packageBase="$out/${outdir}"
-    mkdir -p "$packageBase"
-    cp -r --reflink=auto * "$packageBase"
-    ln -s ${packageXml} "$packageBase/package.xml"
+  setSourceRoot = ''
+    sourceRoot="$out/${package.path}";
+  '';
+
+  unpackCmd = ''
+    if ! [[ "$curSrc" =~ \.zip$ ]]; then return 1; fi
+
+    unzip-strip() (
+        local zip=$1
+        local dest=''${2:-.}
+        local temp=$(mktemp -d) && unzip -qq -d "$temp" "$zip" && mkdir -p "$dest" &&
+        shopt -s dotglob && local f=("$temp"/*) &&
+        if (( ''${#f[@]} == 1 )) && [[ -d "''${f[0]}" ]] ; then
+            mv "$temp"/*/* "$dest"
+        else
+            mv "$temp"/* "$dest"
+        fi && rmdir "$temp"/* "$temp"
+    )
+
+    export packageBase="$out/${package.path}"
+    unzip-strip "$curSrc" "$packageBase"
+  '';
+
+  installPhase = args.installPhase or ''
+    runHook preInstall
     runHook postInstall
   '';
 
@@ -48,4 +63,4 @@ in stdenv.mkDerivation ({
     maintainers = with maintainers; [ tadfisher ];
     inherit platforms;
   } // (args.meta or {});
-} // removeAttrs args [ "nativeBuildInputs" "passthru" "meta" ])
+} // removeAttrs args [ "nativeBuildInputs" "passthru" "meta" "unzipCmd" ])

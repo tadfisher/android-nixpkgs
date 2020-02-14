@@ -7,39 +7,25 @@ let
   inherit (builtins) replaceStrings;
   inherit (stdenv.lib) hasPrefix recursiveUpdate;
 
-  singleRootUnzip = "unzip $curSrc -d src";
-
   buildArgs =
-    if (hasPrefix "cmake;" package.id) then rec {
-      unpackCmd = singleRootUnzip;
+    if (hasPrefix "cmake;" package.id) then {
       buildInputs = [ stdenv.cc.cc.lib ];
     }
 
     else if (hasPrefix "lldb" package.id) then rec {
-        unpackCmd = singleRootUnzip;
+      buildInputs = [
+        libedit
+        ncurses5
+        python27
+        stdenv.cc.cc.lib
+        zlib
+      ];
 
-        setSourceRoot = ''
-          local files=( src/* )
-          if [ ''${#files[@]} -eq 1 ]; then
-            sourceRoot=''${files[0]}
-          else
-            sourceRoot=src
-          fi
-        '';
+      dontAutoPatchelf = true;
 
-        buildInputs = [
-          libedit
-          ncurses5
-          python27
-          stdenv.cc.cc.lib
-          zlib
-        ];
+      runtimeDependencies = [ zlib ];
 
-        dontAutoPatchelf = true;
-
-        runtimeDependencies = [ zlib ];
-
-        postInstall = ''
+      postUnpack = ''
           rm -r $packageBase/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
           ln -s ${zlib}/lib/libz.so.1 $packageBase/lib/libz.so.1
 
@@ -47,8 +33,8 @@ let
           addAutoPatchelfSearchPath "$packageBase/bin"
           autoPatchelf --no-recurse "$packageBase/lib"
           autoPatchelf --no-recurse "$packageBase/bin"
-          '';
-      }
+      '';
+    }
 
     else {};
 
