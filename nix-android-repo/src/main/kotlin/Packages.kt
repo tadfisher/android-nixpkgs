@@ -63,7 +63,7 @@ data class Package(
         ⇥displayName = "$displayName";
         ⇥path = "$packageDir";
         ⇥license = %s;
-        ⇥xml = builtins.readFile ./$pname.xml;
+        ⇥xml = ./$pname.xml;
         }
     """.trimIndent().format(sources.nixSet { it.platform }.indentMiddle(), license.nix().indentMiddle())
     }

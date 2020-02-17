@@ -24,7 +24,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-10.xml;
+    xml = ./add-ons-addon-google-apis-google-10.xml;
   };
   add-ons.addon-google-apis-google-11 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-11";
@@ -42,7 +42,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-11.xml;
+    xml = ./add-ons-addon-google-apis-google-11.xml;
   };
   add-ons.addon-google-apis-google-12 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-12";
@@ -60,7 +60,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-12.xml;
+    xml = ./add-ons-addon-google-apis-google-12.xml;
   };
   add-ons.addon-google-apis-google-13 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-13";
@@ -78,7 +78,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-13.xml;
+    xml = ./add-ons-addon-google-apis-google-13.xml;
   };
   add-ons.addon-google-apis-google-14 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-14";
@@ -96,7 +96,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-14.xml;
+    xml = ./add-ons-addon-google-apis-google-14.xml;
   };
   add-ons.addon-google-apis-google-15 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-15";
@@ -114,7 +114,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-15.xml;
+    xml = ./add-ons-addon-google-apis-google-15.xml;
   };
   add-ons.addon-google-apis-google-16 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-16";
@@ -132,7 +132,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-16.xml;
+    xml = ./add-ons-addon-google-apis-google-16.xml;
   };
   add-ons.addon-google-apis-google-17 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-17";
@@ -150,7 +150,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-17.xml;
+    xml = ./add-ons-addon-google-apis-google-17.xml;
   };
   add-ons.addon-google-apis-google-18 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-18";
@@ -168,7 +168,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-18.xml;
+    xml = ./add-ons-addon-google-apis-google-18.xml;
   };
   add-ons.addon-google-apis-google-19 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-19";
@@ -186,7 +186,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-19.xml;
+    xml = ./add-ons-addon-google-apis-google-19.xml;
   };
   add-ons.addon-google-apis-google-21 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-21";
@@ -204,7 +204,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-21.xml;
+    xml = ./add-ons-addon-google-apis-google-21.xml;
   };
   add-ons.addon-google-apis-google-22 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-22";
@@ -222,7 +222,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-22.xml;
+    xml = ./add-ons-addon-google-apis-google-22.xml;
   };
   add-ons.addon-google-apis-google-23 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-23";
@@ -240,7 +240,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-23.xml;
+    xml = ./add-ons-addon-google-apis-google-23.xml;
   };
   add-ons.addon-google-apis-google-24 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-24";
@@ -258,7 +258,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-24.xml;
+    xml = ./add-ons-addon-google-apis-google-24.xml;
   };
   add-ons.addon-google-apis-google-3 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-3";
@@ -276,7 +276,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-3.xml;
+    xml = ./add-ons-addon-google-apis-google-3.xml;
   };
   add-ons.addon-google-apis-google-4 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-4";
@@ -294,7 +294,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-4.xml;
+    xml = ./add-ons-addon-google-apis-google-4.xml;
   };
   add-ons.addon-google-apis-google-5 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-5";
@@ -312,7 +312,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-5.xml;
+    xml = ./add-ons-addon-google-apis-google-5.xml;
   };
   add-ons.addon-google-apis-google-6 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-6";
@@ -330,7 +330,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-6.xml;
+    xml = ./add-ons-addon-google-apis-google-6.xml;
   };
   add-ons.addon-google-apis-google-7 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-7";
@@ -348,7 +348,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-7.xml;
+    xml = ./add-ons-addon-google-apis-google-7.xml;
   };
   add-ons.addon-google-apis-google-8 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-8";
@@ -366,7 +366,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-8.xml;
+    xml = ./add-ons-addon-google-apis-google-8.xml;
   };
   add-ons.addon-google-apis-google-9 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-9";
@@ -384,7 +384,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./add-ons-addon-google-apis-google-9.xml;
+    xml = ./add-ons-addon-google-apis-google-9.xml;
   };
   add-ons.addon-google-gdk-google-19 = mkSrcOnly {
     id = "add-ons;addon-google_gdk-google-19";
@@ -402,7 +402,7 @@
       id = "google-gdk-license";
       hash = "33b6a2b64607f11b759f320ef9dff4ae5c47d97a";
     };
-    xml = builtins.readFile ./add-ons-addon-google-gdk-google-19.xml;
+    xml = ./add-ons-addon-google-gdk-google-19.xml;
   };
   add-ons.addon-google-tv-addon-google-12 = mkSrcOnly {
     id = "add-ons;addon-google_tv_addon-google-12";
@@ -420,7 +420,7 @@
       id = "android-googletv-license";
       hash = "601085b94cd77f0b54ff86406957099ebe79c4d6";
     };
-    xml = builtins.readFile ./add-ons-addon-google-tv-addon-google-12.xml;
+    xml = ./add-ons-addon-google-tv-addon-google-12.xml;
   };
   add-ons.addon-google-tv-addon-google-13 = mkSrcOnly {
     id = "add-ons;addon-google_tv_addon-google-13";
@@ -438,7 +438,7 @@
       id = "android-googletv-license";
       hash = "601085b94cd77f0b54ff86406957099ebe79c4d6";
     };
-    xml = builtins.readFile ./add-ons-addon-google-tv-addon-google-13.xml;
+    xml = ./add-ons-addon-google-tv-addon-google-13.xml;
   };
   build-tools-17-0-0 = mkBuildTools {
     id = "build-tools;17.0.0";
@@ -464,7 +464,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-17-0-0.xml;
+    xml = ./build-tools-17-0-0.xml;
   };
   build-tools-18-0-1 = mkBuildTools {
     id = "build-tools;18.0.1";
@@ -490,7 +490,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-18-0-1.xml;
+    xml = ./build-tools-18-0-1.xml;
   };
   build-tools-18-1-0 = mkBuildTools {
     id = "build-tools;18.1.0";
@@ -516,7 +516,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-18-1-0.xml;
+    xml = ./build-tools-18-1-0.xml;
   };
   build-tools-18-1-1 = mkBuildTools {
     id = "build-tools;18.1.1";
@@ -542,7 +542,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-18-1-1.xml;
+    xml = ./build-tools-18-1-1.xml;
   };
   build-tools-19-0-0 = mkBuildTools {
     id = "build-tools;19.0.0";
@@ -568,7 +568,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-19-0-0.xml;
+    xml = ./build-tools-19-0-0.xml;
   };
   build-tools-19-0-1 = mkBuildTools {
     id = "build-tools;19.0.1";
@@ -594,7 +594,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-19-0-1.xml;
+    xml = ./build-tools-19-0-1.xml;
   };
   build-tools-19-0-2 = mkBuildTools {
     id = "build-tools;19.0.2";
@@ -620,7 +620,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-19-0-2.xml;
+    xml = ./build-tools-19-0-2.xml;
   };
   build-tools-19-0-3 = mkBuildTools {
     id = "build-tools;19.0.3";
@@ -646,7 +646,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-19-0-3.xml;
+    xml = ./build-tools-19-0-3.xml;
   };
   build-tools-19-1-0 = mkBuildTools {
     id = "build-tools;19.1.0";
@@ -672,7 +672,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-19-1-0.xml;
+    xml = ./build-tools-19-1-0.xml;
   };
   build-tools-20-0-0 = mkBuildTools {
     id = "build-tools;20.0.0";
@@ -698,7 +698,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-20-0-0.xml;
+    xml = ./build-tools-20-0-0.xml;
   };
   build-tools-21-0-0 = mkBuildTools {
     id = "build-tools;21.0.0";
@@ -724,7 +724,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-21-0-0.xml;
+    xml = ./build-tools-21-0-0.xml;
   };
   build-tools-21-0-1 = mkBuildTools {
     id = "build-tools;21.0.1";
@@ -750,7 +750,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-21-0-1.xml;
+    xml = ./build-tools-21-0-1.xml;
   };
   build-tools-21-0-2 = mkBuildTools {
     id = "build-tools;21.0.2";
@@ -776,7 +776,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-21-0-2.xml;
+    xml = ./build-tools-21-0-2.xml;
   };
   build-tools-21-1-0 = mkBuildTools {
     id = "build-tools;21.1.0";
@@ -802,7 +802,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-21-1-0.xml;
+    xml = ./build-tools-21-1-0.xml;
   };
   build-tools-21-1-1 = mkBuildTools {
     id = "build-tools;21.1.1";
@@ -828,7 +828,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-21-1-1.xml;
+    xml = ./build-tools-21-1-1.xml;
   };
   build-tools-21-1-2 = mkBuildTools {
     id = "build-tools;21.1.2";
@@ -854,7 +854,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-21-1-2.xml;
+    xml = ./build-tools-21-1-2.xml;
   };
   build-tools-22-0-0 = mkBuildTools {
     id = "build-tools;22.0.0";
@@ -880,7 +880,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-22-0-0.xml;
+    xml = ./build-tools-22-0-0.xml;
   };
   build-tools-22-0-1 = mkBuildTools {
     id = "build-tools;22.0.1";
@@ -906,7 +906,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-22-0-1.xml;
+    xml = ./build-tools-22-0-1.xml;
   };
   build-tools-23-0-0 = mkBuildTools {
     id = "build-tools;23.0.0";
@@ -932,7 +932,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-23-0-0.xml;
+    xml = ./build-tools-23-0-0.xml;
   };
   build-tools-23-0-1 = mkBuildTools {
     id = "build-tools;23.0.1";
@@ -958,7 +958,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-23-0-1.xml;
+    xml = ./build-tools-23-0-1.xml;
   };
   build-tools-23-0-2 = mkBuildTools {
     id = "build-tools;23.0.2";
@@ -984,7 +984,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-23-0-2.xml;
+    xml = ./build-tools-23-0-2.xml;
   };
   build-tools-23-0-3 = mkBuildTools {
     id = "build-tools;23.0.3";
@@ -1010,7 +1010,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-23-0-3.xml;
+    xml = ./build-tools-23-0-3.xml;
   };
   build-tools-24-0-0 = mkBuildTools {
     id = "build-tools;24.0.0";
@@ -1036,7 +1036,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-24-0-0.xml;
+    xml = ./build-tools-24-0-0.xml;
   };
   build-tools-24-0-1 = mkBuildTools {
     id = "build-tools;24.0.1";
@@ -1062,7 +1062,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-24-0-1.xml;
+    xml = ./build-tools-24-0-1.xml;
   };
   build-tools-24-0-2 = mkBuildTools {
     id = "build-tools;24.0.2";
@@ -1088,7 +1088,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-24-0-2.xml;
+    xml = ./build-tools-24-0-2.xml;
   };
   build-tools-24-0-3 = mkBuildTools {
     id = "build-tools;24.0.3";
@@ -1114,7 +1114,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-24-0-3.xml;
+    xml = ./build-tools-24-0-3.xml;
   };
   build-tools-25-0-0 = mkBuildTools {
     id = "build-tools;25.0.0";
@@ -1140,7 +1140,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-25-0-0.xml;
+    xml = ./build-tools-25-0-0.xml;
   };
   build-tools-25-0-1 = mkBuildTools {
     id = "build-tools;25.0.1";
@@ -1166,7 +1166,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-25-0-1.xml;
+    xml = ./build-tools-25-0-1.xml;
   };
   build-tools-25-0-2 = mkBuildTools {
     id = "build-tools;25.0.2";
@@ -1192,7 +1192,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-25-0-2.xml;
+    xml = ./build-tools-25-0-2.xml;
   };
   build-tools-25-0-3 = mkBuildTools {
     id = "build-tools;25.0.3";
@@ -1218,7 +1218,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-25-0-3.xml;
+    xml = ./build-tools-25-0-3.xml;
   };
   build-tools-26-0-0 = mkBuildTools {
     id = "build-tools;26.0.0";
@@ -1244,7 +1244,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-26-0-0.xml;
+    xml = ./build-tools-26-0-0.xml;
   };
   build-tools-26-0-0-rc1 = mkBuildTools {
     id = "build-tools;26.0.0-rc1";
@@ -1270,7 +1270,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./build-tools-26-0-0-rc1.xml;
+    xml = ./build-tools-26-0-0-rc1.xml;
   };
   build-tools-26-0-0-rc2 = mkBuildTools {
     id = "build-tools;26.0.0-rc2";
@@ -1296,7 +1296,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./build-tools-26-0-0-rc2.xml;
+    xml = ./build-tools-26-0-0-rc2.xml;
   };
   build-tools-26-0-1 = mkBuildTools {
     id = "build-tools;26.0.1";
@@ -1322,7 +1322,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-26-0-1.xml;
+    xml = ./build-tools-26-0-1.xml;
   };
   build-tools-26-0-2 = mkBuildTools {
     id = "build-tools;26.0.2";
@@ -1348,7 +1348,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-26-0-2.xml;
+    xml = ./build-tools-26-0-2.xml;
   };
   build-tools-26-0-3 = mkBuildTools {
     id = "build-tools;26.0.3";
@@ -1374,7 +1374,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-26-0-3.xml;
+    xml = ./build-tools-26-0-3.xml;
   };
   build-tools-27-0-0 = mkBuildTools {
     id = "build-tools;27.0.0";
@@ -1400,7 +1400,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-27-0-0.xml;
+    xml = ./build-tools-27-0-0.xml;
   };
   build-tools-27-0-1 = mkBuildTools {
     id = "build-tools;27.0.1";
@@ -1426,7 +1426,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-27-0-1.xml;
+    xml = ./build-tools-27-0-1.xml;
   };
   build-tools-27-0-2 = mkBuildTools {
     id = "build-tools;27.0.2";
@@ -1452,7 +1452,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-27-0-2.xml;
+    xml = ./build-tools-27-0-2.xml;
   };
   build-tools-27-0-3 = mkBuildTools {
     id = "build-tools;27.0.3";
@@ -1478,7 +1478,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-27-0-3.xml;
+    xml = ./build-tools-27-0-3.xml;
   };
   build-tools-28-0-0 = mkBuildTools {
     id = "build-tools;28.0.0";
@@ -1504,7 +1504,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-28-0-0.xml;
+    xml = ./build-tools-28-0-0.xml;
   };
   build-tools-28-0-0-rc1 = mkBuildTools {
     id = "build-tools;28.0.0-rc1";
@@ -1530,7 +1530,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-28-0-0-rc1.xml;
+    xml = ./build-tools-28-0-0-rc1.xml;
   };
   build-tools-28-0-0-rc2 = mkBuildTools {
     id = "build-tools;28.0.0-rc2";
@@ -1556,7 +1556,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-28-0-0-rc2.xml;
+    xml = ./build-tools-28-0-0-rc2.xml;
   };
   build-tools-28-0-1 = mkBuildTools {
     id = "build-tools;28.0.1";
@@ -1582,7 +1582,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-28-0-1.xml;
+    xml = ./build-tools-28-0-1.xml;
   };
   build-tools-28-0-2 = mkBuildTools {
     id = "build-tools;28.0.2";
@@ -1608,7 +1608,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-28-0-2.xml;
+    xml = ./build-tools-28-0-2.xml;
   };
   build-tools-28-0-3 = mkBuildTools {
     id = "build-tools;28.0.3";
@@ -1634,7 +1634,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-28-0-3.xml;
+    xml = ./build-tools-28-0-3.xml;
   };
   build-tools-29-0-0 = mkBuildTools {
     id = "build-tools;29.0.0";
@@ -1660,7 +1660,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-0.xml;
+    xml = ./build-tools-29-0-0.xml;
   };
   build-tools-29-0-0-rc1 = mkBuildTools {
     id = "build-tools;29.0.0-rc1";
@@ -1686,7 +1686,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-0-rc1.xml;
+    xml = ./build-tools-29-0-0-rc1.xml;
   };
   build-tools-29-0-0-rc2 = mkBuildTools {
     id = "build-tools;29.0.0-rc2";
@@ -1712,7 +1712,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-0-rc2.xml;
+    xml = ./build-tools-29-0-0-rc2.xml;
   };
   build-tools-29-0-0-rc3 = mkBuildTools {
     id = "build-tools;29.0.0-rc3";
@@ -1738,7 +1738,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-0-rc3.xml;
+    xml = ./build-tools-29-0-0-rc3.xml;
   };
   build-tools-29-0-1 = mkBuildTools {
     id = "build-tools;29.0.1";
@@ -1764,7 +1764,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-1.xml;
+    xml = ./build-tools-29-0-1.xml;
   };
   build-tools-29-0-2 = mkBuildTools {
     id = "build-tools;29.0.2";
@@ -1790,7 +1790,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-2.xml;
+    xml = ./build-tools-29-0-2.xml;
   };
   build-tools-29-0-3 = mkBuildTools {
     id = "build-tools;29.0.3";
@@ -1816,7 +1816,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./build-tools-29-0-3.xml;
+    xml = ./build-tools-29-0-3.xml;
   };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
@@ -1842,7 +1842,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./cmake-3-10-2-4988404.xml;
+    xml = ./cmake-3-10-2-4988404.xml;
   };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
@@ -1868,7 +1868,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./cmake-3-6-4111459.xml;
+    xml = ./cmake-3-6-4111459.xml;
   };
   docs = mkGeneric {
     id = "docs";
@@ -1886,7 +1886,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./docs.xml;
+    xml = ./docs.xml;
   };
   emulator = mkEmulator {
     id = "emulator";
@@ -1912,7 +1912,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./emulator.xml;
+    xml = ./emulator.xml;
   };
   android.gapid.gapid-1 = mkSrcOnly {
     id = "extras;android;gapid;1";
@@ -1938,7 +1938,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-android-gapid-1.xml;
+    xml = ./extras-android-gapid-1.xml;
   };
   android.gapid.gapid-3 = mkSrcOnly {
     id = "extras;android;gapid;3";
@@ -1964,7 +1964,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-android-gapid-3.xml;
+    xml = ./extras-android-gapid-3.xml;
   };
   extras.android.m2repository = mkSrcOnly {
     id = "extras;android;m2repository";
@@ -1982,7 +1982,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-android-m2repository.xml;
+    xml = ./extras-android-m2repository.xml;
   };
   extras.google.admob-ads-sdk = mkSrcOnly {
     id = "extras;google;admob_ads_sdk";
@@ -2000,7 +2000,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-admob-ads-sdk.xml;
+    xml = ./extras-google-admob-ads-sdk.xml;
   };
   extras.google.analytics-sdk-v2 = mkSrcOnly {
     id = "extras;google;analytics_sdk_v2";
@@ -2018,7 +2018,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-analytics-sdk-v2.xml;
+    xml = ./extras-google-analytics-sdk-v2.xml;
   };
   extras.google.auto = mkSrcOnly {
     id = "extras;google;auto";
@@ -2044,7 +2044,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-auto.xml;
+    xml = ./extras-google-auto.xml;
   };
   extras.google.gcm = mkSrcOnly {
     id = "extras;google;gcm";
@@ -2062,7 +2062,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-gcm.xml;
+    xml = ./extras-google-gcm.xml;
   };
   extras.google.google-play-services = mkSrcOnly {
     id = "extras;google;google_play_services";
@@ -2080,7 +2080,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-google-play-services.xml;
+    xml = ./extras-google-google-play-services.xml;
   };
   extras.google.google-play-services-froyo = mkSrcOnly {
     id = "extras;google;google_play_services_froyo";
@@ -2098,7 +2098,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-google-play-services-froyo.xml;
+    xml = ./extras-google-google-play-services-froyo.xml;
   };
   extras.google.instantapps = mkSrcOnly {
     id = "extras;google;instantapps";
@@ -2116,7 +2116,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-instantapps.xml;
+    xml = ./extras-google-instantapps.xml;
   };
   extras.google.m2repository = mkSrcOnly {
     id = "extras;google;m2repository";
@@ -2134,7 +2134,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-m2repository.xml;
+    xml = ./extras-google-m2repository.xml;
   };
   extras.google.market-apk-expansion = mkSrcOnly {
     id = "extras;google;market_apk_expansion";
@@ -2152,7 +2152,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-market-apk-expansion.xml;
+    xml = ./extras-google-market-apk-expansion.xml;
   };
   extras.google.market-licensing = mkSrcOnly {
     id = "extras;google;market_licensing";
@@ -2170,7 +2170,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-market-licensing.xml;
+    xml = ./extras-google-market-licensing.xml;
   };
   extras.google.simulators = mkSrcOnly {
     id = "extras;google;simulators";
@@ -2188,7 +2188,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-simulators.xml;
+    xml = ./extras-google-simulators.xml;
   };
   extras.google.webdriver = mkSrcOnly {
     id = "extras;google;webdriver";
@@ -2206,7 +2206,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-google-webdriver.xml;
+    xml = ./extras-google-webdriver.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0";
@@ -2224,7 +2224,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-alpha4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4";
@@ -2242,7 +2242,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha4.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha4.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-alpha8 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8";
@@ -2260,7 +2260,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha8.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha8.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1";
@@ -2278,7 +2278,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta1.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta1.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2";
@@ -2296,7 +2296,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta2.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta2.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta3 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3";
@@ -2314,7 +2314,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta3.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta3.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4";
@@ -2332,7 +2332,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta4.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta4.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta5 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5";
@@ -2350,7 +2350,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta5.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta5.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1";
@@ -2368,7 +2368,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-1.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-1.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2";
@@ -2386,7 +2386,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-2.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-2.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0";
@@ -2404,7 +2404,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-alpha4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha4";
@@ -2422,7 +2422,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha4.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha4.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-alpha8 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8";
@@ -2440,7 +2440,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha8.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha8.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta1";
@@ -2458,7 +2458,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta1.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta1.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta2";
@@ -2476,7 +2476,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta2.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta2.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta3 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta3";
@@ -2494,7 +2494,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta3.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta3.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4";
@@ -2512,7 +2512,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta4.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta4.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta5 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5";
@@ -2530,7 +2530,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta5.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta5.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1";
@@ -2548,7 +2548,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-1.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-1.xml;
   };
   m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2";
@@ -2566,7 +2566,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-2.xml;
+    xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-2.xml;
   };
   lldb-2-0 = mkPrebuilt {
     id = "lldb;2.0";
@@ -2596,7 +2596,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./lldb-2-0.xml;
+    xml = ./lldb-2-0.xml;
   };
   lldb-2-1 = mkPrebuilt {
     id = "lldb;2.1";
@@ -2626,7 +2626,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./lldb-2-1.xml;
+    xml = ./lldb-2-1.xml;
   };
   lldb-2-2 = mkPrebuilt {
     id = "lldb;2.2";
@@ -2652,7 +2652,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./lldb-2-2.xml;
+    xml = ./lldb-2-2.xml;
   };
   lldb-2-3 = mkPrebuilt {
     id = "lldb;2.3";
@@ -2678,7 +2678,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./lldb-2-3.xml;
+    xml = ./lldb-2-3.xml;
   };
   lldb-3-0 = mkPrebuilt {
     id = "lldb;3.0";
@@ -2704,7 +2704,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./lldb-3-0.xml;
+    xml = ./lldb-3-0.xml;
   };
   lldb-3-1 = mkPrebuilt {
     id = "lldb;3.1";
@@ -2730,7 +2730,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./lldb-3-1.xml;
+    xml = ./lldb-3-1.xml;
   };
   ndk-bundle = mkGeneric {
     id = "ndk-bundle";
@@ -2756,7 +2756,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-bundle.xml;
+    xml = ./ndk-bundle.xml;
   };
   ndk-16-1-4479499 = mkGeneric {
     id = "ndk;16.1.4479499";
@@ -2786,7 +2786,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-16-1-4479499.xml;
+    xml = ./ndk-16-1-4479499.xml;
   };
   ndk-17-2-4988734 = mkGeneric {
     id = "ndk;17.2.4988734";
@@ -2816,7 +2816,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-17-2-4988734.xml;
+    xml = ./ndk-17-2-4988734.xml;
   };
   ndk-18-1-5063045 = mkGeneric {
     id = "ndk;18.1.5063045";
@@ -2846,7 +2846,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-18-1-5063045.xml;
+    xml = ./ndk-18-1-5063045.xml;
   };
   ndk-19-0-5232133 = mkGeneric {
     id = "ndk;19.0.5232133";
@@ -2876,7 +2876,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-19-0-5232133.xml;
+    xml = ./ndk-19-0-5232133.xml;
   };
   ndk-19-2-5345600 = mkGeneric {
     id = "ndk;19.2.5345600";
@@ -2906,7 +2906,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-19-2-5345600.xml;
+    xml = ./ndk-19-2-5345600.xml;
   };
   ndk-20-0-5392854 = mkGeneric {
     id = "ndk;20.0.5392854";
@@ -2936,7 +2936,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./ndk-20-0-5392854.xml;
+    xml = ./ndk-20-0-5392854.xml;
   };
   ndk-20-0-5471264 = mkGeneric {
     id = "ndk;20.0.5471264";
@@ -2966,7 +2966,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./ndk-20-0-5471264.xml;
+    xml = ./ndk-20-0-5471264.xml;
   };
   ndk-20-0-5594570 = mkGeneric {
     id = "ndk;20.0.5594570";
@@ -2996,7 +2996,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-20-0-5594570.xml;
+    xml = ./ndk-20-0-5594570.xml;
   };
   ndk-20-1-5948944 = mkGeneric {
     id = "ndk;20.1.5948944";
@@ -3026,7 +3026,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-20-1-5948944.xml;
+    xml = ./ndk-20-1-5948944.xml;
   };
   ndk-21-0-6011959 = mkGeneric {
     id = "ndk;21.0.6011959";
@@ -3052,7 +3052,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./ndk-21-0-6011959.xml;
+    xml = ./ndk-21-0-6011959.xml;
   };
   ndk-21-0-6113669 = mkGeneric {
     id = "ndk;21.0.6113669";
@@ -3078,7 +3078,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./ndk-21-0-6113669.xml;
+    xml = ./ndk-21-0-6113669.xml;
   };
   patcher.v4 = mkGeneric {
     id = "patcher;v4";
@@ -3096,7 +3096,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./patcher-v4.xml;
+    xml = ./patcher-v4.xml;
   };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
@@ -3122,7 +3122,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platform-tools.xml;
+    xml = ./platform-tools.xml;
   };
   platforms.android-10 = mkSrcOnly {
     id = "platforms;android-10";
@@ -3140,7 +3140,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-10.xml;
+    xml = ./platforms-android-10.xml;
   };
   platforms.android-11 = mkSrcOnly {
     id = "platforms;android-11";
@@ -3158,7 +3158,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-11.xml;
+    xml = ./platforms-android-11.xml;
   };
   platforms.android-12 = mkSrcOnly {
     id = "platforms;android-12";
@@ -3176,7 +3176,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-12.xml;
+    xml = ./platforms-android-12.xml;
   };
   platforms.android-13 = mkSrcOnly {
     id = "platforms;android-13";
@@ -3194,7 +3194,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-13.xml;
+    xml = ./platforms-android-13.xml;
   };
   platforms.android-14 = mkSrcOnly {
     id = "platforms;android-14";
@@ -3212,7 +3212,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-14.xml;
+    xml = ./platforms-android-14.xml;
   };
   platforms.android-15 = mkSrcOnly {
     id = "platforms;android-15";
@@ -3230,7 +3230,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-15.xml;
+    xml = ./platforms-android-15.xml;
   };
   platforms.android-16 = mkSrcOnly {
     id = "platforms;android-16";
@@ -3248,7 +3248,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-16.xml;
+    xml = ./platforms-android-16.xml;
   };
   platforms.android-17 = mkSrcOnly {
     id = "platforms;android-17";
@@ -3266,7 +3266,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-17.xml;
+    xml = ./platforms-android-17.xml;
   };
   platforms.android-18 = mkSrcOnly {
     id = "platforms;android-18";
@@ -3284,7 +3284,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-18.xml;
+    xml = ./platforms-android-18.xml;
   };
   platforms.android-19 = mkSrcOnly {
     id = "platforms;android-19";
@@ -3302,7 +3302,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-19.xml;
+    xml = ./platforms-android-19.xml;
   };
   platforms.android-2 = mkSrcOnly {
     id = "platforms;android-2";
@@ -3328,7 +3328,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-2.xml;
+    xml = ./platforms-android-2.xml;
   };
   platforms.android-20 = mkSrcOnly {
     id = "platforms;android-20";
@@ -3346,7 +3346,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-20.xml;
+    xml = ./platforms-android-20.xml;
   };
   platforms.android-21 = mkSrcOnly {
     id = "platforms;android-21";
@@ -3364,7 +3364,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-21.xml;
+    xml = ./platforms-android-21.xml;
   };
   platforms.android-22 = mkSrcOnly {
     id = "platforms;android-22";
@@ -3382,7 +3382,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-22.xml;
+    xml = ./platforms-android-22.xml;
   };
   platforms.android-23 = mkSrcOnly {
     id = "platforms;android-23";
@@ -3400,7 +3400,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-23.xml;
+    xml = ./platforms-android-23.xml;
   };
   platforms.android-24 = mkSrcOnly {
     id = "platforms;android-24";
@@ -3418,7 +3418,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-24.xml;
+    xml = ./platforms-android-24.xml;
   };
   platforms.android-25 = mkSrcOnly {
     id = "platforms;android-25";
@@ -3436,7 +3436,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-25.xml;
+    xml = ./platforms-android-25.xml;
   };
   platforms.android-26 = mkSrcOnly {
     id = "platforms;android-26";
@@ -3454,7 +3454,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-26.xml;
+    xml = ./platforms-android-26.xml;
   };
   platforms.android-27 = mkSrcOnly {
     id = "platforms;android-27";
@@ -3472,7 +3472,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-27.xml;
+    xml = ./platforms-android-27.xml;
   };
   platforms.android-28 = mkSrcOnly {
     id = "platforms;android-28";
@@ -3490,7 +3490,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-28.xml;
+    xml = ./platforms-android-28.xml;
   };
   platforms.android-29 = mkSrcOnly {
     id = "platforms;android-29";
@@ -3508,7 +3508,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-29.xml;
+    xml = ./platforms-android-29.xml;
   };
   platforms.android-3 = mkSrcOnly {
     id = "platforms;android-3";
@@ -3534,7 +3534,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-3.xml;
+    xml = ./platforms-android-3.xml;
   };
   platforms.android-4 = mkSrcOnly {
     id = "platforms;android-4";
@@ -3560,7 +3560,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-4.xml;
+    xml = ./platforms-android-4.xml;
   };
   platforms.android-5 = mkSrcOnly {
     id = "platforms;android-5";
@@ -3586,7 +3586,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-5.xml;
+    xml = ./platforms-android-5.xml;
   };
   platforms.android-6 = mkSrcOnly {
     id = "platforms;android-6";
@@ -3612,7 +3612,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-6.xml;
+    xml = ./platforms-android-6.xml;
   };
   platforms.android-7 = mkSrcOnly {
     id = "platforms;android-7";
@@ -3630,7 +3630,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-7.xml;
+    xml = ./platforms-android-7.xml;
   };
   platforms.android-8 = mkSrcOnly {
     id = "platforms;android-8";
@@ -3648,7 +3648,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-8.xml;
+    xml = ./platforms-android-8.xml;
   };
   platforms.android-9 = mkSrcOnly {
     id = "platforms;android-9";
@@ -3666,7 +3666,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./platforms-android-9.xml;
+    xml = ./platforms-android-9.xml;
   };
   skiaparser-1 = mkGeneric {
     id = "skiaparser;1";
@@ -3692,7 +3692,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./skiaparser-1.xml;
+    xml = ./skiaparser-1.xml;
   };
   sources.android-14 = mkSrcOnly {
     id = "sources;android-14";
@@ -3710,7 +3710,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-14.xml;
+    xml = ./sources-android-14.xml;
   };
   sources.android-15 = mkSrcOnly {
     id = "sources;android-15";
@@ -3728,7 +3728,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-15.xml;
+    xml = ./sources-android-15.xml;
   };
   sources.android-16 = mkSrcOnly {
     id = "sources;android-16";
@@ -3746,7 +3746,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-16.xml;
+    xml = ./sources-android-16.xml;
   };
   sources.android-17 = mkSrcOnly {
     id = "sources;android-17";
@@ -3764,7 +3764,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-17.xml;
+    xml = ./sources-android-17.xml;
   };
   sources.android-18 = mkSrcOnly {
     id = "sources;android-18";
@@ -3782,7 +3782,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-18.xml;
+    xml = ./sources-android-18.xml;
   };
   sources.android-19 = mkSrcOnly {
     id = "sources;android-19";
@@ -3800,7 +3800,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-19.xml;
+    xml = ./sources-android-19.xml;
   };
   sources.android-20 = mkSrcOnly {
     id = "sources;android-20";
@@ -3818,7 +3818,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-20.xml;
+    xml = ./sources-android-20.xml;
   };
   sources.android-21 = mkSrcOnly {
     id = "sources;android-21";
@@ -3836,7 +3836,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-21.xml;
+    xml = ./sources-android-21.xml;
   };
   sources.android-22 = mkSrcOnly {
     id = "sources;android-22";
@@ -3854,7 +3854,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-22.xml;
+    xml = ./sources-android-22.xml;
   };
   sources.android-23 = mkSrcOnly {
     id = "sources;android-23";
@@ -3872,7 +3872,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-23.xml;
+    xml = ./sources-android-23.xml;
   };
   sources.android-24 = mkSrcOnly {
     id = "sources;android-24";
@@ -3890,7 +3890,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-24.xml;
+    xml = ./sources-android-24.xml;
   };
   sources.android-25 = mkSrcOnly {
     id = "sources;android-25";
@@ -3908,7 +3908,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-25.xml;
+    xml = ./sources-android-25.xml;
   };
   sources.android-26 = mkSrcOnly {
     id = "sources;android-26";
@@ -3926,7 +3926,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-26.xml;
+    xml = ./sources-android-26.xml;
   };
   sources.android-27 = mkSrcOnly {
     id = "sources;android-27";
@@ -3944,7 +3944,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-27.xml;
+    xml = ./sources-android-27.xml;
   };
   sources.android-28 = mkSrcOnly {
     id = "sources;android-28";
@@ -3962,7 +3962,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-28.xml;
+    xml = ./sources-android-28.xml;
   };
   sources.android-29 = mkSrcOnly {
     id = "sources;android-29";
@@ -3980,7 +3980,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./sources-android-29.xml;
+    xml = ./sources-android-29.xml;
   };
   system-images.android-10.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;default;armeabi-v7a";
@@ -3998,7 +3998,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-10-default-armeabi-v7a.xml;
+    xml = ./system-images-android-10-default-armeabi-v7a.xml;
   };
   system-images.android-10.default.x86 = mkSrcOnly {
     id = "system-images;android-10;default;x86";
@@ -4016,7 +4016,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-10-default-x86.xml;
+    xml = ./system-images-android-10-default-x86.xml;
   };
   system-images.android-10.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;google_apis;armeabi-v7a";
@@ -4034,7 +4034,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-10-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-10-google-apis-armeabi-v7a.xml;
   };
   system-images.android-10.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-10;google_apis;x86";
@@ -4052,7 +4052,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-10-google-apis-x86.xml;
+    xml = ./system-images-android-10-google-apis-x86.xml;
   };
   system-images.android-14.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-14;default;armeabi-v7a";
@@ -4070,7 +4070,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-14-default-armeabi-v7a.xml;
+    xml = ./system-images-android-14-default-armeabi-v7a.xml;
   };
   system-images.android-15.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-15;default;armeabi-v7a";
@@ -4088,7 +4088,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-15-default-armeabi-v7a.xml;
+    xml = ./system-images-android-15-default-armeabi-v7a.xml;
   };
   system-images.android-15.default.x86 = mkSrcOnly {
     id = "system-images;android-15;default;x86";
@@ -4106,7 +4106,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-15-default-x86.xml;
+    xml = ./system-images-android-15-default-x86.xml;
   };
   system-images.android-15.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-15;google_apis;armeabi-v7a";
@@ -4124,7 +4124,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-15-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-15-google-apis-armeabi-v7a.xml;
   };
   system-images.android-15.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-15;google_apis;x86";
@@ -4142,7 +4142,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-15-google-apis-x86.xml;
+    xml = ./system-images-android-15-google-apis-x86.xml;
   };
   system-images.android-16.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-16;default;armeabi-v7a";
@@ -4160,7 +4160,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-16-default-armeabi-v7a.xml;
+    xml = ./system-images-android-16-default-armeabi-v7a.xml;
   };
   system-images.android-16.default.mips = mkSrcOnly {
     id = "system-images;android-16;default;mips";
@@ -4178,7 +4178,7 @@
       id = "mips-android-sysimage-license";
       hash = "e9acab5b5fbb560a72cfaecce8946896ff6aab9d";
     };
-    xml = builtins.readFile ./system-images-android-16-default-mips.xml;
+    xml = ./system-images-android-16-default-mips.xml;
   };
   system-images.android-16.default.x86 = mkSrcOnly {
     id = "system-images;android-16;default;x86";
@@ -4196,7 +4196,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-16-default-x86.xml;
+    xml = ./system-images-android-16-default-x86.xml;
   };
   system-images.android-16.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-16;google_apis;armeabi-v7a";
@@ -4214,7 +4214,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-16-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-16-google-apis-armeabi-v7a.xml;
   };
   system-images.android-16.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-16;google_apis;x86";
@@ -4232,7 +4232,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-16-google-apis-x86.xml;
+    xml = ./system-images-android-16-google-apis-x86.xml;
   };
   system-images.android-17.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-17;default;armeabi-v7a";
@@ -4250,7 +4250,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-17-default-armeabi-v7a.xml;
+    xml = ./system-images-android-17-default-armeabi-v7a.xml;
   };
   system-images.android-17.default.mips = mkSrcOnly {
     id = "system-images;android-17;default;mips";
@@ -4268,7 +4268,7 @@
       id = "mips-android-sysimage-license";
       hash = "e9acab5b5fbb560a72cfaecce8946896ff6aab9d";
     };
-    xml = builtins.readFile ./system-images-android-17-default-mips.xml;
+    xml = ./system-images-android-17-default-mips.xml;
   };
   system-images.android-17.default.x86 = mkSrcOnly {
     id = "system-images;android-17;default;x86";
@@ -4286,7 +4286,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-17-default-x86.xml;
+    xml = ./system-images-android-17-default-x86.xml;
   };
   system-images.android-17.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-17;google_apis;armeabi-v7a";
@@ -4304,7 +4304,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-17-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-17-google-apis-armeabi-v7a.xml;
   };
   system-images.android-17.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-17;google_apis;x86";
@@ -4322,7 +4322,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-17-google-apis-x86.xml;
+    xml = ./system-images-android-17-google-apis-x86.xml;
   };
   system-images.android-18.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-18;default;armeabi-v7a";
@@ -4340,7 +4340,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-18-default-armeabi-v7a.xml;
+    xml = ./system-images-android-18-default-armeabi-v7a.xml;
   };
   system-images.android-18.default.x86 = mkSrcOnly {
     id = "system-images;android-18;default;x86";
@@ -4358,7 +4358,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-18-default-x86.xml;
+    xml = ./system-images-android-18-default-x86.xml;
   };
   system-images.android-18.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-18;google_apis;armeabi-v7a";
@@ -4376,7 +4376,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-18-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-18-google-apis-armeabi-v7a.xml;
   };
   system-images.android-18.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-18;google_apis;x86";
@@ -4394,7 +4394,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-18-google-apis-x86.xml;
+    xml = ./system-images-android-18-google-apis-x86.xml;
   };
   system-images.android-19.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-19;default;armeabi-v7a";
@@ -4412,7 +4412,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-19-default-armeabi-v7a.xml;
+    xml = ./system-images-android-19-default-armeabi-v7a.xml;
   };
   system-images.android-19.default.x86 = mkSrcOnly {
     id = "system-images;android-19;default;x86";
@@ -4430,7 +4430,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-19-default-x86.xml;
+    xml = ./system-images-android-19-default-x86.xml;
   };
   system-images.android-19.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-19;google_apis;armeabi-v7a";
@@ -4448,7 +4448,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-19-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-19-google-apis-armeabi-v7a.xml;
   };
   system-images.android-19.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-19;google_apis;x86";
@@ -4466,7 +4466,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-19-google-apis-x86.xml;
+    xml = ./system-images-android-19-google-apis-x86.xml;
   };
   system-images.android-21.android-tv.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-21;android-tv;armeabi-v7a";
@@ -4484,7 +4484,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-android-tv-armeabi-v7a.xml;
+    xml = ./system-images-android-21-android-tv-armeabi-v7a.xml;
   };
   system-images.android-21.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-21;android-tv;x86";
@@ -4502,7 +4502,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-android-tv-x86.xml;
+    xml = ./system-images-android-21-android-tv-x86.xml;
   };
   system-images.android-21.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-21;default;armeabi-v7a";
@@ -4520,7 +4520,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-default-armeabi-v7a.xml;
+    xml = ./system-images-android-21-default-armeabi-v7a.xml;
   };
   system-images.android-21.default.x86 = mkSrcOnly {
     id = "system-images;android-21;default;x86";
@@ -4538,7 +4538,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-default-x86.xml;
+    xml = ./system-images-android-21-default-x86.xml;
   };
   system-images.android-21.default.x86-64 = mkSrcOnly {
     id = "system-images;android-21;default;x86_64";
@@ -4556,7 +4556,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-default-x86-64.xml;
+    xml = ./system-images-android-21-default-x86-64.xml;
   };
   system-images.android-21.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-21;google_apis;armeabi-v7a";
@@ -4574,7 +4574,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-21-google-apis-armeabi-v7a.xml;
   };
   system-images.android-21.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-21;google_apis;x86";
@@ -4592,7 +4592,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-google-apis-x86.xml;
+    xml = ./system-images-android-21-google-apis-x86.xml;
   };
   system-images.android-21.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-21;google_apis;x86_64";
@@ -4610,7 +4610,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-21-google-apis-x86-64.xml;
+    xml = ./system-images-android-21-google-apis-x86-64.xml;
   };
   system-images.android-22.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-22;android-tv;x86";
@@ -4628,7 +4628,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-android-tv-x86.xml;
+    xml = ./system-images-android-22-android-tv-x86.xml;
   };
   system-images.android-22.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-22;default;armeabi-v7a";
@@ -4646,7 +4646,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-default-armeabi-v7a.xml;
+    xml = ./system-images-android-22-default-armeabi-v7a.xml;
   };
   system-images.android-22.default.x86 = mkSrcOnly {
     id = "system-images;android-22;default;x86";
@@ -4664,7 +4664,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-default-x86.xml;
+    xml = ./system-images-android-22-default-x86.xml;
   };
   system-images.android-22.default.x86-64 = mkSrcOnly {
     id = "system-images;android-22;default;x86_64";
@@ -4682,7 +4682,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-default-x86-64.xml;
+    xml = ./system-images-android-22-default-x86-64.xml;
   };
   system-images.android-22.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-22;google_apis;armeabi-v7a";
@@ -4700,7 +4700,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-22-google-apis-armeabi-v7a.xml;
   };
   system-images.android-22.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-22;google_apis;x86";
@@ -4718,7 +4718,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-google-apis-x86.xml;
+    xml = ./system-images-android-22-google-apis-x86.xml;
   };
   system-images.android-22.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-22;google_apis;x86_64";
@@ -4736,7 +4736,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-22-google-apis-x86-64.xml;
+    xml = ./system-images-android-22-google-apis-x86-64.xml;
   };
   system-images.android-23.android-tv.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;android-tv;armeabi-v7a";
@@ -4754,7 +4754,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-android-tv-armeabi-v7a.xml;
+    xml = ./system-images-android-23-android-tv-armeabi-v7a.xml;
   };
   system-images.android-23.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-23;android-tv;x86";
@@ -4772,7 +4772,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-android-tv-x86.xml;
+    xml = ./system-images-android-23-android-tv-x86.xml;
   };
   system-images.android-23.android-wear.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;android-wear;armeabi-v7a";
@@ -4790,7 +4790,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-android-wear-armeabi-v7a.xml;
+    xml = ./system-images-android-23-android-wear-armeabi-v7a.xml;
   };
   system-images.android-23.android-wear.x86 = mkSrcOnly {
     id = "system-images;android-23;android-wear;x86";
@@ -4808,7 +4808,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-android-wear-x86.xml;
+    xml = ./system-images-android-23-android-wear-x86.xml;
   };
   system-images.android-23.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;default;armeabi-v7a";
@@ -4826,7 +4826,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-default-armeabi-v7a.xml;
+    xml = ./system-images-android-23-default-armeabi-v7a.xml;
   };
   system-images.android-23.default.x86 = mkSrcOnly {
     id = "system-images;android-23;default;x86";
@@ -4844,7 +4844,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-default-x86.xml;
+    xml = ./system-images-android-23-default-x86.xml;
   };
   system-images.android-23.default.x86-64 = mkSrcOnly {
     id = "system-images;android-23;default;x86_64";
@@ -4862,7 +4862,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-default-x86-64.xml;
+    xml = ./system-images-android-23-default-x86-64.xml;
   };
   system-images.android-23.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;google_apis;armeabi-v7a";
@@ -4880,7 +4880,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-23-google-apis-armeabi-v7a.xml;
   };
   system-images.android-23.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-23;google_apis;x86";
@@ -4898,7 +4898,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-google-apis-x86.xml;
+    xml = ./system-images-android-23-google-apis-x86.xml;
   };
   system-images.android-23.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-23;google_apis;x86_64";
@@ -4916,7 +4916,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-23-google-apis-x86-64.xml;
+    xml = ./system-images-android-23-google-apis-x86-64.xml;
   };
   system-images.android-24.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-24;android-tv;x86";
@@ -4934,7 +4934,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-android-tv-x86.xml;
+    xml = ./system-images-android-24-android-tv-x86.xml;
   };
   system-images.android-24.default.arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;default;arm64-v8a";
@@ -4952,7 +4952,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-default-arm64-v8a.xml;
+    xml = ./system-images-android-24-default-arm64-v8a.xml;
   };
   system-images.android-24.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-24;default;armeabi-v7a";
@@ -4970,7 +4970,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-default-armeabi-v7a.xml;
+    xml = ./system-images-android-24-default-armeabi-v7a.xml;
   };
   system-images.android-24.default.x86 = mkSrcOnly {
     id = "system-images;android-24;default;x86";
@@ -4988,7 +4988,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-default-x86.xml;
+    xml = ./system-images-android-24-default-x86.xml;
   };
   system-images.android-24.default.x86-64 = mkSrcOnly {
     id = "system-images;android-24;default;x86_64";
@@ -5006,7 +5006,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-default-x86-64.xml;
+    xml = ./system-images-android-24-default-x86-64.xml;
   };
   system-images.android-24.google-apis.arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;google_apis;arm64-v8a";
@@ -5024,7 +5024,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-google-apis-arm64-v8a.xml;
+    xml = ./system-images-android-24-google-apis-arm64-v8a.xml;
   };
   system-images.android-24.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-24;google_apis;armeabi-v7a";
@@ -5042,7 +5042,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-24-google-apis-armeabi-v7a.xml;
   };
   system-images.android-24.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-24;google_apis;x86";
@@ -5060,7 +5060,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-google-apis-x86.xml;
+    xml = ./system-images-android-24-google-apis-x86.xml;
   };
   system-images.android-24.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-24;google_apis;x86_64";
@@ -5078,7 +5078,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-google-apis-x86-64.xml;
+    xml = ./system-images-android-24-google-apis-x86-64.xml;
   };
   system-images.android-24.google-apis-playstore.x86 = mkSrcOnly {
     id = "system-images;android-24;google_apis_playstore;x86";
@@ -5096,7 +5096,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-24-google-apis-playstore-x86.xml;
+    xml = ./system-images-android-24-google-apis-playstore-x86.xml;
   };
   system-images.android-25.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-25;android-tv;x86";
@@ -5114,7 +5114,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-android-tv-x86.xml;
+    xml = ./system-images-android-25-android-tv-x86.xml;
   };
   system-images.android-25.android-wear-cn.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;android-wear-cn;armeabi-v7a";
@@ -5132,7 +5132,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-android-wear-cn-armeabi-v7a.xml;
+    xml = ./system-images-android-25-android-wear-cn-armeabi-v7a.xml;
   };
   system-images.android-25.android-wear-cn.x86 = mkSrcOnly {
     id = "system-images;android-25;android-wear-cn;x86";
@@ -5150,7 +5150,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-android-wear-cn-x86.xml;
+    xml = ./system-images-android-25-android-wear-cn-x86.xml;
   };
   system-images.android-25.android-wear.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;android-wear;armeabi-v7a";
@@ -5168,7 +5168,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-android-wear-armeabi-v7a.xml;
+    xml = ./system-images-android-25-android-wear-armeabi-v7a.xml;
   };
   system-images.android-25.android-wear.x86 = mkSrcOnly {
     id = "system-images;android-25;android-wear;x86";
@@ -5186,7 +5186,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-android-wear-x86.xml;
+    xml = ./system-images-android-25-android-wear-x86.xml;
   };
   system-images.android-25.default.x86 = mkSrcOnly {
     id = "system-images;android-25;default;x86";
@@ -5204,7 +5204,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-default-x86.xml;
+    xml = ./system-images-android-25-default-x86.xml;
   };
   system-images.android-25.default.x86-64 = mkSrcOnly {
     id = "system-images;android-25;default;x86_64";
@@ -5222,7 +5222,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-default-x86-64.xml;
+    xml = ./system-images-android-25-default-x86-64.xml;
   };
   system-images.android-25.google-apis.arm64-v8a = mkSrcOnly {
     id = "system-images;android-25;google_apis;arm64-v8a";
@@ -5240,7 +5240,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-google-apis-arm64-v8a.xml;
+    xml = ./system-images-android-25-google-apis-arm64-v8a.xml;
   };
   system-images.android-25.google-apis.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;google_apis;armeabi-v7a";
@@ -5258,7 +5258,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-google-apis-armeabi-v7a.xml;
+    xml = ./system-images-android-25-google-apis-armeabi-v7a.xml;
   };
   system-images.android-25.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-25;google_apis;x86";
@@ -5276,7 +5276,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-google-apis-x86.xml;
+    xml = ./system-images-android-25-google-apis-x86.xml;
   };
   system-images.android-25.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-25;google_apis;x86_64";
@@ -5294,7 +5294,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-google-apis-x86-64.xml;
+    xml = ./system-images-android-25-google-apis-x86-64.xml;
   };
   system-images.android-25.google-apis-playstore.x86 = mkSrcOnly {
     id = "system-images;android-25;google_apis_playstore;x86";
@@ -5312,7 +5312,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-25-google-apis-playstore-x86.xml;
+    xml = ./system-images-android-25-google-apis-playstore-x86.xml;
   };
   system-images.android-26.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-26;android-tv;x86";
@@ -5330,7 +5330,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-26-android-tv-x86.xml;
+    xml = ./system-images-android-26-android-tv-x86.xml;
   };
   system-images.android-26.android-wear-cn.x86 = mkSrcOnly {
     id = "system-images;android-26;android-wear-cn;x86";
@@ -5348,7 +5348,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-26-android-wear-cn-x86.xml;
+    xml = ./system-images-android-26-android-wear-cn-x86.xml;
   };
   system-images.android-26.android-wear.x86 = mkSrcOnly {
     id = "system-images;android-26;android-wear;x86";
@@ -5366,7 +5366,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-26-android-wear-x86.xml;
+    xml = ./system-images-android-26-android-wear-x86.xml;
   };
   system-images.android-26.default.x86 = mkSrcOnly {
     id = "system-images;android-26;default;x86";
@@ -5384,7 +5384,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-26-default-x86.xml;
+    xml = ./system-images-android-26-default-x86.xml;
   };
   system-images.android-26.default.x86-64 = mkSrcOnly {
     id = "system-images;android-26;default;x86_64";
@@ -5402,7 +5402,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-26-default-x86-64.xml;
+    xml = ./system-images-android-26-default-x86-64.xml;
   };
   system-images.android-26.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-26;google_apis;x86";
@@ -5420,7 +5420,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-26-google-apis-x86.xml;
+    xml = ./system-images-android-26-google-apis-x86.xml;
   };
   system-images.android-26.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-26;google_apis;x86_64";
@@ -5438,7 +5438,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-26-google-apis-x86-64.xml;
+    xml = ./system-images-android-26-google-apis-x86-64.xml;
   };
   system-images.android-26.google-apis-playstore.x86 = mkSrcOnly {
     id = "system-images;android-26;google_apis_playstore;x86";
@@ -5456,7 +5456,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-26-google-apis-playstore-x86.xml;
+    xml = ./system-images-android-26-google-apis-playstore-x86.xml;
   };
   system-images.android-27.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-27;android-tv;x86";
@@ -5474,7 +5474,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-27-android-tv-x86.xml;
+    xml = ./system-images-android-27-android-tv-x86.xml;
   };
   system-images.android-27.default.x86 = mkSrcOnly {
     id = "system-images;android-27;default;x86";
@@ -5492,7 +5492,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-27-default-x86.xml;
+    xml = ./system-images-android-27-default-x86.xml;
   };
   system-images.android-27.default.x86-64 = mkSrcOnly {
     id = "system-images;android-27;default;x86_64";
@@ -5510,7 +5510,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-27-default-x86-64.xml;
+    xml = ./system-images-android-27-default-x86-64.xml;
   };
   system-images.android-27.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-27;google_apis;x86";
@@ -5528,7 +5528,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-27-google-apis-x86.xml;
+    xml = ./system-images-android-27-google-apis-x86.xml;
   };
   system-images.android-27.google-apis-playstore.x86 = mkSrcOnly {
     id = "system-images;android-27;google_apis_playstore;x86";
@@ -5546,7 +5546,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-27-google-apis-playstore-x86.xml;
+    xml = ./system-images-android-27-google-apis-playstore-x86.xml;
   };
   system-images.android-28.android-automotive.x86 = mkSrcOnly {
     id = "system-images;android-28;android-automotive;x86";
@@ -5564,7 +5564,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-28-android-automotive-x86.xml;
+    xml = ./system-images-android-28-android-automotive-x86.xml;
   };
   system-images.android-28.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-28;android-tv;x86";
@@ -5582,7 +5582,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-28-android-tv-x86.xml;
+    xml = ./system-images-android-28-android-tv-x86.xml;
   };
   system-images.android-28.android-wear-cn.x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear-cn;x86";
@@ -5600,7 +5600,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-28-android-wear-cn-x86.xml;
+    xml = ./system-images-android-28-android-wear-cn-x86.xml;
   };
   system-images.android-28.android-wear.x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
@@ -5618,7 +5618,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-28-android-wear-x86.xml;
+    xml = ./system-images-android-28-android-wear-x86.xml;
   };
   system-images.android-28.default.x86 = mkSrcOnly {
     id = "system-images;android-28;default;x86";
@@ -5636,7 +5636,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-28-default-x86.xml;
+    xml = ./system-images-android-28-default-x86.xml;
   };
   system-images.android-28.default.x86-64 = mkSrcOnly {
     id = "system-images;android-28;default;x86_64";
@@ -5654,7 +5654,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-28-default-x86-64.xml;
+    xml = ./system-images-android-28-default-x86-64.xml;
   };
   system-images.android-28.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-28;google_apis;x86";
@@ -5672,7 +5672,7 @@
       id = "android-sdk-arm-dbt-license";
       hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
-    xml = builtins.readFile ./system-images-android-28-google-apis-x86.xml;
+    xml = ./system-images-android-28-google-apis-x86.xml;
   };
   system-images.android-28.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-28;google_apis;x86_64";
@@ -5690,7 +5690,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-28-google-apis-x86-64.xml;
+    xml = ./system-images-android-28-google-apis-x86-64.xml;
   };
   system-images.android-28.google-apis-playstore.x86 = mkSrcOnly {
     id = "system-images;android-28;google_apis_playstore;x86";
@@ -5708,7 +5708,7 @@
       id = "android-sdk-arm-dbt-license";
       hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
-    xml = builtins.readFile ./system-images-android-28-google-apis-playstore-x86.xml;
+    xml = ./system-images-android-28-google-apis-playstore-x86.xml;
   };
   system-images.android-28.google-apis-playstore.x86-64 = mkSrcOnly {
     id = "system-images;android-28;google_apis_playstore;x86_64";
@@ -5726,7 +5726,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-28-google-apis-playstore-x86-64.xml;
+    xml = ./system-images-android-28-google-apis-playstore-x86-64.xml;
   };
   system-images.android-29.default.x86 = mkSrcOnly {
     id = "system-images;android-29;default;x86";
@@ -5748,7 +5748,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-29-default-x86.xml;
+    xml = ./system-images-android-29-default-x86.xml;
   };
   system-images.android-29.default.x86-64 = mkSrcOnly {
     id = "system-images;android-29;default;x86_64";
@@ -5770,7 +5770,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-29-default-x86-64.xml;
+    xml = ./system-images-android-29-default-x86-64.xml;
   };
   system-images.android-29.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-29;google_apis;x86";
@@ -5788,7 +5788,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-29-google-apis-x86.xml;
+    xml = ./system-images-android-29-google-apis-x86.xml;
   };
   system-images.android-29.google-apis.x86-64 = mkSrcOnly {
     id = "system-images;android-29;google_apis;x86_64";
@@ -5806,7 +5806,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-29-google-apis-x86-64.xml;
+    xml = ./system-images-android-29-google-apis-x86-64.xml;
   };
   system-images.android-29.google-apis-playstore.x86 = mkSrcOnly {
     id = "system-images;android-29;google_apis_playstore;x86";
@@ -5828,7 +5828,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-29-google-apis-playstore-x86.xml;
+    xml = ./system-images-android-29-google-apis-playstore-x86.xml;
   };
   system-images.android-29.google-apis-playstore.x86-64 = mkSrcOnly {
     id = "system-images;android-29;google_apis_playstore;x86_64";
@@ -5850,7 +5850,7 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./system-images-android-29-google-apis-playstore-x86-64.xml;
+    xml = ./system-images-android-29-google-apis-playstore-x86-64.xml;
   };
   system-images.android-Q.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-Q;android-tv;x86";
@@ -5868,7 +5868,7 @@
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = builtins.readFile ./system-images-android-Q-android-tv-x86.xml;
+    xml = ./system-images-android-Q-android-tv-x86.xml;
   };
   tools = mkTools {
     id = "tools";
@@ -5894,6 +5894,6 @@
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = builtins.readFile ./tools.xml;
+    xml = ./tools.xml;
   };
 }

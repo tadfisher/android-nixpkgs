@@ -26,13 +26,13 @@ let
       runtimeDependencies = [ zlib ];
 
       postUnpack = ''
-          rm -r $packageBase/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
-          ln -s ${zlib}/lib/libz.so.1 $packageBase/lib/libz.so.1
+          rm -r "$out/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
+          ln -s ${zlib}/lib/libz.so.1 $out/lib/libz.so.1
 
-          addAutoPatchelfSearchPath "$packageBase/lib"
-          addAutoPatchelfSearchPath "$packageBase/bin"
-          autoPatchelf --no-recurse "$packageBase/lib"
-          autoPatchelf --no-recurse "$packageBase/bin"
+          addAutoPatchelfSearchPath "$out/lib"
+          addAutoPatchelfSearchPath "$out/bin"
+          autoPatchelf --no-recurse "$out/lib"
+          autoPatchelf --no-recurse "$out/bin"
       '';
     }
 

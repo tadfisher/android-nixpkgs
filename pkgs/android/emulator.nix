@@ -59,13 +59,21 @@ mkGeneric {
   dontWrapQtApps = true;
 
   postUnpack = ''
-    rm -r $packageBase/lib64/gles_mesa
+    rm -r $out/lib64/gles_mesa
 
     for f in ${toString systemLibs}; do
-      rm $out/emulator/lib64/$f || true
+      rm $out/lib64/$f || true
     done
 
     # silence LD_PRELOAD warning
-    ln -s ${freetype}/lib/libfreetype.so.6 $packageBase/lib64/qt/lib
+    ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
   '';
+
+  passthru = {
+    installSdk = ''
+      for exe in emulator emulator-check mksdcard; do
+        ln -s $pkgBase/$exe $out/bin/$exe
+      done
+    '';
+  };
 }

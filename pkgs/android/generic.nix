@@ -23,7 +23,7 @@ in stdenv.mkDerivation (rec {
   };
 
   setSourceRoot = ''
-    sourceRoot="$out/${package.path}";
+    sourceRoot="$out"
   '';
 
   unpackCmd = ''
@@ -41,8 +41,7 @@ in stdenv.mkDerivation (rec {
         fi && rmdir "$temp"/* "$temp"
     )
 
-    export packageBase="$out/${package.path}"
-    unzip-strip "$curSrc" "$packageBase"
+    unzip-strip "$curSrc" "$out"
   '';
 
   installPhase = args.installPhase or ''
@@ -51,7 +50,7 @@ in stdenv.mkDerivation (rec {
   '';
 
   passthru = {
-    license = package.license;
+    inherit (package) license path xml;
   } // (args.passthru or {});
 
   preferLocalBuild = true;
