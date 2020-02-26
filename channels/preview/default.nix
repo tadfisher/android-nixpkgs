@@ -1896,6 +1896,58 @@
     };
     xml = ./cmake-3-6-4111459.xml;
   };
+  cmdline-tools-1-0 = mkGeneric {
+    id = "cmdline-tools;1.0";
+    pname = "cmdline-tools-1-0";
+    version = "1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip";
+        sha1 = "6ffc5bd72db2c755f9b374ed829202262a6d8aaf";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6200805_latest.zip";
+        sha1 = "23f803c07e392bb769507c88b23c2c7868cc7a6f";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6200805_latest.zip";
+        sha1 = "a863da8763de2febeb7429e7894fb65a092609db";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/1.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-1-0.xml;
+  };
+  cmdline-tools.latest = mkGeneric {
+    id = "cmdline-tools;latest";
+    pname = "cmdline-tools-latest";
+    version = "1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip";
+        sha1 = "6ffc5bd72db2c755f9b374ed829202262a6d8aaf";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6200805_latest.zip";
+        sha1 = "23f803c07e392bb769507c88b23c2c7868cc7a6f";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6200805_latest.zip";
+        sha1 = "a863da8763de2febeb7429e7894fb65a092609db";
+      };
+    };
+    displayName = "Android SDK Command-line Tools (latest)";
+    path = "cmdline-tools/latest";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-latest.xml;
+  };
   docs = mkGeneric {
     id = "docs";
     pname = "docs";
