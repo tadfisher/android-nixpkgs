@@ -1969,26 +1969,26 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "30";
+    version = "30.0.2";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin-6203977.zip";
-        sha1 = "3bb965869577be4e62dec053de34c279f5024a12";
+        url = "https://dl.google.com/android/repository/emulator-darwin-6237347.zip";
+        sha1 = "702b6a050a230b3b45f667867f6fc99b3f973d9a";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux-6203977.zip";
-        sha1 = "356cac370c03460ca82166464de7ecd7da1f4a49";
+        url = "https://dl.google.com/android/repository/emulator-linux-6237347.zip";
+        sha1 = "8adefcd6b6883f977615be3d30dc53b8b2981032";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows-6203977.zip";
-        sha1 = "957a3811267b542e6ef4880a7a4128d83b803ea2";
+        url = "https://dl.google.com/android/repository/emulator-windows-6237347.zip";
+        sha1 = "ddfc142be8fb7febf8624583cb95bc3b342011ad";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./emulator.xml;
   };
