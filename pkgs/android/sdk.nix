@@ -47,7 +47,7 @@ assert (assertMsg (any (p: p.pname == "tools") pkgs)
 
 runCommand "android-sdk-env" {
   name = "android-sdk-env";
-  buildInputs = [ licenses ];
+  buildInputs = [ licenses ] ++ pkgs;
   nativeBuildInputs = [ makeWrapper ];
   preferLocalBuild = true;
   allowSubstitutes = false;
