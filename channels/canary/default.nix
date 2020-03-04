@@ -5999,14 +5999,14 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-R_r01.zip";
-        sha1 = "b329da558fa12a8eca3fb50db004403fab512734";
+        sha1 = "4e260bef94760eecba3224b68c1a4fed0fb89485";
       };
     };
     displayName = "Google APIs Intel x86 Atom System Image";
     path = "system-images/android-R/google_apis/x86";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-R-google-apis-x86.xml;
   };
@@ -6017,14 +6017,14 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-R_r01.zip";
-        sha1 = "14998405c5f3216ba3dbfb022dd1f7c427762c25";
+        sha1 = "ae12e1c3e1b36043a299359850e9315f47262f81";
       };
     };
     displayName = "Google APIs Intel x86 Atom_64 System Image";
     path = "system-images/android-R/google_apis/x86_64";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-R-google-apis-x86-64.xml;
   };
@@ -6035,18 +6035,18 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-R_r01-darwin.zip";
-        sha1 = "28306a27347332a37687082427f68d830370cccd";
+        sha1 = "1bcb7d2ba381028fc1fc24905f3009a3a5a826f2";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-R_r01-linux.zip";
-        sha1 = "28306a27347332a37687082427f68d830370cccd";
+        sha1 = "1bcb7d2ba381028fc1fc24905f3009a3a5a826f2";
       };
     };
     displayName = "Google Play Intel x86 Atom System Image";
     path = "system-images/android-R/google_apis_playstore/x86";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-R-google-apis-playstore-x86.xml;
   };
@@ -6057,18 +6057,18 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-R_r01-darwin.zip";
-        sha1 = "5a530040f7b02993a63d43fe4d86a77dbc3f7153";
+        sha1 = "aef2a953f20ca40ab94a4e1d633d2c84a27dc1e1";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-R_r01-linux.zip";
-        sha1 = "5a530040f7b02993a63d43fe4d86a77dbc3f7153";
+        sha1 = "aef2a953f20ca40ab94a4e1d633d2c84a27dc1e1";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
     path = "system-images/android-R/google_apis_playstore/x86_64";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-R-google-apis-playstore-x86-64.xml;
   };
