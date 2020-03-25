@@ -2013,8 +2013,8 @@
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -3261,7 +3261,7 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/platform-tools_r29.0.6-darwin.zip";
-        sha1 = "3232179dce22d8a6332018729026ed39f5d5cd0b";
+        sha1 = "dc551007505e06f85ffa0e29640cc82d43446957";
       };
       linux = {
         url = "https://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip";
