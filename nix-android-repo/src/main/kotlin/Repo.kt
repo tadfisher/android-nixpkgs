@@ -20,7 +20,7 @@ import java.io.PrintStream
 import java.net.URL
 import java.nio.file.Path
 
-class NixDownloader(localPath: Path) : Downloader {
+class NixDownloader() : Downloader {
     override fun downloadFully(url: URL, indicator: ProgressIndicator): Path? {
         val target = File.createTempFile("NixDownloader", null)
         downloadFully(url, target, null, indicator)
@@ -122,7 +122,7 @@ class NixRepoManager(
     private val sdk = AndroidSdkHandler.getInstance(localPath.toFile())
     private val repoManager = sdk.getSdkManager(progress)
     private val settings = NixSettings(channelId)
-    private val downloader = NixDownloader(localPath)
+    private val downloader = NixDownloader()
 
     fun getPackages(): RepositoryPackages {
         repoManager.loadSynchronously(0, progress, downloader, settings)

@@ -8,7 +8,10 @@ let
   inherit (stdenv.lib) hasPrefix recursiveUpdate;
 
   buildArgs =
-    if (hasPrefix "cmake;" package.id) then {
+    if (
+      hasPrefix "cmake;" package.id ||
+      hasPrefix "skiaparser;" package.id
+    ) then {
       buildInputs = [ stdenv.cc.cc.lib ];
     }
 

@@ -1,19 +1,19 @@
 # This is a Gradle generated file for dependency locking.
 # Manual edits can break the build and are not advised.
 # This file is expected to be part of source control.
-com.android.tools.layoutlib:layoutlib-api:27.0.0-alpha09
-com.android.tools:annotations:27.0.0-alpha09
-com.android.tools:common:27.0.0-alpha09
-com.android.tools:dvlib:27.0.0-alpha09
-com.android.tools:repository:27.0.0-alpha09
-com.android.tools:sdklib:27.0.0-alpha09
+com.android.tools.layoutlib:layoutlib-api:27.1.0-alpha08
+com.android.tools:annotations:27.1.0-alpha08
+com.android.tools:common:27.1.0-alpha08
+com.android.tools:dvlib:27.1.0-alpha08
+com.android.tools:repository:27.1.0-alpha08
+com.android.tools:sdklib:27.1.0-alpha08
 com.google.code.findbugs:jsr305:3.0.2
 com.google.code.gson:gson:2.8.5
-com.google.errorprone:error_prone_annotations:2.2.0
+com.google.errorprone:error_prone_annotations:2.3.2
 com.google.guava:failureaccess:1.0.1
-com.google.guava:guava:27.1-jre
+com.google.guava:guava:28.1-jre
 com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
-com.google.j2objc:j2objc-annotations:1.1
+com.google.j2objc:j2objc-annotations:1.3
 com.google.jimfs:jimfs:1.1
 com.sun.activation:javax.activation:1.2.0
 com.sun.istack:istack-commons-runtime:3.0.7
@@ -27,13 +27,13 @@ org.apache.commons:commons-compress:1.12
 org.apache.httpcomponents:httpclient:4.5.6
 org.apache.httpcomponents:httpcore:4.4.10
 org.apache.httpcomponents:httpmime:4.5.6
-org.checkerframework:checker-qual:2.5.2
-org.codehaus.mojo:animal-sniffer-annotations:1.17
+org.checkerframework:checker-qual:2.8.1
+org.codehaus.mojo:animal-sniffer-annotations:1.18
 org.glassfish.jaxb:jaxb-runtime:2.3.1
 org.glassfish.jaxb:txw2:2.3.1
-org.jetbrains.kotlin:kotlin-stdlib-common:1.3.61
-org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61
-org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61
-org.jetbrains.kotlin:kotlin-stdlib:1.3.61
+org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72
+org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72
+org.jetbrains.kotlin:kotlin-stdlib:1.3.72
 org.jetbrains:annotations:13.0
 org.jvnet.staxex:stax-ex:1.8
