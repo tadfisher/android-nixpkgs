@@ -1950,19 +1950,19 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "30.0.11";
+    version = "30.0.12";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin-6449564.zip";
-        sha1 = "f6951b1d08e7d53a8c408a9f0df774d8bb3e614b";
+        url = "https://dl.google.com/android/repository/emulator-darwin-6466327.zip";
+        sha1 = "adc72a012a6092f52a5378f1cf94ec133eb0dfc8";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux-6449564.zip";
-        sha1 = "a2d76653431c4841b00edec141282f1bd4d99921";
+        url = "https://dl.google.com/android/repository/emulator-linux-6466327.zip";
+        sha1 = "f3fba6f62230625fc5dc4b412ab871e7e427ad1b";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows-6449564.zip";
-        sha1 = "86f8f9b97a6c0e601f39512288cddfc132358298";
+        url = "https://dl.google.com/android/repository/emulator-windows-6466327.zip";
+        sha1 = "b39cc2efc2628444d91745be567ffa7be6e6971f";
       };
     };
     displayName = "Android Emulator";
@@ -1972,58 +1972,6 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./emulator.xml;
-  };
-  android.gapid.gapid-1 = mkSrcOnly {
-    id = "extras;android;gapid;1";
-    pname = "extras-android-gapid-1";
-    version = "1.0.3";
-    sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/gapid_r01_linux.zip";
-        sha1 = "7c9ef7544cf0aea030bcc29bd8e12c04fd53e653";
-      };
-      darwin = {
-        url = "https://dl.google.com/android/repository/gapid_r01_osx.zip";
-        sha1 = "597eb271349d890566274861eba2770a84ee4c69";
-      };
-      windows = {
-        url = "https://dl.google.com/android/repository/gapid_r01_windows.zip";
-        sha1 = "82c9b3eb1b281f27f58fe55025227148b3deb12e";
-      };
-    };
-    displayName = "GPU Debugging tools";
-    path = "extras/android/gapid/1";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./extras-android-gapid-1.xml;
-  };
-  android.gapid.gapid-3 = mkSrcOnly {
-    id = "extras;android;gapid;3";
-    pname = "extras-android-gapid-3";
-    version = "3.1";
-    sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/gapid_2994895_linux.zip";
-        sha1 = "e40371ba191f617e4e79bc760d0ab2948ba8cf46";
-      };
-      darwin = {
-        url = "https://dl.google.com/android/repository/gapid_2994895_osx.zip";
-        sha1 = "ad86a2350b7b9908300277bf03d41649659de384";
-      };
-      windows = {
-        url = "https://dl.google.com/android/repository/gapid_2994895_windows.zip";
-        sha1 = "0383903a9a9e61ecb3a339f7981857ddb667cc61";
-      };
-    };
-    displayName = "GPU Debugging tools";
-    path = "extras/android/gapid/3";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./extras-android-gapid-3.xml;
   };
   extras.android.m2repository = mkSrcOnly {
     id = "extras;android;m2repository";
@@ -5550,11 +5498,11 @@
   system-images.android-28.android-automotive.x86 = mkSrcOnly {
     id = "system-images;android-28;android-automotive;x86";
     pname = "system-images-android-28-android-automotive-x86";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86-28_r03.zip";
-        sha1 = "0bd113f184dba1df8c04b58b6e462328e40605db";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86-28_r04.zip";
+        sha1 = "8f18c929d44ff7834966b79e91491a0f10407b9b";
       };
     };
     displayName = "Automotive Intel x86 Atom System Image";

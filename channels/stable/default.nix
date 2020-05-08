@@ -1973,58 +1973,6 @@
     };
     xml = ./emulator.xml;
   };
-  android.gapid.gapid-1 = mkSrcOnly {
-    id = "extras;android;gapid;1";
-    pname = "extras-android-gapid-1";
-    version = "1.0.3";
-    sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/gapid_r01_linux.zip";
-        sha1 = "7c9ef7544cf0aea030bcc29bd8e12c04fd53e653";
-      };
-      darwin = {
-        url = "https://dl.google.com/android/repository/gapid_r01_osx.zip";
-        sha1 = "597eb271349d890566274861eba2770a84ee4c69";
-      };
-      windows = {
-        url = "https://dl.google.com/android/repository/gapid_r01_windows.zip";
-        sha1 = "82c9b3eb1b281f27f58fe55025227148b3deb12e";
-      };
-    };
-    displayName = "GPU Debugging tools";
-    path = "extras/android/gapid/1";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./extras-android-gapid-1.xml;
-  };
-  android.gapid.gapid-3 = mkSrcOnly {
-    id = "extras;android;gapid;3";
-    pname = "extras-android-gapid-3";
-    version = "3.1";
-    sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/gapid_2994895_linux.zip";
-        sha1 = "e40371ba191f617e4e79bc760d0ab2948ba8cf46";
-      };
-      darwin = {
-        url = "https://dl.google.com/android/repository/gapid_2994895_osx.zip";
-        sha1 = "ad86a2350b7b9908300277bf03d41649659de384";
-      };
-      windows = {
-        url = "https://dl.google.com/android/repository/gapid_2994895_windows.zip";
-        sha1 = "0383903a9a9e61ecb3a339f7981857ddb667cc61";
-      };
-    };
-    displayName = "GPU Debugging tools";
-    path = "extras/android/gapid/3";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./extras-android-gapid-3.xml;
-  };
   extras.android.m2repository = mkSrcOnly {
     id = "extras;android;m2repository";
     pname = "extras-android-m2repository";
@@ -4787,8 +4735,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "cfe537f22f994c317c40aaa59b00391628c3fa4b";
       };
     };
     displayName = "ARM EABI v7a System Image";
