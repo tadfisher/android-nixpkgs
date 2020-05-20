@@ -1921,29 +1921,55 @@
     };
     xml = ./cmdline-tools-1-0.xml;
   };
+  cmdline-tools-2-0-rc01 = mkSrcOnly {
+    id = "cmdline-tools;2.0-rc01";
+    pname = "cmdline-tools-2-0-rc01";
+    version = "2-rc1";
+    sources = {
+      windows = {
+        url = "https://dl.google.com/android/repository/1450506156dfc82f4872275eff70bd82823b4c10.commandlinetools-win-6502184_latest.zip";
+        sha1 = "378db723830be33c27fa5b63f49d404a8ddd51fa";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/5b5d9c63bfe29250e97dc86d315b0a693830f38a.commandlinetools-mac-6502184_latest.zip";
+        sha1 = "5e9931251318be66f7145f44dadea1d6b36730cc";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6502184_latest.zip";
+        sha1 = "5fcd56f5a36bfc8f50f55956a1ba00d4ae3e8d4b";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/2.0-rc01";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./cmdline-tools-2-0-rc01.xml;
+  };
   cmdline-tools.latest = mkSrcOnly {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "1";
+    version = "2-rc1";
     sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip";
-        sha1 = "6ffc5bd72db2c755f9b374ed829202262a6d8aaf";
+      windows = {
+        url = "https://dl.google.com/android/repository/1450506156dfc82f4872275eff70bd82823b4c10.commandlinetools-win-6502184_latest.zip";
+        sha1 = "378db723830be33c27fa5b63f49d404a8ddd51fa";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-6200805_latest.zip";
-        sha1 = "23f803c07e392bb769507c88b23c2c7868cc7a6f";
+        url = "https://dl.google.com/android/repository/5b5d9c63bfe29250e97dc86d315b0a693830f38a.commandlinetools-mac-6502184_latest.zip";
+        sha1 = "5e9931251318be66f7145f44dadea1d6b36730cc";
       };
-      windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-6200805_latest.zip";
-        sha1 = "a863da8763de2febeb7429e7894fb65a092609db";
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6502184_latest.zip";
+        sha1 = "5fcd56f5a36bfc8f50f55956a1ba00d4ae3e8d4b";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
     path = "cmdline-tools/latest";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./cmdline-tools-latest.xml;
   };
