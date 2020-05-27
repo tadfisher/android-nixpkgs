@@ -2604,26 +2604,26 @@
   ndk-bundle = mkSrcOnly {
     id = "ndk-bundle";
     pname = "ndk-bundle";
-    version = "21.1.6363665-rc3";
+    version = "21.2.6472646";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21b-beta3-darwin-x86_64.zip";
-        sha1 = "767f722c14dd27a22b17903e09b768407131129e";
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-darwin-x86_64.zip";
+        sha1 = "c42a836f6697a4ef8b927813d5f7dd12e974cfba";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21b-beta3-linux-x86_64.zip";
-        sha1 = "29139085aa402d6b27d4394c30e797f814876d1e";
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-linux-x86_64.zip";
+        sha1 = "c81a5bcb4672a18d3647bf6898cd4dbcb978d0e8";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21b-beta3-windows-x86_64.zip";
-        sha1 = "8ecb03c728b8dc814db30c8152c4436cb1536c8d";
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-windows-x86_64.zip";
+        sha1 = "93563a1297a60b5da49a48f62340dbf0c878a5f3";
       };
     };
     displayName = "NDK";
     path = "ndk-bundle";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./ndk-bundle.xml;
   };
@@ -3052,6 +3052,32 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./ndk-21-1-6363665.xml;
+  };
+  ndk-21-2-6472646 = mkSrcOnly {
+    id = "ndk;21.2.6472646";
+    pname = "ndk-21-2-6472646";
+    version = "21.2.6472646";
+    sources = {
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-darwin-x86_64.zip";
+        sha1 = "c42a836f6697a4ef8b927813d5f7dd12e974cfba";
+      };
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-linux-x86_64.zip";
+        sha1 = "c81a5bcb4672a18d3647bf6898cd4dbcb978d0e8";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-windows-x86_64.zip";
+        sha1 = "93563a1297a60b5da49a48f62340dbf0c878a5f3";
+      };
+    };
+    displayName = "NDK (Side by side) 21.2.6472646";
+    path = "ndk/21.2.6472646";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-21-2-6472646.xml;
   };
   patcher.v4 = mkSrcOnly {
     id = "patcher;v4";
