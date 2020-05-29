@@ -1921,22 +1921,48 @@
     };
     xml = ./cmdline-tools-1-0.xml;
   };
+  cmdline-tools-2-0 = mkSrcOnly {
+    id = "cmdline-tools;2.0";
+    pname = "cmdline-tools-2-0";
+    version = "2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip";
+        sha1 = "14b2114c6eae9e10686a18138d2bb468c46f8e0c";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6514223_latest.zip";
+        sha1 = "a69c4493c4c919698989484bf0ea684550ec5217";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6514223_latest.zip";
+        sha1 = "e11b418c1d2d28589e9194915be2561f1e1e7a95";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/2.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-2-0.xml;
+  };
   cmdline-tools.latest = mkSrcOnly {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "1";
+    version = "2";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip";
-        sha1 = "6ffc5bd72db2c755f9b374ed829202262a6d8aaf";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip";
+        sha1 = "14b2114c6eae9e10686a18138d2bb468c46f8e0c";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-6200805_latest.zip";
-        sha1 = "23f803c07e392bb769507c88b23c2c7868cc7a6f";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6514223_latest.zip";
+        sha1 = "a69c4493c4c919698989484bf0ea684550ec5217";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-6200805_latest.zip";
-        sha1 = "a863da8763de2febeb7429e7894fb65a092609db";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6514223_latest.zip";
+        sha1 = "e11b418c1d2d28589e9194915be2561f1e1e7a95";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
@@ -3494,6 +3520,32 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./platforms-android-R.xml;
+  };
+  skiaparser-1 = mkPrebuilt {
+    id = "skiaparser;1";
+    pname = "skiaparser-1";
+    version = "1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/skiaparser-6538157-linux.zip";
+        sha1 = "7fcef03a9e71a72b0b78a9b43b87aa617d498327";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/skiaparser-6538157-mac.zip";
+        sha1 = "ab852471513d1523f6b042db5a65b3eca40fbe7e";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/skiaparser-6538157-win.zip";
+        sha1 = "3000fdd12ad4766a37445175df72e0cb5cd7732f";
+      };
+    };
+    displayName = "Skia Parser Server";
+    path = "skiaparser/1";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./skiaparser-1.xml;
   };
   sources.android-14 = mkSrcOnly {
     id = "sources;android-14";
