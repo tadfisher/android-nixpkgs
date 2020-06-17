@@ -4873,8 +4873,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "cfe537f22f994c317c40aaa59b00391628c3fa4b";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -5754,7 +5754,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-30_r05.zip";
-        sha1 = "d79aab99861cda34cbd4dd012421d9a0bf36265a";
+        sha1 = "10e421eca8e09ce283a7f7eaf8d430832f589e44";
       };
     };
     displayName = "Google APIs Intel x86 Atom System Image";
@@ -5772,7 +5772,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-30_r05.zip";
-        sha1 = "5716046c29a52589580180cd296b3d72d2adaee1";
+        sha1 = "62b88630f93ec51388961472eccd6c7100690dd1";
       };
     };
     displayName = "Google APIs Intel x86 Atom_64 System Image";
@@ -5790,11 +5790,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-30_r05-darwin.zip";
-        sha1 = "de8956f69a7c856957c7248878f713b9fe9428c0";
+        sha1 = "2e3065faa19272b01ae3c66e1bc2690a6eca91dc";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-30_r05-linux.zip";
-        sha1 = "de8956f69a7c856957c7248878f713b9fe9428c0";
+        sha1 = "2e3065faa19272b01ae3c66e1bc2690a6eca91dc";
       };
     };
     displayName = "Google Play Intel x86 Atom System Image";
@@ -5812,11 +5812,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r05-darwin.zip";
-        sha1 = "d5eae687cc1629f41aef5475accc034753437796";
+        sha1 = "4f1a8c9bfb21d0bdaef1fee917a7feb1382063c6";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r05-linux.zip";
-        sha1 = "d5eae687cc1629f41aef5475accc034753437796";
+        sha1 = "4f1a8c9bfb21d0bdaef1fee917a7feb1382063c6";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
