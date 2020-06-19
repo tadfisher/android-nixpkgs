@@ -2910,19 +2910,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "30.0.2";
+    version = "30.0.3";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/b2be9c80582174e645d3736daa0d44d8610b38a8.platform-tools_r30.0.2-darwin.zip";
-        sha1 = "369b62c107e0b80c8600a1cc10a9d1c6a16ea26d";
+        url = "https://dl.google.com/android/repository/73f3f0b3034f61563f787bef8ebf51f38df457de.platform-tools_r30.0.3-darwin.zip";
+        sha1 = "c0ec4b0177e31eab1ef7f7e04c1ab783d71bb12a";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r30.0.2-linux.zip";
-        sha1 = "8f54b7c1abeed2599d418bb623773e4fb3c0697b";
+        url = "https://dl.google.com/android/repository/platform-tools_r30.0.3-linux.zip";
+        sha1 = "3aa611654e163fae7e3dbd73b5c04e12dfe1e07b";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r30.0.2-windows.zip";
-        sha1 = "c1f5e954066947bc5431ad02eef0a64ab92d7f6e";
+        url = "https://dl.google.com/android/repository/platform-tools_r30.0.3-windows.zip";
+        sha1 = "d4d170567cc88ac4bc246d33777bda2125d66a54";
       };
     };
     displayName = "Android SDK Platform-Tools";

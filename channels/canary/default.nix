@@ -1924,19 +1924,19 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "30.0.17";
+    version = "30.0.18";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin-6579264.zip";
-        sha1 = "4256c5ded2215d673ff00da12883427b9df5e976";
+        url = "https://dl.google.com/android/repository/emulator-darwin-6601035.zip";
+        sha1 = "c5cf7a3a154ce685f6a4ed96faae32a1c13e6fd4";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux-6579264.zip";
-        sha1 = "34704b6e41c8023158c7f784827bd1df4de853b4";
+        url = "https://dl.google.com/android/repository/emulator-linux-6601035.zip";
+        sha1 = "3428ae3801c27b811a9b1e2c3c2963ec75dce58a";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows-6579264.zip";
-        sha1 = "88e986318541c7a89c7ea022bff5b1295dfe3e84";
+        url = "https://dl.google.com/android/repository/emulator-windows-6601035.zip";
+        sha1 = "84127d6740bdf3fe60631110087f218bff3a2027";
       };
     };
     displayName = "Android Emulator";
@@ -3074,19 +3074,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "30.0.2";
+    version = "30.0.3";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/b2be9c80582174e645d3736daa0d44d8610b38a8.platform-tools_r30.0.2-darwin.zip";
-        sha1 = "369b62c107e0b80c8600a1cc10a9d1c6a16ea26d";
+        url = "https://dl.google.com/android/repository/73f3f0b3034f61563f787bef8ebf51f38df457de.platform-tools_r30.0.3-darwin.zip";
+        sha1 = "c0ec4b0177e31eab1ef7f7e04c1ab783d71bb12a";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r30.0.2-linux.zip";
-        sha1 = "8f54b7c1abeed2599d418bb623773e4fb3c0697b";
+        url = "https://dl.google.com/android/repository/platform-tools_r30.0.3-linux.zip";
+        sha1 = "3aa611654e163fae7e3dbd73b5c04e12dfe1e07b";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r30.0.2-windows.zip";
-        sha1 = "c1f5e954066947bc5431ad02eef0a64ab92d7f6e";
+        url = "https://dl.google.com/android/repository/platform-tools_r30.0.3-windows.zip";
+        sha1 = "d4d170567cc88ac4bc246d33777bda2125d66a54";
       };
     };
     displayName = "Android SDK Platform-Tools";
