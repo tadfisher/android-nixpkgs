@@ -5521,23 +5521,23 @@
     };
     xml = ./system-images-android-27-google-apis-playstore-x86.xml;
   };
-  system-images.android-28.android-automotive.x86 = mkSrcOnly {
-    id = "system-images;android-28;android-automotive;x86";
-    pname = "system-images-android-28-android-automotive-x86";
-    version = "4";
+  system-images.android-28.android-automotive-playstore.x86 = mkSrcOnly {
+    id = "system-images;android-28;android-automotive-playstore;x86";
+    pname = "system-images-android-28-android-automotive-playstore-x86";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86-28_r04.zip";
-        sha1 = "8f18c929d44ff7834966b79e91491a0f10407b9b";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86-28_r05.zip";
+        sha1 = "a1f224245056ddaa89651e379efbde7357b15046";
       };
     };
     displayName = "Automotive Intel x86 Atom System Image";
-    path = "system-images/android-28/android-automotive/x86";
+    path = "system-images/android-28/android-automotive-playstore/x86";
     license = {
       id = "android-sdk-license";
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = ./system-images-android-28-android-automotive-x86.xml;
+    xml = ./system-images-android-28-android-automotive-playstore-x86.xml;
   };
   system-images.android-28.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-28;android-tv;x86";
