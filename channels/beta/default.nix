@@ -3662,19 +3662,19 @@
   skiaparser-1 = mkPrebuilt {
     id = "skiaparser;1";
     pname = "skiaparser-1";
-    version = "2";
+    version = "3";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-6646980-linux.zip";
-        sha1 = "de1d91bd7baa4abce1a3fb859a2281e40e497739";
+        url = "https://dl.google.com/android/repository/skiaparser-6743343-linux.zip";
+        sha1 = "a006d285d1b8c5f87f0aa54ca31c862c7646bbad";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-6646980-mac.zip";
-        sha1 = "85298875130e63aa35638372623d9909d15b3794";
+        url = "https://dl.google.com/android/repository/skiaparser-6743343-mac.zip";
+        sha1 = "f12d4bc223112b82bcc30fa4ef0703abeb9cb0e9";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-6646980-win.zip";
-        sha1 = "b468ac8dac098850796fef10fcf9e8da74a1a799";
+        url = "https://dl.google.com/android/repository/skiaparser-6743343-win.zip";
+        sha1 = "9c582f01e0c705c62741bf76457be1150a6a7b5d";
       };
     };
     displayName = "Layout Inspector image server for API 29-30";
