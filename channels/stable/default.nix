@@ -1817,6 +1817,32 @@
     };
     xml = ./build-tools-30-0-1.xml;
   };
+  build-tools-30-0-2 = mkBuildTools {
+    id = "build-tools;30.0.2";
+    pname = "build-tools-30-0-2";
+    version = "30.0.2";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/5a6ceea22103d8dec989aefcef309949c0c42f1d.build-tools_r30.0.2-macosx.zip";
+        sha1 = "6b0166d1f4b0b3d496c0dde660145dfa7898095f";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r30.0.2-linux.zip";
+        sha1 = "363632ff8f7a198bf9fa94e3b9e0db6927bf373d";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/efbaa277338195608aa4e3dbd43927e97f60218c.build-tools_r30.0.2-windows.zip";
+        sha1 = "b42b77e02b82f242432cd7ffff5cbb92f6888ca7";
+      };
+    };
+    displayName = "Android SDK Build-Tools 30.0.2";
+    path = "build-tools/30.0.2";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./build-tools-30-0-2.xml;
+  };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
     pname = "cmake-3-10-2-4988404";
@@ -3400,11 +3426,11 @@
   platforms.android-30 = mkSrcOnly {
     id = "platforms;android-30";
     pname = "platforms-android-30";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-30_r02.zip";
-        sha1 = "0b1102c5f0be7bc629e396fcefd36b9f1edfa0a7";
+        url = "https://dl.google.com/android/repository/platform-30_r03.zip";
+        sha1 = "e7c6280901dcfa511af098d67dd88c4dfcbc6ea2";
       };
     };
     displayName = "Android SDK Platform 30";
@@ -4839,8 +4865,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "cfe537f22f994c317c40aaa59b00391628c3fa4b";
       };
     };
     displayName = "ARM EABI v7a System Image";
