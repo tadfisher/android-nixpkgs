@@ -2054,19 +2054,19 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "30.1";
+    version = "30.1.1";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin-6769834.zip";
-        sha1 = "0bf4a1e891e5f4aa5e1d8e016de51382a7a56484";
+        url = "https://dl.google.com/android/repository/emulator-darwin-6783220.zip";
+        sha1 = "1c9c9454f233658cf3bcd447fc2f2adb457a0f87";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux-6769834.zip";
-        sha1 = "e274ab8ded13fb54cd4ad53b665be0f46b8f6955";
+        url = "https://dl.google.com/android/repository/emulator-linux-6783220.zip";
+        sha1 = "5049b001f509cd3fc2dec973bd535a285ef78684";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows-6769834.zip";
-        sha1 = "15a285dbf61f5da886fed4e44918dde904e96128";
+        url = "https://dl.google.com/android/repository/emulator-windows-6783220.zip";
+        sha1 = "3bf5c9de96dd6220354d16ef0e99d73aec991b19";
       };
     };
     displayName = "Android Emulator";
@@ -5830,6 +5830,24 @@
       hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-28-google-ndk-x86.xml;
+  };
+  system-images.android-29.android-tv.x86 = mkSrcOnly {
+    id = "system-images;android-29;android-tv;x86";
+    pname = "system-images-android-29-android-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-29_r03.zip";
+        sha1 = "736c2f6c79493b5ee4ca0d2531a25c9eb7f9c7ab";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-29/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-29-android-tv-x86.xml;
   };
   system-images.android-29.default.x86 = mkSrcOnly {
     id = "system-images;android-29;default;x86";
