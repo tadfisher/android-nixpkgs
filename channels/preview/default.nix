@@ -3999,6 +3999,24 @@
     };
     xml = ./sources-android-29.xml;
   };
+  sources.android-30 = mkSrcOnly {
+    id = "sources;android-30";
+    pname = "sources-android-30";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sources-30_r01.zip";
+        sha1 = "e4c000fb3afb32380609ddcad91f5d6495eeccb1";
+      };
+    };
+    displayName = "Sources for Android 30";
+    path = "sources/android-30";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./sources-android-30.xml;
+  };
   system-images.android-10.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;default;armeabi-v7a";
     pname = "system-images-android-10-default-armeabi-v7a";

@@ -3887,6 +3887,24 @@
     };
     xml = ./sources-android-29.xml;
   };
+  sources.android-30 = mkSrcOnly {
+    id = "sources;android-30";
+    pname = "sources-android-30";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sources-30_r01.zip";
+        sha1 = "e4c000fb3afb32380609ddcad91f5d6495eeccb1";
+      };
+    };
+    displayName = "Sources for Android 30";
+    path = "sources/android-30";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./sources-android-30.xml;
+  };
   system-images.android-10.default.armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;default;armeabi-v7a";
     pname = "system-images-android-10-default-armeabi-v7a";
@@ -4865,8 +4883,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
