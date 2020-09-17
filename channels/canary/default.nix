@@ -2025,22 +2025,48 @@
     };
     xml = ./cmdline-tools-3-0-beta01.xml;
   };
+  cmdline-tools-4-0-alpha02 = mkSrcOnly {
+    id = "cmdline-tools;4.0-alpha02";
+    pname = "cmdline-tools-4-0-alpha02";
+    version = "4-rc2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6825553_latest.zip";
+        sha1 = "e0cf192aa1f18b165078dea57c9cb60221c38ba9";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6825553_latest.zip";
+        sha1 = "5eb01149af2d95c0890883c3e29b43793830a3c7";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6825553_latest.zip";
+        sha1 = "fe1279ae4b1bb744bcec0593f984d374d0696df7";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/4.0-alpha02";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./cmdline-tools-4-0-alpha02.xml;
+  };
   cmdline-tools.latest = mkSrcOnly {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "3-rc1";
+    version = "4-rc2";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-6604631_latest.zip";
-        sha1 = "d0626de9a4749c35219b7e845fcbb86798d70e14";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6825553_latest.zip";
+        sha1 = "e0cf192aa1f18b165078dea57c9cb60221c38ba9";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-6604631_latest.zip";
-        sha1 = "c81a080c47c1787ee421aa29a9e64995da170667";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6825553_latest.zip";
+        sha1 = "5eb01149af2d95c0890883c3e29b43793830a3c7";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-6604631_latest.zip";
-        sha1 = "d65248a6ad6659fc5149977c0dc80c8d8dda76f9";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6825553_latest.zip";
+        sha1 = "fe1279ae4b1bb744bcec0593f984d374d0696df7";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
@@ -5099,8 +5125,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6070,24 +6096,6 @@
       hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-30-google-apis-playstore-x86-64.xml;
-  };
-  system-images.android-Q.android-tv.x86 = mkSrcOnly {
-    id = "system-images;android-Q;android-tv;x86";
-    pname = "system-images-android-Q-android-tv-x86";
-    version = "1";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-Q_r01.zip";
-        sha1 = "80c66ddce0dbe53fe6fedcade230d518112fffb1";
-      };
-    };
-    displayName = "Android TV Intel x86 Atom System Image";
-    path = "system-images/android-Q/android-tv/x86";
-    license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
-    };
-    xml = ./system-images-android-Q-android-tv-x86.xml;
   };
   tools = mkTools {
     id = "tools";
