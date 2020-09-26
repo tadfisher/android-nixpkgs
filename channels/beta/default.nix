@@ -2108,26 +2108,26 @@
   extras.google.auto = mkSrcOnly {
     id = "extras;google;auto";
     pname = "extras-google-auto";
-    version = "1.1";
+    version = "2-rc1";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r01.1.zip";
-        sha1 = "202a6e1b3009a0eb815f8c672d2d5b3717de6169";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r02.0.rc1.zip";
+        sha1 = "b480489e604371301da10731a793b234b01b8f42";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r01.1.zip";
-        sha1 = "8179cbb3914493ebc5eb65b731cba061582f2e84";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r02.0.rc1.zip";
+        sha1 = "3adaf99d06eaeeb31f7bdbb62ae841e740bfc156";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r01.1.zip";
-        sha1 = "99c4a7172d73673552119347bc24c58b47da177b";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r02.0.rc1.zip";
+        sha1 = "e07788ed91d8e6dd3374f77da1cf78afb2664cc0";
       };
     };
-    displayName = "Android Auto Desktop Head Unit emulator";
+    displayName = "Android Auto Desktop Head Unit Emulator";
     path = "extras/google/auto";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./extras-google-auto.xml;
   };
@@ -3688,19 +3688,19 @@
   skiaparser-1 = mkPrebuilt {
     id = "skiaparser;1";
     pname = "skiaparser-1";
-    version = "3";
+    version = "4";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-6743343-linux.zip";
-        sha1 = "a006d285d1b8c5f87f0aa54ca31c862c7646bbad";
+        url = "https://dl.google.com/android/repository/skiaparser-6861534-linux.zip";
+        sha1 = "351bc7368128c392ed50e78003ac264c22ae6d7a";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-6743343-mac.zip";
-        sha1 = "f12d4bc223112b82bcc30fa4ef0703abeb9cb0e9";
+        url = "https://dl.google.com/android/repository/skiaparser-6861534-mac.zip";
+        sha1 = "cd7e45e9d51b89df59ae403e2f827b3541138a18";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-6743343-win.zip";
-        sha1 = "9c582f01e0c705c62741bf76457be1150a6a7b5d";
+        url = "https://dl.google.com/android/repository/skiaparser-6861534-win.zip";
+        sha1 = "996a39e4196bad3e0411a742dd95c7f3a84607fc";
       };
     };
     displayName = "Layout Inspector image server for API 29-30";
@@ -4995,8 +4995,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
