@@ -2083,16 +2083,16 @@
     version = "30.2";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin-6848414.zip";
-        sha1 = "5e97ea570e0c8fb3f7b90cb9e6513c730f7e76dc";
+        url = "https://dl.google.com/android/repository/emulator-darwin-6870254.zip";
+        sha1 = "5bad274f5977d3da1d1ddf90f51591dc442a53ed";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux-6848414.zip";
-        sha1 = "a0b0706fd5b220458d1c0848e3e8d99b909d1a4a";
+        url = "https://dl.google.com/android/repository/emulator-linux-6870254.zip";
+        sha1 = "2152c4b70b9e9eadf0ee6c3cce99670fb4aee984";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows-6848414.zip";
-        sha1 = "56ce18badcaab1840b80ec6c11a69049716b096f";
+        url = "https://dl.google.com/android/repository/emulator-windows-6870254.zip";
+        sha1 = "ff9be65002980bfc0d70c9cb0bbb28458cbf8882";
       };
     };
     displayName = "Android Emulator";
