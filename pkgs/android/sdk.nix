@@ -5,7 +5,7 @@ pkgsFun:
 let
   inherit (builtins) attrValues concatStringsSep length;
 
-  inherit (lib) any assertMsg concatMapStringsSep filterAttrs groupBy groupBy'
+  inherit (lib) all any assertMsg concatMapStringsSep filterAttrs groupBy groupBy'
     mapAttrs mapAttrsToList unique;
 
   pkgs = pkgsFun packages;
@@ -42,8 +42,11 @@ assert (assertMsg (duplicates == {})
   ''
 );
 
-assert (assertMsg (any (p: p.pname == "tools") pkgs)
-  "Missing 'tools' package, which is required for a working Android SDK.");
+assert (assertMsg (all (p: p.name != "tools") pkgs)
+  "The 'tools' package is obsolete. Use 'cmdline-tools' instead.");
+
+assert (assertMsg (any (p: p.pname == "cmdline-tools") pkgs)
+  "Missing 'cmdline-tools' package, which is required for a working Android SDK.");
 
 runCommand "android-sdk-env" {
   name = "android-sdk-env";
@@ -59,7 +62,7 @@ runCommand "android-sdk-env" {
   ${installSdk}
 
   mkdir -p "$ANDROID_HOME/licenses"
-  cp -as "${licenses}/" "$ANDROID_HOME/licenses"
+  cp -as ${licenses}/* "$ANDROID_HOME/licenses"
 
   export ANDROID_SDK_HOME=$(mktemp -d)
   touch $ANDROID_SDK_HOME/repositories.cfg

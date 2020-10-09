@@ -17,6 +17,7 @@ lib.makeScope pkgs.newScope (self: with self; rec {
 
   mkGeneric = callPackage ./generic.nix {};
   mkBuildTools = callPackage ./build-tools.nix {};
+  mkCmdlineTools = callPackage ./cmdline-tools.nix {};
   mkEmulator = callPackage ./emulator.nix {};
   mkPlatformTools = callPackage ./platform-tools.nix {};
   mkPrebuilt = callPackage ./prebuilt.nix {};

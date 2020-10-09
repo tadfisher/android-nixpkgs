@@ -19,18 +19,17 @@ dependencyLocking {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
     implementation("com.android.tools:sdklib:latest.release")
 }
 
 tasks {
     withType<KotlinCompile> {
         kotlinOptions {
-            jvmTarget = "1.8"
+            jvmTarget = "11"
         }
     }
 
     withType<Wrapper> {
-        gradleVersion = "6.3"
+        gradleVersion = "6.6.1"
     }
 }
