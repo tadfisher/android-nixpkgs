@@ -2000,31 +2000,31 @@
     };
     xml = ./cmdline-tools-2-1.xml;
   };
-  cmdline-tools-3-0-beta01 = mkCmdlineTools {
-    id = "cmdline-tools;3.0-beta01";
-    pname = "cmdline-tools-3-0-beta01";
-    version = "3-rc1";
+  cmdline-tools-3-0 = mkCmdlineTools {
+    id = "cmdline-tools;3.0";
+    pname = "cmdline-tools-3-0";
+    version = "3";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-6604631_latest.zip";
-        sha1 = "d0626de9a4749c35219b7e845fcbb86798d70e14";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip";
+        sha1 = "4f4417d53923c34891f1c05f302be2ed197d6844";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-6604631_latest.zip";
-        sha1 = "c81a080c47c1787ee421aa29a9e64995da170667";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6858069_latest.zip";
+        sha1 = "4846d2aede9db06361a5f0885d03997a6199229a";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-6604631_latest.zip";
-        sha1 = "d65248a6ad6659fc5149977c0dc80c8d8dda76f9";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6858069_latest.zip";
+        sha1 = "f0bf21e0a13dfcc48e7b0166f44dcff49912d2ee";
       };
     };
     displayName = "Android SDK Command-line Tools";
-    path = "cmdline-tools/3.0-beta01";
+    path = "cmdline-tools/3.0";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
-    xml = ./cmdline-tools-3-0-beta01.xml;
+    xml = ./cmdline-tools-3-0.xml;
   };
   cmdline-tools-4-0-alpha02 = mkCmdlineTools {
     id = "cmdline-tools;4.0-alpha02";
@@ -5875,6 +5875,24 @@
       hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-28-google-ndk-x86.xml;
+  };
+  system-images.android-29.android-automotive-playstore.x86 = mkSrcOnly {
+    id = "system-images;android-29;android-automotive-playstore;x86";
+    pname = "system-images-android-29-android-automotive-playstore-x86";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86-29_r01.zip";
+        sha1 = "8fb2624c63c34a01c27dd8085277b2a5fb8d7fbc";
+      };
+    };
+    displayName = "Automotive with Play Store Intel x86 Atom System Image";
+    path = "system-images/android-29/android-automotive-playstore/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-29-android-automotive-playstore-x86.xml;
   };
   system-images.android-29.android-tv.x86 = mkSrcOnly {
     id = "system-images;android-29;android-tv;x86";

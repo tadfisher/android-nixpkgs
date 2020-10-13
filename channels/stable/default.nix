@@ -1974,22 +1974,48 @@
     };
     xml = ./cmdline-tools-2-1.xml;
   };
+  cmdline-tools-3-0 = mkCmdlineTools {
+    id = "cmdline-tools;3.0";
+    pname = "cmdline-tools-3-0";
+    version = "3";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip";
+        sha1 = "4f4417d53923c34891f1c05f302be2ed197d6844";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6858069_latest.zip";
+        sha1 = "4846d2aede9db06361a5f0885d03997a6199229a";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6858069_latest.zip";
+        sha1 = "f0bf21e0a13dfcc48e7b0166f44dcff49912d2ee";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/3.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-3-0.xml;
+  };
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "2.1";
+    version = "3";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip";
-        sha1 = "9172381ff070ee2a416723c1989770cf4b0d1076";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip";
+        sha1 = "4f4417d53923c34891f1c05f302be2ed197d6844";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-6609375_latest.zip";
-        sha1 = "c0c6bb9f1970bfadeaac623dfabf22c3e56baaec";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-6858069_latest.zip";
+        sha1 = "4846d2aede9db06361a5f0885d03997a6199229a";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-6609375_latest.zip";
-        sha1 = "e2e19c2ff584efa87ef0cfdd1987f92881323208";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-6858069_latest.zip";
+        sha1 = "f0bf21e0a13dfcc48e7b0166f44dcff49912d2ee";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
@@ -5475,11 +5501,11 @@
   system-images.android-28.android-wear-cn.x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear-cn;x86";
     pname = "system-images-android-28-android-wear-cn-x86";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r03.zip";
-        sha1 = "2099d87709c5e064273925dbf2cf1fd081bf0262";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r04.zip";
+        sha1 = "cd9a54893ba58fc71041808ba8b8393f808be584";
       };
     };
     displayName = "China version of Wear OS Intel x86 Atom System Image";
@@ -5493,11 +5519,11 @@
   system-images.android-28.android-wear.x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
     pname = "system-images-android-28-android-wear-x86";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-28_r03.zip";
-        sha1 = "b80bd53ab69f19441714bff2e4d55931e6d3f7be";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-28_r04.zip";
+        sha1 = "0b88aafb088b4eb009b979b171a567f473faf599";
       };
     };
     displayName = "Wear OS Intel x86 Atom System Image";
