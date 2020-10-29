@@ -1,5 +1,7 @@
-language: nix
-nix: 2.2.2
+version: ~> 1.0
+import: nix-community/nix-travis-ci:nix.yml@main
+env:
+  - NIX_PATH: nixpkgs=channel:nixpkgs-unstable
 git:
   depth: 3
   quiet: true
@@ -18,7 +20,7 @@ before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
   - mkdir -p $HOME/nix.store
-  - nix copy --to file://$HOME/nix.store -f default.nix
+  - nix copy --to file://$HOME/nix.store -f sample.nix
 jobs:
   include:
     - stage: test
@@ -37,6 +39,3 @@ jobs:
         local_dir: build
         on:
           branch: master
-    - stage: cachix-unstable
-      script: scripts/cachix.sh nixos-unstable
-      if: branch = master
