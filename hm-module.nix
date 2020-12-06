@@ -1,9 +1,3 @@
-system: { self, ... }@inputs:
-
-let
-  sdk = self.legacyPackages.${system}.sdk;
-
-in
 { config, lib, pkgs, ... }:
 
 with lib;
@@ -51,7 +45,7 @@ in
   };
 
   config = mkIf (cfg.enable) {
-    android-sdk.finalPackage = sdk cfg.packages;
+    android-sdk.finalPackage = pkgs.androidSdkPackages.sdk cfg.packages;
 
     home = {
       file.${cfg.path}.source = "${cfg.finalPackage}/share/android-sdk";

@@ -11,7 +11,7 @@
       systems = [ "x86_64-linux" ];
 
     in {
-      hmModules.android-sdk = import ./hm-module.nix inputs;
+      hmModules.android-sdk = import ./hm-module.nix;
 
       # TODO Need to flatten the attrset in order to provide 'packages'.
       legacyPackages = genAttrs systems (system:
@@ -23,5 +23,9 @@
           # the more stable channels, with the exception of the emulator.
           androidpkgs.packages.canary
       );
+
+      overlay = final: prev: {
+        androidSdkPackages = (import ./default.nix { pkgs = final; }).packages.canary;
+      };
     };
 }
