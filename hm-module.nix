@@ -1,5 +1,9 @@
-{ self, ... }@inputs:
+system: { self, ... }@inputs:
 
+let
+  sdk = self.legacyPackages.${system}.sdk;
+
+in
 { config, lib, pkgs, ... }:
 
 with lib;
@@ -8,7 +12,6 @@ let
   cfg = config.android-sdk;
 
 in
-
 {
   options.android-sdk = {
     enable = mkEnableOption "android SDK environment";
@@ -48,7 +51,7 @@ in
   };
 
   config = mkIf (cfg.enable) {
-    android-sdk.finalPackage = self.sdk cfg.packages;
+    android-sdk.finalPackage = sdk cfg.packages;
 
     home = {
       file.${cfg.path}.source = "${cfg.finalPackage}/share/android-sdk";
