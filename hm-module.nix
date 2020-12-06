@@ -21,7 +21,7 @@ in
 
     packages = mkOption {
       default = self: [ self.cmdline-tools-latest ];
-      type = hmTypes.selectorFunction;
+      type = hm.types.selectorFunction;
       defaultText = "sdk: [ sdk.cmdline-tools-latest ]";
       example = literalExample ''
         sdk: with sdk; [
