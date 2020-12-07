@@ -1844,6 +1844,32 @@
     };
     xml = ./build-tools-30-0-2.xml;
   };
+  build-tools-30-0-3 = mkBuildTools {
+    id = "build-tools;30.0.3";
+    pname = "build-tools-30-0-3";
+    version = "30.0.3";
+    sources = {
+      windows = {
+        url = "https://dl.google.com/android/repository/91936d4ee3ccc839f0addd53c9ebf087b1e39251.build-tools_r30.0.3-windows.zip";
+        sha1 = "fc165c721b8d2da55e6fede467526c81f562be7b";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r30.0.3-linux.zip";
+        sha1 = "2076ea81b5a2fc298ef7bf85d666f496b928c7f1";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/f6d24b187cc6bd534c6c37604205171784ac5621.build-tools_r30.0.3-macosx.zip";
+        sha1 = "0807cd3f0dbc33c8be7f3d6faa263f6b14b502b7";
+      };
+    };
+    displayName = "Android SDK Build-Tools 30.0.3";
+    path = "build-tools/30.0.3";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./build-tools-30-0-3.xml;
+  };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
     pname = "cmake-3-10-2-4988404";
@@ -4043,11 +4069,11 @@
   system-images.android-15.default.x86 = mkSrcOnly {
     id = "system-images;android-15;default;x86";
     pname = "system-images-android-15-default-x86";
-    version = "5";
+    version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/x86-15_r05.zip";
-        sha1 = "c387e0efed2cdc610e5944eea67b7b692d03760c";
+        url = "https://dl.google.com/android/repository/sys-img/android/x86-15_r07.zip";
+        sha1 = "61381aef3fd0cdc8255cb3298072a920c80186ca";
       };
     };
     displayName = "Intel x86 Atom System Image";
@@ -4079,11 +4105,11 @@
   system-images.android-15.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-15;google_apis;x86";
     pname = "system-images-android-15-google-apis-x86";
-    version = "6";
+    version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-15_r06.zip";
-        sha1 = "a7deb32c12396b6c4fd60ad14a62e19f8bdcae20";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-15_r07.zip";
+        sha1 = "5ef2c5481f5bb8789c0b5224d46fb2e13602a450";
       };
     };
     displayName = "Google APIs Intel x86 Atom System Image";
@@ -4133,11 +4159,11 @@
   system-images.android-16.default.x86 = mkSrcOnly {
     id = "system-images;android-16;default;x86";
     pname = "system-images-android-16-default-x86";
-    version = "6";
+    version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/x86-16_r06.zip";
-        sha1 = "bf1bf8c5591346118d2235da1ad20e7be8a3e9cd";
+        url = "https://dl.google.com/android/repository/sys-img/android/x86-16_r07.zip";
+        sha1 = "ee6718e7556c8f8bd8d3f470b34f2c5dbf9bcff4";
       };
     };
     displayName = "Intel x86 Atom System Image";
@@ -4169,11 +4195,11 @@
   system-images.android-16.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-16;google_apis;x86";
     pname = "system-images-android-16-google-apis-x86";
-    version = "6";
+    version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-16_r06.zip";
-        sha1 = "b57adef2f43dd176b8c02c980c16a796021b2071";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-16_r07.zip";
+        sha1 = "246903c75f5aa3db7fb58cac877f2201fbbfd94a";
       };
     };
     displayName = "Google APIs Intel x86 Atom System Image";
@@ -4223,11 +4249,11 @@
   system-images.android-17.default.x86 = mkSrcOnly {
     id = "system-images;android-17;default;x86";
     pname = "system-images-android-17-default-x86";
-    version = "4";
+    version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/x86-17_r04.zip";
-        sha1 = "03c6d022ab2dcbbcf655d78ba5ccb0431cadcaec";
+        url = "https://dl.google.com/android/repository/sys-img/android/x86-17_r07.zip";
+        sha1 = "1ad5ffb51e31f5fe9fa47411fed2c2ade9a33865";
       };
     };
     displayName = "Intel x86 Atom System Image";
@@ -4259,11 +4285,11 @@
   system-images.android-17.google-apis.x86 = mkSrcOnly {
     id = "system-images;android-17;google_apis;x86";
     pname = "system-images-android-17-google-apis-x86";
-    version = "6";
+    version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-17_r06.zip";
-        sha1 = "7864c34faf0402b8923d8c6e609a5339f74cc8d6";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86-17_r07.zip";
+        sha1 = "1ad5ffb51e31f5fe9fa47411fed2c2ade9a33865";
       };
     };
     displayName = "Google APIs Intel x86 Atom System Image";
@@ -4910,8 +4936,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
