@@ -2709,26 +2709,26 @@
   ndk-bundle = mkSrcOnly {
     id = "ndk-bundle";
     pname = "ndk-bundle";
-    version = "22.0.6917172-rc1";
+    version = "22.0.7026061";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-beta1-darwin-x86_64.zip";
-        sha1 = "0ff242f820663fe45773bca7a2df036004fc7c69";
+        url = "https://dl.google.com/android/repository/android-ndk-r22-darwin-x86_64.zip";
+        sha1 = "9cf3816ed3e4308ff03bd5f69100b373bad12f13";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-beta1-linux-x86_64.zip";
-        sha1 = "687f696f43b23e2623e7f7073bbd575d254f66f6";
+        url = "https://dl.google.com/android/repository/android-ndk-r22-linux-x86_64.zip";
+        sha1 = "82274313aba10da6177fd41868f56a0f9651dd81";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-beta1-windows-x86_64.zip";
-        sha1 = "ef38999c0e3c96124acffab6971ad2054a433b91";
+        url = "https://dl.google.com/android/repository/android-ndk-r22-windows-x86_64.zip";
+        sha1 = "c03f761caf1c6f5efbeb5ccfa573ea922cb955b3";
       };
     };
     displayName = "NDK";
     path = "ndk-bundle";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./ndk-bundle.xml;
   };
@@ -3157,6 +3157,32 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./ndk-22-0-6917172.xml;
+  };
+  ndk-22-0-7026061 = mkSrcOnly {
+    id = "ndk;22.0.7026061";
+    pname = "ndk-22-0-7026061";
+    version = "22.0.7026061";
+    sources = {
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22-darwin-x86_64.zip";
+        sha1 = "9cf3816ed3e4308ff03bd5f69100b373bad12f13";
+      };
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22-linux-x86_64.zip";
+        sha1 = "82274313aba10da6177fd41868f56a0f9651dd81";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22-windows-x86_64.zip";
+        sha1 = "c03f761caf1c6f5efbeb5ccfa573ea922cb955b3";
+      };
+    };
+    displayName = "NDK (Side by side) 22.0.7026061";
+    path = "ndk/22.0.7026061";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-22-0-7026061.xml;
   };
   patcher.v4 = mkSrcOnly {
     id = "patcher;v4";
@@ -5074,8 +5100,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
