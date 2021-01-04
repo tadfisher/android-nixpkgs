@@ -7,7 +7,12 @@ let
 
   androidSdk = recurseIntoAttrs (callPackage ./pkgs/android {});
 
-  channels = lib.genAttrs channelNames (channel: androidSdk.callPackage (./channels + "/${channel}") {});
+  channels = lib.genAttrs channelNames (channel:
+    let
+      packages = androidSdk.callPackage (./channels + "/${channel}") {};
+      sdk = callPackage ./pkgs/android/sdk.nix { inherit packages; };
+    in packages // { inherit sdk; }
+  );
 
 in rec {
   aapt2 = callPackage ./pkgs/aapt2 { };
