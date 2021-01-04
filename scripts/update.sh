@@ -11,4 +11,4 @@ for channel in stable beta preview canary; do
         --out=channels/$channel/default.nix --xml=channels/$channel --channel=$channel
 done
 
-nix flake update
+nix flake update --recreate-lock-file
