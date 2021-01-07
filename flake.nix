@@ -27,5 +27,12 @@
       overlay = final: prev: {
         androidSdkPackages = (import ./default.nix { pkgs = final; }).packages.canary;
       };
+
+      packages = genAttrs systems (system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in {
+          sample = import ./sample.nix { inherit pkgs; };
+        });
     };
 }
