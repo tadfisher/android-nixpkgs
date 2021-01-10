@@ -19,7 +19,7 @@ jobs:
       - name: update android sources
         run: ./scripts/update.sh
       - name: test
-        run: ./scripts/test.sh
+        run: nix flake check
       - name: push
         run: |
           git config user.name "github-actions"

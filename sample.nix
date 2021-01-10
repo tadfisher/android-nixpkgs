@@ -7,8 +7,8 @@ in
 
 androidPkgs.sdk (p: with p.stable; [
   cmdline-tools-latest
-  build-tools-29-0-3
+  build-tools-30-0-2
   platform-tools
-  platforms.android-29
+  platforms-android-30
   emulator
 ])

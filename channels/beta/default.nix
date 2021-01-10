@@ -8,7 +8,7 @@
 , mkTools
 , mkSrcOnly
 }: {
-  add-ons.addon-google-apis-google-10 = mkSrcOnly {
+  add-ons-addon-google-apis-google-10 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-10";
     pname = "add-ons-addon-google-apis-google-10";
     version = "2";
@@ -26,7 +26,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-10.xml;
   };
-  add-ons.addon-google-apis-google-11 = mkSrcOnly {
+  add-ons-addon-google-apis-google-11 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-11";
     pname = "add-ons-addon-google-apis-google-11";
     version = "1";
@@ -44,7 +44,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-11.xml;
   };
-  add-ons.addon-google-apis-google-12 = mkSrcOnly {
+  add-ons-addon-google-apis-google-12 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-12";
     pname = "add-ons-addon-google-apis-google-12";
     version = "1";
@@ -62,7 +62,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-12.xml;
   };
-  add-ons.addon-google-apis-google-13 = mkSrcOnly {
+  add-ons-addon-google-apis-google-13 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-13";
     pname = "add-ons-addon-google-apis-google-13";
     version = "1";
@@ -80,7 +80,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-13.xml;
   };
-  add-ons.addon-google-apis-google-14 = mkSrcOnly {
+  add-ons-addon-google-apis-google-14 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-14";
     pname = "add-ons-addon-google-apis-google-14";
     version = "2";
@@ -98,7 +98,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-14.xml;
   };
-  add-ons.addon-google-apis-google-15 = mkSrcOnly {
+  add-ons-addon-google-apis-google-15 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-15";
     pname = "add-ons-addon-google-apis-google-15";
     version = "3";
@@ -116,7 +116,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-15.xml;
   };
-  add-ons.addon-google-apis-google-16 = mkSrcOnly {
+  add-ons-addon-google-apis-google-16 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-16";
     pname = "add-ons-addon-google-apis-google-16";
     version = "4";
@@ -134,7 +134,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-16.xml;
   };
-  add-ons.addon-google-apis-google-17 = mkSrcOnly {
+  add-ons-addon-google-apis-google-17 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-17";
     pname = "add-ons-addon-google-apis-google-17";
     version = "4";
@@ -152,7 +152,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-17.xml;
   };
-  add-ons.addon-google-apis-google-18 = mkSrcOnly {
+  add-ons-addon-google-apis-google-18 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-18";
     pname = "add-ons-addon-google-apis-google-18";
     version = "4";
@@ -170,7 +170,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-18.xml;
   };
-  add-ons.addon-google-apis-google-19 = mkSrcOnly {
+  add-ons-addon-google-apis-google-19 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-19";
     pname = "add-ons-addon-google-apis-google-19";
     version = "20";
@@ -188,7 +188,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-19.xml;
   };
-  add-ons.addon-google-apis-google-21 = mkSrcOnly {
+  add-ons-addon-google-apis-google-21 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-21";
     pname = "add-ons-addon-google-apis-google-21";
     version = "1";
@@ -206,7 +206,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-21.xml;
   };
-  add-ons.addon-google-apis-google-22 = mkSrcOnly {
+  add-ons-addon-google-apis-google-22 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-22";
     pname = "add-ons-addon-google-apis-google-22";
     version = "1";
@@ -224,7 +224,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-22.xml;
   };
-  add-ons.addon-google-apis-google-23 = mkSrcOnly {
+  add-ons-addon-google-apis-google-23 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-23";
     pname = "add-ons-addon-google-apis-google-23";
     version = "1";
@@ -242,7 +242,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-23.xml;
   };
-  add-ons.addon-google-apis-google-24 = mkSrcOnly {
+  add-ons-addon-google-apis-google-24 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-24";
     pname = "add-ons-addon-google-apis-google-24";
     version = "1";
@@ -260,7 +260,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-24.xml;
   };
-  add-ons.addon-google-apis-google-3 = mkSrcOnly {
+  add-ons-addon-google-apis-google-3 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-3";
     pname = "add-ons-addon-google-apis-google-3";
     version = "3";
@@ -278,7 +278,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-3.xml;
   };
-  add-ons.addon-google-apis-google-4 = mkSrcOnly {
+  add-ons-addon-google-apis-google-4 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-4";
     pname = "add-ons-addon-google-apis-google-4";
     version = "2";
@@ -296,7 +296,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-4.xml;
   };
-  add-ons.addon-google-apis-google-5 = mkSrcOnly {
+  add-ons-addon-google-apis-google-5 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-5";
     pname = "add-ons-addon-google-apis-google-5";
     version = "1";
@@ -314,7 +314,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-5.xml;
   };
-  add-ons.addon-google-apis-google-6 = mkSrcOnly {
+  add-ons-addon-google-apis-google-6 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-6";
     pname = "add-ons-addon-google-apis-google-6";
     version = "1";
@@ -332,7 +332,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-6.xml;
   };
-  add-ons.addon-google-apis-google-7 = mkSrcOnly {
+  add-ons-addon-google-apis-google-7 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-7";
     pname = "add-ons-addon-google-apis-google-7";
     version = "1";
@@ -350,7 +350,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-7.xml;
   };
-  add-ons.addon-google-apis-google-8 = mkSrcOnly {
+  add-ons-addon-google-apis-google-8 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-8";
     pname = "add-ons-addon-google-apis-google-8";
     version = "2";
@@ -368,7 +368,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-8.xml;
   };
-  add-ons.addon-google-apis-google-9 = mkSrcOnly {
+  add-ons-addon-google-apis-google-9 = mkSrcOnly {
     id = "add-ons;addon-google_apis-google-9";
     pname = "add-ons-addon-google-apis-google-9";
     version = "2";
@@ -386,7 +386,7 @@
     };
     xml = ./add-ons-addon-google-apis-google-9.xml;
   };
-  add-ons.addon-google-gdk-google-19 = mkSrcOnly {
+  add-ons-addon-google-gdk-google-19 = mkSrcOnly {
     id = "add-ons;addon-google_gdk-google-19";
     pname = "add-ons-addon-google-gdk-google-19";
     version = "11";
@@ -404,7 +404,7 @@
     };
     xml = ./add-ons-addon-google-gdk-google-19.xml;
   };
-  add-ons.addon-google-tv-addon-google-12 = mkSrcOnly {
+  add-ons-addon-google-tv-addon-google-12 = mkSrcOnly {
     id = "add-ons;addon-google_tv_addon-google-12";
     pname = "add-ons-addon-google-tv-addon-google-12";
     version = "2";
@@ -422,7 +422,7 @@
     };
     xml = ./add-ons-addon-google-tv-addon-google-12.xml;
   };
-  add-ons.addon-google-tv-addon-google-13 = mkSrcOnly {
+  add-ons-addon-google-tv-addon-google-13 = mkSrcOnly {
     id = "add-ons;addon-google_tv_addon-google-13";
     pname = "add-ons-addon-google-tv-addon-google-13";
     version = "1";
@@ -2104,7 +2104,7 @@
     };
     xml = ./emulator.xml;
   };
-  extras.android.m2repository = mkSrcOnly {
+  extras-android-m2repository = mkSrcOnly {
     id = "extras;android;m2repository";
     pname = "extras-android-m2repository";
     version = "47";
@@ -2122,7 +2122,7 @@
     };
     xml = ./extras-android-m2repository.xml;
   };
-  extras.google.admob-ads-sdk = mkSrcOnly {
+  extras-google-admob-ads-sdk = mkSrcOnly {
     id = "extras;google;admob_ads_sdk";
     pname = "extras-google-admob-ads-sdk";
     version = "11";
@@ -2140,7 +2140,7 @@
     };
     xml = ./extras-google-admob-ads-sdk.xml;
   };
-  extras.google.analytics-sdk-v2 = mkSrcOnly {
+  extras-google-analytics-sdk-v2 = mkSrcOnly {
     id = "extras;google;analytics_sdk_v2";
     pname = "extras-google-analytics-sdk-v2";
     version = "3";
@@ -2158,7 +2158,7 @@
     };
     xml = ./extras-google-analytics-sdk-v2.xml;
   };
-  extras.google.auto = mkSrcOnly {
+  extras-google-auto = mkSrcOnly {
     id = "extras;google;auto";
     pname = "extras-google-auto";
     version = "2-rc1";
@@ -2184,7 +2184,7 @@
     };
     xml = ./extras-google-auto.xml;
   };
-  extras.google.gcm = mkSrcOnly {
+  extras-google-gcm = mkSrcOnly {
     id = "extras;google;gcm";
     pname = "extras-google-gcm";
     version = "3";
@@ -2202,7 +2202,7 @@
     };
     xml = ./extras-google-gcm.xml;
   };
-  extras.google.google-play-services = mkSrcOnly {
+  extras-google-google-play-services = mkSrcOnly {
     id = "extras;google;google_play_services";
     pname = "extras-google-google-play-services";
     version = "49";
@@ -2220,7 +2220,7 @@
     };
     xml = ./extras-google-google-play-services.xml;
   };
-  extras.google.google-play-services-froyo = mkSrcOnly {
+  extras-google-google-play-services-froyo = mkSrcOnly {
     id = "extras;google;google_play_services_froyo";
     pname = "extras-google-google-play-services-froyo";
     version = "12";
@@ -2238,7 +2238,7 @@
     };
     xml = ./extras-google-google-play-services-froyo.xml;
   };
-  extras.google.instantapps = mkSrcOnly {
+  extras-google-instantapps = mkSrcOnly {
     id = "extras;google;instantapps";
     pname = "extras-google-instantapps";
     version = "1.9";
@@ -2256,7 +2256,7 @@
     };
     xml = ./extras-google-instantapps.xml;
   };
-  extras.google.m2repository = mkSrcOnly {
+  extras-google-m2repository = mkSrcOnly {
     id = "extras;google;m2repository";
     pname = "extras-google-m2repository";
     version = "58";
@@ -2274,7 +2274,7 @@
     };
     xml = ./extras-google-m2repository.xml;
   };
-  extras.google.market-apk-expansion = mkSrcOnly {
+  extras-google-market-apk-expansion = mkSrcOnly {
     id = "extras;google;market_apk_expansion";
     pname = "extras-google-market-apk-expansion";
     version = "1";
@@ -2292,7 +2292,7 @@
     };
     xml = ./extras-google-market-apk-expansion.xml;
   };
-  extras.google.market-licensing = mkSrcOnly {
+  extras-google-market-licensing = mkSrcOnly {
     id = "extras;google;market_licensing";
     pname = "extras-google-market-licensing";
     version = "1";
@@ -2310,7 +2310,7 @@
     };
     xml = ./extras-google-market-licensing.xml;
   };
-  extras.google.simulators = mkSrcOnly {
+  extras-google-simulators = mkSrcOnly {
     id = "extras;google;simulators";
     pname = "extras-google-simulators";
     version = "1";
@@ -2328,7 +2328,7 @@
     };
     xml = ./extras-google-simulators.xml;
   };
-  extras.google.webdriver = mkSrcOnly {
+  extras-google-webdriver = mkSrcOnly {
     id = "extras;google;webdriver";
     pname = "extras-google-webdriver";
     version = "2";
@@ -2346,7 +2346,7 @@
     };
     xml = ./extras-google-webdriver.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0";
     version = "1";
@@ -2364,7 +2364,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-alpha4 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-alpha4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha4";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha4";
     version = "1";
@@ -2382,7 +2382,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha4.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-alpha8 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-alpha8 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-alpha8";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha8";
     version = "1";
@@ -2400,7 +2400,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-alpha8.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta1 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-beta1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta1";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta1";
     version = "1";
@@ -2418,7 +2418,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta1.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta2 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-beta2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta2";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta2";
     version = "1";
@@ -2436,7 +2436,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta2.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta3 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-beta3 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta3";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta3";
     version = "1";
@@ -2454,7 +2454,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta3.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta4 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-beta4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta4";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta4";
     version = "1";
@@ -2472,7 +2472,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta4.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-0-beta5 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0-beta5 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta5";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta5";
     version = "1";
@@ -2490,7 +2490,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0-beta5.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-1 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-1";
     version = "1";
@@ -2508,7 +2508,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-1.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout-solver.constraint-layout-solver-1-0-2 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-2";
     version = "1";
@@ -2526,7 +2526,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-2.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0";
     version = "1";
@@ -2544,7 +2544,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-alpha4 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-alpha4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha4";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha4";
     version = "1";
@@ -2562,7 +2562,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha4.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-alpha8 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-alpha8 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha8";
     version = "1";
@@ -2580,7 +2580,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-alpha8.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta1 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-beta1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta1";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta1";
     version = "1";
@@ -2598,7 +2598,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta1.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta2 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-beta2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta2";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta2";
     version = "1";
@@ -2616,7 +2616,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta2.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta3 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-beta3 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta3";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta3";
     version = "1";
@@ -2634,7 +2634,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta3.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta4 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-beta4 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta4";
     version = "1";
@@ -2652,7 +2652,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta4.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-0-beta5 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-0-beta5 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta5";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta5";
     version = "1";
@@ -2670,7 +2670,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-0-beta5.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-1 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-1 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-1";
     version = "1";
@@ -2688,7 +2688,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-1.xml;
   };
-  m2repository.com.android.support.constraint.constraint-layout.constraint-layout-1-0-2 = mkSrcOnly {
+  m2repository-com-android-support-constraint-constraint-layout-constraint-layout-1-0-2 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-1-0-2";
     version = "1";
@@ -3184,7 +3184,7 @@
     };
     xml = ./ndk-22-0-7026061.xml;
   };
-  patcher.v4 = mkSrcOnly {
+  patcher-v4 = mkSrcOnly {
     id = "patcher;v4";
     pname = "patcher-v4";
     version = "1";
@@ -3228,7 +3228,7 @@
     };
     xml = ./platform-tools.xml;
   };
-  platforms.android-10 = mkSrcOnly {
+  platforms-android-10 = mkSrcOnly {
     id = "platforms;android-10";
     pname = "platforms-android-10";
     version = "2";
@@ -3246,7 +3246,7 @@
     };
     xml = ./platforms-android-10.xml;
   };
-  platforms.android-11 = mkSrcOnly {
+  platforms-android-11 = mkSrcOnly {
     id = "platforms;android-11";
     pname = "platforms-android-11";
     version = "2";
@@ -3264,7 +3264,7 @@
     };
     xml = ./platforms-android-11.xml;
   };
-  platforms.android-12 = mkSrcOnly {
+  platforms-android-12 = mkSrcOnly {
     id = "platforms;android-12";
     pname = "platforms-android-12";
     version = "3";
@@ -3282,7 +3282,7 @@
     };
     xml = ./platforms-android-12.xml;
   };
-  platforms.android-13 = mkSrcOnly {
+  platforms-android-13 = mkSrcOnly {
     id = "platforms;android-13";
     pname = "platforms-android-13";
     version = "1";
@@ -3300,7 +3300,7 @@
     };
     xml = ./platforms-android-13.xml;
   };
-  platforms.android-14 = mkSrcOnly {
+  platforms-android-14 = mkSrcOnly {
     id = "platforms;android-14";
     pname = "platforms-android-14";
     version = "4";
@@ -3318,7 +3318,7 @@
     };
     xml = ./platforms-android-14.xml;
   };
-  platforms.android-15 = mkSrcOnly {
+  platforms-android-15 = mkSrcOnly {
     id = "platforms;android-15";
     pname = "platforms-android-15";
     version = "5";
@@ -3336,7 +3336,7 @@
     };
     xml = ./platforms-android-15.xml;
   };
-  platforms.android-16 = mkSrcOnly {
+  platforms-android-16 = mkSrcOnly {
     id = "platforms;android-16";
     pname = "platforms-android-16";
     version = "5";
@@ -3354,7 +3354,7 @@
     };
     xml = ./platforms-android-16.xml;
   };
-  platforms.android-17 = mkSrcOnly {
+  platforms-android-17 = mkSrcOnly {
     id = "platforms;android-17";
     pname = "platforms-android-17";
     version = "3";
@@ -3372,7 +3372,7 @@
     };
     xml = ./platforms-android-17.xml;
   };
-  platforms.android-18 = mkSrcOnly {
+  platforms-android-18 = mkSrcOnly {
     id = "platforms;android-18";
     pname = "platforms-android-18";
     version = "3";
@@ -3390,7 +3390,7 @@
     };
     xml = ./platforms-android-18.xml;
   };
-  platforms.android-19 = mkSrcOnly {
+  platforms-android-19 = mkSrcOnly {
     id = "platforms;android-19";
     pname = "platforms-android-19";
     version = "4";
@@ -3408,7 +3408,7 @@
     };
     xml = ./platforms-android-19.xml;
   };
-  platforms.android-2 = mkSrcOnly {
+  platforms-android-2 = mkSrcOnly {
     id = "platforms;android-2";
     pname = "platforms-android-2";
     version = "1";
@@ -3434,7 +3434,7 @@
     };
     xml = ./platforms-android-2.xml;
   };
-  platforms.android-20 = mkSrcOnly {
+  platforms-android-20 = mkSrcOnly {
     id = "platforms;android-20";
     pname = "platforms-android-20";
     version = "2";
@@ -3452,7 +3452,7 @@
     };
     xml = ./platforms-android-20.xml;
   };
-  platforms.android-21 = mkSrcOnly {
+  platforms-android-21 = mkSrcOnly {
     id = "platforms;android-21";
     pname = "platforms-android-21";
     version = "2";
@@ -3470,7 +3470,7 @@
     };
     xml = ./platforms-android-21.xml;
   };
-  platforms.android-22 = mkSrcOnly {
+  platforms-android-22 = mkSrcOnly {
     id = "platforms;android-22";
     pname = "platforms-android-22";
     version = "2";
@@ -3488,7 +3488,7 @@
     };
     xml = ./platforms-android-22.xml;
   };
-  platforms.android-23 = mkSrcOnly {
+  platforms-android-23 = mkSrcOnly {
     id = "platforms;android-23";
     pname = "platforms-android-23";
     version = "3";
@@ -3506,7 +3506,7 @@
     };
     xml = ./platforms-android-23.xml;
   };
-  platforms.android-24 = mkSrcOnly {
+  platforms-android-24 = mkSrcOnly {
     id = "platforms;android-24";
     pname = "platforms-android-24";
     version = "2";
@@ -3524,7 +3524,7 @@
     };
     xml = ./platforms-android-24.xml;
   };
-  platforms.android-25 = mkSrcOnly {
+  platforms-android-25 = mkSrcOnly {
     id = "platforms;android-25";
     pname = "platforms-android-25";
     version = "3";
@@ -3542,7 +3542,7 @@
     };
     xml = ./platforms-android-25.xml;
   };
-  platforms.android-26 = mkSrcOnly {
+  platforms-android-26 = mkSrcOnly {
     id = "platforms;android-26";
     pname = "platforms-android-26";
     version = "2";
@@ -3560,7 +3560,7 @@
     };
     xml = ./platforms-android-26.xml;
   };
-  platforms.android-27 = mkSrcOnly {
+  platforms-android-27 = mkSrcOnly {
     id = "platforms;android-27";
     pname = "platforms-android-27";
     version = "3";
@@ -3578,7 +3578,7 @@
     };
     xml = ./platforms-android-27.xml;
   };
-  platforms.android-28 = mkSrcOnly {
+  platforms-android-28 = mkSrcOnly {
     id = "platforms;android-28";
     pname = "platforms-android-28";
     version = "6";
@@ -3596,7 +3596,7 @@
     };
     xml = ./platforms-android-28.xml;
   };
-  platforms.android-29 = mkSrcOnly {
+  platforms-android-29 = mkSrcOnly {
     id = "platforms;android-29";
     pname = "platforms-android-29";
     version = "5";
@@ -3614,7 +3614,7 @@
     };
     xml = ./platforms-android-29.xml;
   };
-  platforms.android-3 = mkSrcOnly {
+  platforms-android-3 = mkSrcOnly {
     id = "platforms;android-3";
     pname = "platforms-android-3";
     version = "4";
@@ -3640,7 +3640,7 @@
     };
     xml = ./platforms-android-3.xml;
   };
-  platforms.android-30 = mkSrcOnly {
+  platforms-android-30 = mkSrcOnly {
     id = "platforms;android-30";
     pname = "platforms-android-30";
     version = "3";
@@ -3658,7 +3658,7 @@
     };
     xml = ./platforms-android-30.xml;
   };
-  platforms.android-4 = mkSrcOnly {
+  platforms-android-4 = mkSrcOnly {
     id = "platforms;android-4";
     pname = "platforms-android-4";
     version = "3";
@@ -3684,7 +3684,7 @@
     };
     xml = ./platforms-android-4.xml;
   };
-  platforms.android-5 = mkSrcOnly {
+  platforms-android-5 = mkSrcOnly {
     id = "platforms;android-5";
     pname = "platforms-android-5";
     version = "1";
@@ -3710,7 +3710,7 @@
     };
     xml = ./platforms-android-5.xml;
   };
-  platforms.android-6 = mkSrcOnly {
+  platforms-android-6 = mkSrcOnly {
     id = "platforms;android-6";
     pname = "platforms-android-6";
     version = "1";
@@ -3736,7 +3736,7 @@
     };
     xml = ./platforms-android-6.xml;
   };
-  platforms.android-7 = mkSrcOnly {
+  platforms-android-7 = mkSrcOnly {
     id = "platforms;android-7";
     pname = "platforms-android-7";
     version = "3";
@@ -3754,7 +3754,7 @@
     };
     xml = ./platforms-android-7.xml;
   };
-  platforms.android-8 = mkSrcOnly {
+  platforms-android-8 = mkSrcOnly {
     id = "platforms;android-8";
     pname = "platforms-android-8";
     version = "3";
@@ -3772,7 +3772,7 @@
     };
     xml = ./platforms-android-8.xml;
   };
-  platforms.android-9 = mkSrcOnly {
+  platforms-android-9 = mkSrcOnly {
     id = "platforms;android-9";
     pname = "platforms-android-9";
     version = "2";
@@ -3816,7 +3816,7 @@
     };
     xml = ./skiaparser-1.xml;
   };
-  sources.android-14 = mkSrcOnly {
+  sources-android-14 = mkSrcOnly {
     id = "sources;android-14";
     pname = "sources-android-14";
     version = "1";
@@ -3834,7 +3834,7 @@
     };
     xml = ./sources-android-14.xml;
   };
-  sources.android-15 = mkSrcOnly {
+  sources-android-15 = mkSrcOnly {
     id = "sources;android-15";
     pname = "sources-android-15";
     version = "2";
@@ -3852,7 +3852,7 @@
     };
     xml = ./sources-android-15.xml;
   };
-  sources.android-16 = mkSrcOnly {
+  sources-android-16 = mkSrcOnly {
     id = "sources;android-16";
     pname = "sources-android-16";
     version = "2";
@@ -3870,7 +3870,7 @@
     };
     xml = ./sources-android-16.xml;
   };
-  sources.android-17 = mkSrcOnly {
+  sources-android-17 = mkSrcOnly {
     id = "sources;android-17";
     pname = "sources-android-17";
     version = "1";
@@ -3888,7 +3888,7 @@
     };
     xml = ./sources-android-17.xml;
   };
-  sources.android-18 = mkSrcOnly {
+  sources-android-18 = mkSrcOnly {
     id = "sources;android-18";
     pname = "sources-android-18";
     version = "1";
@@ -3906,7 +3906,7 @@
     };
     xml = ./sources-android-18.xml;
   };
-  sources.android-19 = mkSrcOnly {
+  sources-android-19 = mkSrcOnly {
     id = "sources;android-19";
     pname = "sources-android-19";
     version = "2";
@@ -3924,7 +3924,7 @@
     };
     xml = ./sources-android-19.xml;
   };
-  sources.android-20 = mkSrcOnly {
+  sources-android-20 = mkSrcOnly {
     id = "sources;android-20";
     pname = "sources-android-20";
     version = "1";
@@ -3942,7 +3942,7 @@
     };
     xml = ./sources-android-20.xml;
   };
-  sources.android-21 = mkSrcOnly {
+  sources-android-21 = mkSrcOnly {
     id = "sources;android-21";
     pname = "sources-android-21";
     version = "1";
@@ -3960,7 +3960,7 @@
     };
     xml = ./sources-android-21.xml;
   };
-  sources.android-22 = mkSrcOnly {
+  sources-android-22 = mkSrcOnly {
     id = "sources;android-22";
     pname = "sources-android-22";
     version = "1";
@@ -3978,7 +3978,7 @@
     };
     xml = ./sources-android-22.xml;
   };
-  sources.android-23 = mkSrcOnly {
+  sources-android-23 = mkSrcOnly {
     id = "sources;android-23";
     pname = "sources-android-23";
     version = "1";
@@ -3996,7 +3996,7 @@
     };
     xml = ./sources-android-23.xml;
   };
-  sources.android-24 = mkSrcOnly {
+  sources-android-24 = mkSrcOnly {
     id = "sources;android-24";
     pname = "sources-android-24";
     version = "1";
@@ -4014,7 +4014,7 @@
     };
     xml = ./sources-android-24.xml;
   };
-  sources.android-25 = mkSrcOnly {
+  sources-android-25 = mkSrcOnly {
     id = "sources;android-25";
     pname = "sources-android-25";
     version = "1";
@@ -4032,7 +4032,7 @@
     };
     xml = ./sources-android-25.xml;
   };
-  sources.android-26 = mkSrcOnly {
+  sources-android-26 = mkSrcOnly {
     id = "sources;android-26";
     pname = "sources-android-26";
     version = "1";
@@ -4050,7 +4050,7 @@
     };
     xml = ./sources-android-26.xml;
   };
-  sources.android-27 = mkSrcOnly {
+  sources-android-27 = mkSrcOnly {
     id = "sources;android-27";
     pname = "sources-android-27";
     version = "1";
@@ -4068,7 +4068,7 @@
     };
     xml = ./sources-android-27.xml;
   };
-  sources.android-28 = mkSrcOnly {
+  sources-android-28 = mkSrcOnly {
     id = "sources;android-28";
     pname = "sources-android-28";
     version = "1";
@@ -4086,7 +4086,7 @@
     };
     xml = ./sources-android-28.xml;
   };
-  sources.android-29 = mkSrcOnly {
+  sources-android-29 = mkSrcOnly {
     id = "sources;android-29";
     pname = "sources-android-29";
     version = "1";
@@ -4104,7 +4104,7 @@
     };
     xml = ./sources-android-29.xml;
   };
-  sources.android-30 = mkSrcOnly {
+  sources-android-30 = mkSrcOnly {
     id = "sources;android-30";
     pname = "sources-android-30";
     version = "1";
@@ -4122,7 +4122,7 @@
     };
     xml = ./sources-android-30.xml;
   };
-  system-images.android-10.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-10-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;default;armeabi-v7a";
     pname = "system-images-android-10-default-armeabi-v7a";
     version = "5";
@@ -4140,7 +4140,7 @@
     };
     xml = ./system-images-android-10-default-armeabi-v7a.xml;
   };
-  system-images.android-10.default.x86 = mkSrcOnly {
+  system-images-android-10-default-x86 = mkSrcOnly {
     id = "system-images;android-10;default;x86";
     pname = "system-images-android-10-default-x86";
     version = "5";
@@ -4158,7 +4158,7 @@
     };
     xml = ./system-images-android-10-default-x86.xml;
   };
-  system-images.android-10.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-10-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;google_apis;armeabi-v7a";
     pname = "system-images-android-10-google-apis-armeabi-v7a";
     version = "6";
@@ -4176,7 +4176,7 @@
     };
     xml = ./system-images-android-10-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-10.google-apis.x86 = mkSrcOnly {
+  system-images-android-10-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-10;google_apis;x86";
     pname = "system-images-android-10-google-apis-x86";
     version = "6";
@@ -4194,7 +4194,7 @@
     };
     xml = ./system-images-android-10-google-apis-x86.xml;
   };
-  system-images.android-14.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-14-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-14;default;armeabi-v7a";
     pname = "system-images-android-14-default-armeabi-v7a";
     version = "2";
@@ -4212,7 +4212,7 @@
     };
     xml = ./system-images-android-14-default-armeabi-v7a.xml;
   };
-  system-images.android-15.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-15-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-15;default;armeabi-v7a";
     pname = "system-images-android-15-default-armeabi-v7a";
     version = "5";
@@ -4230,7 +4230,7 @@
     };
     xml = ./system-images-android-15-default-armeabi-v7a.xml;
   };
-  system-images.android-15.default.x86 = mkSrcOnly {
+  system-images-android-15-default-x86 = mkSrcOnly {
     id = "system-images;android-15;default;x86";
     pname = "system-images-android-15-default-x86";
     version = "7";
@@ -4248,7 +4248,7 @@
     };
     xml = ./system-images-android-15-default-x86.xml;
   };
-  system-images.android-15.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-15-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-15;google_apis;armeabi-v7a";
     pname = "system-images-android-15-google-apis-armeabi-v7a";
     version = "6";
@@ -4266,7 +4266,7 @@
     };
     xml = ./system-images-android-15-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-15.google-apis.x86 = mkSrcOnly {
+  system-images-android-15-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-15;google_apis;x86";
     pname = "system-images-android-15-google-apis-x86";
     version = "7";
@@ -4284,7 +4284,7 @@
     };
     xml = ./system-images-android-15-google-apis-x86.xml;
   };
-  system-images.android-16.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-16-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-16;default;armeabi-v7a";
     pname = "system-images-android-16-default-armeabi-v7a";
     version = "6";
@@ -4302,7 +4302,7 @@
     };
     xml = ./system-images-android-16-default-armeabi-v7a.xml;
   };
-  system-images.android-16.default.mips = mkSrcOnly {
+  system-images-android-16-default-mips = mkSrcOnly {
     id = "system-images;android-16;default;mips";
     pname = "system-images-android-16-default-mips";
     version = "1";
@@ -4320,7 +4320,7 @@
     };
     xml = ./system-images-android-16-default-mips.xml;
   };
-  system-images.android-16.default.x86 = mkSrcOnly {
+  system-images-android-16-default-x86 = mkSrcOnly {
     id = "system-images;android-16;default;x86";
     pname = "system-images-android-16-default-x86";
     version = "7";
@@ -4338,7 +4338,7 @@
     };
     xml = ./system-images-android-16-default-x86.xml;
   };
-  system-images.android-16.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-16-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-16;google_apis;armeabi-v7a";
     pname = "system-images-android-16-google-apis-armeabi-v7a";
     version = "6";
@@ -4356,7 +4356,7 @@
     };
     xml = ./system-images-android-16-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-16.google-apis.x86 = mkSrcOnly {
+  system-images-android-16-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-16;google_apis;x86";
     pname = "system-images-android-16-google-apis-x86";
     version = "7";
@@ -4374,7 +4374,7 @@
     };
     xml = ./system-images-android-16-google-apis-x86.xml;
   };
-  system-images.android-17.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-17-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-17;default;armeabi-v7a";
     pname = "system-images-android-17-default-armeabi-v7a";
     version = "6";
@@ -4392,7 +4392,7 @@
     };
     xml = ./system-images-android-17-default-armeabi-v7a.xml;
   };
-  system-images.android-17.default.mips = mkSrcOnly {
+  system-images-android-17-default-mips = mkSrcOnly {
     id = "system-images;android-17;default;mips";
     pname = "system-images-android-17-default-mips";
     version = "1";
@@ -4410,7 +4410,7 @@
     };
     xml = ./system-images-android-17-default-mips.xml;
   };
-  system-images.android-17.default.x86 = mkSrcOnly {
+  system-images-android-17-default-x86 = mkSrcOnly {
     id = "system-images;android-17;default;x86";
     pname = "system-images-android-17-default-x86";
     version = "7";
@@ -4428,7 +4428,7 @@
     };
     xml = ./system-images-android-17-default-x86.xml;
   };
-  system-images.android-17.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-17-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-17;google_apis;armeabi-v7a";
     pname = "system-images-android-17-google-apis-armeabi-v7a";
     version = "6";
@@ -4446,7 +4446,7 @@
     };
     xml = ./system-images-android-17-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-17.google-apis.x86 = mkSrcOnly {
+  system-images-android-17-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-17;google_apis;x86";
     pname = "system-images-android-17-google-apis-x86";
     version = "7";
@@ -4464,7 +4464,7 @@
     };
     xml = ./system-images-android-17-google-apis-x86.xml;
   };
-  system-images.android-18.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-18-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-18;default;armeabi-v7a";
     pname = "system-images-android-18-default-armeabi-v7a";
     version = "5";
@@ -4482,7 +4482,7 @@
     };
     xml = ./system-images-android-18-default-armeabi-v7a.xml;
   };
-  system-images.android-18.default.x86 = mkSrcOnly {
+  system-images-android-18-default-x86 = mkSrcOnly {
     id = "system-images;android-18;default;x86";
     pname = "system-images-android-18-default-x86";
     version = "4";
@@ -4500,7 +4500,7 @@
     };
     xml = ./system-images-android-18-default-x86.xml;
   };
-  system-images.android-18.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-18-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-18;google_apis;armeabi-v7a";
     pname = "system-images-android-18-google-apis-armeabi-v7a";
     version = "6";
@@ -4518,7 +4518,7 @@
     };
     xml = ./system-images-android-18-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-18.google-apis.x86 = mkSrcOnly {
+  system-images-android-18-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-18;google_apis;x86";
     pname = "system-images-android-18-google-apis-x86";
     version = "6";
@@ -4536,7 +4536,7 @@
     };
     xml = ./system-images-android-18-google-apis-x86.xml;
   };
-  system-images.android-19.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-19-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-19;default;armeabi-v7a";
     pname = "system-images-android-19-default-armeabi-v7a";
     version = "5";
@@ -4554,7 +4554,7 @@
     };
     xml = ./system-images-android-19-default-armeabi-v7a.xml;
   };
-  system-images.android-19.default.x86 = mkSrcOnly {
+  system-images-android-19-default-x86 = mkSrcOnly {
     id = "system-images;android-19;default;x86";
     pname = "system-images-android-19-default-x86";
     version = "6";
@@ -4572,7 +4572,7 @@
     };
     xml = ./system-images-android-19-default-x86.xml;
   };
-  system-images.android-19.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-19-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-19;google_apis;armeabi-v7a";
     pname = "system-images-android-19-google-apis-armeabi-v7a";
     version = "40";
@@ -4590,7 +4590,7 @@
     };
     xml = ./system-images-android-19-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-19.google-apis.x86 = mkSrcOnly {
+  system-images-android-19-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-19;google_apis;x86";
     pname = "system-images-android-19-google-apis-x86";
     version = "40";
@@ -4608,7 +4608,7 @@
     };
     xml = ./system-images-android-19-google-apis-x86.xml;
   };
-  system-images.android-21.android-tv.armeabi-v7a = mkSrcOnly {
+  system-images-android-21-android-tv-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-21;android-tv;armeabi-v7a";
     pname = "system-images-android-21-android-tv-armeabi-v7a";
     version = "3";
@@ -4626,7 +4626,7 @@
     };
     xml = ./system-images-android-21-android-tv-armeabi-v7a.xml;
   };
-  system-images.android-21.android-tv.x86 = mkSrcOnly {
+  system-images-android-21-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-21;android-tv;x86";
     pname = "system-images-android-21-android-tv-x86";
     version = "3";
@@ -4644,7 +4644,7 @@
     };
     xml = ./system-images-android-21-android-tv-x86.xml;
   };
-  system-images.android-21.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-21-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-21;default;armeabi-v7a";
     pname = "system-images-android-21-default-armeabi-v7a";
     version = "4";
@@ -4662,7 +4662,7 @@
     };
     xml = ./system-images-android-21-default-armeabi-v7a.xml;
   };
-  system-images.android-21.default.x86 = mkSrcOnly {
+  system-images-android-21-default-x86 = mkSrcOnly {
     id = "system-images;android-21;default;x86";
     pname = "system-images-android-21-default-x86";
     version = "5";
@@ -4680,7 +4680,7 @@
     };
     xml = ./system-images-android-21-default-x86.xml;
   };
-  system-images.android-21.default.x86-64 = mkSrcOnly {
+  system-images-android-21-default-x86-64 = mkSrcOnly {
     id = "system-images;android-21;default;x86_64";
     pname = "system-images-android-21-default-x86-64";
     version = "5";
@@ -4698,7 +4698,7 @@
     };
     xml = ./system-images-android-21-default-x86-64.xml;
   };
-  system-images.android-21.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-21-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-21;google_apis;armeabi-v7a";
     pname = "system-images-android-21-google-apis-armeabi-v7a";
     version = "32";
@@ -4716,7 +4716,7 @@
     };
     xml = ./system-images-android-21-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-21.google-apis.x86 = mkSrcOnly {
+  system-images-android-21-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-21;google_apis;x86";
     pname = "system-images-android-21-google-apis-x86";
     version = "32";
@@ -4734,7 +4734,7 @@
     };
     xml = ./system-images-android-21-google-apis-x86.xml;
   };
-  system-images.android-21.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-21-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-21;google_apis;x86_64";
     pname = "system-images-android-21-google-apis-x86-64";
     version = "32";
@@ -4752,7 +4752,7 @@
     };
     xml = ./system-images-android-21-google-apis-x86-64.xml;
   };
-  system-images.android-22.android-tv.x86 = mkSrcOnly {
+  system-images-android-22-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-22;android-tv;x86";
     pname = "system-images-android-22-android-tv-x86";
     version = "3";
@@ -4770,7 +4770,7 @@
     };
     xml = ./system-images-android-22-android-tv-x86.xml;
   };
-  system-images.android-22.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-22-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-22;default;armeabi-v7a";
     pname = "system-images-android-22-default-armeabi-v7a";
     version = "2";
@@ -4788,7 +4788,7 @@
     };
     xml = ./system-images-android-22-default-armeabi-v7a.xml;
   };
-  system-images.android-22.default.x86 = mkSrcOnly {
+  system-images-android-22-default-x86 = mkSrcOnly {
     id = "system-images;android-22;default;x86";
     pname = "system-images-android-22-default-x86";
     version = "6";
@@ -4806,7 +4806,7 @@
     };
     xml = ./system-images-android-22-default-x86.xml;
   };
-  system-images.android-22.default.x86-64 = mkSrcOnly {
+  system-images-android-22-default-x86-64 = mkSrcOnly {
     id = "system-images;android-22;default;x86_64";
     pname = "system-images-android-22-default-x86-64";
     version = "6";
@@ -4824,7 +4824,7 @@
     };
     xml = ./system-images-android-22-default-x86-64.xml;
   };
-  system-images.android-22.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-22-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-22;google_apis;armeabi-v7a";
     pname = "system-images-android-22-google-apis-armeabi-v7a";
     version = "26";
@@ -4842,7 +4842,7 @@
     };
     xml = ./system-images-android-22-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-22.google-apis.x86 = mkSrcOnly {
+  system-images-android-22-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-22;google_apis;x86";
     pname = "system-images-android-22-google-apis-x86";
     version = "26";
@@ -4860,7 +4860,7 @@
     };
     xml = ./system-images-android-22-google-apis-x86.xml;
   };
-  system-images.android-22.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-22-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-22;google_apis;x86_64";
     pname = "system-images-android-22-google-apis-x86-64";
     version = "26";
@@ -4878,7 +4878,7 @@
     };
     xml = ./system-images-android-22-google-apis-x86-64.xml;
   };
-  system-images.android-23.android-tv.armeabi-v7a = mkSrcOnly {
+  system-images-android-23-android-tv-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;android-tv;armeabi-v7a";
     pname = "system-images-android-23-android-tv-armeabi-v7a";
     version = "12";
@@ -4896,7 +4896,7 @@
     };
     xml = ./system-images-android-23-android-tv-armeabi-v7a.xml;
   };
-  system-images.android-23.android-tv.x86 = mkSrcOnly {
+  system-images-android-23-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-23;android-tv;x86";
     pname = "system-images-android-23-android-tv-x86";
     version = "21";
@@ -4914,7 +4914,7 @@
     };
     xml = ./system-images-android-23-android-tv-x86.xml;
   };
-  system-images.android-23.android-wear.armeabi-v7a = mkSrcOnly {
+  system-images-android-23-android-wear-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;android-wear;armeabi-v7a";
     pname = "system-images-android-23-android-wear-armeabi-v7a";
     version = "6";
@@ -4932,7 +4932,7 @@
     };
     xml = ./system-images-android-23-android-wear-armeabi-v7a.xml;
   };
-  system-images.android-23.android-wear.x86 = mkSrcOnly {
+  system-images-android-23-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-23;android-wear;x86";
     pname = "system-images-android-23-android-wear-x86";
     version = "6";
@@ -4950,7 +4950,7 @@
     };
     xml = ./system-images-android-23-android-wear-x86.xml;
   };
-  system-images.android-23.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-23-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;default;armeabi-v7a";
     pname = "system-images-android-23-default-armeabi-v7a";
     version = "6";
@@ -4968,7 +4968,7 @@
     };
     xml = ./system-images-android-23-default-armeabi-v7a.xml;
   };
-  system-images.android-23.default.x86 = mkSrcOnly {
+  system-images-android-23-default-x86 = mkSrcOnly {
     id = "system-images;android-23;default;x86";
     pname = "system-images-android-23-default-x86";
     version = "10";
@@ -4986,7 +4986,7 @@
     };
     xml = ./system-images-android-23-default-x86.xml;
   };
-  system-images.android-23.default.x86-64 = mkSrcOnly {
+  system-images-android-23-default-x86-64 = mkSrcOnly {
     id = "system-images;android-23;default;x86_64";
     pname = "system-images-android-23-default-x86-64";
     version = "10";
@@ -5004,7 +5004,7 @@
     };
     xml = ./system-images-android-23-default-x86-64.xml;
   };
-  system-images.android-23.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-23-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;google_apis;armeabi-v7a";
     pname = "system-images-android-23-google-apis-armeabi-v7a";
     version = "33";
@@ -5022,7 +5022,7 @@
     };
     xml = ./system-images-android-23-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-23.google-apis.x86 = mkSrcOnly {
+  system-images-android-23-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-23;google_apis;x86";
     pname = "system-images-android-23-google-apis-x86";
     version = "33";
@@ -5040,7 +5040,7 @@
     };
     xml = ./system-images-android-23-google-apis-x86.xml;
   };
-  system-images.android-23.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-23-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-23;google_apis;x86_64";
     pname = "system-images-android-23-google-apis-x86-64";
     version = "33";
@@ -5058,7 +5058,7 @@
     };
     xml = ./system-images-android-23-google-apis-x86-64.xml;
   };
-  system-images.android-24.android-tv.x86 = mkSrcOnly {
+  system-images-android-24-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-24;android-tv;x86";
     pname = "system-images-android-24-android-tv-x86";
     version = "22";
@@ -5076,7 +5076,7 @@
     };
     xml = ./system-images-android-24-android-tv-x86.xml;
   };
-  system-images.android-24.default.arm64-v8a = mkSrcOnly {
+  system-images-android-24-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;default;arm64-v8a";
     pname = "system-images-android-24-default-arm64-v8a";
     version = "7";
@@ -5094,14 +5094,14 @@
     };
     xml = ./system-images-android-24-default-arm64-v8a.xml;
   };
-  system-images.android-24.default.armeabi-v7a = mkSrcOnly {
+  system-images-android-24-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-24;default;armeabi-v7a";
     pname = "system-images-android-24-default-armeabi-v7a";
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -5112,7 +5112,7 @@
     };
     xml = ./system-images-android-24-default-armeabi-v7a.xml;
   };
-  system-images.android-24.default.x86 = mkSrcOnly {
+  system-images-android-24-default-x86 = mkSrcOnly {
     id = "system-images;android-24;default;x86";
     pname = "system-images-android-24-default-x86";
     version = "8";
@@ -5130,7 +5130,7 @@
     };
     xml = ./system-images-android-24-default-x86.xml;
   };
-  system-images.android-24.default.x86-64 = mkSrcOnly {
+  system-images-android-24-default-x86-64 = mkSrcOnly {
     id = "system-images;android-24;default;x86_64";
     pname = "system-images-android-24-default-x86-64";
     version = "8";
@@ -5148,7 +5148,7 @@
     };
     xml = ./system-images-android-24-default-x86-64.xml;
   };
-  system-images.android-24.google-apis.arm64-v8a = mkSrcOnly {
+  system-images-android-24-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;google_apis;arm64-v8a";
     pname = "system-images-android-24-google-apis-arm64-v8a";
     version = "27";
@@ -5166,7 +5166,7 @@
     };
     xml = ./system-images-android-24-google-apis-arm64-v8a.xml;
   };
-  system-images.android-24.google-apis.x86 = mkSrcOnly {
+  system-images-android-24-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-24;google_apis;x86";
     pname = "system-images-android-24-google-apis-x86";
     version = "27";
@@ -5184,7 +5184,7 @@
     };
     xml = ./system-images-android-24-google-apis-x86.xml;
   };
-  system-images.android-24.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-24-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-24;google_apis;x86_64";
     pname = "system-images-android-24-google-apis-x86-64";
     version = "27";
@@ -5202,7 +5202,7 @@
     };
     xml = ./system-images-android-24-google-apis-x86-64.xml;
   };
-  system-images.android-24.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-24-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-24;google_apis_playstore;x86";
     pname = "system-images-android-24-google-apis-playstore-x86";
     version = "19";
@@ -5220,7 +5220,7 @@
     };
     xml = ./system-images-android-24-google-apis-playstore-x86.xml;
   };
-  system-images.android-25.android-tv.x86 = mkSrcOnly {
+  system-images-android-25-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-25;android-tv;x86";
     pname = "system-images-android-25-android-tv-x86";
     version = "16";
@@ -5238,7 +5238,7 @@
     };
     xml = ./system-images-android-25-android-tv-x86.xml;
   };
-  system-images.android-25.android-wear-cn.armeabi-v7a = mkSrcOnly {
+  system-images-android-25-android-wear-cn-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;android-wear-cn;armeabi-v7a";
     pname = "system-images-android-25-android-wear-cn-armeabi-v7a";
     version = "4";
@@ -5256,7 +5256,7 @@
     };
     xml = ./system-images-android-25-android-wear-cn-armeabi-v7a.xml;
   };
-  system-images.android-25.android-wear-cn.x86 = mkSrcOnly {
+  system-images-android-25-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-25;android-wear-cn;x86";
     pname = "system-images-android-25-android-wear-cn-x86";
     version = "4";
@@ -5274,7 +5274,7 @@
     };
     xml = ./system-images-android-25-android-wear-cn-x86.xml;
   };
-  system-images.android-25.android-wear.armeabi-v7a = mkSrcOnly {
+  system-images-android-25-android-wear-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;android-wear;armeabi-v7a";
     pname = "system-images-android-25-android-wear-armeabi-v7a";
     version = "3";
@@ -5292,7 +5292,7 @@
     };
     xml = ./system-images-android-25-android-wear-armeabi-v7a.xml;
   };
-  system-images.android-25.android-wear.x86 = mkSrcOnly {
+  system-images-android-25-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-25;android-wear;x86";
     pname = "system-images-android-25-android-wear-x86";
     version = "3";
@@ -5310,7 +5310,7 @@
     };
     xml = ./system-images-android-25-android-wear-x86.xml;
   };
-  system-images.android-25.default.x86 = mkSrcOnly {
+  system-images-android-25-default-x86 = mkSrcOnly {
     id = "system-images;android-25;default;x86";
     pname = "system-images-android-25-default-x86";
     version = "1";
@@ -5328,7 +5328,7 @@
     };
     xml = ./system-images-android-25-default-x86.xml;
   };
-  system-images.android-25.default.x86-64 = mkSrcOnly {
+  system-images-android-25-default-x86-64 = mkSrcOnly {
     id = "system-images;android-25;default;x86_64";
     pname = "system-images-android-25-default-x86-64";
     version = "1";
@@ -5346,7 +5346,7 @@
     };
     xml = ./system-images-android-25-default-x86-64.xml;
   };
-  system-images.android-25.google-apis.arm64-v8a = mkSrcOnly {
+  system-images-android-25-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-25;google_apis;arm64-v8a";
     pname = "system-images-android-25-google-apis-arm64-v8a";
     version = "18";
@@ -5364,7 +5364,7 @@
     };
     xml = ./system-images-android-25-google-apis-arm64-v8a.xml;
   };
-  system-images.android-25.google-apis.armeabi-v7a = mkSrcOnly {
+  system-images-android-25-google-apis-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;google_apis;armeabi-v7a";
     pname = "system-images-android-25-google-apis-armeabi-v7a";
     version = "18";
@@ -5382,7 +5382,7 @@
     };
     xml = ./system-images-android-25-google-apis-armeabi-v7a.xml;
   };
-  system-images.android-25.google-apis.x86 = mkSrcOnly {
+  system-images-android-25-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-25;google_apis;x86";
     pname = "system-images-android-25-google-apis-x86";
     version = "18";
@@ -5400,7 +5400,7 @@
     };
     xml = ./system-images-android-25-google-apis-x86.xml;
   };
-  system-images.android-25.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-25-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-25;google_apis;x86_64";
     pname = "system-images-android-25-google-apis-x86-64";
     version = "18";
@@ -5418,7 +5418,7 @@
     };
     xml = ./system-images-android-25-google-apis-x86-64.xml;
   };
-  system-images.android-25.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-25-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-25;google_apis_playstore;x86";
     pname = "system-images-android-25-google-apis-playstore-x86";
     version = "9";
@@ -5436,7 +5436,7 @@
     };
     xml = ./system-images-android-25-google-apis-playstore-x86.xml;
   };
-  system-images.android-26.android-tv.x86 = mkSrcOnly {
+  system-images-android-26-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-26;android-tv;x86";
     pname = "system-images-android-26-android-tv-x86";
     version = "14";
@@ -5454,7 +5454,7 @@
     };
     xml = ./system-images-android-26-android-tv-x86.xml;
   };
-  system-images.android-26.android-wear-cn.x86 = mkSrcOnly {
+  system-images-android-26-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-26;android-wear-cn;x86";
     pname = "system-images-android-26-android-wear-cn-x86";
     version = "4";
@@ -5472,7 +5472,7 @@
     };
     xml = ./system-images-android-26-android-wear-cn-x86.xml;
   };
-  system-images.android-26.android-wear.x86 = mkSrcOnly {
+  system-images-android-26-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-26;android-wear;x86";
     pname = "system-images-android-26-android-wear-x86";
     version = "4";
@@ -5490,7 +5490,7 @@
     };
     xml = ./system-images-android-26-android-wear-x86.xml;
   };
-  system-images.android-26.default.x86 = mkSrcOnly {
+  system-images-android-26-default-x86 = mkSrcOnly {
     id = "system-images;android-26;default;x86";
     pname = "system-images-android-26-default-x86";
     version = "1";
@@ -5508,7 +5508,7 @@
     };
     xml = ./system-images-android-26-default-x86.xml;
   };
-  system-images.android-26.default.x86-64 = mkSrcOnly {
+  system-images-android-26-default-x86-64 = mkSrcOnly {
     id = "system-images;android-26;default;x86_64";
     pname = "system-images-android-26-default-x86-64";
     version = "1";
@@ -5526,7 +5526,7 @@
     };
     xml = ./system-images-android-26-default-x86-64.xml;
   };
-  system-images.android-26.google-apis.x86 = mkSrcOnly {
+  system-images-android-26-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-26;google_apis;x86";
     pname = "system-images-android-26-google-apis-x86";
     version = "16";
@@ -5544,7 +5544,7 @@
     };
     xml = ./system-images-android-26-google-apis-x86.xml;
   };
-  system-images.android-26.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-26-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-26;google_apis;x86_64";
     pname = "system-images-android-26-google-apis-x86-64";
     version = "16";
@@ -5562,7 +5562,7 @@
     };
     xml = ./system-images-android-26-google-apis-x86-64.xml;
   };
-  system-images.android-26.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-26-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-26;google_apis_playstore;x86";
     pname = "system-images-android-26-google-apis-playstore-x86";
     version = "7";
@@ -5580,7 +5580,7 @@
     };
     xml = ./system-images-android-26-google-apis-playstore-x86.xml;
   };
-  system-images.android-27.android-tv.x86 = mkSrcOnly {
+  system-images-android-27-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-27;android-tv;x86";
     pname = "system-images-android-27-android-tv-x86";
     version = "9";
@@ -5598,7 +5598,7 @@
     };
     xml = ./system-images-android-27-android-tv-x86.xml;
   };
-  system-images.android-27.default.x86 = mkSrcOnly {
+  system-images-android-27-default-x86 = mkSrcOnly {
     id = "system-images;android-27;default;x86";
     pname = "system-images-android-27-default-x86";
     version = "1";
@@ -5616,7 +5616,7 @@
     };
     xml = ./system-images-android-27-default-x86.xml;
   };
-  system-images.android-27.default.x86-64 = mkSrcOnly {
+  system-images-android-27-default-x86-64 = mkSrcOnly {
     id = "system-images;android-27;default;x86_64";
     pname = "system-images-android-27-default-x86-64";
     version = "1";
@@ -5634,7 +5634,7 @@
     };
     xml = ./system-images-android-27-default-x86-64.xml;
   };
-  system-images.android-27.google-apis.x86 = mkSrcOnly {
+  system-images-android-27-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-27;google_apis;x86";
     pname = "system-images-android-27-google-apis-x86";
     version = "11";
@@ -5652,7 +5652,7 @@
     };
     xml = ./system-images-android-27-google-apis-x86.xml;
   };
-  system-images.android-27.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-27-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-27;google_apis_playstore;x86";
     pname = "system-images-android-27-google-apis-playstore-x86";
     version = "3";
@@ -5670,7 +5670,7 @@
     };
     xml = ./system-images-android-27-google-apis-playstore-x86.xml;
   };
-  system-images.android-28.android-automotive-playstore.x86 = mkSrcOnly {
+  system-images-android-28-android-automotive-playstore-x86 = mkSrcOnly {
     id = "system-images;android-28;android-automotive-playstore;x86";
     pname = "system-images-android-28-android-automotive-playstore-x86";
     version = "5";
@@ -5688,7 +5688,7 @@
     };
     xml = ./system-images-android-28-android-automotive-playstore-x86.xml;
   };
-  system-images.android-28.android-tv.x86 = mkSrcOnly {
+  system-images-android-28-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-28;android-tv;x86";
     pname = "system-images-android-28-android-tv-x86";
     version = "10";
@@ -5706,7 +5706,7 @@
     };
     xml = ./system-images-android-28-android-tv-x86.xml;
   };
-  system-images.android-28.android-wear-cn.x86 = mkSrcOnly {
+  system-images-android-28-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear-cn;x86";
     pname = "system-images-android-28-android-wear-cn-x86";
     version = "4";
@@ -5724,7 +5724,7 @@
     };
     xml = ./system-images-android-28-android-wear-cn-x86.xml;
   };
-  system-images.android-28.android-wear.x86 = mkSrcOnly {
+  system-images-android-28-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
     pname = "system-images-android-28-android-wear-x86";
     version = "4";
@@ -5742,7 +5742,7 @@
     };
     xml = ./system-images-android-28-android-wear-x86.xml;
   };
-  system-images.android-28.default.x86 = mkSrcOnly {
+  system-images-android-28-default-x86 = mkSrcOnly {
     id = "system-images;android-28;default;x86";
     pname = "system-images-android-28-default-x86";
     version = "4";
@@ -5760,7 +5760,7 @@
     };
     xml = ./system-images-android-28-default-x86.xml;
   };
-  system-images.android-28.default.x86-64 = mkSrcOnly {
+  system-images-android-28-default-x86-64 = mkSrcOnly {
     id = "system-images;android-28;default;x86_64";
     pname = "system-images-android-28-default-x86-64";
     version = "4";
@@ -5778,7 +5778,7 @@
     };
     xml = ./system-images-android-28-default-x86-64.xml;
   };
-  system-images.android-28.google-apis.x86 = mkSrcOnly {
+  system-images-android-28-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-28;google_apis;x86";
     pname = "system-images-android-28-google-apis-x86";
     version = "12";
@@ -5796,7 +5796,7 @@
     };
     xml = ./system-images-android-28-google-apis-x86.xml;
   };
-  system-images.android-28.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-28-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-28;google_apis;x86_64";
     pname = "system-images-android-28-google-apis-x86-64";
     version = "11";
@@ -5814,7 +5814,7 @@
     };
     xml = ./system-images-android-28-google-apis-x86-64.xml;
   };
-  system-images.android-28.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-28-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-28;google_apis_playstore;x86";
     pname = "system-images-android-28-google-apis-playstore-x86";
     version = "9";
@@ -5832,7 +5832,7 @@
     };
     xml = ./system-images-android-28-google-apis-playstore-x86.xml;
   };
-  system-images.android-28.google-apis-playstore.x86-64 = mkSrcOnly {
+  system-images-android-28-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-28;google_apis_playstore;x86_64";
     pname = "system-images-android-28-google-apis-playstore-x86-64";
     version = "8";
@@ -5850,7 +5850,7 @@
     };
     xml = ./system-images-android-28-google-apis-playstore-x86-64.xml;
   };
-  system-images.android-29.android-automotive-playstore.x86 = mkSrcOnly {
+  system-images-android-29-android-automotive-playstore-x86 = mkSrcOnly {
     id = "system-images;android-29;android-automotive-playstore;x86";
     pname = "system-images-android-29-android-automotive-playstore-x86";
     version = "1";
@@ -5868,7 +5868,7 @@
     };
     xml = ./system-images-android-29-android-automotive-playstore-x86.xml;
   };
-  system-images.android-29.android-tv.x86 = mkSrcOnly {
+  system-images-android-29-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-29;android-tv;x86";
     pname = "system-images-android-29-android-tv-x86";
     version = "3";
@@ -5886,7 +5886,7 @@
     };
     xml = ./system-images-android-29-android-tv-x86.xml;
   };
-  system-images.android-29.default.x86 = mkSrcOnly {
+  system-images-android-29-default-x86 = mkSrcOnly {
     id = "system-images;android-29;default;x86";
     pname = "system-images-android-29-default-x86";
     version = "7";
@@ -5908,7 +5908,7 @@
     };
     xml = ./system-images-android-29-default-x86.xml;
   };
-  system-images.android-29.default.x86-64 = mkSrcOnly {
+  system-images-android-29-default-x86-64 = mkSrcOnly {
     id = "system-images;android-29;default;x86_64";
     pname = "system-images-android-29-default-x86-64";
     version = "7";
@@ -5930,7 +5930,7 @@
     };
     xml = ./system-images-android-29-default-x86-64.xml;
   };
-  system-images.android-29.google-apis.x86 = mkSrcOnly {
+  system-images-android-29-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-29;google_apis;x86";
     pname = "system-images-android-29-google-apis-x86";
     version = "11";
@@ -5948,7 +5948,7 @@
     };
     xml = ./system-images-android-29-google-apis-x86.xml;
   };
-  system-images.android-29.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-29-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-29;google_apis;x86_64";
     pname = "system-images-android-29-google-apis-x86-64";
     version = "11";
@@ -5966,7 +5966,7 @@
     };
     xml = ./system-images-android-29-google-apis-x86-64.xml;
   };
-  system-images.android-29.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-29-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-29;google_apis_playstore;x86";
     pname = "system-images-android-29-google-apis-playstore-x86";
     version = "8";
@@ -5988,7 +5988,7 @@
     };
     xml = ./system-images-android-29-google-apis-playstore-x86.xml;
   };
-  system-images.android-29.google-apis-playstore.x86-64 = mkSrcOnly {
+  system-images-android-29-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-29;google_apis_playstore;x86_64";
     pname = "system-images-android-29-google-apis-playstore-x86-64";
     version = "8";
@@ -6010,7 +6010,7 @@
     };
     xml = ./system-images-android-29-google-apis-playstore-x86-64.xml;
   };
-  system-images.android-30.google-apis.arm64-v8a = mkSrcOnly {
+  system-images-android-30-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;google_apis;arm64-v8a";
     pname = "system-images-android-30-google-apis-arm64-v8a";
     version = "10";
@@ -6028,7 +6028,7 @@
     };
     xml = ./system-images-android-30-google-apis-arm64-v8a.xml;
   };
-  system-images.android-30.google-apis.x86 = mkSrcOnly {
+  system-images-android-30-google-apis-x86 = mkSrcOnly {
     id = "system-images;android-30;google_apis;x86";
     pname = "system-images-android-30-google-apis-x86";
     version = "9";
@@ -6046,7 +6046,7 @@
     };
     xml = ./system-images-android-30-google-apis-x86.xml;
   };
-  system-images.android-30.google-apis.x86-64 = mkSrcOnly {
+  system-images-android-30-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-30;google_apis;x86_64";
     pname = "system-images-android-30-google-apis-x86-64";
     version = "10";
@@ -6064,7 +6064,7 @@
     };
     xml = ./system-images-android-30-google-apis-x86-64.xml;
   };
-  system-images.android-30.google-apis-playstore.arm64-v8a = mkSrcOnly {
+  system-images-android-30-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-30-google-apis-playstore-arm64-v8a";
     version = "9";
@@ -6086,7 +6086,7 @@
     };
     xml = ./system-images-android-30-google-apis-playstore-arm64-v8a.xml;
   };
-  system-images.android-30.google-apis-playstore.x86 = mkSrcOnly {
+  system-images-android-30-google-apis-playstore-x86 = mkSrcOnly {
     id = "system-images;android-30;google_apis_playstore;x86";
     pname = "system-images-android-30-google-apis-playstore-x86";
     version = "9";
@@ -6108,7 +6108,7 @@
     };
     xml = ./system-images-android-30-google-apis-playstore-x86.xml;
   };
-  system-images.android-30.google-apis-playstore.x86-64 = mkSrcOnly {
+  system-images-android-30-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-30;google_apis_playstore;x86_64";
     pname = "system-images-android-30-google-apis-playstore-x86-64";
     version = "10";

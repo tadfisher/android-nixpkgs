@@ -15,4 +15,4 @@ jobs:
           extra_nix_config: |
             experimental-features = nix-command flakes
       - name: test
-        run: ./scripts/test.sh
+        run: nix flake check

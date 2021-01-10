@@ -1,4 +1,4 @@
-{ stdenv, lib, runCommand, jdk8, linkFarm, makeWrapper, writeText, packages }:
+{ stdenv, lib, runCommand, linkFarm, makeWrapper, writeShellScript, writeText, packages }:
 
 pkgsFun:
 
@@ -24,13 +24,48 @@ let
       linkFarm "android-licenses" (mapAttrsToList (id: file: { name = id; path = file; }) licenseFiles);
 
   installSdk = concatMapStringsSep "\n" (pkg: ''
-    pkgBase="$ANDROID_HOME/${pkg.path}"
+    pkgBase="$ANDROID_SDK_ROOT/${pkg.path}"
     mkdir -p "$(dirname $pkgBase)"
     cp -as ${pkg}/ $pkgBase
     chmod +w $pkgBase
     cp "${pkg.xml}" $pkgBase/package.xml
     ${pkg.installSdk or ""}
   '') pkgs;
+
+  sdk = runCommand "android-sdk-env" {
+    name = "android-sdk-env";
+    buildInputs = [ licenses ] ++ pkgs;
+    nativeBuildInputs = [ makeWrapper ];
+    preferLocalBuild = true;
+    allowSubstitutes = false;
+    setupHook = writeText "setup-hook" ''
+      export ANDROID_SDK_ROOT="@out@/share/android-sdk"
+      # Android Studio uses this even though it is deprecated.
+      export ANDROID_HOME="$ANDROID_SDK_ROOT"
+    '';
+    shellHook = ''
+      echo Using Android SDK root: $out/share/android-sdk
+      source $out/nix-support/setup-hook
+    '';
+  } ''
+    export ANDROID_SDK_ROOT=$out/share/android-sdk
+    mkdir -p "$ANDROID_SDK_ROOT"
+    mkdir -p "$out/bin"
+
+    ${installSdk}
+
+    mkdir -p "$ANDROID_SDK_ROOT/licenses"
+    cp -as ${licenses}/* "$ANDROID_SDK_ROOT/licenses"
+
+    export ANDROID_SDK_HOME=$(mktemp -d)
+    touch $ANDROID_SDK_HOME/repositories.cfg
+    $out/bin/sdkmanager --list --verbose
+
+    # Normally done in fixupPhase
+    source ${stdenv.setup}
+    mkdir -p "$out/nix-support"
+    substituteAll "$setupHook" "$out/nix-support/setup-hook"
+  '';
 
 in
 
@@ -48,23 +83,4 @@ assert (assertMsg (all (p: p.name != "tools") pkgs)
 assert (assertMsg (any (p: p.pname == "cmdline-tools") pkgs)
   "Missing 'cmdline-tools' package, which is required for a working Android SDK.");
 
-runCommand "android-sdk-env" {
-  name = "android-sdk-env";
-  buildInputs = [ licenses ] ++ pkgs;
-  nativeBuildInputs = [ makeWrapper ];
-  preferLocalBuild = true;
-  allowSubstitutes = false;
-} ''
-  ANDROID_HOME="$out/share/android-sdk"
-  mkdir -p "$ANDROID_HOME"
-  mkdir -p "$out/bin"
-
-  ${installSdk}
-
-  mkdir -p "$ANDROID_HOME/licenses"
-  cp -as ${licenses}/* "$ANDROID_HOME/licenses"
-
-  export ANDROID_SDK_HOME=$(mktemp -d)
-  touch $ANDROID_SDK_HOME/repositories.cfg
-  $out/bin/sdkmanager --list --verbose
-''
+sdk

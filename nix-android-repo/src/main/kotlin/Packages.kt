@@ -37,7 +37,7 @@ data class Repo(
             , mkSrcOnly
             }: %s
         """.trimIndent().format(
-            packages.nixSet { it.path.joinToString(".") }
+            packages.nixSet { it.path.joinToString("-") }
         )
     }
 }

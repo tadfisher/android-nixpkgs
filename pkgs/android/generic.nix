@@ -57,7 +57,7 @@ in stdenv.mkDerivation (rec {
 
   meta = with stdenv.lib; {
     description = package.displayName;
-    homepage = https://developer.android.com/studio/;
+    homepage = "https://developer.android.com/studio/";
     license = licenses.asl20;
     maintainers = with maintainers; [ tadfisher ];
     inherit platforms;
