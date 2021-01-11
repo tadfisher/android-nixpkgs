@@ -13,14 +13,14 @@ lib.makeScope pkgs.newScope (self: with self; rec {
 
   autoPatchelfMultiHook = pkgs.makeSetupHook { name = "auto-patchelf-multi-hook"; } ./auto-patchelf.sh;
 
-  fetchandroid = callPackage ./fetch.nix {};
+  fetchandroid = callPackage ./fetch.nix { };
 
-  mkGeneric = callPackage ./generic.nix {};
-  mkBuildTools = callPackage ./build-tools.nix {};
-  mkCmdlineTools = callPackage ./cmdline-tools.nix {};
-  mkEmulator = callPackage ./emulator.nix {};
-  mkPlatformTools = callPackage ./platform-tools.nix {};
-  mkPrebuilt = callPackage ./prebuilt.nix {};
-  mkSrcOnly = callPackage ./src-only.nix {};
-  mkTools = callPackage ./tools.nix {};
+  mkGeneric = callPackage ./generic.nix { };
+  mkBuildTools = callPackage ./build-tools.nix { };
+  mkCmdlineTools = callPackage ./cmdline-tools.nix { };
+  mkEmulator = callPackage ./emulator.nix { };
+  mkPlatformTools = callPackage ./platform-tools.nix { };
+  mkPrebuilt = callPackage ./prebuilt.nix { };
+  mkSrcOnly = callPackage ./src-only.nix { };
+  mkTools = callPackage ./tools.nix { };
 })

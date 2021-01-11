@@ -1,8 +1,26 @@
-{ stdenv, mkGeneric, autoPatchelfMultiHook, makeWrapper, findutils
-, coreutils, fontconfig, freetype, jdk8, libX11, libXdamage, libXrender
-, libXext, libpulseaudio, ncurses5, zlib
-# 32-bit dependencies
-, stdenv_32bit, fontconfig-32, freetype-32, libX11-32, libXrender-32, zlib-32
+{ stdenv
+, mkGeneric
+, autoPatchelfMultiHook
+, makeWrapper
+, findutils
+, coreutils
+, fontconfig
+, freetype
+, jdk8
+, libX11
+, libXdamage
+, libXrender
+, libXext
+, libpulseaudio
+, ncurses5
+, zlib
+  # 32-bit dependencies
+, stdenv_32bit
+, fontconfig-32
+, freetype-32
+, libX11-32
+, libXrender-32
+, zlib-32
 }:
 
 mkGeneric {

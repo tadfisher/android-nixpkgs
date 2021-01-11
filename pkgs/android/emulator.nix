@@ -1,10 +1,33 @@
-{ stdenv, mkGeneric, runCommand, srcOnly, autoPatchelfHook
-, alsaLib, fontconfig, freetype, gperftools, libGL, libX11, libXcomposite
-, libXcursor, libXdamage, libXext, libXfixes, libXi, libXrender, libXtst
-, libcxx, libpulseaudio, libunwind, libuuid, libxkbcommon, sqlite, nss, nspr
-, vulkan-loader, zlib
+{ stdenv
+, mkGeneric
+, runCommand
+, srcOnly
+, autoPatchelfHook
+, alsaLib
+, fontconfig
+, freetype
+, gperftools
+, libGL
+, libX11
+, libXcomposite
+, libXcursor
+, libXdamage
+, libXext
+, libXfixes
+, libXi
+, libXrender
+, libXtst
+, libcxx
+, libpulseaudio
+, libunwind
+, libuuid
+, libxkbcommon
+, sqlite
+, nss
+, nspr
+, vulkan-loader
+, zlib
 }:
-
 let
   systemLibs = [
     "libc++.so"
@@ -23,7 +46,6 @@ let
   ];
 
 in
-
 mkGeneric {
   nativeBuildInputs = [
     autoPatchelfHook

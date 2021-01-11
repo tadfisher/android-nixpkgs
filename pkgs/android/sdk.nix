@@ -1,7 +1,6 @@
 { stdenv, lib, runCommand, linkFarm, makeWrapper, writeShellScript, writeText, packages }:
 
 pkgsFun:
-
 let
   inherit (builtins) attrValues concatStringsSep length;
 
@@ -18,36 +17,39 @@ let
 
   licenses =
     let
-      licenseHashes = groupBy' (sum: p: unique (sum ++ [p.license.hash])) [] (p: p.license.id) pkgs;
+      licenseHashes = groupBy' (sum: p: unique (sum ++ [ p.license.hash ])) [ ] (p: p.license.id) pkgs;
       licenseFiles = mapAttrs (id: hashes: writeText id ("\n" + (concatStringsSep "\n" hashes))) licenseHashes;
     in
-      linkFarm "android-licenses" (mapAttrsToList (id: file: { name = id; path = file; }) licenseFiles);
+    linkFarm "android-licenses" (mapAttrsToList (id: file: { name = id; path = file; }) licenseFiles);
 
-  installSdk = concatMapStringsSep "\n" (pkg: ''
-    pkgBase="$ANDROID_SDK_ROOT/${pkg.path}"
-    mkdir -p "$(dirname $pkgBase)"
-    cp -as ${pkg}/ $pkgBase
-    chmod +w $pkgBase
-    cp "${pkg.xml}" $pkgBase/package.xml
-    ${pkg.installSdk or ""}
-  '') pkgs;
+  installSdk = concatMapStringsSep "\n"
+    (pkg: ''
+      pkgBase="$ANDROID_SDK_ROOT/${pkg.path}"
+      mkdir -p "$(dirname $pkgBase)"
+      cp -as ${pkg}/ $pkgBase
+      chmod +w $pkgBase
+      cp "${pkg.xml}" $pkgBase/package.xml
+      ${pkg.installSdk or ""}
+    '')
+    pkgs;
 
-  sdk = runCommand "android-sdk-env" {
-    name = "android-sdk-env";
-    buildInputs = [ licenses ] ++ pkgs;
-    nativeBuildInputs = [ makeWrapper ];
-    preferLocalBuild = true;
-    allowSubstitutes = false;
-    setupHook = writeText "setup-hook" ''
-      export ANDROID_SDK_ROOT="@out@/share/android-sdk"
-      # Android Studio uses this even though it is deprecated.
-      export ANDROID_HOME="$ANDROID_SDK_ROOT"
-    '';
-    shellHook = ''
-      echo Using Android SDK root: $out/share/android-sdk
-      source $out/nix-support/setup-hook
-    '';
-  } ''
+  sdk = runCommand "android-sdk-env"
+    {
+      name = "android-sdk-env";
+      buildInputs = [ licenses ] ++ pkgs;
+      nativeBuildInputs = [ makeWrapper ];
+      preferLocalBuild = true;
+      allowSubstitutes = false;
+      setupHook = writeText "setup-hook" ''
+        export ANDROID_SDK_ROOT="@out@/share/android-sdk"
+        # Android Studio uses this even though it is deprecated.
+        export ANDROID_HOME="$ANDROID_SDK_ROOT"
+      '';
+      shellHook = ''
+        echo Using Android SDK root: $out/share/android-sdk
+        source $out/nix-support/setup-hook
+      '';
+    } ''
     export ANDROID_SDK_ROOT=$out/share/android-sdk
     mkdir -p "$ANDROID_SDK_ROOT"
     mkdir -p "$out/bin"
@@ -68,8 +70,7 @@ let
   '';
 
 in
-
-assert (assertMsg (duplicates == {})
+assert (assertMsg (duplicates == { })
   ''
     The following SDK packages collide:
 

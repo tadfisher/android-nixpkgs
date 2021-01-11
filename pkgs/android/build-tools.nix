@@ -1,5 +1,14 @@
-{ stdenv, stdenv_32bit, lib, mkGeneric, autoPatchelfMultiHook
-, libcxx, ncurses5, ncurses5-32, zlib, zlib-32}:
+{ stdenv
+, stdenv_32bit
+, lib
+, mkGeneric
+, autoPatchelfMultiHook
+, libcxx
+, ncurses5
+, ncurses5-32
+, zlib
+, zlib-32
+}:
 
 mkGeneric {
   nativeBuildInputs = [

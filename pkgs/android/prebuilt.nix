@@ -1,8 +1,13 @@
-{ stdenv, autoPatchelfHook, mkGeneric
-, libedit, ncurses5, python27, zlib  }:
+{ stdenv
+, autoPatchelfHook
+, mkGeneric
+, libedit
+, ncurses5
+, python27
+, zlib
+}:
 
 package:
-
 let
   inherit (builtins) replaceStrings;
   inherit (stdenv.lib) hasPrefix recursiveUpdate;
@@ -29,16 +34,17 @@ let
       runtimeDependencies = [ zlib ];
 
       postUnpack = ''
-          rm -r "$out/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
-          ln -s ${zlib}/lib/libz.so.1 $out/lib/libz.so.1
+        rm -r "$out/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
+        ln -s ${zlib}/lib/libz.so.1 $out/lib/libz.so.1
 
-          addAutoPatchelfSearchPath "$out/lib"
-          addAutoPatchelfSearchPath "$out/bin"
-          autoPatchelf --no-recurse "$out/lib"
-          autoPatchelf --no-recurse "$out/bin"
+        addAutoPatchelfSearchPath "$out/lib"
+        addAutoPatchelfSearchPath "$out/bin"
+        autoPatchelf --no-recurse "$out/lib"
+        autoPatchelf --no-recurse "$out/bin"
       '';
     }
 
-    else {};
+    else { };
 
-in mkGeneric ({ nativeBuildInputs = [ autoPatchelfHook ]; } // buildArgs) package
+in
+mkGeneric ({ nativeBuildInputs = [ autoPatchelfHook ]; } // buildArgs) package

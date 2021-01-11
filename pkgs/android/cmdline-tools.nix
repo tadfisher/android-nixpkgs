@@ -2,7 +2,8 @@
 
 package:
 
-mkGeneric {
+mkGeneric
+{
   pname = "cmdline-tools";
 
   passthru.installSdk = ''
@@ -13,4 +14,5 @@ mkGeneric {
         --prefix JAVA_OPTS ' ' "-Dcom.android.sdklib.toolsdir=$pkgBase"
       done
   '';
-} package
+}
+  package

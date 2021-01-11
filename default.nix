@@ -1,9 +1,8 @@
-{ pkgs ? import <nixpkgs> {}
+{ pkgs ? import <nixpkgs> { }
 , channel ? "stable"
 }:
 
 with pkgs;
-
 let
   androidSdk = callPackage ./pkgs/android { };
 in

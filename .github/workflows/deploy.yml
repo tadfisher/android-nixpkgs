@@ -18,6 +18,8 @@ jobs:
             experimental-features = nix-command flakes
       - name: update android sources
         run: ./scripts/update.sh
+      - name: lint
+        run: ./scripts/format.sh --check
       - name: test
         run: nix flake check
       - name: push

@@ -1,9 +1,7 @@
 { stdenv, fetchurl, unzip }:
 
 { sources, ... } @ args:
-
 let
-
   # Keys by which to search the package's "sources" set for the host platform.
   hostOsKeys = with stdenv.hostPlatform; [
     system
@@ -19,6 +17,7 @@ let
 
   src = sources.${platformKey};
 
-in (fetchurl ({
+in
+(fetchurl ({
   inherit (src) url sha1;
 } // removeAttrs args [ "sources" ]))

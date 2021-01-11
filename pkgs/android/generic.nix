@@ -1,22 +1,24 @@
 { stdenv, fetchandroid, writeText, unzip }:
 
 args: package:
-
 let
   inherit (builtins) attrNames concatStringsSep filter hasAttr head listToAttrs replaceStrings;
   inherit (stdenv.lib) hasPrefix findFirst flatten groupBy mapAttrs nameValuePair optionalString;
 
-  platforms = flatten (map (name:
-    if (hasAttr name stdenv.lib.platforms) then stdenv.lib.platforms.${name} else name
-  ) (attrNames package.sources));
+  platforms = flatten (map
+    (name:
+      if (hasAttr name stdenv.lib.platforms) then stdenv.lib.platforms.${name} else name
+    )
+    (attrNames package.sources));
 
   packageXml = writeText "${package.pname}-${package.version}-package-xml" package.xml;
 
-in stdenv.mkDerivation (rec {
+in
+stdenv.mkDerivation (rec {
 
   inherit (package) pname version;
 
-  nativeBuildInputs = [ unzip ] ++ (args.nativeBuildInputs or []);
+  nativeBuildInputs = [ unzip ] ++ (args.nativeBuildInputs or [ ]);
 
   src = fetchandroid {
     inherit (package) sources;
@@ -51,7 +53,7 @@ in stdenv.mkDerivation (rec {
 
   passthru = {
     inherit (package) license path xml;
-  } // (args.passthru or {});
+  } // (args.passthru or { });
 
   preferLocalBuild = true;
 
@@ -61,5 +63,5 @@ in stdenv.mkDerivation (rec {
     license = licenses.asl20;
     maintainers = with maintainers; [ tadfisher ];
     inherit platforms;
-  } // (args.meta or {});
+  } // (args.meta or { });
 } // removeAttrs args [ "nativeBuildInputs" "passthru" "meta" "unzipCmd" ])
