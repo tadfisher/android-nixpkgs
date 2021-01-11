@@ -2,7 +2,9 @@
 
 All packages from the Android SDK repository, packaged with [Nix](https://nixos.org/nix/).
 
-## Installation
+Updated daily from Google's Android SDK repositories.
+
+## Install
 
 ### Requirements
 
@@ -31,15 +33,17 @@ installation.
 with pkgs;
 
 let
-  androidSdkPackages = callPackage <android> { };
+  androidSdkPackages = callPackage <android> {
+    # Default; can also choose "beta", "preview", or "canary".
+    channel = "stable";
+  };
 
 in
-  # Replace `stable' with `beta', `preview', or `canary' to select from a different package set.
-  androidSdkPackages.sdk (apkgs: with apkgs.stable; [
+  androidSdkPackages.sdk (apkgs: with apkgs; [
     cmdline-tools-latest
-    build-tools-30-0-3
+    build-tools-30-0-2
     platform-tools
-    platforms.android-30
+    platforms-android-30
     emulator
   ])
 ```
@@ -61,11 +65,11 @@ with pkgs;
 let
   androidSdkPackages = callPackage <android> { };
 
-  androidSdk = androidSdkPackages.sdk (apkgs: with apkgs.stable; [
+  androidSdk = androidSdkPackages.sdk (sdkPkgs: with sdkPkgs; [
     cmdline-tools-latest
     build-tools-30-0-2
     platform-tools
-    platforms.android-30
+    platforms-android-30
     emulator
   ]);
 
@@ -90,19 +94,149 @@ building Android apps.
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    android-nixpkgs = {
+    android = {
       url = "github:tadfisher/android-nixpkgs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = { self, nixpkgs, android-nixpkgs }: {
-    packages.x86_64-linux.android-sdk = android-nixpkgs.lib.sdk (
+    packages.x86_64-linux.android-sdk = android.sdk (sdkPkgs: with sdkPkgs; [
+      cmdline-tools-latest
+      build-tools-30-0-2
+      platform-tools
+      platforms-android-30
+      emulator
+    ]);
   };
 }
 ```
 
-# Troubleshooting
+A project template is provided via `templates.android`. This also provides a `devShell` with Android
+Studio and a configured Android SDK.
+
+```
+nix flake init github:tadfisher/android-nixpkgs
+nix develop
+android-studio
+```
+
+See `flake.nix` in the generated project to customize the SDK and Android Studio version.
+
+
+### Home Manager
+
+A [Home Manager](https://github.com/nix-community/home-manager) module is provided to manage an
+Android SDK installation for the user profile. Usage depends on whether you are using Home Manager
+via flakes.
+
+#### Normal
+
+In `home.nix`:
+
+```nix
+{ config, pkgs, ... }:
+
+let
+  android-sdk =
+    let
+      android-nixpkgs = import (fetchTarball "https://github.com/tadfisher/android-nixpkgs/archive/main.tar.gz") {
+        inherit pkgs;
+      };
+    in
+      import (android-nixpkgs + "/hm-module.nix");
+
+in
+{
+  imports = [ android-sdk ];
+
+  android-sdk.enable = true;
+
+  # Optional; default path is "~/.local/share/android".
+  android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
+
+  android-sdk.packages = sdk: with sdk; [
+    build-tools-30-0-2
+    cmdline-tools-latest
+    emulator
+    platforms-android-30
+    sources-android-30
+  ];
+}
+```
+
+#### Flake
+
+An example `flake.nix`:
+
+```nix
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    home-manager = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+    };
+
+    android-nixpkgs = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:tadfisher/android-nixpkgs/flake";
+    };
+  };
+
+  outputs = { self, nixpkgs, home-manager, android-nixpkgs }: {
+
+    nixosConfigurations.x86_64-linux.myhostname = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        home-manager.nixosModules.home-manager
+
+        {
+          home-manager.users.myusername = { config, lib, pkgs, ... }: {
+            imports = [
+              android-nixpkgs.hmModule
+
+              {
+                android-sdk.enable = true;
+
+                # Optional; default path is "~/.local/share/android".
+                android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
+
+                android-sdk.packages = sdk: with sdk; [
+                  build-tools-30-0-2
+                  cmdline-tools-latest
+                  emulator
+                  platforms-android-30
+                  sources-android-30
+                ];
+              }
+            ];
+          };
+        }
+      ];
+    };
+  };
+}
+```
+
+## List SDK packages
+
+### Channel
+
+Unfortunately, this is a little rough using stable Nix, but here's a one-liner.
+
+```
+nix-instantiate --eval -E "with (import <android> { }); builtins.attrNames packages.stable" --json | jq '.[]'
+```
+
+### Flake
+
+```
+nix flake show github:tadfisher/android-nixpkgs
+```
+
+## Troubleshooting
 
 **Android Studio is using the wrong SDK installation directory.**
 
@@ -125,9 +259,12 @@ endeavor.
 
 This is fine; you cannot install packages via the SDK Manager to a Nix-built SDK, because the point
 of this project is to make your build dependencies immutable. Either update your Nix expression to
-include the additional packages, or switch to using a standard Android SDK install. Note that on
-NixOS, you may have to run `patchelf` to set the ELF interpreter for binaries referencing standard
-paths for the system linker.
+include the additional packages, or switch to using a standard Android SDK install.
+
+When using a standard installation downloaded from the Android Developers site, if you're running
+NixOS then you may have to run `patchelf` to set the ELF interpreter for binaries referencing
+standard paths for the system linker. The binaries may work inside Android Studio built from
+nixpkgs, as it runs in a FHS-compliant chroot.
 
 ## License
 
