@@ -21,6 +21,13 @@
       overlay = final: prev: {
         androidSdkPackages = (sdkPkgsFor final).packages.canary;
       };
+
+      templates.android = {
+        path = ./template;
+        description = "Android application or library";
+      };
+
+      defaultTemplate = self.templates.android;
     }
     //
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:

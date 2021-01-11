@@ -29,8 +29,8 @@ in
           build-tools-30-0-2
           cmdline-tools-latest
           emulator
-          platforms.android-30
-          sources.android-30
+          platforms-android-30
+          sources-android-30
         ]
       '';
     };
@@ -52,6 +52,7 @@ in
       file.${cfg.path}.source = "${cfg.finalPackage}/share/android-sdk";
       packages = [ cfg.finalPackage ];
       sessionVariables = {
+        ANDROID_HOME = config.home.file.${cfg.path}.target;
         ANDROID_SDK_ROOT = config.home.file.${cfg.path}.target;
       };
     };

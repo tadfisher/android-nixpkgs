@@ -6,26 +6,18 @@ with pkgs;
 #
 # Documentation: https://github.com/numtide/devshell
 mkDevShell {
-  name = "android-app";
+  name = "android-project";
   motd = ''
     Entered the Android app development environment.
-
-    Available commands:
-
   '';
   env = {
-    JAVA_HOME = ;
+    ANDROID_HOME = "${android-sdk}/share/android-sdk";
+    ANDROID_SDK_ROOT = "${android-sdk}/share/android-sdk";
+    JAVA_HOME = jdk11.home;
   };
   packages = [
-    # Select a version of Android Studio.
     android-studio
-    # androidStudioPackages.beta
-    # androidStudioPackages.canary
-    # androidStudioPackages.dev
-
-    # Configure SDK packages in flake.nix.
     android-sdk
-
     gradle
     jdk11
   ];
