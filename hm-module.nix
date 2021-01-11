@@ -45,7 +45,7 @@ in
   };
 
   config = mkIf (cfg.enable) {
-    android-sdk.finalPackage = pkgs.androidSdkPackages.sdk cfg.packages;
+    android-sdk.finalPackage = pkgs.androidSdk cfg.packages;
 
     home = {
       file.${cfg.path}.source = "${cfg.finalPackage}/share/android-sdk";

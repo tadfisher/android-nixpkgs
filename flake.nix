@@ -12,15 +12,24 @@
         inherit pkgs;
         # TODO Support channel selection.
         # Possibly generate flake.nix in each channel subdirectory.
+        # Alternatively, publish separate Git branches per channel.
         channel = "canary";
       };
     in
     {
-      hmModule = import ./hm-module.nix;
 
-      overlay = final: prev: {
-        androidSdkPackages = (sdkPkgsFor final).packages.canary;
-      };
+      hmModules.android = import ./hm-module.nix;
+
+      hmModule = self.hmModules.android;
+
+      overlay = final: prev:
+        let
+          android = sdkPkgsFor final;
+        in
+        {
+          androidSdkPackages = android.packages;
+          androidSdk = android.sdk;
+        };
 
       templates.android = {
         path = ./template;
