@@ -39,3 +39,31 @@ jobs:
           SINGLE_COMMIT: true
           GIT_CONFIG_NAME: "github-actions"
           GIT_CONFIG_EMAIL: "github-actions@github.com"
+      - name: main -> stable
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: main
+          target_branch: stable
+          github_token: ${{ github.token }}
+      - name: main -> beta
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: main
+          target_branch: beta
+          github_token: ${{ github.token }}
+      - name: main -> preview
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: main
+          target_branch: preview
+          github_token: ${{ github.token }}
+      - name: main -> canary
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: main
+          target_branch: canary
+          github_token: ${{ github.token }}
