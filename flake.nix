@@ -10,10 +10,7 @@
     let
       sdkPkgsFor = pkgs: import ./default.nix {
         inherit pkgs;
-        # TODO Support channel selection.
-        # Possibly generate flake.nix in each channel subdirectory.
-        # Alternatively, publish separate Git branches per channel.
-        channel = "canary";
+        channel = builtins.readFile ./channel;
       };
     in
     {
