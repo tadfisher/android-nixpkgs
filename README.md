@@ -85,22 +85,34 @@ mkShell {
 ### Flake
 
 If you live on the bleeding edge, you may be using [Nix Flakes](https://nixos.wiki/wiki/Flakes).
-This project can be used as an input to your project's `flake.nix` to provide an immutable SDK for
-building Android apps.
+This repository can be used as an input to your project's `flake.nix` to provide an immutable SDK
+for building Android apps or libraries.
 
 ```nix
 {
   description = "My Android app";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     android = {
       url = "github:tadfisher/android-nixpkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
+
+      # The main branch follows the "canary" channel of the Android SDK
+      # repository. Use another android-nixpkgs branch to explicitly
+      # track an SDK release channel.
+      #
+      # url = "github:tadfisher/android-nixpkgs/stable";
+      # url = "github:tadfisher/android-nixpkgs/beta";
+      # url = "github:tadfisher/android-nixpkgs/preview";
+      # url = "github:tadfisher/android-nixpkgs/canary";
+
+      # If you have nixpkgs as an input, this will replace the "nixpkgs" input
+      # for the "android" flake.
+      #
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, android-nixpkgs }: {
+  outputs = { self, android }: {
     packages.x86_64-linux.android-sdk = android.sdk (sdkPkgs: with sdkPkgs; [
       cmdline-tools-latest
       build-tools-30-0-2
@@ -175,13 +187,13 @@ An example `flake.nix`:
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     android-nixpkgs = {
+      url = "github:tadfisher/android-nixpkgs";
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:tadfisher/android-nixpkgs/flake";
     };
   };
 
