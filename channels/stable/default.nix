@@ -2139,18 +2139,18 @@
     sources = {
       linux = {
         url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r01.1.zip";
-        sha1 = "18632007ecb843b4fc69babd521a9b061868534b";
+        sha1 = "202a6e1b3009a0eb815f8c672d2d5b3717de6169";
       };
       darwin = {
         url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r01.1.zip";
-        sha1 = "ccb64105888ba61ab06f20ad1ba97c71d440a421";
+        sha1 = "8179cbb3914493ebc5eb65b731cba061582f2e84";
       };
       windows = {
         url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r01.1.zip";
-        sha1 = "f26d80a84020b40e24f8a99873dea6a9c7978f10";
+        sha1 = "99c4a7172d73673552119347bc24c58b47da177b";
       };
     };
-    displayName = "Android Auto Desktop Head Unit Emulator";
+    displayName = "Android Auto Desktop Head Unit emulator";
     path = "extras/google/auto";
     license = {
       id = "android-sdk-license";
@@ -3655,19 +3655,19 @@
   skiaparser-1 = mkPrebuilt {
     id = "skiaparser;1";
     pname = "skiaparser-1";
-    version = "5";
+    version = "6";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-6923996-linux.zip";
-        sha1 = "b4ac0f553c2b582fd4e1896f46e2021b9da9d19b";
+        url = "https://dl.google.com/android/repository/skiaparser-7083912-linux.zip";
+        sha1 = "78af2cd3e4168af80c16d7686536baa318e10cc4";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-6923996-mac.zip";
-        sha1 = "6d4bafe363b8536c9c3da51fac6f4b16c5685359";
+        url = "https://dl.google.com/android/repository/skiaparser-7083912-mac.zip";
+        sha1 = "73aa4e3b52177cf7d4cf956a74311e0097987bb4";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-6923996-win.zip";
-        sha1 = "2aafef23d600d05467e645cd1420e8c7e5a5dad3";
+        url = "https://dl.google.com/android/repository/skiaparser-7083912-win.zip";
+        sha1 = "28dde025a70a0f4819cf195c1cb6e0e2b4bf4514";
       };
     };
     displayName = "Layout Inspector image server for API 29-30";
