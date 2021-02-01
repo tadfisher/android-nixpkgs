@@ -1896,6 +1896,32 @@
     };
     xml = ./cmake-3-10-2-4988404.xml;
   };
+  cmake-3-18-1 = mkPrebuilt {
+    id = "cmake;3.18.1";
+    pname = "cmake-3-18-1";
+    version = "3.18.1";
+    sources = {
+      windows = {
+        url = "https://dl.google.com/android/repository/7c386a739f915f5bd60051f2572c24782388e807.cmake-3.18.1-windows.zip";
+        sha1 = "80916762df6955f431743066e3568ae65b1b2b2f";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/ba34c321f92f6e6fd696c8354c262c122f56abf8.cmake-3.18.1-darwin.zip";
+        sha1 = "1580deb8fb5d705aefb028413dad1a3a129891fe";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.18.1-linux.zip";
+        sha1 = "9435bbe2120763871c75c37a365451b48c007fed";
+      };
+    };
+    displayName = "CMake 3.18.1";
+    path = "cmake/3.18.1";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-18-1.xml;
+  };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
     pname = "cmake-3-6-4111459";
@@ -5126,8 +5152,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
