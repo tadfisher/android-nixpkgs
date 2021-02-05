@@ -2139,18 +2139,18 @@
     sources = {
       linux = {
         url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r01.1.zip";
-        sha1 = "202a6e1b3009a0eb815f8c672d2d5b3717de6169";
+        sha1 = "18632007ecb843b4fc69babd521a9b061868534b";
       };
       darwin = {
         url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r01.1.zip";
-        sha1 = "8179cbb3914493ebc5eb65b731cba061582f2e84";
+        sha1 = "ccb64105888ba61ab06f20ad1ba97c71d440a421";
       };
       windows = {
         url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r01.1.zip";
-        sha1 = "99c4a7172d73673552119347bc24c58b47da177b";
+        sha1 = "f26d80a84020b40e24f8a99873dea6a9c7978f10";
       };
     };
-    displayName = "Android Auto Desktop Head Unit emulator";
+    displayName = "Android Auto Desktop Head Unit Emulator";
     path = "extras/google/auto";
     license = {
       id = "android-sdk-license";
@@ -4988,8 +4988,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
