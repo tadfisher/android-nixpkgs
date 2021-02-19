@@ -1948,6 +1948,32 @@
     };
     xml = ./cmake-3-18-1.xml;
   };
+  cmake-3-6-4111459 = mkPrebuilt {
+    id = "cmake;3.6.4111459";
+    pname = "cmake-3-6-4111459";
+    version = "3.6.4111459";
+    sources = {
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.6.4111459-darwin-x86_64.zip";
+        sha1 = "c9b02d630079783c6d67cb91488b622cfcd9765c";
+      };
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.6.4111459-linux-x86_64.zip";
+        sha1 = "71c539b9c33f0943e9ad6251fea0b161c0b70782";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/cmake-3.6.4111459-windows-x86_64.zip";
+        sha1 = "4c4730dc3f399b2fa9ab701112d2c439368a59a5";
+      };
+    };
+    displayName = "CMake 3.6.4111459";
+    path = "cmake/3.6.4111459";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-6-4111459.xml;
+  };
   cmdline-tools-1-0 = mkCmdlineTools {
     id = "cmdline-tools;1.0";
     pname = "cmdline-tools-1-0";
