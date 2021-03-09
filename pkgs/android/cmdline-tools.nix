@@ -1,7 +1,5 @@
 { mkGeneric, openjdk, jdk ? openjdk }:
 
-package:
-
 mkGeneric
 {
   pname = "cmdline-tools";
@@ -15,4 +13,3 @@ mkGeneric
       done
   '';
 }
-  package
