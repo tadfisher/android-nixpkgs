@@ -1,4 +1,5 @@
 { stdenv
+, lib
 , mkGeneric
 , runCommand
 , srcOnly
@@ -51,7 +52,7 @@ mkGeneric {
     autoPatchelfHook
   ];
 
-  buildInputs = [
+  buildInputs = lib.optionals stdenv.isLinux [
     alsaLib
     fontconfig
     freetype
@@ -80,7 +81,7 @@ mkGeneric {
 
   dontWrapQtApps = true;
 
-  postUnpack = ''
+  postUnpack = lib.optionalString stdenv.isLinux ''
     rm -r $out/lib64/gles_mesa
 
     for f in ${toString systemLibs}; do

@@ -15,4 +15,4 @@ mkGeneric
       done
   '';
 }
-  package
+package

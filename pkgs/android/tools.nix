@@ -1,6 +1,7 @@
 { stdenv
+, lib
 , mkGeneric
-, autoPatchelfMultiHook
+, autoPatchelfHook
 , makeWrapper
 , findutils
 , coreutils
@@ -14,23 +15,16 @@
 , libpulseaudio
 , ncurses5
 , zlib
-  # 32-bit dependencies
-, stdenv_32bit
-, fontconfig-32
-, freetype-32
-, libX11-32
-, libXrender-32
-, zlib-32
 }:
 
 mkGeneric {
-  nativeBuildInputs = [
-    autoPatchelfMultiHook
+  nativeBuildInputs = [ autoPatchelfHook ]
+  ++ lib.optionals stdenv.isLinux [
     findutils
     makeWrapper
   ];
 
-  buildInputs = [
+  buildInputs = lib.optionals stdenv.isLinux [
     coreutils
     fontconfig
     freetype
@@ -40,20 +34,9 @@ mkGeneric {
     libXext
     libpulseaudio
     ncurses5
-    stdenv_32bit.cc.cc.lib
-    fontconfig-32
-    freetype-32
-    libX11-32
-    libXrender-32
-    zlib-32
   ];
 
-  autoPatchelfCCWrappers = [
-    stdenv.cc
-    stdenv_32bit.cc
-  ];
-
-  postUnpack = ''
+  postUnpack = lib.optionalString stdenv.isLinux ''
     for f in $(grep -l -a -r "/bin/ls" $out); do
       substituteInPlace $f --replace "/bin/ls" "${coreutils}/bin/ls"
     done

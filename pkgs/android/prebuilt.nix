@@ -1,4 +1,5 @@
 { stdenv
+, lib
 , autoPatchelfHook
 , mkGeneric
 , libedit
@@ -10,7 +11,7 @@
 package:
 let
   inherit (builtins) replaceStrings;
-  inherit (stdenv.lib) hasPrefix recursiveUpdate;
+  inherit (lib) hasPrefix recursiveUpdate;
 
   buildArgs =
     if (
@@ -21,7 +22,7 @@ let
     }
 
     else if (hasPrefix "lldb" package.id) then rec {
-      buildInputs = [
+      buildInputs = lib.optionals stdenv.isLinux [
         libedit
         ncurses5
         python27
@@ -31,9 +32,9 @@ let
 
       dontAutoPatchelf = true;
 
-      runtimeDependencies = [ zlib ];
+      runtimeDependencies = lib.optionals stdenv.isLinux [ zlib ];
 
-      postUnpack = ''
+      postUnpack = lib.optionalString stdenv.isLinux ''
         rm -r "$out/lib/{libedit.so.*,libpython2.7.so.*,libtinfo.so.*,python2.7}
         ln -s ${zlib}/lib/libz.so.1 $out/lib/libz.so.1
 
