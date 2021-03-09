@@ -7,7 +7,7 @@
 , zlib
 }:
 
-mkGeneric {
+mkGeneric (lib.optionalAttrs stdenv.isLinux {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
@@ -22,4 +22,4 @@ mkGeneric {
   autoPatchelfCCWrappers = [
     stdenv.cc
   ];
-}
+})

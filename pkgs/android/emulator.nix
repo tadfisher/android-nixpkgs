@@ -47,12 +47,12 @@ let
   ];
 
 in
-mkGeneric {
+mkGeneric (lib.optionalAttrs stdenv.isLinux {
   nativeBuildInputs = [
     autoPatchelfHook
   ];
 
-  buildInputs = lib.optionals stdenv.isLinux [
+  buildInputs = [
     alsaLib
     fontconfig
     freetype
@@ -81,7 +81,7 @@ mkGeneric {
 
   dontWrapQtApps = true;
 
-  postUnpack = lib.optionalString stdenv.isLinux ''
+  postUnpack = ''
     rm -r $out/lib64/gles_mesa
 
     for f in ${toString systemLibs}; do
@@ -91,12 +91,10 @@ mkGeneric {
     # silence LD_PRELOAD warning
     ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
   '';
-
-  passthru = {
-    installSdk = ''
-      for exe in emulator emulator-check mksdcard; do
-        ln -s $pkgBase/$exe $out/bin/$exe
-      done
-    '';
-  };
-}
+} // {
+  passthru.installSdk = ''
+    for exe in emulator emulator-check mksdcard; do
+      ln -s $pkgBase/$exe $out/bin/$exe
+    done
+  '';
+})
