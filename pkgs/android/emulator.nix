@@ -47,51 +47,52 @@ let
   ];
 
 in
-mkGeneric (lib.optionalAttrs stdenv.isLinux {
-  nativeBuildInputs = [
-    autoPatchelfHook
-  ];
+mkGeneric (lib.optionalAttrs stdenv.isLinux
+  {
+    nativeBuildInputs = [
+      autoPatchelfHook
+    ];
 
-  buildInputs = [
-    alsaLib
-    fontconfig
-    freetype
-    gperftools
-    libGL
-    libX11
-    libXcomposite
-    libXcursor
-    libXdamage
-    libXext
-    libXfixes
-    libXi
-    libXrender
-    libXtst
-    libcxx
-    libpulseaudio
-    libxkbcommon
-    libunwind
-    libuuid
-    nss
-    nspr
-    sqlite
-    vulkan-loader
-    zlib
-  ];
+    buildInputs = [
+      alsaLib
+      fontconfig
+      freetype
+      gperftools
+      libGL
+      libX11
+      libXcomposite
+      libXcursor
+      libXdamage
+      libXext
+      libXfixes
+      libXi
+      libXrender
+      libXtst
+      libcxx
+      libpulseaudio
+      libxkbcommon
+      libunwind
+      libuuid
+      nss
+      nspr
+      sqlite
+      vulkan-loader
+      zlib
+    ];
 
-  dontWrapQtApps = true;
+    dontWrapQtApps = true;
 
-  postUnpack = ''
-    rm -r $out/lib64/gles_mesa
+    postUnpack = ''
+      rm -r $out/lib64/gles_mesa
 
-    for f in ${toString systemLibs}; do
-      rm $out/lib64/$f || true
-    done
+      for f in ${toString systemLibs}; do
+        rm $out/lib64/$f || true
+      done
 
-    # silence LD_PRELOAD warning
-    ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
-  '';
-} // {
+      # silence LD_PRELOAD warning
+      ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
+    '';
+  } // {
   passthru.installSdk = ''
     for exe in emulator emulator-check mksdcard; do
       ln -s $pkgBase/$exe $out/bin/$exe

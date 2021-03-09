@@ -9,7 +9,6 @@
 }:
 
 { id, ... }@package:
-
 let
   inherit (builtins) replaceStrings;
   inherit (lib) hasPrefix recursiveUpdate;
