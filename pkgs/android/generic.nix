@@ -1,14 +1,12 @@
-{ stdenv, fetchandroid, writeText, unzip }:
+{ stdenv, lib, fetchandroid, writeText, unzip }:
 
 args: package:
 let
   inherit (builtins) attrNames concatStringsSep filter hasAttr head listToAttrs replaceStrings;
-  inherit (stdenv.lib) hasPrefix findFirst flatten groupBy mapAttrs nameValuePair optionalString;
+  inherit (lib) hasPrefix findFirst flatten groupBy mapAttrs nameValuePair optionalString;
 
   platforms = flatten (map
-    (name:
-      if (hasAttr name stdenv.lib.platforms) then stdenv.lib.platforms.${name} else name
-    )
+    (name: if (hasAttr name lib.platforms) then lib.platforms.${name} else name)
     (attrNames package.sources));
 
   packageXml = writeText "${package.pname}-${package.version}-package-xml" package.xml;
@@ -57,7 +55,7 @@ stdenv.mkDerivation (rec {
 
   preferLocalBuild = true;
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = package.displayName;
     homepage = "https://developer.android.com/studio/";
     license = licenses.asl20;

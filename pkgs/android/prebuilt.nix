@@ -1,4 +1,5 @@
 { stdenv
+, lib
 , autoPatchelfHook
 , mkGeneric
 , libedit
@@ -7,20 +8,20 @@
 , zlib
 }:
 
-package:
+{ id, ... }@package:
 let
   inherit (builtins) replaceStrings;
-  inherit (stdenv.lib) hasPrefix recursiveUpdate;
+  inherit (lib) hasPrefix recursiveUpdate;
 
-  buildArgs =
-    if (
-      hasPrefix "cmake;" package.id ||
-      hasPrefix "skiaparser;" package.id
-    ) then {
+  buildArgs = lib.optionalAttrs stdenv.isLinux (
+    if (hasPrefix "cmake;" id || hasPrefix "skiaparser;" id) then {
+      nativeBuildInputs = [ autoPatchelfHook ];
       buildInputs = [ stdenv.cc.cc.lib ];
     }
 
-    else if (hasPrefix "lldb" package.id) then rec {
+    else if (hasPrefix "lldb" id) then rec {
+      nativeBuildInputs = [ autoPatchelfHook ];
+
       buildInputs = [
         libedit
         ncurses5
@@ -44,7 +45,8 @@ let
       '';
     }
 
-    else { };
+    else { }
+  );
 
 in
-mkGeneric ({ nativeBuildInputs = [ autoPatchelfHook ]; } // buildArgs) package
+mkGeneric buildArgs package
