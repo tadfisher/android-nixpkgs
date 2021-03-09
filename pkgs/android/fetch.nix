@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, unzip }:
+{ stdenv, lib, fetchurl, unzip }:
 
 { sources, ... } @ args:
 let
@@ -10,7 +10,7 @@ let
     "all"
   ];
 
-  platformKey = stdenv.lib.findFirst
+  platformKey = lib.findFirst
     (k: builtins.hasAttr k sources)
     (throw "Unsupported system: ${stdenv.hostPlatform.system}")
     hostOsKeys;
