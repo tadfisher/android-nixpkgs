@@ -2709,19 +2709,19 @@
   ndk-bundle = mkSrcOnly {
     id = "ndk-bundle";
     pname = "ndk-bundle";
-    version = "22.0.7026061";
+    version = "22.1.7171670";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-darwin-x86_64.zip";
-        sha1 = "9cf3816ed3e4308ff03bd5f69100b373bad12f13";
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-darwin-x86_64.zip";
+        sha1 = "dc80e8a2cfcb28db74c1931d42c652e9d17ff2c3";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-linux-x86_64.zip";
-        sha1 = "82274313aba10da6177fd41868f56a0f9651dd81";
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-linux-x86_64.zip";
+        sha1 = "9ece64c7f19763dd67320d512794969930fce9dc";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-windows-x86_64.zip";
-        sha1 = "c03f761caf1c6f5efbeb5ccfa573ea922cb955b3";
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-windows-x86_64.zip";
+        sha1 = "96ba1a049303cf6bf3ee84cfd64d6bcd43486a50";
       };
     };
     displayName = "NDK";
@@ -3097,6 +3097,32 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./ndk-22-0-7026061.xml;
+  };
+  ndk-22-1-7171670 = mkSrcOnly {
+    id = "ndk;22.1.7171670";
+    pname = "ndk-22-1-7171670";
+    version = "22.1.7171670";
+    sources = {
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-darwin-x86_64.zip";
+        sha1 = "dc80e8a2cfcb28db74c1931d42c652e9d17ff2c3";
+      };
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-linux-x86_64.zip";
+        sha1 = "9ece64c7f19763dd67320d512794969930fce9dc";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-windows-x86_64.zip";
+        sha1 = "96ba1a049303cf6bf3ee84cfd64d6bcd43486a50";
+      };
+    };
+    displayName = "NDK (Side by side) 22.1.7171670";
+    path = "ndk/22.1.7171670";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-22-1-7171670.xml;
   };
   patcher-v4 = mkSrcOnly {
     id = "patcher;v4";
