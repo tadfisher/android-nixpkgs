@@ -1,6 +1,7 @@
 { stdenv
 , lib
 , mkGeneric
+, makeWrapper
 , runCommand
 , srcOnly
 , autoPatchelfHook
@@ -51,6 +52,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
   {
     nativeBuildInputs = [
       autoPatchelfHook
+      makeWrapper
     ];
 
     buildInputs = [
@@ -91,6 +93,9 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
 
       # silence LD_PRELOAD warning
       ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
+
+      # Force XCB platform plugin as Wayland isn't supported.
+      wrapProgram $out/emulator --set QT_QPA_PLATFORM xcb
     '';
   } // {
   passthru.installSdk = ''
