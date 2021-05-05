@@ -21,6 +21,7 @@
 , libXtst
 , libcxx
 , libpulseaudio
+, libudev0-shim
 , libunwind
 , libuuid
 , libxkbcommon
@@ -73,6 +74,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       libcxx
       libpulseaudio
       libxkbcommon
+      libudev0-shim
       libunwind
       libuuid
       nss
@@ -95,7 +97,10 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
 
       # Force XCB platform plugin as Wayland isn't supported.
-      wrapProgram $out/emulator --set QT_QPA_PLATFORM xcb
+      # Inject libudev0-shim to fix udev_loader error.
+      wrapProgram $out/emulator \
+        --set QT_QPA_PLATFORM xcb \
+        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ libudev0-shim ]}
     '';
   } // {
   passthru.installSdk = ''
