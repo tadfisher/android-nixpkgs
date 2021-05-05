@@ -112,7 +112,7 @@ for building Android apps or libraries.
   };
 
   outputs = { self, android }: {
-    packages.x86_64-linux.android-sdk = android.sdk (sdkPkgs: with sdkPkgs; [
+    packages.x86_64-linux.android-sdk = android.sdk.x86_64-linux (sdkPkgs: with sdkPkgs; [
       cmdline-tools-latest
       build-tools-30-0-2
       platform-tools
