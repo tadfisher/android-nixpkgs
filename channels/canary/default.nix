@@ -2159,26 +2159,26 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "30.6.4";
+    version = "30.6.5";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-7306749.zip";
-        sha1 = "cf377a1709b91ab6976fa53ea31afbde0d710303";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-7324830.zip";
+        sha1 = "6b1265a7885ef7179f2c3eb9c1eee984e46e3c3f";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-7306749.zip";
-        sha1 = "25664c2ea3cc2fd970fb2120900149a8063b56b7";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-7324830.zip";
+        sha1 = "43b76b813e7f14fee476c9286ed063131fca7080";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-7306749.zip";
-        sha1 = "93cf9c3ee7cdec9fe318cfe1b6a2908cf09b9e00";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-7324830.zip";
+        sha1 = "25c0b23b1d4127509617e7ee6705766bdb3456c1";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -6039,11 +6039,11 @@
   system-images-android-28-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear-cn;x86";
     pname = "system-images-android-28-android-wear-cn-x86";
-    version = "5";
+    version = "6";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r05.zip";
-        sha1 = "16fb1d13fba2ded0bc27a561ee57256824db39ee";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r06.zip";
+        sha1 = "e289b4f75e62cbd41ad4b07d1eeb6f496b65ca2c";
       };
     };
     displayName = "China version of Wear OS Intel x86 Atom System Image";
@@ -6057,11 +6057,11 @@
   system-images-android-28-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
     pname = "system-images-android-28-android-wear-x86";
-    version = "5";
+    version = "6";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-28_r05.zip";
-        sha1 = "5d939080d97f4a8d5e29c87e8a9ae67b99f19354";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-28_r06.zip";
+        sha1 = "942eb040cb915f0a9a4b4ff97c17a4db9733c1a4";
       };
     };
     displayName = "Wear OS Intel x86 Atom System Image";
