@@ -5378,8 +5378,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6288,6 +6288,24 @@
     };
     xml = ./system-images-android-29-google-apis-playstore-x86-64.xml;
   };
+  system-images-android-30-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-30;android-tv;x86";
+    pname = "system-images-android-30-android-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-30_r03.zip";
+        sha1 = "65ef55423c0d5b1ee695be8e225da2fe7d39a87d";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-30/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-android-tv-x86.xml;
+  };
   system-images-android-30-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-30;android-wear-cn;x86";
     pname = "system-images-android-30-android-wear-cn-x86";
@@ -6323,6 +6341,24 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-30-android-wear-x86.xml;
+  };
+  system-images-android-30-google-tv-x86 = mkSrcOnly {
+    id = "system-images;android-30;google-tv;x86";
+    pname = "system-images-android-30-google-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/x86-30_r03.zip";
+        sha1 = "789d93aab51ce3ee1f9fbdf32640bab9d0ffdb87";
+      };
+    };
+    displayName = "Google TV Intel x86 Atom System Image";
+    path = "system-images/android-30/google-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-google-tv-x86.xml;
   };
   system-images-android-30-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;google_apis;arm64-v8a";
