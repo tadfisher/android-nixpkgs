@@ -2133,19 +2133,19 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "30.6.5";
+    version = "30.7.4";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-7324830.zip";
-        sha1 = "6b1265a7885ef7179f2c3eb9c1eee984e46e3c3f";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-7453540.zip";
+        sha1 = "f99badd19118dc19ddeb79272540899f03180a9c";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-7324830.zip";
-        sha1 = "43b76b813e7f14fee476c9286ed063131fca7080";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-7453540.zip";
+        sha1 = "f7a47d5d68a3d79e618cb0627cbda59f1abc5552";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-7324830.zip";
-        sha1 = "25c0b23b1d4127509617e7ee6705766bdb3456c1";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-7453540.zip";
+        sha1 = "7c9bbae678ee8cb6fa24af1c301fbc6ef68d42e6";
       };
     };
     displayName = "Android Emulator";
@@ -4071,19 +4071,19 @@
   skiaparser-2 = mkPrebuilt {
     id = "skiaparser;2";
     pname = "skiaparser-2";
-    version = "2";
+    version = "3";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-7248848-linux.zip";
-        sha1 = "2703a570224a5ced1f73eb3efbdb3192a1ecec81";
+        url = "https://dl.google.com/android/repository/skiaparser-7478287-linux.zip";
+        sha1 = "36e2c30f7745f4c062129a0fd549d29ab991db41";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-7248848-mac.zip";
-        sha1 = "ecf8794beccf578d4130bb9f7f2c7fa0c40c62c2";
+        url = "https://dl.google.com/android/repository/skiaparser-7478287-mac.zip";
+        sha1 = "04a834a8ab3efd4612300da7cef7f43a6b257468";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-7248848-win.zip";
-        sha1 = "84c28480ca057e48e8d2fed0ae8f52fc21aa7e61";
+        url = "https://dl.google.com/android/repository/skiaparser-7478287-win.zip";
+        sha1 = "567f24512f9d9487a3b948032a136261f5d59c92";
       };
     };
     displayName = "Layout Inspector image server for API S";
@@ -5378,8 +5378,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";

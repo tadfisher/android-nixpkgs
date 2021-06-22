@@ -2177,8 +2177,8 @@
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -4175,19 +4175,19 @@
   skiaparser-2 = mkPrebuilt {
     id = "skiaparser;2";
     pname = "skiaparser-2";
-    version = "2";
+    version = "3";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-7248848-linux.zip";
-        sha1 = "2703a570224a5ced1f73eb3efbdb3192a1ecec81";
+        url = "https://dl.google.com/android/repository/skiaparser-7478287-linux.zip";
+        sha1 = "36e2c30f7745f4c062129a0fd549d29ab991db41";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-7248848-mac.zip";
-        sha1 = "ecf8794beccf578d4130bb9f7f2c7fa0c40c62c2";
+        url = "https://dl.google.com/android/repository/skiaparser-7478287-mac.zip";
+        sha1 = "04a834a8ab3efd4612300da7cef7f43a6b257468";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-7248848-win.zip";
-        sha1 = "84c28480ca057e48e8d2fed0ae8f52fc21aa7e61";
+        url = "https://dl.google.com/android/repository/skiaparser-7478287-win.zip";
+        sha1 = "567f24512f9d9487a3b948032a136261f5d59c92";
       };
     };
     displayName = "Layout Inspector image server for API S";
@@ -5482,8 +5482,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
