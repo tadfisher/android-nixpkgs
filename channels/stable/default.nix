@@ -6133,7 +6133,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-S_r05.zip";
-        sha1 = "b6fb9f143f7fb78752e4fd8b202e7df3fcc5363d";
+        sha1 = "35b82a369d932a060c82d3b0eaeba4e384285a72";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -6151,7 +6151,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-S_r05.zip";
-        sha1 = "90cc2c622b2bd7fb40f1b5441e0084bfdc4b3703";
+        sha1 = "35754eb1d8c9f18dd422187da48bd4dcf721cb8d";
       };
     };
     displayName = "Google APIs Intel x86 Atom_64 System Image";
@@ -6169,11 +6169,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-S_r05-darwin.zip";
-        sha1 = "6b7eca9cfb8c2899c260dfd7456ce8fda277e288";
+        sha1 = "6d9b4d3c98c7c1506693bdf94928cc48791b04cb";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-S_r05-linux.zip";
-        sha1 = "6b7eca9cfb8c2899c260dfd7456ce8fda277e288";
+        sha1 = "6d9b4d3c98c7c1506693bdf94928cc48791b04cb";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -6191,11 +6191,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r05-darwin.zip";
-        sha1 = "05a4dbf93cc02301a709237a943910adab66b98d";
+        sha1 = "92b61c0b33de4b48a023d9b45574db322480b365";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r05-linux.zip";
-        sha1 = "05a4dbf93cc02301a709237a943910adab66b98d";
+        sha1 = "92b61c0b33de4b48a023d9b45574db322480b365";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
