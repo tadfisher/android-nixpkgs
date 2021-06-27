@@ -6,12 +6,7 @@ plugins {
 }
 
 application {
-    mainClassName = "codes.tad.nixandroidrepo.MainKt"
-}
-
-repositories {
-    jcenter()
-    google()
+    mainClass.set("codes.tad.nixandroidrepo.MainKt")
 }
 
 dependencyLocking {
@@ -19,7 +14,8 @@ dependencyLocking {
 }
 
 dependencies {
-    implementation("com.android.tools:sdklib:latest.release")
+    implementation(libs.common)
+    implementation(libs.sdklib)
 }
 
 tasks {
@@ -29,7 +25,19 @@ tasks {
         }
     }
 
-    withType<Wrapper> {
-        gradleVersion = "6.6.1"
+    register("downloadSources") {
+        doLast {
+            val componentIds = configurations.filter { it.isCanBeResolved }
+                .flatMap { c -> c.incoming.resolutionResult.allComponents }
+                .map { it.id }
+
+            project.dependencies.createArtifactResolutionQuery()
+                .forComponents(componentIds)
+                .withArtifacts(JvmLibrary::class.java, SourcesArtifact::class.java)
+                .execute()
+                .resolvedComponents
+                .flatMap { it.getArtifacts(SourcesArtifact::class.java) }
+                .filterIsInstance<ResolvedArtifactResult>()
+        }
     }
 }
