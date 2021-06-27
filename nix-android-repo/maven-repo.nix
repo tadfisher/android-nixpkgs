@@ -70,7 +70,7 @@ let
             let
               files = flatten (map (v: v.files or [ ]) variants);
             in
-              map ({ name, url, ... }: nameValuePair name url) files
+            map ({ name, url, ... }: nameValuePair name url) files
           )
           variants)
       );
@@ -86,12 +86,12 @@ let
         mapAttrsToList fetchArtifact artifacts;
 
       sources = if !fetchSources then [ ] else
-        let
-          sourcesVariants = filter (v: v.name == "sourcesElements") variants;
-          files = flatten (map (v: v.files) sourcesVariants);
-          # artifacts = map ({ url, sha256, ... }: nameValuePair url sha256) files;
-        in
-        map ({ url, sha256, ... }: fetchArtifact url sha256) files;
+      let
+        sourcesVariants = filter (v: v.name == "sourcesElements") variants;
+        files = flatten (map (v: v.files) sourcesVariants);
+        # artifacts = map ({ url, sha256, ... }: nameValuePair url sha256) files;
+      in
+      map ({ url, sha256, ... }: fetchArtifact url sha256) files;
 
     in
     if moduleArtifacts == { }

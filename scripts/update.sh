@@ -10,6 +10,5 @@ for channel in stable beta preview canary; do
         --out=build/$channel/default.nix --xml=build/$channel --channel=$channel
 done
 
-for channel in stable beta preview canary; do
-    mv build/$channel channels/$channel
-done
+rm -r channels
+mv build channels

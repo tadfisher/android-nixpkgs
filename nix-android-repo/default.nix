@@ -16,9 +16,10 @@ let
 
 in
 rec {
-  gradle-properties = runCommand "gradle.properties" {
-    mavenRepo = "file://${maven-repo}";
-  } ''
+  gradle-properties = runCommand "gradle.properties"
+    {
+      mavenRepo = "file://${maven-repo}";
+    } ''
     substituteAll ${./gradle.properties.in} $out
   '';
 
