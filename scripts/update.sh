@@ -2,13 +2,14 @@
 
 set -ex
 
-rm -r channels || true
-nix-android-repo/gradlew -p nix-android-repo installDist
+nix flake update
 
 for channel in stable beta preview canary; do
-    mkdir -p channels/$channel
-    nix-android-repo/build/install/nix-android-repo/bin/nix-android-repo \
-        --out=channels/$channel/default.nix --xml=channels/$channel --channel=$channel
+    mkdir -p build/$channel
+    nix run .#nix-android-repo -- \
+        --out=build/$channel/default.nix --xml=build/$channel --channel=$channel
 done
 
-nix flake update --recreate-lock-file
+for channel in stable beta preview canary; do
+    mv build/$channel channels/$channel
+done

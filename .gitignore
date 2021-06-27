@@ -3,3 +3,7 @@ result*
 **/.gradle/
 **/.idea/
 **/build/
+/nix-android-repo/gradle.properties
+/nix-android-repo/gradlew.bat
+/nix-android-repo/gradlew
+/nix-android-repo/gradle/wrapper/
