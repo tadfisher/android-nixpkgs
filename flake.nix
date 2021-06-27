@@ -3,10 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    devshell.url = "github:numtide/devshell";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, devshell, flake-utils }:
     let
       sdkPkgsFor = pkgs: import ./default.nix {
         inherit pkgs;
@@ -42,8 +43,16 @@
           inherit system;
           config = {
             allowUnfree = true;
-            overlays = [ self.overlay ];
+            overlays = [
+              (devshell.overlay)
+              (self.overlay)
+            ];
           };
+        };
+
+        localPkgs = import ./nix-android-repo {
+          inherit (nixpkgs) lib;
+          final = pkgs;
         };
 
         sdkPkgs = sdkPkgsFor pkgs;
@@ -51,9 +60,19 @@
       {
         inherit (sdkPkgs) sdk;
 
-        apps.format = {
-          type = "app";
-          program = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+        apps = {
+          format = {
+            type = "app";
+            program = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+          };
+          nix-android-repo = {
+            type = "app";
+            program = "${localPkgs.nix-android-repo}/bin/nix-android-repo";
+          };
+          updateLocks = {
+            type = "app";
+            program = "${localPkgs.update-locks}/bin/update-locks";
+          };
         };
 
         checks.sdk = self.sdk.${system} (sdkPkgs: with sdkPkgs; [
@@ -63,6 +82,13 @@
           platforms-android-30
           emulator
         ]);
+
+        devShell = pkgs.callPackage ./nix-android-repo/devshell.nix {
+          inherit (localPkgs)
+            gradle-properties
+            update-locks;
+          devshell = devshell.legacyPackages.${system};
+        };
 
         packages = flake-utils.lib.flattenTree sdkPkgs.packages;
       });
