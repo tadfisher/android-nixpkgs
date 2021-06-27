@@ -1,26 +1,39 @@
-{ stdenv, makeWrapper, gradle, jdk }:
+{ lib
+, final
+, prev ? final
+}:
 
-stdenv.mkDerivation rec {
-  name = "nix-android-repo-${version}";
-  version = "0.0.1";
+let
+  inherit (final) callPackage runCommand;
 
-  src = ./.;
+  repos = [
+    "https://repo1.maven.org/maven2"
+    "https://dl.google.com/dl/android/maven2"
+    "https://plugins.gradle.org/m2"
+  ];
 
-  nativeBuildInputs = [ makeWrapper gradle ];
+  buildMavenRepo = callPackage ./maven-repo.nix { };
 
-  buildInputs = [ jdk ];
-
-  buildPhase = ''
-    export GRADLE_USER_HOME=$(mktemp -d)
-    gradle --no-daemon --offline --stacktrace installDist
+in
+rec {
+  gradle-properties = runCommand "gradle.properties"
+    {
+      mavenRepo = "file://${maven-repo}";
+    } ''
+    substituteAll ${./gradle.properties.in} $out
   '';
 
-  installPhase = ''
-    mkdir -p $out
-    cp -r build/install/nix-android-repo/* $out
-  '';
+  nix-android-repo = callPackage ./nix-android-repo.nix {
+    inherit maven-repo;
+  };
 
-  postFixup = ''
-    wrapProgram $out/bin/nix-android-repo --set JAVA_HOME ${jdk.home}
-  '';
+  maven-repo = buildMavenRepo {
+    inherit repos;
+    deps = builtins.fromJSON (builtins.readFile ./deps.json);
+  };
+
+  update-locks = callPackage ./update-locks.nix {
+    inherit (final.haskellPackages) xml-to-json;
+    inherit repos;
+  };
 }
