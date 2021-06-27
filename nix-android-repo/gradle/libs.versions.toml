@@ -1,0 +1,6 @@
+[versions]
+kotlin = "1.5.20"
+
+[libraries]
+common = "com.android.tools:common:+"
+sdklib = "com.android.tools:sdklib:+"

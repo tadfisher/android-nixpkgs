@@ -1,42 +1,43 @@
 package codes.tad.nixandroidrepo
 
-import com.android.repository.api.Channel
-import com.android.repository.api.Downloader
-import com.android.repository.api.ProgressIndicator
-import com.android.repository.api.ProgressIndicatorAdapter
-import com.android.repository.api.RemotePackage
-import com.android.repository.api.RepoManager
-import com.android.repository.api.SettingsController
+import com.android.prefs.AndroidLocationsSingleton
+import com.android.repository.api.*
 import com.android.repository.impl.meta.LocalPackageImpl
 import com.android.repository.impl.meta.RepositoryPackages
 import com.android.repository.impl.meta.SchemaModuleUtil
 import com.android.sdklib.repository.AndroidSdkHandler
 import com.android.sdklib.tool.sdkmanager.SdkManagerCli
-import org.apache.http.Header
 import java.io.ByteArrayOutputStream
-import java.io.File
 import java.io.InputStream
 import java.io.PrintStream
 import java.net.URL
 import java.nio.file.Path
+import kotlin.io.path.exists
+import kotlin.io.path.fileSize
+import kotlin.io.path.inputStream
 
-class NixDownloader() : Downloader {
-    override fun downloadFully(url: URL, indicator: ProgressIndicator): Path? {
-        val target = File.createTempFile("NixDownloader", null)
+class NixDownloader : Downloader {
+    override fun downloadFully(url: URL, indicator: ProgressIndicator): Path {
+        val target = kotlin.io.path.createTempFile("NixDownloader")
         downloadFully(url, target, null, indicator)
-        return target.toPath()
+        return target
     }
 
     override fun downloadFully(
         url: URL,
-        target: File,
-        checksum: String?,
+        target: Path,
+        checksum: Checksum?,
         indicator: ProgressIndicator
     ) {
         if (target.exists() && checksum != null) {
             indicator.setText("Verifying previous download...")
             target.inputStream().buffered().use { stream ->
-                if (checksum == Downloader.hash(stream, target.length(), indicator.createSubProgress(0.3))) {
+                if (checksum.value == Downloader.hash(
+                        stream,
+                        target.fileSize(),
+                        checksum.type,
+                        indicator.createSubProgress(0.3)
+                    )) {
                     return
                 }
             }
@@ -44,20 +45,14 @@ class NixDownloader() : Downloader {
         println("Should download: $url -> $target")
     }
 
-    override fun downloadAndStream(url: URL, indicator: ProgressIndicator): InputStream? {
+    override fun downloadAndStream(url: URL, indicator: ProgressIndicator): InputStream {
         return openUrl(url.toString())
     }
 
     private fun openUrl(
         url: String,
-        headers: Array<Header>? = null
     ): InputStream {
         val connection = URL(url).openConnection()
-        if (headers != null) {
-            for (header in headers) {
-                connection.setRequestProperty(header.name, header.value)
-            }
-        }
         connection.connect()
         return connection.getInputStream().ensureMarkReset()
     }
@@ -119,7 +114,7 @@ class NixRepoManager(
     channelId: Int
 ) {
     private val progress = NixProgressIndicator
-    private val sdk = AndroidSdkHandler.getInstance(localPath.toFile())
+    private val sdk = AndroidSdkHandler.getInstance(AndroidLocationsSingleton, localPath)
     private val repoManager = sdk.getSdkManager(progress)
     private val settings = NixSettings(channelId)
     private val downloader = NixDownloader()

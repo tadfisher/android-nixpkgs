@@ -1,5 +1,6 @@
 package codes.tad.nixandroidrepo
 
+import com.android.repository.api.Checksum
 import com.android.repository.api.License
 import com.android.repository.api.RemotePackage
 import com.android.repository.api.RepoPackage
@@ -72,13 +73,13 @@ data class Package(
 data class Source(
     val platform: String,
     val url: String,
-    val sha1: String
+    val checksum: Checksum
 ) : NixExpr {
     override fun nix(): String {
         return """
         {
         ⇥url = "$url";
-        ⇥sha1 = "$sha1";
+        ⇥${checksum.nixAttr()};
         }
     """.trimIndent()
     }
@@ -110,7 +111,7 @@ fun RepositoryPackages.nixPackages(): List<Package> {
                     Source(
                         platform = archive.platform(),
                         url = InstallerUtil.resolveUrl(archive.complete.url, pkg, NixProgressIndicator)!!.toString(),
-                        sha1 = archive.complete.checksum
+                        checksum = archive.complete.typedChecksum
                     )
                 },
                 displayName = pkg.displayName,
@@ -120,6 +121,18 @@ fun RepositoryPackages.nixPackages(): List<Package> {
         }
 }
 
+fun Checksum.nixAttr(): String = buildString {
+    append(when (this@nixAttr.type) {
+        "sha1" -> "sha1"
+        "sha-1" -> "sha1"
+        "sha-256" -> "sha256"
+        else -> error("Unknown checksum type: ${this@nixAttr.type}")
+    })
+    append(" = \"")
+    append(value)
+    append("\"")
+}
+
 fun Archive.platform(): String {
     val os = when (hostOs) {
         "linux" -> "linux"
@@ -127,9 +140,10 @@ fun Archive.platform(): String {
         "windows" -> "windows"
         else -> null
     }
-    val arch = when (hostBits) {
-        32 -> "i686"
-        64 -> "x86_64"
+    val arch = when (hostArch) {
+        "x86" -> "i686"
+        "x64" -> "x86_64"
+        "aarch64" -> "aarch64"
         else -> null
     }
     return when {
