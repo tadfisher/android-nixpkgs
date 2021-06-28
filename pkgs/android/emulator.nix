@@ -6,6 +6,7 @@
 , srcOnly
 , autoPatchelfHook
 , alsaLib
+, dbus
 , fontconfig
 , freetype
 , gperftools
@@ -25,30 +26,17 @@
 , libunwind
 , libuuid
 , libxkbcommon
-, sqlite
+, ncurses5
 , nss
 , nspr
+, sqlite
+, swiftshader
+, systemd
 , vulkan-loader
+, xkeyboard_config
 , zlib
 }:
-let
-  systemLibs = [
-    "libc++.so"
-    "libc++.so.1"
-    "libtcmalloc_minimal.so.4"
-    "libunwind.so.8"
-    "libunwind-x86_64.so.8"
-    "qt/lib/libfreetype.so.6"
-    "qt/lib/libsoftokn3.so"
-    "qt/lib/libsqlite3.so"
-    "qt/lib/libxkbcommon.so"
-    "qt/lib/libxkbcommon.so.0"
-    "qt/lib/libxkbcommon.so.0.0.0"
-    "vulkan/libvulkan.so"
-    "vulkan/libvulkan.so.1"
-  ];
 
-in
 mkGeneric (lib.optionalAttrs stdenv.isLinux
   {
     nativeBuildInputs = [
@@ -77,30 +65,37 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       libudev0-shim
       libunwind
       libuuid
+      ncurses5
       nss
       nspr
       sqlite
+      swiftshader
       vulkan-loader
       zlib
     ];
 
+    dontMoveLib64 = true;
     dontWrapQtApps = true;
 
     postUnpack = ''
       rm -r $out/lib64/gles_mesa
-
-      for f in ${toString systemLibs}; do
-        rm $out/lib64/$f || true
-      done
-
-      # silence LD_PRELOAD warning
-      ln -s ${freetype}/lib/libfreetype.so.6 $out/lib64/qt/lib
+      rm -r $out/lib64/vulkan/*
+      ln -s $(realpath ${vulkan-loader}/lib/libvulkan.so.1) $out/lib64/vulkan/libvulkan.so.1
+      ln -s ${swiftshader}/lib/libEGL.so $out/lib64/vulkan/
+      ln -s ${swiftshader}/lib/libvk_swiftshader.so $out/lib64/vulkan/
+      ln -s ${swiftshader}/share/vulkan/icd.d/vk_swiftshader_icd.json $out/lib64/vulkan/
 
       # Force XCB platform plugin as Wayland isn't supported.
       # Inject libudev0-shim to fix udev_loader error.
       wrapProgram $out/emulator \
         --set QT_QPA_PLATFORM xcb \
-        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ libudev0-shim ]}
+        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [
+          libudev0-shim
+          dbus
+          systemd
+        ]} \
+        --set QT_XKB_CONFIG_ROOT ${xkeyboard_config}/share/X11/xkb \
+        --set QTCOMPOSE ${libX11.out}/share/X11/locale
     '';
   } // {
   passthru.installSdk = ''
