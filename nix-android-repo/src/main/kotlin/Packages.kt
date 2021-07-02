@@ -6,7 +6,6 @@ import com.android.repository.api.RemotePackage
 import com.android.repository.api.RepoPackage
 import com.android.repository.impl.meta.Archive
 import com.android.repository.impl.meta.RemotePackageImpl
-import com.android.repository.impl.meta.RepositoryPackages
 import com.android.repository.util.InstallerUtil
 import com.android.sdklib.repository.meta.DetailsTypes
 import java.io.File
@@ -96,36 +95,14 @@ class AndroidLicense(private val license: License) : NixExpr {
     }
 }
 
-fun RepositoryPackages.nixPackages(): List<Package> {
-    return remotePackages.values
-        .sortedBy { it.path }
-        .filterIsInstance<RemotePackageImpl>()
-        .map { pkg ->
-            Package(
-                id = pkg.path,
-                path = pkg.attrpath(),
-                pname = pkg.path.sanitize(),
-                version = pkg.revision(),
-                builder = pkg.builder(),
-                sources = pkg.allArchives.map { archive ->
-                    Source(
-                        platform = archive.platform(),
-                        url = InstallerUtil.resolveUrl(archive.complete.url, pkg, NixProgressIndicator)!!.toString(),
-                        checksum = archive.complete.typedChecksum
-                    )
-                },
-                displayName = pkg.displayName,
-                packageDir = pkg.path.replace(RepoPackage.PATH_SEPARATOR, File.separatorChar),
-                license = AndroidLicense(pkg.license)
-            )
-        }
-}
-
 fun Checksum.nixAttr(): String = buildString {
     append(when (this@nixAttr.type) {
         "sha1" -> "sha1"
         "sha-1" -> "sha1"
+        "sha256" -> "sha256"
         "sha-256" -> "sha256"
+        "sha512" -> "sha512"
+        "sha-512" -> "sha512"
         else -> error("Unknown checksum type: ${this@nixAttr.type}")
     })
     append(" = \"")
@@ -138,13 +115,15 @@ fun Archive.platform(): String {
         "linux" -> "linux"
         "macosx" -> "darwin"
         "windows" -> "windows"
-        else -> null
+        null -> null
+        else -> error("Unknown os: $hostOs")
     }
     val arch = when (hostArch) {
         "x86" -> "i686"
         "x64" -> "x86_64"
         "aarch64" -> "aarch64"
-        else -> null
+        null -> null
+        else -> error("Unknown arch: $hostArch")
     }
     return when {
         os != null -> (if (arch != null) "$arch-" else "") + os
@@ -202,10 +181,36 @@ fun RemotePackage.builder(): String {
     }
 }
 
-fun RepositoryPackages.nixRepo(): Repo {
+fun nixPackages(packages: Map<String, RemotePackage>): List<Package> {
+    return packages.values
+        .sortedBy { it.path }
+        .filterIsInstance<RemotePackageImpl>()
+        .map { pkg ->
+            Package(
+                id = pkg.path,
+                path = pkg.attrpath(),
+                pname = pkg.path.sanitize(),
+                version = pkg.revision(),
+                builder = pkg.builder(),
+                sources = pkg.allArchives.map { archive ->
+                    println("${pkg.path}-${pkg.revision()}: ${archive.complete.url}")
+                    Source(
+                        platform = archive.platform(),
+                        url = InstallerUtil.resolveUrl(archive.complete.url, pkg, NixProgressIndicator)!!.toString(),
+                        checksum = archive.complete.typedChecksum
+                    )
+                },
+                displayName = pkg.displayName,
+                packageDir = pkg.path.replace(RepoPackage.PATH_SEPARATOR, File.separatorChar),
+                license = AndroidLicense(pkg.license)
+            )
+        }
+}
+
+fun nixRepo(packages: Map<String, RemotePackage>): Repo {
     return Repo(
-        packages = nixPackages(),
-        licenses = remotePackages.values.map { it.license }
+        packages = nixPackages(packages),
+        licenses = packages.values.map { it.license }
             .distinctBy { it.id }
             .sortedBy { it.id }
             .map { AndroidLicense(it) }
