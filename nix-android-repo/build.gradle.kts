@@ -16,6 +16,7 @@ dependencyLocking {
 dependencies {
     implementation(libs.common)
     implementation(libs.sdklib)
+    implementation(libs.coroutines)
 }
 
 tasks {
