@@ -2,7 +2,6 @@ package codes.tad.nixandroidrepo
 
 import java.io.File
 import java.io.PrintStream
-import java.nio.file.Files
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
@@ -46,22 +45,20 @@ fun main(args: Array<String>) {
         else -> usage(System.err, "channel: Not a channel: ${options["channel"]}")
     }
 
-    val tmp = Files.createTempDirectory("nix-android")
-    tmp.toFile().deleteOnExit()
-    val repo = NixRepoManager(tmp, channel)
+    val repo = NixRepoManager(channel)
 
     print("fetching ${options["channel"]} packages... ")
     val packages = repo.getPackages()
-    println("${packages.remotePackages.size} packages found")
+    println("${packages.size} packages found")
 
     print("generating... ")
-    val nixRepo = packages.nixRepo()
+    val nixRepo = nixRepo(packages)
     val generatedNix = nixRepo.nix().formatIndents()
     out.writeText(generatedNix)
     println("${nixRepo.packages.size} packages generated")
 
     print("writing package xml... ")
-    for (pkg in packages.remotePackages.values) {
+    for (pkg in packages.values) {
         xml.resolve(pkg.path.sanitize() + ".xml").writeText(repo.packageXml(pkg))
     }
     println("done")
