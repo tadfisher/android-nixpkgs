@@ -6492,6 +6492,24 @@
     };
     xml = ./system-images-android-29-google-apis-playstore-x86-64.xml;
   };
+  system-images-android-30-android-automotive-playstore-x86-64 = mkSrcOnly {
+    id = "system-images;android-30;android-automotive-playstore;x86_64";
+    pname = "system-images-android-30-android-automotive-playstore-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-30_r01.zip";
+        sha1 = "44390252940cfb57471226d5250a97ad02a01acb";
+      };
+    };
+    displayName = "Automotive with Play Store Intel x86 Atom_64 System Image";
+    path = "system-images/android-30/android-automotive-playstore/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-30-android-automotive-playstore-x86-64.xml;
+  };
   system-images-android-30-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-30;android-tv;x86";
     pname = "system-images-android-30-android-tv-x86";
