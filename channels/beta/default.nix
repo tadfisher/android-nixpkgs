@@ -5566,8 +5566,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6491,6 +6491,24 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-29-google-apis-playstore-x86-64.xml;
+  };
+  system-images-android-30-android-automotive-playstore-x86-64 = mkSrcOnly {
+    id = "system-images;android-30;android-automotive-playstore;x86_64";
+    pname = "system-images-android-30-android-automotive-playstore-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-30_r01.zip";
+        sha1 = "44390252940cfb57471226d5250a97ad02a01acb";
+      };
+    };
+    displayName = "Automotive with Play Store Intel x86 Atom_64 System Image";
+    path = "system-images/android-30/android-automotive-playstore/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-30-android-automotive-playstore-x86-64.xml;
   };
   system-images-android-30-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-30;android-tv;x86";
