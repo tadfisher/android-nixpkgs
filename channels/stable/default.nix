@@ -1901,6 +1901,10 @@
     pname = "cmake-3-10-2-4988404";
     version = "3.10.2";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.10.2-darwin-aarch64.zip";
+        sha1 = "f227a85cb53dcb927ac52a5a717f647c4a29bf3b";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/cmake-3.10.2-darwin-x86_64.zip";
         sha1 = "f227a85cb53dcb927ac52a5a717f647c4a29bf3b";
@@ -1912,10 +1916,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/cmake-3.10.2-windows-x86_64.zip";
         sha1 = "0a75b9c5bf558dc31caad7241a44515064656486";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/cmake-3.10.2-darwin-aarch64.zip";
-        sha1 = "f227a85cb53dcb927ac52a5a717f647c4a29bf3b";
       };
     };
     displayName = "CMake 3.10.2.4988404";
@@ -1957,6 +1957,10 @@
     pname = "cmake-3-6-4111459";
     version = "3.6.4111459";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.6.4111459-darwin-aarch64.zip";
+        sha1 = "c9b02d630079783c6d67cb91488b622cfcd9765c";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/cmake-3.6.4111459-darwin-x86_64.zip";
         sha1 = "c9b02d630079783c6d67cb91488b622cfcd9765c";
@@ -1968,10 +1972,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/cmake-3.6.4111459-windows-x86_64.zip";
         sha1 = "4c4730dc3f399b2fa9ab701112d2c439368a59a5";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/cmake-3.6.4111459-darwin-aarch64.zip";
-        sha1 = "c9b02d630079783c6d67cb91488b622cfcd9765c";
       };
     };
     displayName = "CMake 3.6.4111459";
@@ -2112,29 +2112,55 @@
     };
     xml = ./cmdline-tools-4-0.xml;
   };
+  cmdline-tools-5-0 = mkCmdlineTools {
+    id = "cmdline-tools;5.0";
+    pname = "cmdline-tools-5-0";
+    version = "5";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip";
+        sha1 = "0885385de11983c020ff0d47039987fe372160d2";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-7583922_latest.zip";
+        sha1 = "49538fa064c077b188bdb51f3aa57bb2882b0abd";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-7583922_latest.zip";
+        sha1 = "a2f359fb8b075acebcb3e3e48b4170cfe4071882";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/5.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-5-0.xml;
+  };
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "5-rc1";
+    version = "5";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-7006259_latest.zip";
-        sha1 = "f06b1642396ef1e431b990dbe386d5f1e3deabcc";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip";
+        sha1 = "0885385de11983c020ff0d47039987fe372160d2";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-7006259_latest.zip";
-        sha1 = "0752424530724f76cb5a28de84d663e63739e6ee";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-7583922_latest.zip";
+        sha1 = "49538fa064c077b188bdb51f3aa57bb2882b0abd";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-7006259_latest.zip";
-        sha1 = "6f8e359dba91af39c046a791ea32e3ca5149a078";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-7583922_latest.zip";
+        sha1 = "a2f359fb8b075acebcb3e3e48b4170cfe4071882";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
     path = "cmdline-tools/latest";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./cmdline-tools-latest.xml;
   };
@@ -2143,6 +2169,10 @@
     pname = "emulator";
     version = "30.8.2";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-7557372.zip";
+        sha1 = "5396b1b5a693e6b8ac0056f1fe0fbfe72443e86c";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/emulator-darwin_x64-7557372.zip";
         sha1 = "fa3dcf454cb065b856da7bb4120d5549f42234a6";
@@ -2154,10 +2184,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/emulator-windows_x64-7557372.zip";
         sha1 = "e3c6a82b3f32ce22630fda1d3ce78d2d255f1ba9";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-7557372.zip";
-        sha1 = "5396b1b5a693e6b8ac0056f1fe0fbfe72443e86c";
       };
     };
     displayName = "Android Emulator";
@@ -2243,19 +2269,19 @@
   extras-google-auto = mkSrcOnly {
     id = "extras;google;auto";
     pname = "extras-google-auto";
-    version = "2-rc1";
+    version = "2-rc2";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r02.0.rc1.zip";
-        sha1 = "b480489e604371301da10731a793b234b01b8f42";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r02.0.rc2.zip";
+        sha1 = "dbb771c2be299fd88ca05d8b0e381c369a7f7009";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r02.0.rc1.zip";
-        sha1 = "3adaf99d06eaeeb31f7bdbb62ae841e740bfc156";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r02.0.rc2.zip";
+        sha1 = "ec1f68f9acc234f8493f4ba24954d1d45291b736";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r02.0.rc1.zip";
-        sha1 = "e07788ed91d8e6dd3374f77da1cf78afb2664cc0";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r02.0.rc2.zip";
+        sha1 = "471ae94176512f859580e6ac9e8b8f5010632c78";
       };
     };
     displayName = "Android Auto Desktop Head Unit Emulator";
@@ -2833,10 +2859,6 @@
     pname = "ndk-bundle";
     version = "23.0.7344513-rc4";
     sources = {
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r23-beta4-darwin-aarch64.zip";
-        sha1 = "a8fedcf0dd3b3a340e68684a5a2308154a952039";
-      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r23-beta4-darwin-x86_64.zip";
         sha1 = "a8fedcf0dd3b3a340e68684a5a2308154a952039";
@@ -2863,6 +2885,10 @@
     pname = "ndk-16-1-4479499";
     version = "16.1.4479499";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r16b-darwin-aarch64.zip";
+        sha1 = "e51e615449b98c716cf912057e2682e75d55e2de";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r16b-darwin-x86_64.zip";
         sha1 = "e51e615449b98c716cf912057e2682e75d55e2de";
@@ -2879,10 +2905,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r16b-windows-x86_64.zip";
         sha1 = "f3f1909ed1052e98dda2c79d11c22f3da28daf25";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r16b-darwin-aarch64.zip";
-        sha1 = "e51e615449b98c716cf912057e2682e75d55e2de";
-      };
     };
     displayName = "NDK (Side by side) 16.1.4479499";
     path = "ndk/16.1.4479499";
@@ -2897,6 +2919,10 @@
     pname = "ndk-17-2-4988734";
     version = "17.2.4988734";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r17c-darwin-aarch64.zip";
+        sha1 = "f97e3d7711497e3b4faf9e7b3fa0f0da90bb649c";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r17c-darwin-x86_64.zip";
         sha1 = "f97e3d7711497e3b4faf9e7b3fa0f0da90bb649c";
@@ -2913,10 +2939,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r17c-windows-x86_64.zip";
         sha1 = "3e3b8d1650f9d297d130be2b342db956003f5992";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r17c-darwin-aarch64.zip";
-        sha1 = "f97e3d7711497e3b4faf9e7b3fa0f0da90bb649c";
-      };
     };
     displayName = "NDK (Side by side) 17.2.4988734";
     path = "ndk/17.2.4988734";
@@ -2931,6 +2953,10 @@
     pname = "ndk-18-1-5063045";
     version = "18.1.5063045";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r18b-darwin-aarch64.zip";
+        sha1 = "98cb9909aa8c2dab32db188bbdc3ac6207e09440";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r18b-darwin-x86_64.zip";
         sha1 = "98cb9909aa8c2dab32db188bbdc3ac6207e09440";
@@ -2947,10 +2973,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r18b-windows-x86_64.zip";
         sha1 = "6b6d4138aaaad7166679fdfa4780e177f95cee6f";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r18b-darwin-aarch64.zip";
-        sha1 = "98cb9909aa8c2dab32db188bbdc3ac6207e09440";
-      };
     };
     displayName = "NDK (Side by side) 18.1.5063045";
     path = "ndk/18.1.5063045";
@@ -2965,6 +2987,10 @@
     pname = "ndk-19-0-5232133";
     version = "19.0.5232133";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r19-darwin-aarch64.zip";
+        sha1 = "86c1a962601b23b8a6d3d535c93b4b0bc4f29249";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r19-darwin-x86_64.zip";
         sha1 = "86c1a962601b23b8a6d3d535c93b4b0bc4f29249";
@@ -2981,10 +3007,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r19-windows-x86_64.zip";
         sha1 = "37906e8e79a9dddf6805325f706a072055e4136c";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r19-darwin-aarch64.zip";
-        sha1 = "86c1a962601b23b8a6d3d535c93b4b0bc4f29249";
-      };
     };
     displayName = "NDK (Side by side) 19.0.5232133";
     path = "ndk/19.0.5232133";
@@ -2999,6 +3021,10 @@
     pname = "ndk-19-2-5345600";
     version = "19.2.5345600";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r19c-darwin-aarch64.zip";
+        sha1 = "f46b8193109bba8a58e0461c1a48f4534051fb25";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r19c-darwin-x86_64.zip";
         sha1 = "f46b8193109bba8a58e0461c1a48f4534051fb25";
@@ -3015,10 +3041,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r19c-windows-x86_64.zip";
         sha1 = "c4cd8c0b6e7618ca0a871a5f24102e40c239f6a3";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r19c-darwin-aarch64.zip";
-        sha1 = "f46b8193109bba8a58e0461c1a48f4534051fb25";
-      };
     };
     displayName = "NDK (Side by side) 19.2.5345600";
     path = "ndk/19.2.5345600";
@@ -3033,6 +3055,10 @@
     pname = "ndk-20-0-5594570";
     version = "20.0.5594570";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r20-darwin-aarch64.zip";
+        sha1 = "96d5f1c50452596912d1982439c514194b5751e6";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r20-darwin-x86_64.zip";
         sha1 = "96d5f1c50452596912d1982439c514194b5751e6";
@@ -3049,10 +3075,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip";
         sha1 = "36e1dc77fad08ad2498fb94b13ad8caf26bbd9df";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r20-darwin-aarch64.zip";
-        sha1 = "96d5f1c50452596912d1982439c514194b5751e6";
-      };
     };
     displayName = "NDK (Side by side) 20.0.5594570";
     path = "ndk/20.0.5594570";
@@ -3067,6 +3089,10 @@
     pname = "ndk-20-1-5948944";
     version = "20.1.5948944";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r20b-darwin-aarch64.zip";
+        sha1 = "b51290ab69cb89de1f0ba108702277bc333b38be";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r20b-darwin-x86_64.zip";
         sha1 = "b51290ab69cb89de1f0ba108702277bc333b38be";
@@ -3083,10 +3109,6 @@
         url = "https://dl.google.com/android/repository/android-ndk-r20b-windows-x86_64.zip";
         sha1 = "ead0846608040b8344ad2bc9bc721b88cf13fb8d";
       };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r20b-darwin-aarch64.zip";
-        sha1 = "b51290ab69cb89de1f0ba108702277bc333b38be";
-      };
     };
     displayName = "NDK (Side by side) 20.1.5948944";
     path = "ndk/20.1.5948944";
@@ -3101,6 +3123,10 @@
     pname = "ndk-21-0-6113669";
     version = "21.0.6113669";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21-darwin-aarch64.zip";
+        sha1 = "0d50636cc0e34ed3ba540d6d5818ea0cf10f16aa";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21-darwin-x86_64.zip";
         sha1 = "0d50636cc0e34ed3ba540d6d5818ea0cf10f16aa";
@@ -3112,10 +3138,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r21-windows-x86_64.zip";
         sha1 = "c61631eacbd40c30273b716a4e589c6877b85419";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21-darwin-aarch64.zip";
-        sha1 = "0d50636cc0e34ed3ba540d6d5818ea0cf10f16aa";
       };
     };
     displayName = "NDK (Side by side) 21.0.6113669";
@@ -3131,6 +3153,10 @@
     pname = "ndk-21-1-6352462";
     version = "21.1.6352462";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21b-darwin-aarch64.zip";
+        sha1 = "e1de2f749c5c32ae991c3ccaabfcdf7688ee221f";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21b-darwin-x86_64.zip";
         sha1 = "e1de2f749c5c32ae991c3ccaabfcdf7688ee221f";
@@ -3142,10 +3168,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r21b-windows-x86_64.zip";
         sha1 = "6809fac4a6e829f4bac64628fa9835d57bbd61a8";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21b-darwin-aarch64.zip";
-        sha1 = "e1de2f749c5c32ae991c3ccaabfcdf7688ee221f";
       };
     };
     displayName = "NDK (Side by side) 21.1.6352462";
@@ -3161,6 +3183,10 @@
     pname = "ndk-21-2-6472646";
     version = "21.2.6472646";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21c-darwin-aarch64.zip";
+        sha1 = "c42a836f6697a4ef8b927813d5f7dd12e974cfba";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21c-darwin-x86_64.zip";
         sha1 = "c42a836f6697a4ef8b927813d5f7dd12e974cfba";
@@ -3172,10 +3198,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r21c-windows-x86_64.zip";
         sha1 = "93563a1297a60b5da49a48f62340dbf0c878a5f3";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21c-darwin-aarch64.zip";
-        sha1 = "c42a836f6697a4ef8b927813d5f7dd12e974cfba";
       };
     };
     displayName = "NDK (Side by side) 21.2.6472646";
@@ -3191,6 +3213,10 @@
     pname = "ndk-21-3-6528147";
     version = "21.3.6528147";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21d-darwin-aarch64.zip";
+        sha1 = "ef06c9f9d7efd6f243eb3c05ac440562ae29ae12";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21d-darwin-x86_64.zip";
         sha1 = "ef06c9f9d7efd6f243eb3c05ac440562ae29ae12";
@@ -3202,10 +3228,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r21d-windows-x86_64.zip";
         sha1 = "99175ce1210258f2280568cd340e0666c69955c7";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21d-darwin-aarch64.zip";
-        sha1 = "ef06c9f9d7efd6f243eb3c05ac440562ae29ae12";
       };
     };
     displayName = "NDK (Side by side) 21.3.6528147";
@@ -3221,6 +3243,10 @@
     pname = "ndk-21-4-7075529";
     version = "21.4.7075529";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r21e-darwin-aarch64.zip";
+        sha1 = "3f15c23a1c247ad17c7c271806848dbd40434738";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21e-darwin-x86_64.zip";
         sha1 = "3f15c23a1c247ad17c7c271806848dbd40434738";
@@ -3232,10 +3258,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r21e-windows-x86_64.zip";
         sha1 = "fc44fea8bb3f5a6789821f40f41dce2d2cd5dc30";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21e-darwin-aarch64.zip";
-        sha1 = "3f15c23a1c247ad17c7c271806848dbd40434738";
       };
     };
     displayName = "NDK (Side by side) 21.4.7075529";
@@ -3251,6 +3273,10 @@
     pname = "ndk-22-0-7026061";
     version = "22.0.7026061";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22-darwin-aarch64.zip";
+        sha1 = "9cf3816ed3e4308ff03bd5f69100b373bad12f13";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r22-darwin-x86_64.zip";
         sha1 = "9cf3816ed3e4308ff03bd5f69100b373bad12f13";
@@ -3262,10 +3288,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r22-windows-x86_64.zip";
         sha1 = "c03f761caf1c6f5efbeb5ccfa573ea922cb955b3";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22-darwin-aarch64.zip";
-        sha1 = "9cf3816ed3e4308ff03bd5f69100b373bad12f13";
       };
     };
     displayName = "NDK (Side by side) 22.0.7026061";
@@ -3281,6 +3303,10 @@
     pname = "ndk-22-1-7171670";
     version = "22.1.7171670";
     sources = {
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r22b-darwin-aarch64.zip";
+        sha1 = "dc80e8a2cfcb28db74c1931d42c652e9d17ff2c3";
+      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r22b-darwin-x86_64.zip";
         sha1 = "dc80e8a2cfcb28db74c1931d42c652e9d17ff2c3";
@@ -3292,10 +3318,6 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r22b-windows-x86_64.zip";
         sha1 = "96ba1a049303cf6bf3ee84cfd64d6bcd43486a50";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r22b-darwin-aarch64.zip";
-        sha1 = "dc80e8a2cfcb28db74c1931d42c652e9d17ff2c3";
       };
     };
     displayName = "NDK (Side by side) 22.1.7171670";
@@ -3327,19 +3349,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "31.0.2";
+    version = "31.0.3";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/42b081e1e068bb936179551684cdcb30315e245c.platform-tools_r31.0.2-darwin.zip";
-        sha1 = "78937049851e1db90317612c6b831759f56fc86d";
+        url = "https://dl.google.com/android/repository/e8b2b4cbe47c728c1e54c5f524440b52d4e1a33c.platform-tools_r31.0.3-darwin.zip";
+        sha1 = "15f6f7e97b35994d538a0fc5147ad5fb502ba03d";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r31.0.2-linux.zip";
-        sha1 = "ff02a9d8c6fa9687e1207fc0c4b84033925d452d";
+        url = "https://dl.google.com/android/repository/platform-tools_r31.0.3-linux.zip";
+        sha1 = "f09581347ed39978abb3a99c6bb286de6adc98ef";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r31.0.2-windows.zip";
-        sha1 = "9cc0f642a66706a978214395b85c8e8228c24f2f";
+        url = "https://dl.google.com/android/repository/platform-tools_r31.0.3-windows.zip";
+        sha1 = "26bc02bbd920e8ed461ae526cc4c69d773b72395";
       };
     };
     displayName = "Android SDK Platform-Tools";
