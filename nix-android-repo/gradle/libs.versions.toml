@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.5.20"
+kotlin = "1.5.30"
 
 [libraries]
 common = "com.android.tools:common:+"
