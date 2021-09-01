@@ -3,6 +3,7 @@
 { mkBuildTools
 , mkCmdlineTools
 , mkEmulator
+, mkNdk
 , mkPlatformTools
 , mkPrebuilt
 , mkTools
@@ -2854,7 +2855,7 @@
     };
     xml = ./extras-m2repository-com-android-support-constraint-constraint-layout-1-0-2.xml;
   };
-  ndk-bundle = mkSrcOnly {
+  ndk-bundle = mkNdk {
     id = "ndk-bundle";
     pname = "ndk-bundle";
     version = "23.0.7344513-rc4";
@@ -2884,7 +2885,7 @@
     };
     xml = ./ndk-bundle.xml;
   };
-  ndk-16-1-4479499 = mkSrcOnly {
+  ndk-16-1-4479499 = mkNdk {
     id = "ndk;16.1.4479499";
     pname = "ndk-16-1-4479499";
     version = "16.1.4479499";
@@ -2918,7 +2919,7 @@
     };
     xml = ./ndk-16-1-4479499.xml;
   };
-  ndk-17-2-4988734 = mkSrcOnly {
+  ndk-17-2-4988734 = mkNdk {
     id = "ndk;17.2.4988734";
     pname = "ndk-17-2-4988734";
     version = "17.2.4988734";
@@ -2952,7 +2953,7 @@
     };
     xml = ./ndk-17-2-4988734.xml;
   };
-  ndk-18-1-5063045 = mkSrcOnly {
+  ndk-18-1-5063045 = mkNdk {
     id = "ndk;18.1.5063045";
     pname = "ndk-18-1-5063045";
     version = "18.1.5063045";
@@ -2986,7 +2987,7 @@
     };
     xml = ./ndk-18-1-5063045.xml;
   };
-  ndk-19-0-5232133 = mkSrcOnly {
+  ndk-19-0-5232133 = mkNdk {
     id = "ndk;19.0.5232133";
     pname = "ndk-19-0-5232133";
     version = "19.0.5232133";
@@ -3020,7 +3021,7 @@
     };
     xml = ./ndk-19-0-5232133.xml;
   };
-  ndk-19-2-5345600 = mkSrcOnly {
+  ndk-19-2-5345600 = mkNdk {
     id = "ndk;19.2.5345600";
     pname = "ndk-19-2-5345600";
     version = "19.2.5345600";
@@ -3054,7 +3055,7 @@
     };
     xml = ./ndk-19-2-5345600.xml;
   };
-  ndk-20-0-5594570 = mkSrcOnly {
+  ndk-20-0-5594570 = mkNdk {
     id = "ndk;20.0.5594570";
     pname = "ndk-20-0-5594570";
     version = "20.0.5594570";
@@ -3088,7 +3089,7 @@
     };
     xml = ./ndk-20-0-5594570.xml;
   };
-  ndk-20-1-5948944 = mkSrcOnly {
+  ndk-20-1-5948944 = mkNdk {
     id = "ndk;20.1.5948944";
     pname = "ndk-20-1-5948944";
     version = "20.1.5948944";
@@ -3122,7 +3123,7 @@
     };
     xml = ./ndk-20-1-5948944.xml;
   };
-  ndk-21-0-6113669 = mkSrcOnly {
+  ndk-21-0-6113669 = mkNdk {
     id = "ndk;21.0.6113669";
     pname = "ndk-21-0-6113669";
     version = "21.0.6113669";
@@ -3152,7 +3153,7 @@
     };
     xml = ./ndk-21-0-6113669.xml;
   };
-  ndk-21-1-6352462 = mkSrcOnly {
+  ndk-21-1-6352462 = mkNdk {
     id = "ndk;21.1.6352462";
     pname = "ndk-21-1-6352462";
     version = "21.1.6352462";
@@ -3182,7 +3183,7 @@
     };
     xml = ./ndk-21-1-6352462.xml;
   };
-  ndk-21-2-6472646 = mkSrcOnly {
+  ndk-21-2-6472646 = mkNdk {
     id = "ndk;21.2.6472646";
     pname = "ndk-21-2-6472646";
     version = "21.2.6472646";
@@ -3212,7 +3213,7 @@
     };
     xml = ./ndk-21-2-6472646.xml;
   };
-  ndk-21-3-6528147 = mkSrcOnly {
+  ndk-21-3-6528147 = mkNdk {
     id = "ndk;21.3.6528147";
     pname = "ndk-21-3-6528147";
     version = "21.3.6528147";
@@ -3242,7 +3243,7 @@
     };
     xml = ./ndk-21-3-6528147.xml;
   };
-  ndk-21-4-7075529 = mkSrcOnly {
+  ndk-21-4-7075529 = mkNdk {
     id = "ndk;21.4.7075529";
     pname = "ndk-21-4-7075529";
     version = "21.4.7075529";
@@ -3272,7 +3273,7 @@
     };
     xml = ./ndk-21-4-7075529.xml;
   };
-  ndk-22-0-7026061 = mkSrcOnly {
+  ndk-22-0-7026061 = mkNdk {
     id = "ndk;22.0.7026061";
     pname = "ndk-22-0-7026061";
     version = "22.0.7026061";
@@ -3302,7 +3303,7 @@
     };
     xml = ./ndk-22-0-7026061.xml;
   };
-  ndk-22-1-7171670 = mkSrcOnly {
+  ndk-22-1-7171670 = mkNdk {
     id = "ndk;22.1.7171670";
     pname = "ndk-22-1-7171670";
     version = "22.1.7171670";
@@ -3332,7 +3333,7 @@
     };
     xml = ./ndk-22-1-7171670.xml;
   };
-  ndk-23-0-7599858 = mkSrcOnly {
+  ndk-23-0-7599858 = mkNdk {
     id = "ndk;23.0.7599858";
     pname = "ndk-23-0-7599858";
     version = "23.0.7599858";
