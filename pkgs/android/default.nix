@@ -8,6 +8,7 @@ lib.makeScope pkgs.newScope (self: with self; rec {
   mkBuildTools = callPackage ./build-tools.nix { };
   mkCmdlineTools = callPackage ./cmdline-tools.nix { };
   mkEmulator = callPackage ./emulator.nix { };
+  mkNdk = callPackage ./ndk.nix { };
   mkPlatformTools = callPackage ./platform-tools.nix { };
   mkPrebuilt = callPackage ./prebuilt.nix { };
   mkSrcOnly = callPackage ./src-only.nix { };

@@ -31,6 +31,7 @@ data class Repo(
             { mkBuildTools
             , mkCmdlineTools
             , mkEmulator
+            , mkNdk
             , mkPlatformTools
             , mkPrebuilt
             , mkTools
@@ -173,6 +174,7 @@ fun RemotePackage.builder(): String {
             "build-tools" -> "mkBuildTools"
             "cmdline-tools" -> "mkCmdlineTools"
             "emulator" -> "mkEmulator"
+            "ndk", "ndk-bundle" -> "mkNdk";
             "platform-tools" -> "mkPlatformTools"
             "tools" -> "mkTools"
             "cmake", "lldb", "skiaparser" -> "mkPrebuilt"
