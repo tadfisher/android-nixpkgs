@@ -77,10 +77,11 @@
 
         checks.sdk = self.sdk.${system} (sdkPkgs: with sdkPkgs; [
           cmdline-tools-latest
-          build-tools-30-0-3
-          platform-tools
-          platforms-android-30
+          build-tools-31-0-0
           emulator
+          ndk-bundle
+          platform-tools
+          platforms-android-31
         ]);
 
         devShell = pkgs.callPackage ./nix-android-repo/devshell.nix {
