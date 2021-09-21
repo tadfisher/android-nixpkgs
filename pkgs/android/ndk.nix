@@ -71,6 +71,7 @@ let
     dontStrip = true;
     dontPatchELF = true;
     dontAutoPatchelf = true;
+    autoPatchelfIgnoreMissingDeps = true;
 
     passthru.installSdk = ''
       ln -sf $pkgBase/ndk-build $out/bin/ndk-build
