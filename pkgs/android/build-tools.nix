@@ -19,6 +19,8 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux {
     zlib
   ];
 
+  autoPatchelfIgnoreMissingDeps = true;
+
   autoPatchelfCCWrappers = [
     stdenv.cc
   ];
