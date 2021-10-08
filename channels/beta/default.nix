@@ -5451,42 +5451,6 @@
     };
     xml = ./system-images-android-23-android-tv-x86.xml;
   };
-  system-images-android-23-android-wear-armeabi-v7a = mkSrcOnly {
-    id = "system-images;android-23;android-wear;armeabi-v7a";
-    pname = "system-images-android-23-android-wear-armeabi-v7a";
-    version = "6";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/armeabi-v7a-23_r06.zip";
-        sha1 = "0df5d34b1cdaaaa3805a2f06bb889901eabe2e71";
-      };
-    };
-    displayName = "Android Wear ARM EABI v7a System Image";
-    path = "system-images/android-23/android-wear/armeabi-v7a";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-23-android-wear-armeabi-v7a.xml;
-  };
-  system-images-android-23-android-wear-x86 = mkSrcOnly {
-    id = "system-images;android-23;android-wear;x86";
-    pname = "system-images-android-23-android-wear-x86";
-    version = "6";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-23_r06.zip";
-        sha1 = "3b15c123f3f71459d5b60c1714d49c5d90a5525e";
-      };
-    };
-    displayName = "Android Wear Intel x86 Atom System Image";
-    path = "system-images/android-23/android-wear/x86";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-23-android-wear-x86.xml;
-  };
   system-images-android-23-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-23;default;armeabi-v7a";
     pname = "system-images-android-23-default-armeabi-v7a";
