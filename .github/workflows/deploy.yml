@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: nixbuild/nix-quick-install-action@v6
+      - uses: nixbuild/nix-quick-install-action@v8
         with:
-          nix_version: 2.4pre20210601_5985b8b
           nix_conf: experimental-features = nix-command flakes
       - name: update android sources
         run: ./scripts/update.sh
