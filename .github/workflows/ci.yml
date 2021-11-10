@@ -12,9 +12,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: nixbuild/nix-quick-install-action@v6
+      - uses: nixbuild/nix-quick-install-action@v8
         with:
-          nix_version: 2.4pre20210601_5985b8b
           nix_conf: experimental-features = nix-command flakes
       - name: lint
         run: ./scripts/format.sh --check
