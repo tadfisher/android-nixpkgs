@@ -20,7 +20,6 @@ import kotlin.io.path.exists
 import kotlin.io.path.fileSize
 import kotlin.io.path.inputStream
 
-
 class NixDownloader : Downloader {
     override fun downloadFully(url: URL, indicator: ProgressIndicator): Path {
         val target = kotlin.io.path.createTempFile("NixDownloader")
