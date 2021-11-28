@@ -17,12 +17,14 @@ dependencies {
     implementation(libs.common)
     implementation(libs.sdklib)
     implementation(libs.coroutines)
+    implementation(libs.jaxb.api)
+    runtimeOnly(libs.jaxb.impl)
 }
 
 tasks {
     withType<KotlinCompile> {
         kotlinOptions {
-            jvmTarget = "11"
+            jvmTarget = "17"
         }
     }
 
