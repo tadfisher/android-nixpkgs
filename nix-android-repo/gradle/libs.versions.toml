@@ -1,7 +1,9 @@
 [versions]
-kotlin = "1.5.30"
+kotlin = "1.6.0"
 
 [libraries]
 common = "com.android.tools:common:+"
 sdklib = "com.android.tools:sdklib:+"
-coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.+"
+coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.+"
+jaxb-api = "jakarta.xml.bind:jakarta.xml.bind-api:2.3.+"
+jaxb-impl = "com.sun.xml.bind:jaxb-impl:2.3.+"

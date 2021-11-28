@@ -16,6 +16,8 @@ let
 
 in
 rec {
+  gradle = callPackage ./gradle.nix { };
+
   gradle-properties = runCommand "gradle.properties"
     {
       mavenRepo = "file://${maven-repo}";
