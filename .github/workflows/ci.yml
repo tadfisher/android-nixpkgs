@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: nixbuild/nix-quick-install-action@v8
+      - uses: nixbuild/nix-quick-install-action@v9
         with:
           nix_conf: experimental-features = nix-command flakes
       - name: lint
