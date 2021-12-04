@@ -2194,26 +2194,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "31.1.4";
+    version = "31.2.1";
     sources = {
-      x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-7920983.zip";
-        sha1 = "fa3cc18914be8d89ee65e0428bc08efd9a8d9cce";
-      };
-      x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-7920983.zip";
-        sha1 = "d273603bfb87b95f2da69f7f56c8062b546893ef";
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-7952822.zip";
+        sha1 = "1cdfcaa67d8dd6bc36f6a94515d9446d2ab284c1";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-7920983.zip";
-        sha1 = "c9f00a785ae2b07363ee77b550c0cbde94fbd1f8";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-7952822.zip";
+        sha1 = "4ebf074123a274d04b2a2d7c1dd1ec6c270a91ab";
+      };
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-7952822.zip";
+        sha1 = "9a3c28a62015576a2ba7852933fa7161ef3846f4";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-7952822.zip";
+        sha1 = "35d1efd3c7dd07d1b9593a3e7978952150093dae";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./emulator.xml;
   };
@@ -6116,6 +6120,24 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-29-android-tv-x86.xml;
+  };
+  system-images-android-29-default-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-29;default;arm64-v8a";
+    pname = "system-images-android-29-default-arm64-v8a";
+    version = "8";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-29_r08.zip";
+        sha1 = "fa0d67d7430fcc84b2fe2508ea81e92ac644e264";
+      };
+    };
+    displayName = "ARM 64 v8a System Image";
+    path = "system-images/android-29/default/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-29-default-arm64-v8a.xml;
   };
   system-images-android-29-default-x86 = mkSrcOnly {
     id = "system-images;android-29;default;x86";
