@@ -18,4 +18,4 @@ jobs:
       - name: lint
         run: ./scripts/format.sh --check
       - name: test
-        run: nix flake check
+        run: nix flake check --show-trace
