@@ -19,8 +19,8 @@ If you're not using flakes, Nix channel is provided which contains `stable`,
 `beta`, `preview`, and `canary` releases of the Android SDK package set.
 
 ```sh
-nix-channel --add https://tadfisher.github.io/android-nixpkgs android
-nix-channel --update android
+nix-channel --add https://tadfisher.github.io/android-nixpkgs android-nixpkgs
+nix-channel --update android-nixpkgs
 ```
 
 The `sdk` function is provided to easily compose a selection of packages into a usable Android SDK
@@ -32,19 +32,19 @@ installation.
 with pkgs;
 
 let
-  androidSdkPackages = callPackage <android> {
+  android-nixpkgs = callPackage <android-nixpkgs> {
     # Default; can also choose "beta", "preview", or "canary".
     channel = "stable";
   };
 
 in
-  androidSdkPackages.sdk (apkgs: with apkgs; [
-    cmdline-tools-latest
-    build-tools-30-0-2
-    platform-tools
-    platforms-android-30
-    emulator
-  ])
+android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
+  cmdline-tools-latest
+  build-tools-31-0-0
+  platform-tools
+  platforms-android-31
+  emulator
+])
 ```
 
 If you save this in something like `sdk.nix`, you can get a dev environment with `nix-shell`. This
@@ -62,13 +62,13 @@ Here's an example `shell.nix` which includes Android Studio from Nixpkgs and a w
 with pkgs;
 
 let
-  androidSdkPackages = callPackage <android> { };
+  android-nixpkgs = callPackage <android> { };
 
-  androidSdk = androidSdkPackages.sdk (sdkPkgs: with sdkPkgs; [
+  android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
     cmdline-tools-latest
-    build-tools-30-0-2
+    build-tools-31-0-0
     platform-tools
-    platforms-android-30
+    platforms-android-31
     emulator
   ]);
 
@@ -76,9 +76,35 @@ in
 mkShell {
   buildInputs = [
     android-studio
-    androidSdk
+    android-sdk
   ];
 }
+```
+
+### Ad-hoc
+
+If you don't want to set up a channel, and you don't use Nix flakes, you can import
+`android-nixpkgs` using `builtins.fetchGit`:
+
+``` nix
+{ pkgs ? import <nixpkgs> { } }:
+
+with pkgs;
+
+let
+  android-nixpkgs = import (builtins.fetchGit {
+    url = "https://github.com/tadfisher/android-nixpkgs.git";
+    ref = "main";  # Or "stable", "beta", "preview", "canary"
+  });
+
+in
+android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
+  cmdline-tools-latest
+  build-tools-31-0-0
+  platform-tools
+  platforms-android-31
+  emulator
+])
 ```
 
 ### Flake
@@ -92,7 +118,7 @@ for building Android apps or libraries.
   description = "My Android app";
 
   inputs = {
-    android = {
+    android-nixpkgs = {
       url = "github:tadfisher/android-nixpkgs";
 
       # The main branch follows the "canary" channel of the Android SDK
@@ -111,12 +137,12 @@ for building Android apps or libraries.
     };
   };
 
-  outputs = { self, android }: {
-    packages.x86_64-linux.android-sdk = android.sdk (sdkPkgs: with sdkPkgs; [
+  outputs = { self, android-nixpkgs }: {
+    packages.x86_64-linux.android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
       cmdline-tools-latest
-      build-tools-30-0-2
+      build-tools-31-0-0
       platform-tools
-      platforms-android-30
+      platforms-android-31
       emulator
     ]);
   };
@@ -149,29 +175,26 @@ In `home.nix`:
 { config, pkgs, ... }:
 
 let
-  android-sdk =
-    let
-      android-nixpkgs = import (fetchTarball "https://github.com/tadfisher/android-nixpkgs/archive/main.tar.gz") {
-        inherit pkgs;
-      };
-    in
-      import (android-nixpkgs + "/hm-module.nix");
+  androidSdkModule = import ((builtins.fetchGit {
+    url = "https://github.com/tadfisher/android-nixpkgs.git";
+    ref = "main";  # Or "stable", "beta", "preview", "canary"
+  }) + "/hm-module.nix");
 
 in
 {
-  imports = [ android-sdk ];
+  imports = [ androidSdkModule ];
 
   android-sdk.enable = true;
 
   # Optional; default path is "~/.local/share/android".
   android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
 
-  android-sdk.packages = sdk: with sdk; [
-    build-tools-30-0-2
+  android-sdk.packages = sdkPkgs: with sdkPkgs; [
+    build-tools-31-0-0
     cmdline-tools-latest
     emulator
-    platforms-android-30
-    sources-android-30
+    platforms-android-31
+    sources-android-31
   ];
 }
 ```
@@ -215,11 +238,11 @@ An example `flake.nix`:
                 android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
 
                 android-sdk.packages = sdk: with sdk; [
-                  build-tools-30-0-2
+                  build-tools-31-0-0
                   cmdline-tools-latest
                   emulator
-                  platforms-android-30
-                  sources-android-30
+                  platforms-android-31
+                  sources-android-31
                 ];
               }
             ];
