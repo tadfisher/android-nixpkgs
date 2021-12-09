@@ -50,11 +50,6 @@
           };
         };
 
-        localPkgs = import ./nix-android-repo {
-          inherit (nixpkgs) lib;
-          final = pkgs;
-        };
-
         sdkPkgs = sdkPkgsFor pkgs;
       in
       {
@@ -65,30 +60,23 @@
             type = "app";
             program = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
           };
-          nix-android-repo = {
-            type = "app";
-            program = "${localPkgs.nix-android-repo}/bin/nix-android-repo";
-          };
-          updateLocks = {
-            type = "app";
-            program = "${localPkgs.update-locks}/bin/update-locks";
-          };
         };
 
-        checks.sdk = self.sdk.${system} (sdkPkgs: with sdkPkgs; [
-          cmdline-tools-latest
-          build-tools-31-0-0
-          emulator
-          ndk-bundle
-          platform-tools
-          platforms-android-31
-        ]);
+        checks = {
+          lint = with pkgs; runCommandLocal "lint" { } ''
+            cd ${./.}
+            ${nixpkgs-fmt}/bin/nixpkgs-fmt --check *.nix pkgs/android/*.nix template/*.nix
+            echo "checked" > $out
+          '';
 
-        devShell = pkgs.callPackage ./nix-android-repo/devshell.nix {
-          inherit (localPkgs)
-            gradle-properties
-            update-locks;
-          devshell = devshell.legacyPackages.${system};
+          sdk = self.sdk.${system} (sdkPkgs: with sdkPkgs; [
+            cmdline-tools-latest
+            build-tools-31-0-0
+            emulator
+            ndk-bundle
+            platform-tools
+            platforms-android-31
+          ]);
         };
 
         packages = flake-utils.lib.flattenTree sdkPkgs.packages;
