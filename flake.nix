@@ -71,11 +71,11 @@
 
           sdk = self.sdk.${system} (sdkPkgs: with sdkPkgs; [
             cmdline-tools-latest
-            build-tools-31-0-0
+            build-tools-32-0-0
             emulator
             ndk-bundle
             platform-tools
-            platforms-android-31
+            platforms-android-32
           ]);
         };
 

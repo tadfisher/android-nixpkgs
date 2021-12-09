@@ -40,7 +40,7 @@ let
 in
 android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
   cmdline-tools-latest
-  build-tools-31-0-0
+  build-tools-32-0-0
   platform-tools
   platforms-android-31
   emulator
@@ -66,7 +66,7 @@ let
 
   android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
     cmdline-tools-latest
-    build-tools-31-0-0
+    build-tools-32-0-0
     platform-tools
     platforms-android-31
     emulator
@@ -100,7 +100,7 @@ let
 in
 android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
   cmdline-tools-latest
-  build-tools-31-0-0
+  build-tools-32-0-0
   platform-tools
   platforms-android-31
   emulator
@@ -140,7 +140,7 @@ for building Android apps or libraries.
   outputs = { self, android-nixpkgs }: {
     packages.x86_64-linux.android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
       cmdline-tools-latest
-      build-tools-31-0-0
+      build-tools-32-0-0
       platform-tools
       platforms-android-31
       emulator
@@ -190,7 +190,7 @@ in
   android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
 
   android-sdk.packages = sdkPkgs: with sdkPkgs; [
-    build-tools-31-0-0
+    build-tools-32-0-0
     cmdline-tools-latest
     emulator
     platforms-android-31
@@ -238,7 +238,7 @@ An example `flake.nix`:
                 android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
 
                 android-sdk.packages = sdk: with sdk; [
-                  build-tools-31-0-0
+                  build-tools-32-0-0
                   cmdline-tools-latest
                   emulator
                   platforms-android-31
