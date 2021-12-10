@@ -65,7 +65,7 @@
         checks = {
           lint = with pkgs; runCommandLocal "lint" { } ''
             cd ${./.}
-            ${nixpkgs-fmt}/bin/nixpkgs-fmt --check *.nix pkgs/android/*.nix template/*.nix
+            ${nixpkgs-fmt}/bin/nixpkgs-fmt --check *.nix pkgs/android/*.nix template/*.nix nix-android-repo/*.nix
             echo "checked" > $out
           '';
 
