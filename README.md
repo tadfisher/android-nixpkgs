@@ -62,7 +62,7 @@ Here's an example `shell.nix` which includes Android Studio from Nixpkgs and a w
 with pkgs;
 
 let
-  android-nixpkgs = callPackage <android> { };
+  android-nixpkgs = callPackage <android-nixpkgs> { };
 
   android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
     cmdline-tools-latest
@@ -94,13 +94,15 @@ with pkgs;
 let
   android-nixpkgs = callPackage (import (builtins.fetchGit {
     url = "https://github.com/tadfisher/android-nixpkgs.git";
-    ref = "main";  # Or "stable", "beta", "preview", "canary"
-  })) { };
+  })) {
+    # Default; can also choose "beta", "preview", or "canary".
+    channel = "stable";
+  };
 
 in
 android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
   cmdline-tools-latest
-  build-tools-32-0-0
+  build-tools-31-0-0
   platform-tools
   platforms-android-31
   emulator
@@ -190,7 +192,7 @@ in
   android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
 
   android-sdk.packages = sdkPkgs: with sdkPkgs; [
-    build-tools-32-0-0
+    build-tools-31-0-0
     cmdline-tools-latest
     emulator
     platforms-android-31
@@ -238,7 +240,7 @@ An example `flake.nix`:
                 android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
 
                 android-sdk.packages = sdk: with sdk; [
-                  build-tools-32-0-0
+                  build-tools-31-0-0
                   cmdline-tools-latest
                   emulator
                   platforms-android-31
