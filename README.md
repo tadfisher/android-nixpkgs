@@ -92,10 +92,10 @@ If you don't want to set up a channel, and you don't use Nix flakes, you can imp
 with pkgs;
 
 let
-  android-nixpkgs = import (builtins.fetchGit {
+  android-nixpkgs = callPackage (import (builtins.fetchGit {
     url = "https://github.com/tadfisher/android-nixpkgs.git";
     ref = "main";  # Or "stable", "beta", "preview", "canary"
-  });
+  })) { };
 
 in
 android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
