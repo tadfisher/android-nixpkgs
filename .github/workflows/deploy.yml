@@ -11,12 +11,14 @@ jobs:
       - uses: nixbuild/nix-quick-install-action@v9
         with:
           nix_conf: experimental-features = nix-command flakes
+      - name: update flake inputs
+        run: nix flake update
       - name: update android sources
         run: ./scripts/update.sh
-      - name: lint
-        run: ./scripts/format.sh --check
       - name: test
-        run: nix flake check
+        run: |
+          nix flake check --show-trace
+          nix flake check ./nix-android-repo --show-trace
       - name: push
         run: |
           git config user.name "github-actions"

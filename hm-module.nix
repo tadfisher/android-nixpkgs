@@ -25,11 +25,11 @@ in
       defaultText = "sdk: [ sdk.cmdline-tools-latest ]";
       example = literalExample ''
         sdk: with sdk; [
-          build-tools-30-0-2
+          build-tools-32-0-0
           cmdline-tools-latest
           emulator
-          platforms-android-30
-          sources-android-30
+          platforms-android-31
+          sources-android-31
         ]
       '';
     };
