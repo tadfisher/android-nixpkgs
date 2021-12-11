@@ -47,7 +47,9 @@ let
       '';
       shellHook = ''
         echo Using Android SDK root: $out/share/android-sdk
-        source $out/nix-support/setup-hook
+        export ANDROID_SDK_ROOT="$out/share/android-sdk"
+        # Android Studio uses this even though it is deprecated.
+        export ANDROID_HOME="$ANDROID_SDK_ROOT"
       '';
     } ''
     export ANDROID_SDK_ROOT=$out/share/android-sdk
