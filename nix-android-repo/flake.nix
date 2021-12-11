@@ -28,10 +28,6 @@
             type = "app";
             program = "${self.packages.${system}.nix-android-repo}/bin/nix-android-repo";
           };
-          updateLocks = {
-            type = "app";
-            program = "${self.packages.${system}.update-locks}/bin/update-locks";
-          };
         };
 
         packages = {
