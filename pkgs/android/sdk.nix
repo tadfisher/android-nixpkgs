@@ -7,7 +7,9 @@ let
   inherit (lib) all any assertMsg concatMapStringsSep filterAttrs groupBy groupBy'
     mapAttrs mapAttrsToList unique;
 
-  pkgs = pkgsFun packages;
+  packages' = filterAttrs (_: p: lib.isDerivation p) packages;
+
+  pkgs = pkgsFun packages';
 
   duplicates = filterAttrs (path: ps: (length ps) > 1) (groupBy (p: p.path) pkgs);
 
@@ -17,7 +19,7 @@ let
 
   licenses =
     let
-      licenseHashes = groupBy' (sum: p: unique (sum ++ [ p.license.hash ])) [ ] (p: p.license.id) pkgs;
+      licenseHashes = groupBy' (sum: p: unique (sum ++ [ p.license.hash ])) [ ] (p: p.license.id) (builtins.attrValues packages');
       licenseFiles = mapAttrs (id: hashes: writeText id ("\n" + (concatStringsSep "\n" hashes))) licenseHashes;
     in
     linkFarm "android-licenses" (mapAttrsToList (id: file: { name = id; path = file; }) licenseFiles);
