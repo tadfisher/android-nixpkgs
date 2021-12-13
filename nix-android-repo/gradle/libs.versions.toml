@@ -7,3 +7,6 @@ sdklib = "com.android.tools:sdklib:+"
 coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.+"
 jaxb-api = "jakarta.xml.bind:jakarta.xml.bind-api:2.3.+"
 jaxb-impl = "com.sun.xml.bind:jaxb-impl:2.3.+"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

@@ -15,7 +15,7 @@ let
 
   buildArgs = lib.optionalAttrs stdenv.isLinux (
     if (hasPrefix "cmake;" id || hasPrefix "skiaparser;" id) then {
-      nativeBuildInputs = [ autoPatchelfHook ];
+      nativeBuildInputs = [ autoPatchelfHook ncurses5 ];
       buildInputs = [ stdenv.cc.cc.lib ];
     }
 

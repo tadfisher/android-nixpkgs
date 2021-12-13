@@ -26,8 +26,8 @@ devshell.mkShell {
 
   devshell.startup = {
     gradle-properties.text = ''
-      rm -f $PRJ_ROOT/nix-android-repo/gradle.properties
-      ln -sf ${gradle-properties} $PRJ_ROOT/nix-android-repo/gradle.properties
+      rm -f $PRJ_ROOT/gradle.properties
+      ln -sf ${gradle-properties} $PRJ_ROOT/gradle.properties
     '';
   };
 
