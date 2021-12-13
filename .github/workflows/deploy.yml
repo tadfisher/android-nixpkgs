@@ -24,6 +24,14 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           ./scripts/deploy.sh
+  channel:
+    runs-on: ubuntu-latest
+    needs: update
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nixbuild/nix-quick-install-action@v9
+        with:
+          nix_conf: experimental-features = nix-command flakes
       - name: build nixexprs
         run: ./scripts/channel.sh
       - name: deploy nix channel
@@ -36,31 +44,18 @@ jobs:
           SINGLE_COMMIT: true
           GIT_CONFIG_NAME: "github-actions"
           GIT_CONFIG_EMAIL: "github-actions@github.com"
-      - name: main -> stable
-        uses: devmasx/merge-branch@v1.3.1
+  sync:
+    runs-on: ubuntu-latest
+    needs: update
+    strategy:
+      matrix:
+        channel: [stable, beta, preview, canary]
+    steps:
+      - uses: actions/checkout@v2
+      - name: main -> ${{ matrix.channel }}
+        uses: devmasx/merge-branch@v1.4.0
         with:
           type: now
           from_branch: main
-          target_branch: stable
-          github_token: ${{ github.token }}
-      - name: main -> beta
-        uses: devmasx/merge-branch@v1.3.1
-        with:
-          type: now
-          from_branch: main
-          target_branch: beta
-          github_token: ${{ github.token }}
-      - name: main -> preview
-        uses: devmasx/merge-branch@v1.3.1
-        with:
-          type: now
-          from_branch: main
-          target_branch: preview
-          github_token: ${{ github.token }}
-      - name: main -> canary
-        uses: devmasx/merge-branch@v1.3.1
-        with:
-          type: now
-          from_branch: main
-          target_branch: canary
+          target_branch: ${{ matrix.channel }}
           github_token: ${{ github.token }}
