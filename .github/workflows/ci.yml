@@ -15,7 +15,5 @@ jobs:
       - uses: nixbuild/nix-quick-install-action@v9
         with:
           nix_conf: experimental-features = nix-command flakes
-      - name: lint
-        run: ./scripts/format.sh --check
       - name: test
-        run: nix flake check
+        run: nix flake check --show-trace

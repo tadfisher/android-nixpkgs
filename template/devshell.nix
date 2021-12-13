@@ -5,16 +5,25 @@ with pkgs;
 # Configure your development environment.
 #
 # Documentation: https://github.com/numtide/devshell
-mkDevShell {
+devshell.mkShell {
   name = "android-project";
   motd = ''
     Entered the Android app development environment.
   '';
-  env = {
-    ANDROID_HOME = "${android-sdk}/share/android-sdk";
-    ANDROID_SDK_ROOT = "${android-sdk}/share/android-sdk";
-    JAVA_HOME = jdk11.home;
-  };
+  env = [
+    {
+      name = "ANDROID_HOME";
+      value = "${android-sdk}/share/android-sdk";
+    }
+    {
+      name = "ANDROID_SDK_ROOT";
+      value = "${android-sdk}/share/android-sdk";
+    }
+    {
+      name = "JAVA_HOME";
+      value = jdk11.home;
+    }
+  ];
   packages = [
     android-studio
     android-sdk

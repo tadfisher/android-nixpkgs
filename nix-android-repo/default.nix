@@ -32,10 +32,12 @@ rec {
   maven-repo = buildMavenRepo {
     inherit repos;
     deps = builtins.fromJSON (builtins.readFile ./deps.json);
+    fetchSources = true;
   };
 
   update-locks = callPackage ./update-locks.nix {
     inherit (final.haskellPackages) xml-to-json;
     inherit repos;
+    fetchSources = true;
   };
 }

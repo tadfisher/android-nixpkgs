@@ -7,7 +7,9 @@ let
   inherit (lib) all any assertMsg concatMapStringsSep filterAttrs groupBy groupBy'
     mapAttrs mapAttrsToList unique;
 
-  pkgs = pkgsFun packages;
+  packages' = filterAttrs (_: p: lib.isDerivation p) packages;
+
+  pkgs = pkgsFun packages';
 
   duplicates = filterAttrs (path: ps: (length ps) > 1) (groupBy (p: p.path) pkgs);
 
@@ -17,7 +19,7 @@ let
 
   licenses =
     let
-      licenseHashes = groupBy' (sum: p: unique (sum ++ [ p.license.hash ])) [ ] (p: p.license.id) pkgs;
+      licenseHashes = groupBy' (sum: p: unique (sum ++ [ p.license.hash ])) [ ] (p: p.license.id) (builtins.attrValues packages');
       licenseFiles = mapAttrs (id: hashes: writeText id ("\n" + (concatStringsSep "\n" hashes))) licenseHashes;
     in
     linkFarm "android-licenses" (mapAttrsToList (id: file: { name = id; path = file; }) licenseFiles);
@@ -47,7 +49,9 @@ let
       '';
       shellHook = ''
         echo Using Android SDK root: $out/share/android-sdk
-        source $out/nix-support/setup-hook
+        export ANDROID_SDK_ROOT="$out/share/android-sdk"
+        # Android Studio uses this even though it is deprecated.
+        export ANDROID_HOME="$ANDROID_SDK_ROOT"
       '';
     } ''
     export ANDROID_SDK_ROOT=$out/share/android-sdk
