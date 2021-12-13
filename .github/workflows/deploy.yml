@@ -51,7 +51,6 @@ jobs:
       matrix:
         channel: [stable, beta, preview, canary]
     steps:
-      - uses: actions/checkout@v2
       - name: main -> ${{ matrix.channel }}
         uses: devmasx/merge-branch@v1.4.0
         with:
@@ -59,3 +58,13 @@ jobs:
           from_branch: main
           target_branch: ${{ matrix.channel }}
           github_token: ${{ github.token }}
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ matrix.channel }}
+      - name: tag ${{ matrix.channel }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          tag="$(date --utc --iso-8601)-${{ matrix.channel }}"
+          git tag --annotate --message "Version $tag" "$tag"
+          git push origin "$tag"
