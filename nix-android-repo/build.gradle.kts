@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm")
+    alias(libs.plugins.kotlin.jvm)
     application
 }
 
@@ -42,5 +42,9 @@ tasks {
                 .flatMap { it.getArtifacts(SourcesArtifact::class.java) }
                 .filterIsInstance<ResolvedArtifactResult>()
         }
+    }
+
+    wrapper {
+        gradleVersion = "7.3.1"
     }
 }

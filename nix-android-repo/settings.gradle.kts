@@ -23,12 +23,6 @@ val repos: Provider<List<String>> =
 pluginManagement.repositories.configure(repos)
 dependencyResolutionManagement.repositories.configure(repos)
 
-pluginManagement {
-    plugins {
-        kotlin("jvm") version "1.6.0"
-    }
-}
-
 buildscript {
     configurations.classpath {
         resolutionStrategy.activateDependencyLocking()
