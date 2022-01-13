@@ -7174,11 +7174,11 @@
   system-images-android-32-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-32;google_apis;arm64-v8a";
     pname = "system-images-android-32-google-apis-arm64-v8a";
-    version = "3";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-32_r03.zip";
-        sha1 = "757b8440f75be62313a5b8cbc8b17c03122048be";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-32_r02.zip";
+        sha1 = "cf09f02944fc9d2f14581e25198aed315b066af0";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -7192,11 +7192,11 @@
   system-images-android-32-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-32;google_apis;x86_64";
     pname = "system-images-android-32-google-apis-x86-64";
-    version = "3";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-32_r03.zip";
-        sha1 = "9727f570164b062e820d6e62edabc96d125027f6";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-32_r02.zip";
+        sha1 = "325137a34d92574e3d2cf2050e229eb91e37c5c6";
       };
     };
     displayName = "Google APIs Intel x86 Atom_64 System Image";
@@ -7210,15 +7210,15 @@
   system-images-android-32-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-32;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-32-google-apis-playstore-arm64-v8a";
-    version = "3";
+    version = "2";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-32_r03-darwin.zip";
-        sha1 = "a03c886495ad5a3c3929fb0fc122c8ded743eef0";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-32_r02-darwin.zip";
+        sha1 = "c8ace5eb70832d25b3e061780ff2ec8dd45635f5";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-32_r03-linux.zip";
-        sha1 = "a03c886495ad5a3c3929fb0fc122c8ded743eef0";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-32_r02-linux.zip";
+        sha1 = "c8ace5eb70832d25b3e061780ff2ec8dd45635f5";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -7232,19 +7232,19 @@
   system-images-android-32-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-32;google_apis_playstore;x86_64";
     pname = "system-images-android-32-google-apis-playstore-x86-64";
-    version = "3";
+    version = "2";
     sources = {
       windows = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-32_r03-windows.zip";
-        sha1 = "734f2fde664518688a402ad8198b10cf093c5871";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-32_r02-windows.zip";
+        sha1 = "73646d612fe288984ff4bab5ba0bef57bad59d68";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-32_r03-darwin.zip";
-        sha1 = "734f2fde664518688a402ad8198b10cf093c5871";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-32_r02-darwin.zip";
+        sha1 = "73646d612fe288984ff4bab5ba0bef57bad59d68";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-32_r03-linux.zip";
-        sha1 = "734f2fde664518688a402ad8198b10cf093c5871";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-32_r02-linux.zip";
+        sha1 = "73646d612fe288984ff4bab5ba0bef57bad59d68";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
