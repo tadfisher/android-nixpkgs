@@ -1923,6 +1923,32 @@
     };
     xml = ./build-tools-32-0-0.xml;
   };
+  build-tools-32-1-0-rc1 = mkBuildTools {
+    id = "build-tools;32.1.0-rc1";
+    pname = "build-tools-32-1-0-rc1";
+    version = "32.1-rc1";
+    sources = {
+      windows = {
+        url = "https://dl.google.com/android/repository/21014bc1a76d38d0dcb79b3b3f49f40ea5a53c10.build-tools_r32.1-rc1-windows.zip";
+        sha1 = "af2abccfe48f9109ca0bddbec023234a4a68446b";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r32.1-rc1-linux.zip";
+        sha1 = "4af23395f3a7cb4a5c01623347622f881a4772fd";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/c165e9b235479731f416c7aea22d065819c7ce23.build-tools_r32.1-rc1-macosx.zip";
+        sha1 = "38c166a60de3cb799ff1ad5b855234579d05e7b6";
+      };
+    };
+    displayName = "Android SDK Build-Tools 32.1-rc1";
+    path = "build-tools/32.1.0-rc1";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./build-tools-32-1-0-rc1.xml;
+  };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
     pname = "cmake-3-10-2-4988404";
@@ -2165,22 +2191,48 @@
     };
     xml = ./cmdline-tools-5-0.xml;
   };
+  cmdline-tools-6-0 = mkCmdlineTools {
+    id = "cmdline-tools;6.0";
+    pname = "cmdline-tools-6-0";
+    version = "6";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip";
+        sha1 = "8d47ab9a90caa60ce8a95d7e384ec64633bc13b4";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-8092744_latest.zip";
+        sha1 = "bbd306940256ccb698edae47a56fb8da36d63e0b";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip";
+        sha1 = "3098050fb2bdc7cc8a07bdef4dd13035f9f78d2a";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/6.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-6-0.xml;
+  };
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "5";
+    version = "6";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip";
-        sha1 = "0885385de11983c020ff0d47039987fe372160d2";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip";
+        sha1 = "8d47ab9a90caa60ce8a95d7e384ec64633bc13b4";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-7583922_latest.zip";
-        sha1 = "49538fa064c077b188bdb51f3aa57bb2882b0abd";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-8092744_latest.zip";
+        sha1 = "bbd306940256ccb698edae47a56fb8da36d63e0b";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-7583922_latest.zip";
-        sha1 = "a2f359fb8b075acebcb3e3e48b4170cfe4071882";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-8092744_latest.zip";
+        sha1 = "3098050fb2bdc7cc8a07bdef4dd13035f9f78d2a";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
@@ -2194,30 +2246,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "31.2.5";
+    version = "31.2.6";
     sources = {
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8053530.zip";
-        sha1 = "59db7d9514ae739721141018827b7ed66b0f8e71";
-      };
-      x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8053530.zip";
-        sha1 = "4f7f60c119342559da9541aae0d7c077f347abc9";
-      };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-8053530.zip";
-        sha1 = "0b7ec6e848e5dca4676fdfc6b05d818b6ebfdc3f";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-8100890.zip";
+        sha1 = "255b6eb39277f3d79cf9ee441e3e08e2dff7ec95";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-8053530.zip";
-        sha1 = "392791519743b67109569e4603e086e843738879";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-8100890.zip";
+        sha1 = "80f3bd09fb3189eb89dcf3b4c77b9c6de5eeb221";
+      };
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8100890.zip";
+        sha1 = "5ed56ccabfeecf4eb28c33a33555e691ae0dc95b";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8100890.zip";
+        sha1 = "dd344caa57a2305d298e2dcbd8eb0a833d962ebc";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -2242,11 +2294,11 @@
   extras-google-Android-Emulator-Hypervisor-Driver = mkSrcOnly {
     id = "extras;google;Android_Emulator_Hypervisor_Driver";
     pname = "extras-google-Android-Emulator-Hypervisor-Driver";
-    version = "1.7";
+    version = "1.8";
     sources = {
       windows = {
-        url = "https://dl.google.com/android/repository/gvm-windows_v1_7_0.zip";
-        sha1 = "1d35ead3cdfaf6e51001455f66a2db102dd647b7";
+        url = "https://dl.google.com/android/repository/gvm-windows_v1_8_0.zip";
+        sha1 = "7be9c46e3bbf4ab107fa614e426f925584ce310b";
       };
     };
     displayName = "Android Emulator Hypervisor Driver for AMD Processors (installer)";
@@ -3432,19 +3484,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "31.0.3";
+    version = "32";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/e8b2b4cbe47c728c1e54c5f524440b52d4e1a33c.platform-tools_r31.0.3-darwin.zip";
-        sha1 = "15f6f7e97b35994d538a0fc5147ad5fb502ba03d";
+        url = "https://dl.google.com/android/repository/platform-tools_r32.0.0-darwin.zip";
+        sha1 = "1e38a4d569f06c9f870e791ce021114d8a693002";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r31.0.3-linux.zip";
-        sha1 = "f09581347ed39978abb3a99c6bb286de6adc98ef";
+        url = "https://dl.google.com/android/repository/platform-tools_r32.0.0-linux.zip";
+        sha1 = "67ad18f3a2a6716d957b9ce630ea5e564171838a";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r31.0.3-windows.zip";
-        sha1 = "26bc02bbd920e8ed461ae526cc4c69d773b72395";
+        url = "https://dl.google.com/android/repository/platform-tools_r32.0.0-windows.zip";
+        sha1 = "ad2dffd5500ae3ac1ed7c3340e4cdd1025446cd7";
       };
     };
     displayName = "Android SDK Platform-Tools";
