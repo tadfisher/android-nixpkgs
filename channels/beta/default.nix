@@ -6384,11 +6384,11 @@
   system-images-android-28-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear-cn;x86";
     pname = "system-images-android-28-android-wear-cn-x86";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r07.zip";
-        sha1 = "813bc46a979d1e6c11b2f8a63845e8e673f741e9";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r08.zip";
+        sha1 = "3772404294e40e5e03ec0f3eddf0317aa893eeea";
       };
     };
     displayName = "China version of Wear OS Intel x86 Atom System Image";
@@ -6402,11 +6402,11 @@
   system-images-android-28-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
     pname = "system-images-android-28-android-wear-x86";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-28_r07.zip";
-        sha1 = "950f51a48b363db26e9350d44ed1adbdbb587823";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-28_r08.zip";
+        sha1 = "86068194b680a16e54c3fcf82f1e034f27265996";
       };
     };
     displayName = "Wear OS Intel x86 Atom System Image";
