@@ -155,7 +155,7 @@ A project template is provided via `templates.android`. This also provides a `de
 Studio and a configured Android SDK.
 
 ```
-nix flake init github:tadfisher/android-nixpkgs
+nix flake init -t github:tadfisher/android-nixpkgs
 nix develop
 android-studio
 ```
