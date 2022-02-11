@@ -1949,6 +1949,32 @@
     };
     xml = ./build-tools-32-1-0-rc1.xml;
   };
+  build-tools-33-0-0-rc1 = mkBuildTools {
+    id = "build-tools;33.0.0-rc1";
+    pname = "build-tools-33-0-0-rc1";
+    version = "33-rc1";
+    sources = {
+      windows = {
+        url = "https://dl.google.com/android/repository/3445d43cda680f3d8f6ed1cb0cfc1a2511151b39.build-tools_r33-rc1-windows.zip";
+        sha1 = "dc23d24f0bc0888d73951ef8b965f82900fe4f59";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/4940a1be8bad91cac45dc771fceb609a07574e78.build-tools_r33-rc1-macosx.zip";
+        sha1 = "86c106d7523cb674ba1af5540b8ea74e9a27511e";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r33-rc1-linux.zip";
+        sha1 = "1b4fa5a9add65879e40200d58c92c6f247b0eb4a";
+      };
+    };
+    displayName = "Android SDK Build-Tools 33-rc1";
+    path = "build-tools/33.0.0-rc1";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./build-tools-33-0-0-rc1.xml;
+  };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
     pname = "cmake-3-10-2-4988404";
@@ -4105,6 +4131,24 @@
     };
     xml = ./platforms-android-9.xml;
   };
+  platforms-android-Tiramisu = mkSrcOnly {
+    id = "platforms;android-Tiramisu";
+    pname = "platforms-android-Tiramisu";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-Tiramisu_r01.zip";
+        sha1 = "21aba446a59ea0bfc75ffc86eb5ec1d25f2fa127";
+      };
+    };
+    displayName = "Android SDK Platform Tiramisu";
+    path = "platforms/android-Tiramisu";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-Tiramisu.xml;
+  };
   skiaparser-1 = mkPrebuilt {
     id = "skiaparser;1";
     pname = "skiaparser-1";
@@ -5423,8 +5467,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6892,6 +6936,82 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-32-google-apis-playstore-x86-64.xml;
+  };
+  system-images-android-Tiramisu-google-apis-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-Tiramisu;google_apis;arm64-v8a";
+    pname = "system-images-android-Tiramisu-google-apis-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-Tiramisu_r01.zip";
+        sha1 = "b98cc67a42a67c1e3cde20ffc78a5ed1a37799d5";
+      };
+    };
+    displayName = "Google APIs ARM 64 v8a System Image";
+    path = "system-images/android-Tiramisu/google_apis/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-Tiramisu-google-apis-arm64-v8a.xml;
+  };
+  system-images-android-Tiramisu-google-apis-x86-64 = mkSrcOnly {
+    id = "system-images;android-Tiramisu;google_apis;x86_64";
+    pname = "system-images-android-Tiramisu-google-apis-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-Tiramisu_r01.zip";
+        sha1 = "c85a68c0348af47df4c4b469913aeb9a9afc8ec1";
+      };
+    };
+    displayName = "Google APIs Intel x86 Atom_64 System Image";
+    path = "system-images/android-Tiramisu/google_apis/x86_64";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-Tiramisu-google-apis-x86-64.xml;
+  };
+  system-images-android-Tiramisu-google-apis-playstore-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-Tiramisu;google_apis_playstore;arm64-v8a";
+    pname = "system-images-android-Tiramisu-google-apis-playstore-arm64-v8a";
+    version = "1";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-Tiramisu_r01-darwin.zip";
+        sha1 = "f35713f96c1844334fb0ff231c5c0707ca734fc9";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-Tiramisu_r01-linux.zip";
+        sha1 = "f35713f96c1844334fb0ff231c5c0707ca734fc9";
+      };
+    };
+    displayName = "Google Play ARM 64 v8a System Image";
+    path = "system-images/android-Tiramisu/google_apis_playstore/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-Tiramisu-google-apis-playstore-arm64-v8a.xml;
+  };
+  system-images-android-Tiramisu-google-apis-playstore-x86-64 = mkSrcOnly {
+    id = "system-images;android-Tiramisu;google_apis_playstore;x86_64";
+    pname = "system-images-android-Tiramisu-google-apis-playstore-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-Tiramisu_r01.zip";
+        sha1 = "ced8befc85f28fc5361a698e0d9400d09672c650";
+      };
+    };
+    displayName = "Google Play Intel x86 Atom_64 System Image";
+    path = "system-images/android-Tiramisu/google_apis_playstore/x86_64";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-Tiramisu-google-apis-playstore-x86-64.xml;
   };
   tools = mkTools {
     id = "tools";
