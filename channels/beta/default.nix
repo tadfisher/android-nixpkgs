@@ -2272,23 +2272,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "31.3.1";
+    version = "31.3.2";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8129060.zip";
-        sha1 = "af174247ec75807f354eab5607b743e502c82cd7";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8165682.zip";
+        sha1 = "f24b9601a3e73e3f8d43e1d4e763f2d697e52bad";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8129060.zip";
-        sha1 = "e40c8263c020f1f5cd5337a9617149aa1408905b";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8165682.zip";
+        sha1 = "6e1a7d4cc48011078747c79180b891217906b857";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-8129060.zip";
-        sha1 = "a2a57597689fcf938bd4a07aeb775e0927ad884b";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-8165682.zip";
+        sha1 = "9ea1a3ed6204ac51dd7c346fa77b835cb725cd70";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-8129060.zip";
-        sha1 = "ebe17d1d48aa717e759f258eef4014aeff372ccd";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-8165682.zip";
+        sha1 = "7b96c68bb3df0ec28d22f52455e027557b4efcfa";
       };
     };
     displayName = "Android Emulator";
@@ -5871,8 +5871,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6948,11 +6948,11 @@
   system-images-android-30-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-30;android-wear-cn;x86";
     pname = "system-images-android-30-android-wear-cn-x86";
-    version = "9";
+    version = "10";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-30_r09.zip";
-        sha1 = "409c990e16a4c97febd2b78c07ab214bf1f760da";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-30_r10.zip";
+        sha1 = "4969560d24a0ab610f6191753a55821520d18e9a";
       };
     };
     displayName = "China version of Wear OS 3 - Preview Intel x86 Atom System Image";
@@ -6963,14 +6963,32 @@
     };
     xml = ./system-images-android-30-android-wear-cn-x86.xml;
   };
+  system-images-android-30-android-wear-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-30;android-wear;arm64-v8a";
+    pname = "system-images-android-30-android-wear-arm64-v8a";
+    version = "10";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-30_r10.zip";
+        sha1 = "ed8aab1eee59c9ad747e1c4999a13270ff94d0bd";
+      };
+    };
+    displayName = "Wear OS 3 - Preview ARM 64 v8a System Image";
+    path = "system-images/android-30/android-wear/arm64-v8a";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-android-wear-arm64-v8a.xml;
+  };
   system-images-android-30-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-30;android-wear;x86";
     pname = "system-images-android-30-android-wear-x86";
-    version = "9";
+    version = "10";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-30_r09.zip";
-        sha1 = "c8a02892fd56a6934716a765d3316c99e9cf16e1";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-30_r10.zip";
+        sha1 = "429a6e600b8e2c584805313ac2b47556dcf9be23";
       };
     };
     displayName = "Wear OS 3 - Preview Intel x86 Atom System Image";
