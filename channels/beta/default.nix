@@ -3867,31 +3867,31 @@
     };
     xml = ./ndk-24-0-8079956.xml;
   };
-  ndk-25-0-8141415 = mkNdk {
-    id = "ndk;25.0.8141415";
-    pname = "ndk-25-0-8141415";
-    version = "25.0.8141415-rc1";
+  ndk-25-0-8151533 = mkNdk {
+    id = "ndk;25.0.8151533";
+    pname = "ndk-25-0-8151533";
+    version = "25.0.8151533-rc1";
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r25-beta1-darwin.zip";
-        sha1 = "974bf7791dd56f9ba00dc3c3c4ebc677b3e9a6cb";
+        sha1 = "32024b773d65dd445cf8cf52156a331c544ee7e0";
       };
       linux = {
         url = "https://dl.google.com/android/repository/android-ndk-r25-beta1-linux.zip";
-        sha1 = "d203b3f829966258c3bdfbd143e35436543fb5d7";
+        sha1 = "0acca5e8faa47a6c961c358d724a93e33f8d6caf";
       };
       windows = {
         url = "https://dl.google.com/android/repository/android-ndk-r25-beta1-windows.zip";
-        sha1 = "c78302e8ab71716170060ad0c739d66a6517d190";
+        sha1 = "a5486182f79696794eb1a216c11f5e29652e72d1";
       };
     };
-    displayName = "NDK (Side by side) 25.0.8141415";
-    path = "ndk/25.0.8141415";
+    displayName = "NDK (Side by side) 25.0.8151533";
+    path = "ndk/25.0.8151533";
     license = {
       id = "android-sdk-preview-license";
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
-    xml = ./ndk-25-0-8141415.xml;
+    xml = ./ndk-25-0-8151533.xml;
   };
   patcher-v4 = mkSrcOnly {
     id = "patcher;v4";
@@ -5871,8 +5871,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
