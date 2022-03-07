@@ -12,7 +12,9 @@ jobs:
         with:
           nix_conf: experimental-features = nix-command flakes
       - name: update flake inputs
-        run: nix flake update
+        run: |
+          nix flake update
+          git add flake.lock
       - name: update android sources
         run: ./scripts/update.sh
       - name: test
