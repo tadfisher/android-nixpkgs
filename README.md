@@ -8,7 +8,11 @@ Updated daily from Google's Android SDK repositories.
 
 ### Requirements
 
-Currently we support Linux and macOS on `x86_64` platforms only.
+Currently we support the following platforms:
+
+- `aarch64-darwin`: MacOS on Apple Silicon
+- `x86_64-darwin`: MacOS on x86-64
+- `x86_64-linux`: Linux on x86-64
 
 You should have `nix` installed, either because your're awesome and run NixOS, or you have installed
 it from [nixos.org](https://nixos.org/download.html).
