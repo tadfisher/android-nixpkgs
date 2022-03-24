@@ -4657,6 +4657,32 @@
     };
     xml = ./skiaparser-2.xml;
   };
+  skiaparser-3 = mkPrebuilt {
+    id = "skiaparser;3";
+    pname = "skiaparser-3";
+    version = "1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/skiaparser-8339467-linux.zip";
+        sha1 = "72be6f7630b28e02449a8bbadff7589688f3c3d6";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/skiaparser-8339467-mac.zip";
+        sha1 = "53c688b0d2458bcead273791745fb27efa3b58ce";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/skiaparser-8339467-win.zip";
+        sha1 = "8d08dc7c56531092f1704a24b3457bd0455a4be1";
+      };
+    };
+    displayName = "Layout Inspector image server for API 31 and T";
+    path = "skiaparser/3";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./skiaparser-3.xml;
+  };
   sources-android-14 = mkSrcOnly {
     id = "sources;android-14";
     pname = "sources-android-14";
@@ -5923,8 +5949,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
