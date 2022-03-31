@@ -2374,26 +2374,30 @@
   extras-google-auto = mkSrcOnly {
     id = "extras;google;auto";
     pname = "extras-google-auto";
-    version = "2-rc2";
+    version = "2";
     sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-linux_r02.0.rc2.zip";
-        sha1 = "dbb771c2be299fd88ca05d8b0e381c369a7f7009";
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/desktop-head-unit-darwin-aarch64_r02.0.zip";
+        sha1 = "4e90abf932e512d6ca954b5126dd3a11e7a279e2";
       };
-      darwin = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-macosx_r02.0.rc2.zip";
-        sha1 = "ec1f68f9acc234f8493f4ba24954d1d45291b736";
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/desktop-head-unit-darwin-x64_r02.0.zip";
+        sha1 = "d4d12a2173fef608ad62b94fed3a112bfa146759";
       };
-      windows = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-windows_r02.0.rc2.zip";
-        sha1 = "471ae94176512f859580e6ac9e8b8f5010632c78";
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/desktop-head-unit-linux-x64_r02.0.zip";
+        sha1 = "77e3f80c2834e1fad33f56539ceb0215da408fab";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/desktop-head-unit-windows-x64_r02.0.zip";
+        sha1 = "680418d5aca256cce151eb7f9527294e95b6bb8a";
       };
     };
     displayName = "Android Auto Desktop Head Unit Emulator";
     path = "extras/google/auto";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./extras-google-auto.xml;
   };
