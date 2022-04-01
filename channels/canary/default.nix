@@ -7143,6 +7143,24 @@
     };
     xml = ./system-images-android-30-android-tv-x86.xml;
   };
+  system-images-android-30-android-wear-cn-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-30;android-wear-cn;arm64-v8a";
+    pname = "system-images-android-30-android-wear-cn-arm64-v8a";
+    version = "10";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/arm64-v8a-30_r10.zip";
+        sha1 = "140249006667f3d36f01b1067988b3f3fdbbe37d";
+      };
+    };
+    displayName = "China version of Wear OS 3 - Preview ARM 64 v8a System Image";
+    path = "system-images/android-30/android-wear-cn/arm64-v8a";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-android-wear-cn-arm64-v8a.xml;
+  };
   system-images-android-30-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-30;android-wear-cn;x86";
     pname = "system-images-android-30-android-wear-cn-x86";
