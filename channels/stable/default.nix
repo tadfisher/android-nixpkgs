@@ -2272,23 +2272,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "31.3.6";
+    version = "31.3.7";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8376731.zip";
-        sha1 = "d3dfb86b1d6e4b35c78ec026125118c40afa7902";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8408431.zip";
+        sha1 = "d0370b19926a9081c11a7d2d2b6a364bcbbb779a";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8376731.zip";
-        sha1 = "32c7a35081fc4c03db41575d7256b2cdeb067e5d";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8408431.zip";
+        sha1 = "0020b44623995a5a9a5b0d114f8fd942e9d3cbed";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-8376731.zip";
-        sha1 = "2eb1db1ab4ffc4866b249734f05828c4c6304e7e";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-8408431.zip";
+        sha1 = "46ba0c398fcd2704bee015c95e44d8f317b7b720";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-8376731.zip";
-        sha1 = "503a25e6478084df49f65c540e0fa8ec09f84f63";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-8408431.zip";
+        sha1 = "c09a35dd8c7eb7d8c53bf89c86019f5dbcd89b9d";
       };
     };
     displayName = "Android Emulator";
@@ -6632,6 +6632,24 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-30-android-tv-x86.xml;
+  };
+  system-images-android-30-android-wear-cn-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-30;android-wear-cn;arm64-v8a";
+    pname = "system-images-android-30-android-wear-cn-arm64-v8a";
+    version = "10";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/arm64-v8a-30_r10.zip";
+        sha1 = "140249006667f3d36f01b1067988b3f3fdbbe37d";
+      };
+    };
+    displayName = "China version of Wear OS 3 - Preview ARM 64 v8a System Image";
+    path = "system-images/android-30/android-wear-cn/arm64-v8a";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-android-wear-cn-arm64-v8a.xml;
   };
   system-images-android-30-android-wear-cn-x86 = mkSrcOnly {
     id = "system-images;android-30;android-wear-cn;x86";
