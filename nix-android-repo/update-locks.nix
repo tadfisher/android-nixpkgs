@@ -3,7 +3,7 @@
 , git
 , gradle
 , jq
-, xml-to-json
+, xml-to-json-fast
 , repos
 , fetchSources ? false
 }:
@@ -25,13 +25,9 @@ writeShellScriptBin "update-locks" ''
 
   ${gradle}/bin/gradle ${gradleOpts} ${lockTasks} $EXTRA_OPTS --write-locks --write-verification-metadata sha256
 
-  ${xml-to-json}/bin/xml-to-json -sam -t components gradle/verification-metadata.xml \
-    | ${jq}/bin/jq '[
-        .[] | .component |
-        { group, name, version,
-          artifacts: [([.artifact] | flatten | .[] | {(.name): .sha256.value})] | add
-        }
-      ]' > deps.json
+  ${xml-to-json-fast}/bin/xml-to-json-fast gradle/verification-metadata.xml |
+    ${jq}/bin/jq '[ .items[] | select(.name == "components") | .items[] |
+      .attrs + { artifacts: [ .items[] | { (.attrs.name): .items[0].attrs.value } ] | add } ]' > deps.json
 
-  rm -f gradle/verification-metadata.xml
+  rm gradle/verification-metadata.xml
 ''
