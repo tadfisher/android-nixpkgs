@@ -12,6 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.ByteArrayOutputStream
+import java.io.FileNotFoundException
 import java.io.InputStream
 import java.io.PrintStream
 import java.net.URL
@@ -132,8 +133,12 @@ class NixRepoManager(
         runBlocking {
             for (source in sources) {
                 launch(Dispatchers.IO) {
-                    val manifest = downloader.downloadAndStream(URL(source.url), progress)
-                    parseSource(source, manifest, parsedPackages, legacyParsedPackages)
+                    try {
+                        val manifest = downloader.downloadAndStream(URL(source.url), progress)
+                        parseSource(source, manifest, parsedPackages, legacyParsedPackages)
+                    } catch (e: FileNotFoundException) {
+                        progress.logWarning("Not found: ${source.url}")
+                    }
                 }
             }
         }
