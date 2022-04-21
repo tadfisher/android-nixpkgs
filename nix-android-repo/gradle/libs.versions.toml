@@ -1,5 +1,6 @@
 [versions]
-kotlin = "1.6.0"
+kotlin = "1.6.20"
+gradle = "7.4.2"
 
 [libraries]
 common = "com.android.tools:common:+"

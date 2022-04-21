@@ -45,6 +45,6 @@ tasks {
     }
 
     wrapper {
-        gradleVersion = "7.3.1"
+        gradleVersion = libs.versions.gradle.get()
     }
 }
