@@ -30,7 +30,6 @@
 , nss
 , nspr
 , sqlite
-, swiftshader
 , systemd
 , vulkan-loader
 , xkeyboard_config
@@ -69,8 +68,6 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       nss
       nspr
       sqlite
-      swiftshader
-      vulkan-loader
       zlib
     ];
 
@@ -78,12 +75,10 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
     dontWrapQtApps = true;
 
     postUnpack = ''
+      # Vendored gles_mesa is out of date and causes the following:
+      #     LLVM ERROR: Cannot select: intrinsic %llvm.x86.sse41.pblendvb
+      #     Segmentation fault (core dumped)
       rm -r $out/lib64/gles_mesa
-      rm -r $out/lib64/vulkan/*
-      ln -s $(realpath ${vulkan-loader}/lib/libvulkan.so.1) $out/lib64/vulkan/libvulkan.so.1
-      ln -s ${swiftshader}/lib/libEGL.so $out/lib64/vulkan/
-      ln -s ${swiftshader}/lib/libvk_swiftshader.so $out/lib64/vulkan/
-      ln -s ${swiftshader}/share/vulkan/icd.d/vk_swiftshader_icd.json $out/lib64/vulkan/
 
       # Force XCB platform plugin as Wayland isn't supported.
       # Inject libudev0-shim to fix udev_loader error.
