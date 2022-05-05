@@ -5055,6 +5055,24 @@
     };
     xml = ./sources-android-31.xml;
   };
+  sources-android-32 = mkSrcOnly {
+    id = "sources;android-32";
+    pname = "sources-android-32";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sources-32_r01.zip";
+        sha1 = "d7195c6de611b99d7ec3565eabe2fd21268b7f98";
+      };
+    };
+    displayName = "Sources for Android 32";
+    path = "sources/android-32";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./sources-android-32.xml;
+  };
   system-images-android-10-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;default;armeabi-v7a";
     pname = "system-images-android-10-default-armeabi-v7a";
