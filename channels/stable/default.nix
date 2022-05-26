@@ -2304,13 +2304,13 @@
         url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8598121.zip";
         sha1 = "6db74e104fb2685ba669e44f6308b95ce1b555b0";
       };
-      x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-8598121.zip";
-        sha1 = "0f781977a6cc5377b64444121ff75a513841a4fa";
-      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/emulator-darwin_x64-8598121.zip";
         sha1 = "7214e8384c97a7c9875142149d3bf9c940e9b5a0";
+      };
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-8598121.zip";
+        sha1 = "0f781977a6cc5377b64444121ff75a513841a4fa";
       };
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/emulator-windows_x64-8598121.zip";
@@ -3519,6 +3519,32 @@
     };
     xml = ./ndk-23-1-7779620.xml;
   };
+  ndk-23-2-8568313 = mkNdk {
+    id = "ndk;23.2.8568313";
+    pname = "ndk-23-2-8568313";
+    version = "23.2.8568313";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r23c-darwin.zip";
+        sha1 = "1fc65d8f6083f3f5cd01e0cf97c6adc10f4f076f";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r23c-linux.zip";
+        sha1 = "e5053c126a47e84726d9f7173a04686a71f9a67a";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r23c-windows.zip";
+        sha1 = "f2c5def76a9de371f27d028864fe301ab4fe0cf8";
+      };
+    };
+    displayName = "NDK (Side by side) 23.2.8568313";
+    path = "ndk/23.2.8568313";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-23-2-8568313.xml;
+  };
   ndk-24-0-8215888 = mkNdk {
     id = "ndk;24.0.8215888";
     pname = "ndk-24-0-8215888";
@@ -3566,19 +3592,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "33.0.1";
+    version = "33.0.2";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.1-darwin.zip";
-        sha1 = "82f7c23e9e4acf6c86991bb23cd5d9f861f7819f";
+        url = "https://dl.google.com/android/repository/platform-tools_r33.0.2-darwin.zip";
+        sha1 = "9b5661e0c18a2e5b6935e2b96bcc7be580cd6dcd";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.1-linux.zip";
-        sha1 = "4792ee4593e8e2395ddb87a3e82d60629eb0e977";
+        url = "https://dl.google.com/android/repository/platform-tools_r33.0.2-linux.zip";
+        sha1 = "6bf4f747ad929b02378b44ce083b4502d26109c7";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.1-windows.zip";
-        sha1 = "e91ab59b5ddc5e387c5171b37c3813eaa2fa3846";
+        url = "https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip";
+        sha1 = "2d7599f59b54f02c4ecd33d656091a3c1e55ad9c";
       };
     };
     displayName = "Android SDK Platform-Tools";
