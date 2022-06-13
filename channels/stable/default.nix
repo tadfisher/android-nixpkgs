@@ -2298,30 +2298,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "31.3.8";
+    version = "31.3.9";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8598121.zip";
-        sha1 = "6db74e104fb2685ba669e44f6308b95ce1b555b0";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8700579.zip";
+        sha1 = "d515e9f1dd2b6e15411e1d42665d660165694df0";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8598121.zip";
-        sha1 = "7214e8384c97a7c9875142149d3bf9c940e9b5a0";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8700579.zip";
+        sha1 = "6e7b549113252728cfe0992d58e8cb1790dce9d6";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-8598121.zip";
-        sha1 = "0f781977a6cc5377b64444121ff75a513841a4fa";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-8700579.zip";
+        sha1 = "1c1a7ef65476d3de34f19455a0093cb68e8e90f7";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-8598121.zip";
-        sha1 = "b4f30bad4e68da41cc9bd44965259b2111a011a1";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-8700579.zip";
+        sha1 = "ea834211b199a7fcf6b6758a53c4594d01b44ab9";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -5626,11 +5626,11 @@
   system-images-android-24-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;default;arm64-v8a";
     pname = "system-images-android-24-default-arm64-v8a";
-    version = "8";
+    version = "9";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-24_r08.zip";
-        sha1 = "135bbe3cc3c31244c893da03e0a800cfab0f64a2";
+        url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-24_r09.zip";
+        sha1 = "e88ebdf4533efa0370603ee4ab0e7834e0cc364f";
       };
     };
     displayName = "ARM 64 v8a System Image";
@@ -5698,11 +5698,11 @@
   system-images-android-24-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;google_apis;arm64-v8a";
     pname = "system-images-android-24-google-apis-arm64-v8a";
-    version = "28";
+    version = "29";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-24_r28.zip";
-        sha1 = "d50e7aaa8ba422964b0c89ab82bdfcd9cb88fd7b";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-24_r29.zip";
+        sha1 = "d264adca13330b5e50665ab44726e4fecc1ddd1f";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -5860,11 +5860,11 @@
   system-images-android-25-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-25;default;arm64-v8a";
     pname = "system-images-android-25-default-arm64-v8a";
-    version = "1";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-25_r01.zip";
-        sha1 = "ed87509db81399db624f0a4b8bdfc34db0b407f5";
+        url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-25_r02.zip";
+        sha1 = "b39d359623323a1b4906c071dec396040016ea73";
       };
     };
     displayName = "ARM 64 v8a System Image";
@@ -5914,11 +5914,11 @@
   system-images-android-25-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-25;google_apis;arm64-v8a";
     pname = "system-images-android-25-google-apis-arm64-v8a";
-    version = "19";
+    version = "20";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-25_r19.zip";
-        sha1 = "0ec831a9bbbbc522a58c78e79b345bf67ccdb095";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-25_r20.zip";
+        sha1 = "23162a2123e9e5cd5a7e930f8ca867676e83c0df";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
