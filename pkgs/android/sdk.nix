@@ -9,7 +9,7 @@ let
 
   packages' = filterAttrs (_: p: lib.isDerivation p) packages;
 
-  pkgs = pkgsFun packages';
+  pkgs = unique (pkgsFun packages');
 
   duplicates = filterAttrs (path: ps: (length ps) > 1) (groupBy (p: p.path) pkgs);
 
