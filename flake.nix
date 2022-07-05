@@ -20,7 +20,7 @@
 
       hmModule = self.hmModules.android;
 
-      overlay = final: prev:
+      overlays.default = final: prev:
         let
           android = sdkPkgsFor final;
         in
@@ -29,12 +29,10 @@
           androidSdk = android.sdk;
         };
 
-      templates.android = {
+      templates.default = {
         path = ./template;
         description = "Android application or library";
       };
-
-      defaultTemplate = self.templates.android;
     }
     //
     flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (system:
