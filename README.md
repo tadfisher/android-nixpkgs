@@ -238,6 +238,7 @@ An example `flake.nix`:
               android-nixpkgs.hmModule
 
               {
+                inherit config lib pkgs;
                 android-sdk.enable = true;
 
                 # Optional; default path is "~/.local/share/android".
