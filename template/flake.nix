@@ -38,8 +38,8 @@
 
             # Other useful packages for a development environment.
             # sources-android-30
-            # system-images-android-30-google-apis
-            # system-images-android-30-google-apis-playstore
+            # system-images-android-30-google-apis-x86
+            # system-images-android-30-google-apis-playstore-x86
           ]);
 
           android-studio = pkgs.androidStudioPackages.stable;
