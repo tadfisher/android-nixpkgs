@@ -76,6 +76,7 @@
             ndk-bundle
             platform-tools
             platforms-android-32
+            tools
           ]);
         };
 

@@ -49,8 +49,8 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       makeWrapper $exe $out/bin/$(basename $exe) --set JAVA_HOME "${jdk8.home}"
     done
     makeWrapper $pkgBase/bin/sdkmanager $out/bin/sdkmanager \
+      --add-flags '--sdk_root="$ANDROID_HOME"' \
       --set JAVA_HOME "${jdk8.home}" \
-      --set-default ANDROID_HOME $ANDROID_HOME \
-      --add-flags '--sdk_root="$ANDROID_HOME"'
+      --set-default ANDROID_HOME $ANDROID_HOME 
   '';
 })
