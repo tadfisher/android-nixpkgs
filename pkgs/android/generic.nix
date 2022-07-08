@@ -50,7 +50,7 @@ stdenv.mkDerivation (rec {
   '';
 
   passthru = {
-    inherit (package) license path xml;
+    inherit (package) id license path xml;
   } // (args.passthru or { });
 
   preferLocalBuild = true;
