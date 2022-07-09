@@ -9,7 +9,7 @@ let
 
   packages' = filterAttrs (_: p: lib.isDerivation p) packages;
 
-  pkgs = pkgsFun packages';
+  pkgs = unique (pkgsFun packages');
 
   duplicates = filterAttrs (path: ps: (length ps) > 1) (groupBy (p: p.path) pkgs);
 
@@ -53,6 +53,7 @@ let
         # Android Studio uses this even though it is deprecated.
         export ANDROID_HOME="$ANDROID_SDK_ROOT"
       '';
+      passthru.packages = pkgs;
     } ''
     export ANDROID_SDK_ROOT=$out/share/android-sdk
     mkdir -p "$ANDROID_SDK_ROOT"
