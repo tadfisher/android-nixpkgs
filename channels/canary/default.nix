@@ -2052,8 +2052,8 @@
     displayName = "CMake 3.22.1";
     path = "cmake/3.22.1";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./cmake-3-22-1.xml;
   };
