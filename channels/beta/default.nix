@@ -4772,7 +4772,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/platform-TiramisuPrivacySandbox_r06.zip";
-        sha1 = "ceb85bb72c6dd4e98ea9731bc5441903792506fe";
+        sha1 = "384f8171acb9e409332463f4f1b33c868267679c";
       };
     };
     displayName = "Android SDK Platform TiramisuPrivacySandbox";
