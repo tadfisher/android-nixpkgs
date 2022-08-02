@@ -175,6 +175,8 @@ via flakes.
 
 #### Normal
 
+This is not currently working. See https://github.com/tadfisher/android-nixpkgs/issues/15.
+
 In `home.nix`:
 
 ```nix
