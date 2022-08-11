@@ -2326,14 +2326,6 @@
     pname = "emulator";
     version = "31.3.10";
     sources = {
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8807927.zip";
-        sha1 = "c4cc9ba31713b0560ab10aa64a51125cee6a5d48";
-      };
-      x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8807927.zip";
-        sha1 = "4a35a2702f9138653cd1b67d04e01ffa65fb37bc";
-      };
       x86_64-linux = {
         url = "https://dl.google.com/android/repository/emulator-linux_x64-8807927.zip";
         sha1 = "43df6ed553b89e1553d588251526aae8f79da214";
@@ -2341,6 +2333,14 @@
       x86_64-windows = {
         url = "https://dl.google.com/android/repository/emulator-windows_x64-8807927.zip";
         sha1 = "52f8bfa4a09074e607d393302fe8a627846a18e9";
+      };
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-8807927.zip";
+        sha1 = "4a35a2702f9138653cd1b67d04e01ffa65fb37bc";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8807927.zip";
+        sha1 = "b6d3771d738d590a941002eb286e00bb265a940f";
       };
     };
     displayName = "Android Emulator";
@@ -7630,11 +7630,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r06-darwin.zip";
-        sha1 = "493f2729817865ee558733552694110a522442a4";
+        sha1 = "b429393683579a12eb502e60ecb2261559c9b3b5";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r06-linux.zip";
-        sha1 = "493f2729817865ee558733552694110a522442a4";
+        sha1 = "b429393683579a12eb502e60ecb2261559c9b3b5";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -7652,7 +7652,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-TiramisuPrivacySandbox_r06.zip";
-        sha1 = "8144d792072a8d18b8f63ef0bdc22c0f2907f32a";
+        sha1 = "2581be9a85b8982a17bbe83129f38b60abe05d3b";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
