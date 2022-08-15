@@ -5203,6 +5203,42 @@
     };
     xml = ./sources-android-32.xml;
   };
+  sources-android-33 = mkSrcOnly {
+    id = "sources;android-33";
+    pname = "sources-android-33";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sources-33_r01.zip";
+        sha1 = "dd9819363bb213e378bb9d84b4c5fe8d8091c219";
+      };
+    };
+    displayName = "Sources for Android 33";
+    path = "sources/android-33";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./sources-android-33.xml;
+  };
+  sources-android-33-ext3 = mkSrcOnly {
+    id = "sources;android-33-ext3";
+    pname = "sources-android-33-ext3";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sources-33_r01.zip";
+        sha1 = "dd9819363bb213e378bb9d84b4c5fe8d8091c219";
+      };
+    };
+    displayName = "Sources for Android 33";
+    path = "sources/android-33-ext3";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./sources-android-33-ext3.xml;
+  };
   system-images-android-10-default-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-10;default;armeabi-v7a";
     pname = "system-images-android-10-default-armeabi-v7a";
@@ -6253,8 +6289,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
