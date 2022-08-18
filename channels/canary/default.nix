@@ -2340,7 +2340,7 @@
       };
       aarch64-darwin = {
         url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-8807927.zip";
-        sha1 = "b6d3771d738d590a941002eb286e00bb265a940f";
+        sha1 = "c4cc9ba31713b0560ab10aa64a51125cee6a5d48";
       };
     };
     displayName = "Android Emulator";
@@ -8110,11 +8110,11 @@
   system-images-android-32-android-desktop-arm64-v8a = mkSrcOnly {
     id = "system-images;android-32;android-desktop;arm64-v8a";
     pname = "system-images-android-32-android-desktop-arm64-v8a";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-desktop/arm64-v8a-32_r03.zip";
-        sha1 = "c12050de2b50cada5cc04e9ee74461c91dbf80df";
+        url = "https://dl.google.com/android/repository/sys-img/android-desktop/arm64-v8a-32_r04.zip";
+        sha1 = "7207c3d7366dc8b6a865ce048757943753184a0f";
       };
     };
     displayName = "Desktop ARM 64 v8a System Image";
@@ -8128,11 +8128,11 @@
   system-images-android-32-android-desktop-x86-64 = mkSrcOnly {
     id = "system-images;android-32;android-desktop;x86_64";
     pname = "system-images-android-32-android-desktop-x86-64";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-desktop/x86_64-32_r03.zip";
-        sha1 = "f2de3c6de49f5e9685fc291b13bbaee9cab8b6fe";
+        url = "https://dl.google.com/android/repository/sys-img/android-desktop/x86_64-32_r04.zip";
+        sha1 = "22b6684bd1175a7f2d174ad76f5f7cea59e12193";
       };
     };
     displayName = "Desktop Intel x86 Atom_64 System Image";
@@ -8382,11 +8382,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r06-darwin.zip";
-        sha1 = "b429393683579a12eb502e60ecb2261559c9b3b5";
+        sha1 = "493f2729817865ee558733552694110a522442a4";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r06-linux.zip";
-        sha1 = "b429393683579a12eb502e60ecb2261559c9b3b5";
+        sha1 = "493f2729817865ee558733552694110a522442a4";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -8404,7 +8404,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-TiramisuPrivacySandbox_r06.zip";
-        sha1 = "2581be9a85b8982a17bbe83129f38b60abe05d3b";
+        sha1 = "8144d792072a8d18b8f63ef0bdc22c0f2907f32a";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
