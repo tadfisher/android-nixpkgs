@@ -4105,6 +4105,32 @@
     };
     xml = ./ndk-25-0-8775105.xml;
   };
+  ndk-25-1-8937393 = mkNdk {
+    id = "ndk;25.1.8937393";
+    pname = "ndk-25-1-8937393";
+    version = "25.1.8937393";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r25b-darwin.zip";
+        sha1 = "248f96de6713cbec8707ee2262d3cf08d14d9fde";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r25b-linux.zip";
+        sha1 = "e27dcb9c8bcaa77b78ff68c3f23abcf6867959eb";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r25b-windows.zip";
+        sha1 = "b2e9b5ab2e1434a65ffd85780891878cf5c6fd92";
+      };
+    };
+    displayName = "NDK (Side by side) 25.1.8937393";
+    path = "ndk/25.1.8937393";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-25-1-8937393.xml;
+  };
   patcher-v4 = mkSrcOnly {
     id = "patcher;v4";
     pname = "patcher-v4";
@@ -4126,19 +4152,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "33.0.2";
+    version = "33.0.3";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.2-darwin.zip";
-        sha1 = "9b5661e0c18a2e5b6935e2b96bcc7be580cd6dcd";
+        url = "https://dl.google.com/android/repository/platform-tools_r33.0.3-darwin.zip";
+        sha1 = "250da3216e4c93ccd2612dcec0b64c2668354b09";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.2-linux.zip";
-        sha1 = "6bf4f747ad929b02378b44ce083b4502d26109c7";
+        url = "https://dl.google.com/android/repository/platform-tools_r33.0.3-linux.zip";
+        sha1 = "deb43a0f9eaccd16a47937367ef3b53db3db8d10";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip";
-        sha1 = "2d7599f59b54f02c4ecd33d656091a3c1e55ad9c";
+        url = "https://dl.google.com/android/repository/platform-tools_r33.0.3-windows.zip";
+        sha1 = "6028a80149c0ccde2db22d69e7fe84a352d852a2";
       };
     };
     displayName = "Android SDK Platform-Tools";
