@@ -6405,8 +6405,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -7952,11 +7952,11 @@
   system-images-android-31-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-31;default;arm64-v8a";
     pname = "system-images-android-31-default-arm64-v8a";
-    version = "3";
+    version = "4";
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-31_r03.zip";
-        sha1 = "aeaba3a4a7ce793046b3ef0d435f3c1eb4a9242c";
+        sha1 = "1052df2d0afc8fe57138db19d5ebd82d10c607da";
       };
     };
     displayName = "ARM 64 v8a System Image";
