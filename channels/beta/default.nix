@@ -7844,11 +7844,11 @@
   system-images-android-31-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-31;default;arm64-v8a";
     pname = "system-images-android-31-default-arm64-v8a";
-    version = "3";
+    version = "4";
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-31_r03.zip";
-        sha1 = "aeaba3a4a7ce793046b3ef0d435f3c1eb4a9242c";
+        sha1 = "1052df2d0afc8fe57138db19d5ebd82d10c607da";
       };
     };
     displayName = "ARM 64 v8a System Image";
