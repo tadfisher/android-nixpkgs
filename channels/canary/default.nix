@@ -6405,8 +6405,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -7970,11 +7970,11 @@
   system-images-android-31-default-x86-64 = mkSrcOnly {
     id = "system-images;android-31;default;x86_64";
     pname = "system-images-android-31-default-x86-64";
-    version = "3";
+    version = "4";
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/android/x86_64-31_r03.zip";
-        sha1 = "22bcd2a5e3872528d7d47880d3ea96e721431824";
+        sha1 = "1200d6983af477fd6439f11cc5cabf9866bc4a16";
       };
     };
     displayName = "Intel x86 Atom_64 System Image";
