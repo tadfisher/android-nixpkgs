@@ -5,7 +5,7 @@
 , runCommand
 , srcOnly
 , autoPatchelfHook
-, alsaLib
+, alsa-lib
 , dbus
 , fontconfig
 , freetype
@@ -44,7 +44,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
     ];
 
     buildInputs = [
-      alsaLib
+      alsa-lib
       fontconfig
       freetype
       gperftools
