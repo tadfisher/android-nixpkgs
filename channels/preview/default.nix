@@ -2324,23 +2324,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "32.1.1";
+    version = "32.1.2";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9037203.zip";
-        sha1 = "f6f3c8abc502d9c99c034ba2fe40a68998524877";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9112098.zip";
+        sha1 = "294900f743a45b743f3fe3ff899eb4122293b151";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9037203.zip";
-        sha1 = "2cbd134b89901df6a66958487af318fd8d42b498";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9112098.zip";
+        sha1 = "4d2ca9ba9acfdf27ef4261cbf278ee217815860a";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-9037203.zip";
-        sha1 = "9e2ed4af7c51036c4b034416652f053254eec70f";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-9112098.zip";
+        sha1 = "dde6abe118c31088c0a8d3fef9ae03d601a2b3a8";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-9037203.zip";
-        sha1 = "5432438744350d6803721daed7f4257f7859aad6";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-9112098.zip";
+        sha1 = "7aef2f6a05a3dc3470f9d96a2d76943161ec028a";
       };
     };
     displayName = "Android Emulator";
@@ -8028,11 +8028,11 @@
   system-images-android-32-android-desktop-arm64-v8a = mkSrcOnly {
     id = "system-images;android-32;android-desktop;arm64-v8a";
     pname = "system-images-android-32-android-desktop-arm64-v8a";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-desktop/arm64-v8a-32_r04.zip";
-        sha1 = "7207c3d7366dc8b6a865ce048757943753184a0f";
+        url = "https://dl.google.com/android/repository/sys-img/android-desktop/arm64-v8a-32_r05.zip";
+        sha1 = "6af1a81e05e863b658c41fc80f71bf800eddfbd0";
       };
     };
     displayName = "Desktop ARM 64 v8a System Image";
@@ -8046,11 +8046,11 @@
   system-images-android-32-android-desktop-x86-64 = mkSrcOnly {
     id = "system-images;android-32;android-desktop;x86_64";
     pname = "system-images-android-32-android-desktop-x86-64";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-desktop/x86_64-32_r04.zip";
-        sha1 = "22b6684bd1175a7f2d174ad76f5f7cea59e12193";
+        url = "https://dl.google.com/android/repository/sys-img/android-desktop/x86_64-32_r05.zip";
+        sha1 = "be2a7c38588450c603c56eec3554d7d481090d72";
       };
     };
     displayName = "Desktop Intel x86 Atom_64 System Image";
