@@ -5815,8 +5815,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6964,36 +6964,36 @@
   system-images-android-30-android-wear-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;android-wear;arm64-v8a";
     pname = "system-images-android-30-android-wear-arm64-v8a";
-    version = "10";
+    version = "11";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-30_r10.zip";
-        sha1 = "ed8aab1eee59c9ad747e1c4999a13270ff94d0bd";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-30_r11.zip";
+        sha1 = "4096b210414f609e5f83bd846b6f77700ef23ac4";
       };
     };
-    displayName = "Wear OS 3 - Preview ARM 64 v8a System Image";
+    displayName = "Wear OS 3 ARM 64 v8a System Image";
     path = "system-images/android-30/android-wear/arm64-v8a";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-30-android-wear-arm64-v8a.xml;
   };
   system-images-android-30-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-30;android-wear;x86";
     pname = "system-images-android-30-android-wear-x86";
-    version = "10";
+    version = "11";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-30_r10.zip";
-        sha1 = "429a6e600b8e2c584805313ac2b47556dcf9be23";
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86-30_r11.zip";
+        sha1 = "e528d54306411a56ea2391557c95d4654d949d3c";
       };
     };
-    displayName = "Wear OS 3 - Preview Intel x86 Atom System Image";
+    displayName = "Wear OS 3 Intel x86 Atom System Image";
     path = "system-images/android-30/android-wear/x86";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-30-android-wear-x86.xml;
   };
