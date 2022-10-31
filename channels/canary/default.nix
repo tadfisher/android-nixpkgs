@@ -4884,11 +4884,11 @@
   platforms-android-TiramisuPrivacySandbox = mkSrcOnly {
     id = "platforms;android-TiramisuPrivacySandbox";
     pname = "platforms-android-TiramisuPrivacySandbox";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-TiramisuPrivacySandbox_r07.zip";
-        sha1 = "78e24abc27517b311f38928c2f468cab15257018";
+        url = "https://dl.google.com/android/repository/platform-TiramisuPrivacySandbox_r08.zip";
+        sha1 = "07f3eb84b8f237e61744967d7aee1225efba25e6";
       };
     };
     displayName = "Android SDK Platform TiramisuPrivacySandbox";
@@ -8386,15 +8386,15 @@
   system-images-android-TiramisuPrivacySandbox-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-TiramisuPrivacySandbox;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-TiramisuPrivacySandbox-google-apis-playstore-arm64-v8a";
-    version = "7";
+    version = "8";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r07-darwin.zip";
-        sha1 = "b790fa8e7930e1fa817067dd02f0b2a22df3c03c";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r08-darwin.zip";
+        sha1 = "069cdb5926cef729c8f14897cdc70e47acfe6736";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r07-linux.zip";
-        sha1 = "b790fa8e7930e1fa817067dd02f0b2a22df3c03c";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-TiramisuPrivacySandbox_r08-linux.zip";
+        sha1 = "069cdb5926cef729c8f14897cdc70e47acfe6736";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -8408,11 +8408,11 @@
   system-images-android-TiramisuPrivacySandbox-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-TiramisuPrivacySandbox;google_apis_playstore;x86_64";
     pname = "system-images-android-TiramisuPrivacySandbox-google-apis-playstore-x86-64";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-TiramisuPrivacySandbox_r07.zip";
-        sha1 = "6d144da87b73823fa26308f8d97a2f978383aec0";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-TiramisuPrivacySandbox_r08.zip";
+        sha1 = "7ae1658d066353e9f079afe694bdc17c446c0c88";
       };
     };
     displayName = "Google Play Intel x86 Atom_64 System Image";
