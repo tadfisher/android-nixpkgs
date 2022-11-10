@@ -2295,22 +2295,48 @@
     };
     xml = ./cmdline-tools-7-0.xml;
   };
+  cmdline-tools-8-0 = mkCmdlineTools {
+    id = "cmdline-tools;8.0";
+    pname = "cmdline-tools-8-0";
+    version = "8";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-9123335_latest.zip";
+        sha1 = "09b65ebc5aa9c5011fec9416d22711ce7ffc2260";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-9123335_latest.zip";
+        sha1 = "089eedfc62371040f9e027835d5114178fc0e658";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-9123335_latest.zip";
+        sha1 = "d1511ce5b61e5988b3de4b83062f0a570671074f";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/8.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-8-0.xml;
+  };
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "7";
+    version = "8";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip";
-        sha1 = "5e7bf2dd563d34917d32f3c5920a85562a795c93";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-9123335_latest.zip";
+        sha1 = "09b65ebc5aa9c5011fec9416d22711ce7ffc2260";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-8512546_latest.zip";
-        sha1 = "9a663c49dbd3709fc2b7d49db2814b383d811b4a";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-9123335_latest.zip";
+        sha1 = "089eedfc62371040f9e027835d5114178fc0e658";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-8512546_latest.zip";
-        sha1 = "1bdd32ac4b9fffea04f5bc341108e8b4fea6f32c";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-9123335_latest.zip";
+        sha1 = "d1511ce5b61e5988b3de4b83062f0a570671074f";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
