@@ -1975,6 +1975,32 @@
     };
     xml = ./build-tools-33-0-0.xml;
   };
+  build-tools-33-0-1 = mkBuildTools {
+    id = "build-tools;33.0.1";
+    pname = "build-tools-33-0-1";
+    version = "33.0.1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r33.0.1-linux.zip";
+        sha1 = "fefb393b82814feb94f88147827cbc918cf992b0";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/build-tools_r33.0.1-macosx.zip";
+        sha1 = "d091bee94295480891ca679e7b2004fe6198d05f";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/build-tools_r33.0.1-windows.zip";
+        sha1 = "710918f38f8fa7595320f4d29db5910770993f63";
+      };
+    };
+    displayName = "Android SDK Build-Tools 33.0.1";
+    path = "build-tools/33.0.1";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./build-tools-33-0-1.xml;
+  };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
     pname = "cmake-3-10-2-4988404";
