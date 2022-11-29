@@ -2376,23 +2376,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "32.1.7";
+    version = "32.1.8";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9278971.zip";
-        sha1 = "39ead576927a48bda64e593870657364847798a8";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9310560.zip";
+        sha1 = "2158441e7f8afbfee03d58463ab4b6729b0b0608";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9278971.zip";
-        sha1 = "9fac3a2e0c3df526b7f34e3885acf6a54a2c5274";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9310560.zip";
+        sha1 = "13cadd038b401fdfa04e4af153a7f696ccd422cc";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-9278971.zip";
-        sha1 = "99d3e644793af9c55cb6008c794880a0d56927fc";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-9310560.zip";
+        sha1 = "7d82689a73aacdd56684d7134dc88cc3537fb911";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-9278971.zip";
-        sha1 = "3657352ecae1a1d26ac49845293aef1ae696386b";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-9310560.zip";
+        sha1 = "8324aeb3bd74a214978252c51574b40cdb56b4ba";
       };
     };
     displayName = "Android Emulator";
@@ -7432,11 +7432,11 @@
   system-images-android-31-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-31;google_apis;x86_64";
     pname = "system-images-android-31-google-apis-x86-64";
-    version = "10";
+    version = "11";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-31_r10.zip";
-        sha1 = "32ab0f5b81d3926ab6a4a6a1e61db3f67b8f008f";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-31_r11.zip";
+        sha1 = "05a74ff8509fb76cbfd14b2e3307addad5c4d0df";
       };
     };
     displayName = "Google APIs Intel x86 Atom_64 System Image";
