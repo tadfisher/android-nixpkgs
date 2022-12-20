@@ -2478,23 +2478,23 @@
   extras-google-auto = mkSrcOnly {
     id = "extras;google;auto";
     pname = "extras-google-auto";
-    version = "2";
+    version = "2.1";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-darwin-aarch64_r02.0.zip";
-        sha1 = "4e90abf932e512d6ca954b5126dd3a11e7a279e2";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-darwin-aarch64_r02.1.zip";
+        sha1 = "edd9d9389ac511d5f28e47cdfbf54bbcd7294d7f";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-darwin-x64_r02.0.zip";
-        sha1 = "d4d12a2173fef608ad62b94fed3a112bfa146759";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-darwin-x64_r02.1.zip";
+        sha1 = "4f8a3d3e32b27de1fc190d149039842e76a55bdd";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-linux-x64_r02.0.zip";
-        sha1 = "77e3f80c2834e1fad33f56539ceb0215da408fab";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-linux-x64_r02.1.zip";
+        sha1 = "5d87eb87a1421e59d528eac1f5cdd406c0b39f51";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/desktop-head-unit-windows-x64_r02.0.zip";
-        sha1 = "680418d5aca256cce151eb7f9527294e95b6bb8a";
+        url = "https://dl.google.com/android/repository/desktop-head-unit-windows-x64_r02.1.zip";
+        sha1 = "c27bf84e59dda7b79315b6ca2a314063feffd6ac";
       };
     };
     displayName = "Android Auto Desktop Head Unit Emulator";
