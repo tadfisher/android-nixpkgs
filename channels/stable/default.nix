@@ -2376,30 +2376,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "32.1.8";
+    version = "32.1.9";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9310560.zip";
-        sha1 = "2158441e7f8afbfee03d58463ab4b6729b0b0608";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9364964.zip";
+        sha1 = "481f84ac4bda3d40c455dce7c854269af0bb1085";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9310560.zip";
-        sha1 = "13cadd038b401fdfa04e4af153a7f696ccd422cc";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9364964.zip";
+        sha1 = "fdd07dd78e4f4a1de2da820c3a09c20034d9d287";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-9310560.zip";
-        sha1 = "7d82689a73aacdd56684d7134dc88cc3537fb911";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-9364964.zip";
+        sha1 = "97e2ca24bd230092c48126c0a4deac89c8817687";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-9310560.zip";
-        sha1 = "8324aeb3bd74a214978252c51574b40cdb56b4ba";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-9364964.zip";
+        sha1 = "e95eb5d83d2cd9f15a9193e6f2727043d6a75f8c";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -2424,14 +2424,14 @@
   extras-google-Android-Emulator-Hypervisor-Driver = mkSrcOnly {
     id = "extras;google;Android_Emulator_Hypervisor_Driver";
     pname = "extras-google-Android-Emulator-Hypervisor-Driver";
-    version = "1.8";
+    version = "2";
     sources = {
       windows = {
-        url = "https://dl.google.com/android/repository/gvm-windows_v1_8_0.zip";
-        sha1 = "7be9c46e3bbf4ab107fa614e426f925584ce310b";
+        url = "https://dl.google.com/android/repository/gvm-windows_v2_0_0.zip";
+        sha1 = "1a4ef9875cb0adfe5500632ad7140027cfb080d9";
       };
     };
-    displayName = "Android Emulator Hypervisor Driver for AMD Processors (installer)";
+    displayName = "Android Emulator Hypervisor Driver (installer)";
     path = "extras/google/Android_Emulator_Hypervisor_Driver";
     license = {
       id = "android-sdk-license";
@@ -7486,6 +7486,24 @@
       hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
     };
     xml = ./system-images-android-31-google-apis-playstore-x86-64.xml;
+  };
+  system-images-android-32-google-apis-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-32;google_apis;arm64-v8a";
+    pname = "system-images-android-32-google-apis-arm64-v8a";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-32_r03.zip";
+        sha1 = "757b8440f75be62313a5b8cbc8b17c03122048be";
+      };
+    };
+    displayName = "Google APIs ARM 64 v8a System Image";
+    path = "system-images/android-32/google_apis/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-32-google-apis-arm64-v8a.xml;
   };
   system-images-android-32-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-32;google_apis;x86_64";
