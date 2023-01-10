@@ -27,15 +27,19 @@ let
     }:
     let
       repos' =
-        pinnedDeps."${group}:${name}" or
-          pinnedDeps."${group}:${name}:${version}" or
-            repos;
+        (
+          pinnedDeps."${group}:${name}" or
+            pinnedDeps."${group}:${name}:${version}" or
+              repos
+        )
+        ++ (map (p: "file://${p}") extraPaths);
+
     in
     fetchurl {
       name = file;
       urls = map (repo: "${repo}/${mavenize "/" group}/${name}/${version}/${file}") repos';
       inherit sha256;
-      curlOpts = [ "--retry 0" ];
+      curlOpts = "--retry 0";
       meta.platforms = platforms.all;
     };
 
@@ -49,14 +53,19 @@ let
       fetchArtifact = file: sha256:
         fetch { inherit group name version file sha256; };
 
+      artifacts' =
+        if fetchSources
+        then artifacts
+        else filterAttrs (n: _: !(hasSuffix "-sources.jar" n)) artifacts;
+
       # Each artifact uses the filename in the Gradle cache, which doesn't
       # correspond to the filename in the Maven repo. The mapping of name to URL
       # is provided by Gradle module metadata, so we fetch that first. See
       # https://github.com/gradle/gradle/blob/master/subprojects/docs/src/docs/design/gradle-module-metadata-latest-specification.md
       # for the file format.
       isModule = hasSuffix ".module";
-      moduleArtifacts = filterAttrs (file: _: isModule file) artifacts;
-      otherArtifacts = filterAttrs (file: _: !isModule file) artifacts;
+      moduleArtifacts = filterAttrs (file: _: isModule file) artifacts';
+      otherArtifacts = filterAttrs (file: _: !isModule file) artifacts';
 
       modules = mapAttrsToList fetchArtifact moduleArtifacts;
       modules' = map
@@ -75,29 +84,21 @@ let
           variants)
       );
 
-      replaced =
-        let
-          artifacts = mapAttrs'
-            (file: sha256:
-              nameValuePair (replacements.${file} or file) sha256
-            )
-            otherArtifacts;
-        in
-        mapAttrsToList fetchArtifact artifacts;
+      replaced = mapAttrs'
+        (file: sha256: nameValuePair (replacements.${file} or file) sha256)
+        otherArtifacts;
 
-      sources = if !fetchSources then [ ] else
+      sources = if !fetchSources then { } else
       let
         sourcesVariants = filter (v: v.name == "sourcesElements") variants;
         files = flatten (map (v: v.files) sourcesVariants);
-        # artifacts = map ({ url, sha256, ... }: nameValuePair url sha256) files;
       in
-      map ({ url, sha256, ... }: fetchArtifact url sha256) files;
+      listToAttrs (map ({ url, sha256, ... }: nameValuePair url sha256) files);
 
     in
     if moduleArtifacts == { }
-    then mapAttrsToList fetchArtifact artifacts
-    else modules ++ replaced ++ sources;
-
+    then mapAttrsToList fetchArtifact artifacts'
+    else modules ++ mapAttrsToList fetchArtifact (replaced // sources);
 
   mkDep =
     { group
@@ -210,6 +211,4 @@ in
 symlinkJoin {
   inherit name;
   paths = map mkDep deps ++ mkMetadata deps ++ mkGradleRedirectionPoms deps ++ extraPaths;
-  preferLocalBuild = false;
-  allowSubstitutes = true;
 }

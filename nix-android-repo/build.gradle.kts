@@ -43,8 +43,4 @@ tasks {
                 .filterIsInstance<ResolvedArtifactResult>()
         }
     }
-
-    wrapper {
-        gradleVersion = libs.versions.gradle.get()
-    }
 }
