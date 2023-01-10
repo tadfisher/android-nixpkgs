@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: nixbuild/nix-quick-install-action@v9
+      - uses: nixbuild/nix-quick-install-action@v21
         with:
           nix_conf: experimental-features = nix-command flakes
       - name: test

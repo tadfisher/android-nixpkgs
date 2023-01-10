@@ -1,13 +1,9 @@
-{ stdenv, lib, mkGeneric, autoPatchelfHook, python }:
+{ stdenv, lib, mkGeneric, autoPatchelfHook }:
 
 mkGeneric (lib.optionalAttrs stdenv.isLinux
   {
     nativeBuildInputs = [
       autoPatchelfHook
-    ];
-
-    buildInputs = [
-      python
     ];
 
     runtimeDependencies = [
