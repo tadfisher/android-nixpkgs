@@ -66,7 +66,7 @@ class NixDownloader : Downloader {
         return if (!markSupported()) {
             try {
                 readBytes().inputStream().also {
-                    try { close() } catch (e: Exception) {}
+                    try { close() } catch (_: Exception) {}
                 }
             } catch (e: Exception) {
                 this
@@ -162,7 +162,13 @@ class NixRepoManager(
         result: MutableMap<RepositorySource, Collection<RemotePackage>>,
         legacyResult: MutableMap<RepositorySource, Collection<RemotePackage>>
     ) {
-        val repo = SchemaModuleUtil.unmarshal(manifest, source.permittedModules, true, progress) as? Repository
+        val repo = SchemaModuleUtil.unmarshal(
+            manifest,
+            source.permittedModules,
+            true,
+            progress,
+            source.url
+        ) as? Repository
         if (repo != null) {
             result[source] = repo.remotePackage
         } else {

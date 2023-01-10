@@ -4,6 +4,7 @@
 , mkCmdlineTools
 , mkEmulator
 , mkNdk
+, mkNdkBundle
 , mkPlatformTools
 , mkPrebuilt
 , mkTools
@@ -4229,6 +4230,24 @@
     };
     xml = ./platforms-android-33.xml;
   };
+  platforms-android-33-ext4 = mkSrcOnly {
+    id = "platforms;android-33-ext4";
+    pname = "platforms-android-33-ext4";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-33-ext4_r01.zip";
+        sha1 = "422f50033523c5f934f38df520699080b59bbc7e";
+      };
+    };
+    displayName = "Android SDK Platform 33";
+    path = "platforms/android-33-ext4";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-33-ext4.xml;
+  };
   platforms-android-4 = mkSrcOnly {
     id = "platforms;android-4";
     pname = "platforms-android-4";
@@ -7570,6 +7589,46 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-32-google-apis-playstore-x86-64.xml;
+  };
+  system-images-android-33-ext4-google-apis-playstore-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-33-ext4;google_apis_playstore;arm64-v8a";
+    pname = "system-images-android-33-ext4-google-apis-playstore-arm64-v8a";
+    version = "1";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-33_r01-darwin.zip";
+        sha1 = "26e68d896f560d9abfa293dd7499bc020d3b38ba";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-33_r01-linux.zip";
+        sha1 = "26e68d896f560d9abfa293dd7499bc020d3b38ba";
+      };
+    };
+    displayName = "Google Play ARM 64 v8a System Image";
+    path = "system-images/android-33-ext4/google_apis_playstore/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-33-ext4-google-apis-playstore-arm64-v8a.xml;
+  };
+  system-images-android-33-ext4-google-apis-playstore-x86-64 = mkSrcOnly {
+    id = "system-images;android-33-ext4;google_apis_playstore;x86_64";
+    pname = "system-images-android-33-ext4-google-apis-playstore-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-33_r01.zip";
+        sha1 = "0db4201201a4b8ea1339fb5bd720d25455849100";
+      };
+    };
+    displayName = "Google Play Intel x86 Atom_64 System Image";
+    path = "system-images/android-33-ext4/google_apis_playstore/x86_64";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-33-ext4-google-apis-playstore-x86-64.xml;
   };
   system-images-android-33-android-tv-arm64-v8a = mkSrcOnly {
     id = "system-images;android-33;android-tv;arm64-v8a";
