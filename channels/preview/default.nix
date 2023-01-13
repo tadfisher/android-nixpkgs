@@ -3409,10 +3409,6 @@
     pname = "ndk-21-0-6011959";
     version = "21.0.6011959-rc2";
     sources = {
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21-beta2-darwin-aarch64.zip";
-        sha1 = "34a46c3867c9d87a80895c0b8a098256052536d2";
-      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21-beta2-darwin-x86_64.zip";
         sha1 = "34a46c3867c9d87a80895c0b8a098256052536d2";
@@ -3439,10 +3435,6 @@
     pname = "ndk-21-0-6113669";
     version = "21.0.6113669";
     sources = {
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/android-ndk-r21-darwin-aarch64.zip";
-        sha1 = "0d50636cc0e34ed3ba540d6d5818ea0cf10f16aa";
-      };
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/android-ndk-r21-darwin-x86_64.zip";
         sha1 = "0d50636cc0e34ed3ba540d6d5818ea0cf10f16aa";
