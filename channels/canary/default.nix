@@ -4387,19 +4387,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "33.0.3";
+    version = "34";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.3-darwin.zip";
-        sha1 = "250da3216e4c93ccd2612dcec0b64c2668354b09";
+        url = "https://dl.google.com/android/repository/platform-tools_r34.0.0-darwin.zip";
+        sha1 = "6bc1eb39437ae223e085d2cc6945d51d58d93bb0";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.3-linux.zip";
-        sha1 = "deb43a0f9eaccd16a47937367ef3b53db3db8d10";
+        url = "https://dl.google.com/android/repository/platform-tools_r34.0.0-linux.zip";
+        sha1 = "86bb6c1ff4ad8af8c5bb93acabd76926b6388826";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r33.0.3-windows.zip";
-        sha1 = "6028a80149c0ccde2db22d69e7fe84a352d852a2";
+        url = "https://dl.google.com/android/repository/platform-tools_r34.0.0-windows.zip";
+        sha1 = "a79d9ec5943a7ef015bdbb2ca825c7da842836df";
       };
     };
     displayName = "Android SDK Platform-Tools";
