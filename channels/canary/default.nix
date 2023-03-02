@@ -2192,6 +2192,58 @@
     };
     xml = ./cmdline-tools-1-0.xml;
   };
+  cmdline-tools-10-0-beta04 = mkCmdlineTools {
+    id = "cmdline-tools;10.0-beta04";
+    pname = "cmdline-tools-10-0-beta04";
+    version = "10-rc4";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-9645777_latest.zip";
+        sha1 = "fe41906d2ce82df4cde74fe258e0ccdb283de60a";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-9645777_latest.zip";
+        sha1 = "021540982a843ae2c9b4e0a5c2034b29681b4f70";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-9645777_latest.zip";
+        sha1 = "9c3877a2926c1e73af981964b0f4381a6d68fb21";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/10.0-beta04";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./cmdline-tools-10-0-beta04.xml;
+  };
+  cmdline-tools-11-0-alpha07 = mkCmdlineTools {
+    id = "cmdline-tools;11.0-alpha07";
+    pname = "cmdline-tools-11-0-alpha07";
+    version = "11-rc7";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-9644228_latest.zip";
+        sha1 = "c43e4fb8567c4625e8daf4cee0a5490f826a5442";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-9644228_latest.zip";
+        sha1 = "2c97234849128cb75b0691cf652ab098707c610c";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-9644228_latest.zip";
+        sha1 = "2bfc8fad022acce100a5b0583def1ca5bc56eff1";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/11.0-alpha07";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./cmdline-tools-11-0-alpha07.xml;
+  };
   cmdline-tools-2-0 = mkCmdlineTools {
     id = "cmdline-tools;2.0";
     pname = "cmdline-tools-2-0";
@@ -2429,26 +2481,26 @@
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "9";
+    version = "11-rc7";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip";
-        sha1 = "7f92d6e0783a6d73ade5396fe4cfcb58544ef14b";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-9644228_latest.zip";
+        sha1 = "c43e4fb8567c4625e8daf4cee0a5490f826a5442";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-9477386_latest.zip";
-        sha1 = "587441bc37d957857c1f654726eb7e04ee9ca3e0";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-9644228_latest.zip";
+        sha1 = "2c97234849128cb75b0691cf652ab098707c610c";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-9477386_latest.zip";
-        sha1 = "f8cd24223fee3b4cff857c9435caa72be0d08b70";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-9644228_latest.zip";
+        sha1 = "2bfc8fad022acce100a5b0583def1ca5bc56eff1";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
     path = "cmdline-tools/latest";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./cmdline-tools-latest.xml;
   };
@@ -6568,8 +6620,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
