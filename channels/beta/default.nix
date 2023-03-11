@@ -2035,15 +2035,15 @@
     sources = {
       linux = {
         url = "https://dl.google.com/android/repository/build-tools_r34-rc2-linux.zip";
-        sha1 = "0c0a92fe32525f0481973b631f528086b0962028";
+        sha1 = "bce35f1524d2ea5f6326809dc7accff0ee2fe370";
       };
       darwin = {
         url = "https://dl.google.com/android/repository/build-tools_r34-rc2-macosx.zip";
-        sha1 = "3dd9aee08699e02e6ce9d56c1f94487f0688e045";
+        sha1 = "c47d9c9d040567b1b62eefc1a6306b5acebe3a76";
       };
       windows = {
         url = "https://dl.google.com/android/repository/build-tools_r34-rc2-windows.zip";
-        sha1 = "6f78c88e65a6e55f672110ab1e357be78262dc27";
+        sha1 = "60c51d073ac760fdec647b9fecf086d1a35f7841";
       };
     };
     displayName = "Android SDK Build-Tools 34-rc2";
@@ -4327,19 +4327,19 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "34";
+    version = "34.0.1";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/platform-tools_r34.0.0-darwin.zip";
-        sha1 = "6bc1eb39437ae223e085d2cc6945d51d58d93bb0";
+        url = "https://dl.google.com/android/repository/platform-tools_r34.0.1-darwin.zip";
+        sha1 = "e48d52653385e2a1ace5ccfa65fcc2e48acd690f";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r34.0.0-linux.zip";
-        sha1 = "86bb6c1ff4ad8af8c5bb93acabd76926b6388826";
+        url = "https://dl.google.com/android/repository/platform-tools_r34.0.1-linux.zip";
+        sha1 = "784446b1626e9a7e79aff08189acd04e24c8bd77";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r34.0.0-windows.zip";
-        sha1 = "a79d9ec5943a7ef015bdbb2ca825c7da842836df";
+        url = "https://dl.google.com/android/repository/platform-tools_r34.0.1-windows.zip";
+        sha1 = "db8a17c4780136216c4f2e7ebd005171b6ccb982";
       };
     };
     displayName = "Android SDK Platform-Tools";
@@ -5027,7 +5027,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/platform-UpsideDownCake_r02.zip";
-        sha1 = "d4643c1e84a6f3ff634533b8ff5449a0ab18e6e5";
+        sha1 = "124da1e127e3dde3fdbdb27f693d047ccb3cc0fb";
       };
     };
     displayName = "Android SDK Platform UpsideDownCake";
@@ -6526,8 +6526,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -8631,7 +8631,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-UpsideDownCake_r02.zip";
-        sha1 = "f8bc13b077efc6d9c22c1975ef829f4fe9a79e52";
+        sha1 = "7d1b9a68ba1f48e9e7f1126052b89dae304221fe";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -8649,7 +8649,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-UpsideDownCake_r02.zip";
-        sha1 = "3d78bcd25ad26d6bd0f2687fcd5ac8b68e1eac5a";
+        sha1 = "e53594c3f0a91bdeeffb5a6105e0f4f99a7b5be3";
       };
     };
     displayName = "Google APIs Intel x86_64 Atom System Image";
@@ -8667,11 +8667,11 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-UpsideDownCake_r02-darwin.zip";
-        sha1 = "9800550d17508fe2f7e4f86e01380997fbc44bf8";
+        sha1 = "669c8a17605456260df707d9840c25568c7c4ade";
       };
       linux = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-UpsideDownCake_r02-linux.zip";
-        sha1 = "9800550d17508fe2f7e4f86e01380997fbc44bf8";
+        sha1 = "669c8a17605456260df707d9840c25568c7c4ade";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -8689,7 +8689,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-UpsideDownCake_r02.zip";
-        sha1 = "86c228879cdafa48a2cd4788d251ee2a0567b860";
+        sha1 = "663cf2b2cca9ef45e3c02bc3f8e4151a91361192";
       };
     };
     displayName = "Google Play Intel x86_64 Atom System Image";
