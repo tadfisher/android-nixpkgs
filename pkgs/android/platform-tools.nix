@@ -6,7 +6,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       autoPatchelfHook
     ];
 
-    runtimeDependencies = [
+    buildInputs = [
       stdenv.cc.cc.lib
     ];
   } // {
