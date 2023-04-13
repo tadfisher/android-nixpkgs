@@ -59,9 +59,8 @@ let
     buildInputs = lib.optionals stdenv.isLinux ([
       libxcrypt
       ncurses5
-      zlib
-    ] ++ lib.optionals (lib.versionOlder versionMajor "20") [
       stdenv.cc.cc.lib
+      zlib
     ] ++ lib.optionals (lib.versionOlder versionMajor "18") [
       libedit
     ] ++ lib.optionals (versionMajor == "16") [
