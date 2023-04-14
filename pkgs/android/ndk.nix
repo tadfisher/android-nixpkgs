@@ -5,7 +5,7 @@
 , pkgsHostHost
 , autoPatchelfHook ? null
 , libedit ? null
-, libxcrypt ? null
+, libxcrypt-legacy ? null
 , ncurses5 ? null
 , openssl ? null
 , sqlite ? null
@@ -14,7 +14,7 @@
 }:
 
 assert stdenv.isLinux -> autoPatchelfHook != null;
-assert stdenv.isLinux -> libxcrypt != null;
+assert stdenv.isLinux -> libxcrypt-legacy != null;
 assert stdenv.isLinux -> ncurses5 != null;
 assert stdenv.isLinux -> zlib != null;
 
@@ -57,18 +57,17 @@ let
     ];
 
     buildInputs = lib.optionals stdenv.isLinux ([
-      libxcrypt
+      libxcrypt-legacy
       ncurses5
-      zlib
-    ] ++ lib.optionals (lib.versionOlder versionMajor "20") [
       stdenv.cc.cc.lib
+      zlib
     ] ++ lib.optionals (lib.versionOlder versionMajor "18") [
       libedit
     ] ++ lib.optionals (versionMajor == "16") [
       python27
     ]);
 
-    postInstall = ''
+    postFixup = ''
       patchShebangs .
 
       ${lib.optionalString (stdenv.isLinux && lib.versionOlder versionMajor "18") ''
