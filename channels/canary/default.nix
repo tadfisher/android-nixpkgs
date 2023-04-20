@@ -2507,23 +2507,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "33.1.3";
+    version = "33.1.4";
     sources = {
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9786972.zip";
-        sha1 = "ef9dc7c5b85443ee6b13777ed7ee1a1946f8b205";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-9936625.zip";
+        sha1 = "33be82356a352b79b742154f7c71f6f13455f27b";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-9786972.zip";
-        sha1 = "57d6f82633016df1949661d0f5c850fcf391b186";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-9936625.zip";
+        sha1 = "cfa28a326b6328e2f3a068ac3030a075471d9df0";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-9786972.zip";
-        sha1 = "d75618268c3a1be3915f7773af31e205e0179960";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-9936625.zip";
+        sha1 = "0aab97a7b84853c8f8c7618191dc23416e2a7a4b";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9786972.zip";
-        sha1 = "cc8e1f8da8adc3546f45c77b0b2bc5cba7280ee0";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-9936625.zip";
+        sha1 = "a540ec957ad163d5d8f9bd0c0cfc9f91ecc78f86";
       };
     };
     displayName = "Android Emulator";
@@ -2562,7 +2562,7 @@
         sha1 = "1a4ef9875cb0adfe5500632ad7140027cfb080d9";
       };
     };
-    displayName = "Android Emulator Hypervisor Driver (installer)";
+    displayName = "Android Emulator hypervisor driver (installer)";
     path = "extras/google/Android_Emulator_Hypervisor_Driver";
     license = {
       id = "android-sdk-license";
