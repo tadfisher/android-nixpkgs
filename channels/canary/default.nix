@@ -8624,6 +8624,42 @@
     };
     xml = ./system-images-android-33-android-tv-x86.xml;
   };
+  system-images-android-33-android-wear-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-33;android-wear;arm64-v8a";
+    pname = "system-images-android-33-android-wear-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-33_r02.zip";
+        sha1 = "d1d540281261cf23895004a18705b62a53928fe6";
+      };
+    };
+    displayName = "Wear OS 4 - Preview ARM 64 v8a System Image";
+    path = "system-images/android-33/android-wear/arm64-v8a";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-33-android-wear-arm64-v8a.xml;
+  };
+  system-images-android-33-android-wear-x86-64 = mkSrcOnly {
+    id = "system-images;android-33;android-wear;x86_64";
+    pname = "system-images-android-33-android-wear-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-33_r02.zip";
+        sha1 = "91f88f49e9484a86f18600fbfdfd281619b5ce79";
+      };
+    };
+    displayName = "Wear OS 4 - Preview Intel x86_64 Atom System Image";
+    path = "system-images/android-33/android-wear/x86_64";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-33-android-wear-x86-64.xml;
+  };
   system-images-android-33-google-tv-arm64-v8a = mkSrcOnly {
     id = "system-images;android-33;google-tv;arm64-v8a";
     pname = "system-images-android-33-google-tv-arm64-v8a";
