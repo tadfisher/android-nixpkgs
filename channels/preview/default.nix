@@ -2028,6 +2028,84 @@
     };
     xml = ./build-tools-33-0-2.xml;
   };
+  build-tools-34-0-0-rc1 = mkBuildTools {
+    id = "build-tools;34.0.0-rc1";
+    pname = "build-tools-34-0-0-rc1";
+    version = "34-rc1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc1-linux.zip";
+        sha1 = "fec0a16d0c2fab6576fd58f6aa2e69a561ab1128";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc1-macosx.zip";
+        sha1 = "1e3847d449ce6124ffbf528db601f3dfab25e77e";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc1-windows.zip";
+        sha1 = "73dca92f84827749882bd0ac501c4befdf3ab878";
+      };
+    };
+    displayName = "Android SDK Build-Tools 34-rc1";
+    path = "build-tools/34.0.0-rc1";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./build-tools-34-0-0-rc1.xml;
+  };
+  build-tools-34-0-0-rc2 = mkBuildTools {
+    id = "build-tools;34.0.0-rc2";
+    pname = "build-tools-34-0-0-rc2";
+    version = "34-rc2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc2-linux.zip";
+        sha1 = "bce35f1524d2ea5f6326809dc7accff0ee2fe370";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc2-macosx.zip";
+        sha1 = "c47d9c9d040567b1b62eefc1a6306b5acebe3a76";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc2-windows.zip";
+        sha1 = "60c51d073ac760fdec647b9fecf086d1a35f7841";
+      };
+    };
+    displayName = "Android SDK Build-Tools 34-rc2";
+    path = "build-tools/34.0.0-rc2";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./build-tools-34-0-0-rc2.xml;
+  };
+  build-tools-34-0-0-rc3 = mkBuildTools {
+    id = "build-tools;34.0.0-rc3";
+    pname = "build-tools-34-0-0-rc3";
+    version = "34-rc3";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc3-linux.zip";
+        sha1 = "0bcb893e8b009f1da3d538be47c6ae5907884bf6";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc3-macosx.zip";
+        sha1 = "97db9e5009971021ca18bb62043764b68f756ede";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/build-tools_r34-rc3-windows.zip";
+        sha1 = "78fa4ca752017c3217786af16c513f44a5042433";
+      };
+    };
+    displayName = "Android SDK Build-Tools 34-rc3";
+    path = "build-tools/34.0.0-rc3";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./build-tools-34-0-0-rc3.xml;
+  };
   build-tools-34-0-0-rc4 = mkBuildTools {
     id = "build-tools;34.0.0-rc4";
     pname = "build-tools-34-0-0-rc4";
@@ -6530,8 +6608,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
