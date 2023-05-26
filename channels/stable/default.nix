@@ -2533,23 +2533,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "33.1.10";
+    version = "33.1.11";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10078095.zip";
-        sha1 = "541b46d895bf40a95f6e94466d5223285b9587ad";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10171126.zip";
+        sha1 = "b64d202021ab61c514d44926e5f5e6677e4a9c4c";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10078095.zip";
-        sha1 = "f38b9ec7e9c9ff3b8c4022e7f9baa1d6622634a0";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10171126.zip";
+        sha1 = "8da09632d5a158a9c841ad46ebca37d60c5a37fc";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-10078095.zip";
-        sha1 = "e97f77ce116ff8fb13bd8f89a2097cc4ab1dbc67";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-10171126.zip";
+        sha1 = "2feb321bda966a3c7b196acccfd5d88d6226b544";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-10078095.zip";
-        sha1 = "8738b20ee568c4e6a84b66b1fa848517db646c47";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-10171126.zip";
+        sha1 = "8d537ffef3c8eccd578ce9bc1a1c9179cc714ca3";
       };
     };
     displayName = "Android Emulator";
@@ -8169,11 +8169,11 @@
   system-images-android-UpsideDownCake-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-UpsideDownCake;google_apis;arm64-v8a";
     pname = "system-images-android-UpsideDownCake-google-apis-arm64-v8a";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-UpsideDownCake_r04.zip";
-        sha1 = "2335c0cf2c76cb1883a6d6ee38e6fff99989596f";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-UpsideDownCake_r05.zip";
+        sha1 = "72526139a742400105abb241cbb6a7d1d09b4dcd";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -8187,11 +8187,11 @@
   system-images-android-UpsideDownCake-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-UpsideDownCake;google_apis;x86_64";
     pname = "system-images-android-UpsideDownCake-google-apis-x86-64";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-UpsideDownCake_r04.zip";
-        sha1 = "15a514144f57865a84abbd6df8e6897c80bb8b88";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-UpsideDownCake_r05.zip";
+        sha1 = "c9318ae124896978df9ec8e079cfe532b3515d13";
       };
     };
     displayName = "Google APIs Intel x86_64 Atom System Image";
@@ -8205,15 +8205,15 @@
   system-images-android-UpsideDownCake-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-UpsideDownCake;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-UpsideDownCake-google-apis-playstore-arm64-v8a";
-    version = "4";
+    version = "5";
     sources = {
       darwin = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-UpsideDownCake_r04-darwin.zip";
-        sha1 = "b9f7a7d25450e2385a8334af688ab862fc723dba";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-UpsideDownCake_r05-darwin.zip";
+        sha1 = "35088e4804083a27ccb6ee05cc93977afd209059";
       };
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-UpsideDownCake_r04-linux.zip";
-        sha1 = "b9f7a7d25450e2385a8334af688ab862fc723dba";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-UpsideDownCake_r05-linux.zip";
+        sha1 = "35088e4804083a27ccb6ee05cc93977afd209059";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -8227,11 +8227,11 @@
   system-images-android-UpsideDownCake-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-UpsideDownCake;google_apis_playstore;x86_64";
     pname = "system-images-android-UpsideDownCake-google-apis-playstore-x86-64";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-UpsideDownCake_r04.zip";
-        sha1 = "4647cbb1877cca1394b1a4fff52c644e6220d07a";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-UpsideDownCake_r05.zip";
+        sha1 = "a6e9745715acad2c01a45bdb6eb10a7d98920f23";
       };
     };
     displayName = "Google Play Intel x86_64 Atom System Image";
