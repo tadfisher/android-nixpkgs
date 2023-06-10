@@ -5228,6 +5228,24 @@
     };
     xml = ./platforms-android-TiramisuPrivacySandbox.xml;
   };
+  platforms-android-UpsideDownCake = mkSrcOnly {
+    id = "platforms;android-UpsideDownCake";
+    pname = "platforms-android-UpsideDownCake";
+    version = "4";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-UpsideDownCake_r04.zip";
+        sha1 = "a0fe6b17b8ea26c72f4a1feb0234aab6b20fd4be";
+      };
+    };
+    displayName = "Android SDK Platform UpsideDownCake";
+    path = "platforms/android-UpsideDownCake";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-UpsideDownCake.xml;
+  };
   platforms-android-UpsideDownCakePrivacySandbox = mkSrcOnly {
     id = "platforms;android-UpsideDownCakePrivacySandbox";
     pname = "platforms-android-UpsideDownCakePrivacySandbox";
