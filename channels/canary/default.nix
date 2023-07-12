@@ -4496,6 +4496,32 @@
     };
     xml = ./ndk-25-2-9519653.xml;
   };
+  ndk-26-0-10404224 = mkNdk {
+    id = "ndk;26.0.10404224";
+    pname = "ndk-26-0-10404224";
+    version = "26.0.10404224-rc1";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r26-beta1-darwin.zip";
+        sha1 = "d6dbb122cf3fc52a64ae0d19d120a01ce0052f3b";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r26-beta1-linux.zip";
+        sha1 = "fb5e34313766764d9654b04603e69af813b18799";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r26-beta1-windows.zip";
+        sha1 = "bcdc60cf0149fc862cbb5514e7879d8c46c6e1e0";
+      };
+    };
+    displayName = "NDK (Side by side) 26.0.10404224";
+    path = "ndk/26.0.10404224";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./ndk-26-0-10404224.xml;
+  };
   patcher-v4 = mkSrcOnly {
     id = "patcher;v4";
     pname = "patcher-v4";
@@ -6756,8 +6782,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
