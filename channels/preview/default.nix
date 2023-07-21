@@ -2559,23 +2559,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "33.1.15";
+    version = "33.1.16";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10410302.zip";
-        sha1 = "7ade0b3f93acc56e91fa1395877482fdacf32cf0";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10511200.zip";
+        sha1 = "270cd40a8fa0bc9c3d65d0d85261aad8af7a7991";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10410302.zip";
-        sha1 = "2ce95ed126506c819731e02031c464a92191a247";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10511200.zip";
+        sha1 = "f143d8be11487340a5f09704472334ce6a4d5824";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-10410302.zip";
-        sha1 = "87375134105201ce7f27797d61b72afcb1181df2";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-10511200.zip";
+        sha1 = "57124b05d6dd657c62fae20f4d0e02a338264247";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-10410302.zip";
-        sha1 = "1d495fba0f63e07a262d4b5677f6a2375f031e80";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-10511200.zip";
+        sha1 = "7ea7a3d279739d412a4991d053565cb53e518068";
       };
     };
     displayName = "Android Emulator";
@@ -4435,7 +4435,7 @@
     sources = {
       darwin = {
         url = "https://dl.google.com/android/repository/platform-tools_r34.0.4-darwin.zip";
-        sha1 = "8bcae963fe8af0df791abd050554266762d67eb4";
+        sha1 = "ecc476b9801fcb6ea61605eedf60f85217964f09";
       };
       linux = {
         url = "https://dl.google.com/android/repository/platform-tools_r34.0.4-linux.zip";
@@ -4443,7 +4443,7 @@
       };
       windows = {
         url = "https://dl.google.com/android/repository/platform-tools_r34.0.4-windows.zip";
-        sha1 = "7a3bedeebee793260dfab87dd03dda00b83ed4f8";
+        sha1 = "d245eedc17259b15e799c312e9014f78aea3da21";
       };
     };
     displayName = "Android SDK Platform-Tools";
