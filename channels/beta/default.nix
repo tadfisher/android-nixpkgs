@@ -6722,8 +6722,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -6873,28 +6873,10 @@
     displayName = "China version of Android Wear ARM EABI v7a System Image";
     path = "system-images/android-25/android-wear-cn/armeabi-v7a";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-25-android-wear-cn-armeabi-v7a.xml;
-  };
-  system-images-android-25-android-wear-cn-x86 = mkSrcOnly {
-    id = "system-images;android-25;android-wear-cn;x86";
-    pname = "system-images-android-25-android-wear-cn-x86";
-    version = "4";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-25_r04.zip";
-        sha1 = "73eab14c7cf2f6941e1fee61e0038ead7a2c7f4d";
-      };
-    };
-    displayName = "China version of Android Wear Intel x86 Atom System Image";
-    path = "system-images/android-25/android-wear-cn/x86";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-25-android-wear-cn-x86.xml;
   };
   system-images-android-25-android-wear-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;android-wear;armeabi-v7a";
@@ -7093,24 +7075,6 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-26-android-tv-x86.xml;
-  };
-  system-images-android-26-android-wear-cn-x86 = mkSrcOnly {
-    id = "system-images;android-26;android-wear-cn;x86";
-    pname = "system-images-android-26-android-wear-cn-x86";
-    version = "4";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-26_r04.zip";
-        sha1 = "fdc8a313f889a2d6522de1fbc00ee9e13547d096";
-      };
-    };
-    displayName = "China version of Android Wear Intel x86 Atom System Image";
-    path = "system-images/android-26/android-wear-cn/x86";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-26-android-wear-cn-x86.xml;
   };
   system-images-android-26-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-26;android-wear;x86";
@@ -7417,24 +7381,6 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-28-android-tv-x86.xml;
-  };
-  system-images-android-28-android-wear-cn-x86 = mkSrcOnly {
-    id = "system-images;android-28;android-wear-cn;x86";
-    pname = "system-images-android-28-android-wear-cn-x86";
-    version = "9";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-28_r09.zip";
-        sha1 = "e2a0da3d680e970b745716425bfb984b25e80262";
-      };
-    };
-    displayName = "China version of Wear OS Intel x86 Atom System Image";
-    path = "system-images/android-28/android-wear-cn/x86";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-28-android-wear-cn-x86.xml;
   };
   system-images-android-28-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
@@ -7885,42 +7831,6 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-30-android-tv-x86.xml;
-  };
-  system-images-android-30-android-wear-cn-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-30;android-wear-cn;arm64-v8a";
-    pname = "system-images-android-30-android-wear-cn-arm64-v8a";
-    version = "10";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/arm64-v8a-30_r10.zip";
-        sha1 = "140249006667f3d36f01b1067988b3f3fdbbe37d";
-      };
-    };
-    displayName = "China version of Wear OS 3 - Preview ARM 64 v8a System Image";
-    path = "system-images/android-30/android-wear-cn/arm64-v8a";
-    license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
-    };
-    xml = ./system-images-android-30-android-wear-cn-arm64-v8a.xml;
-  };
-  system-images-android-30-android-wear-cn-x86 = mkSrcOnly {
-    id = "system-images;android-30;android-wear-cn;x86";
-    pname = "system-images-android-30-android-wear-cn-x86";
-    version = "10";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear-cn/x86-30_r10.zip";
-        sha1 = "4969560d24a0ab610f6191753a55821520d18e9a";
-      };
-    };
-    displayName = "China version of Wear OS 3 - Preview Intel x86 Atom System Image";
-    path = "system-images/android-30/android-wear-cn/x86";
-    license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
-    };
-    xml = ./system-images-android-30-android-wear-cn-x86.xml;
   };
   system-images-android-30-android-wear-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;android-wear;arm64-v8a";
