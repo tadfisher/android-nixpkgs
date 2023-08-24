@@ -51,8 +51,8 @@ in
       file.${cfg.path}.source = "${cfg.finalPackage}/share/android-sdk";
       packages = [ cfg.finalPackage ];
       sessionVariables = {
-        ANDROID_HOME = config.home.file.${cfg.path}.target;
-        ANDROID_SDK_ROOT = config.home.file.${cfg.path}.target;
+        ANDROID_HOME = cfg.path;
+        ANDROID_SDK_ROOT = cfg.path;
       };
     };
   };
