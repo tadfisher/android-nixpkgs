@@ -2894,6 +2894,28 @@
     };
     xml = ./extras-google-webdriver.xml;
   };
+  extras-intel-Hardware-Accelerated-Execution-Manager = mkSrcOnly {
+    id = "extras;intel;Hardware_Accelerated_Execution_Manager";
+    pname = "extras-intel-Hardware-Accelerated-Execution-Manager";
+    version = "7.6.5";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/extras/intel/haxm-macosx_v7_6_5.zip";
+        sha1 = "0522a8b783bcb193fd323612ec9b4c183e53189e";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/extras/intel/haxm-windows_v7_6_5.zip";
+        sha1 = "38a44a67907330bb39d8228082cc876da54f7dfc";
+      };
+    };
+    displayName = "Intel x86 Emulator Accelerator (HAXM installer)";
+    path = "extras/intel/Hardware_Accelerated_Execution_Manager";
+    license = {
+      id = "intel-android-extra-license";
+      hash = "d975f751698a77b662f1254ddbeed3901e976f5a";
+    };
+    xml = ./extras-intel-Hardware-Accelerated-Execution-Manager.xml;
+  };
   m2repository-com-android-support-constraint-constraint-layout-solver-constraint-layout-solver-1-0-0 = mkSrcOnly {
     id = "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0";
     pname = "extras-m2repository-com-android-support-constraint-constraint-layout-solver-1-0-0";
