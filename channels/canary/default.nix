@@ -2951,10 +2951,6 @@
     pname = "extras-intel-Hardware-Accelerated-Execution-Manager";
     version = "7.6.5";
     sources = {
-      darwin = {
-        url = "https://dl.google.com/android/repository/extras/intel/haxm-macosx_v7_6_5.zip";
-        sha1 = "0522a8b783bcb193fd323612ec9b4c183e53189e";
-      };
       windows = {
         url = "https://dl.google.com/android/repository/extras/intel/haxm-windows_v7_6_5.zip";
         sha1 = "38a44a67907330bb39d8228082cc876da54f7dfc";
