@@ -18,6 +18,11 @@ let
       buildInputs = [ ncurses5 stdenv.cc.cc.lib ];
     }
     else { }
+  ) // lib.optionalAttrs stdenv.isDarwin (
+    if (hasPrefix "cmake;" id) then {
+      dontStrip = true;
+    }
+    else { }
   );
 
 in
