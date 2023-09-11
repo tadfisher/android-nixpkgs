@@ -2611,23 +2611,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "33.1.17";
+    version = "34.1.1";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10594030.zip";
-        sha1 = "8fc0648edd6f1786f97244a0b7c3dc552d88d95a";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10719686.zip";
+        sha1 = "96de43fe738720c497b28db2d727c9bcdfd4fd3d";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10594030.zip";
-        sha1 = "cd989b0594ebe9382749b3a5dc026acb326e4de0";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10719686.zip";
+        sha1 = "f94b44de3b310b33fd0034da5b850b22650dcc8c";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-10594030.zip";
-        sha1 = "72c3fb1591755ee5f5d662114a394d08247efc13";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-10719686.zip";
+        sha1 = "aad10a9b44d8d9a47a4e31a4d6f01187f4b8b294";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-10594030.zip";
-        sha1 = "cc302b5107e64348e957e4738530bcfbb58212a8";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-10719686.zip";
+        sha1 = "d8efe4ea6a870592f8f7c62b745381b237ade77d";
       };
     };
     displayName = "Android Emulator";
@@ -2930,7 +2930,7 @@
         sha1 = "38a44a67907330bb39d8228082cc876da54f7dfc";
       };
     };
-    displayName = "Intel x86 Emulator Accelerator (HAXM installer)";
+    displayName = "Intel x86 Emulator Accelerator (HAXM installer) - Deprecated";
     path = "extras/intel/Hardware_Accelerated_Execution_Manager";
     license = {
       id = "intel-android-extra-license";
