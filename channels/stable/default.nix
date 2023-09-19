@@ -3928,6 +3928,32 @@
     };
     xml = ./ndk-25-2-9519653.xml;
   };
+  ndk-26-0-10792818 = mkNdk {
+    id = "ndk;26.0.10792818";
+    pname = "ndk-26-0-10792818";
+    version = "26.0.10792818";
+    sources = {
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r26-darwin.zip";
+        sha1 = "5c74249e80549db0f2feddc58e1838d3d2cc6d42";
+      };
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r26-linux.zip";
+        sha1 = "d3bef08e0e43acd9e7815538df31818692d548bb";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r26-windows.zip";
+        sha1 = "7fcf5789bc248c130af675720353819f72b02b94";
+      };
+    };
+    displayName = "NDK (Side by side) 26.0.10792818";
+    path = "ndk/26.0.10792818";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-26-0-10792818.xml;
+  };
   patcher-v4 = mkSrcOnly {
     id = "patcher;v4";
     pname = "patcher-v4";
