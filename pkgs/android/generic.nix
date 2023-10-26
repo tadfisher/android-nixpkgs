@@ -13,6 +13,7 @@ let
 
 in
 stdenv.mkDerivation (rec {
+  dontStrip = args.dontStrip or false;
 
   inherit (package) pname version;
 
