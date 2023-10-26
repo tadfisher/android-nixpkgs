@@ -13,6 +13,7 @@ let
 
 in
 stdenv.mkDerivation (rec {
+  dontStrip = args.dontStrip or false;
 
   inherit (package) pname version;
 
@@ -61,5 +62,7 @@ stdenv.mkDerivation (rec {
     license = licenses.asl20;
     maintainers = with maintainers; [ tadfisher ];
     inherit platforms;
+    broken = builtins.any (p: p.meta.broken or false) (nativeBuildInputs ++ (args.buildInputs or [ ]));
+    knownVulnerabilities = lib.concatMap (p: p.meta.knownVulnerabilities or [ ]) (nativeBuildInputs ++ (args.buildInputs or [ ]));
   } // (args.meta or { });
 } // removeAttrs args [ "nativeBuildInputs" "passthru" "meta" "unzipCmd" ])
