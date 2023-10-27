@@ -8,8 +8,10 @@ let
   androidSdk = callPackage ./pkgs/android { };
 
   isSupported = _: pkg:
-    if (!lib.isDerivation pkg) then true
-    else builtins.elem system pkg.meta.platforms;
+    (!lib.isDerivation pkg) ||
+    lib.meta.availableOn hostPlatform pkg ||
+    config.allowUnsupportedSystem ||
+    builtins.getEnv "NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM" == "1";
 
   filterIsSupported = lib.filterAttrs isSupported;
 
