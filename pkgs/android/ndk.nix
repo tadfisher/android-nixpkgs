@@ -104,7 +104,7 @@ let
     dontPatchELF = true;
     dontAutoPatchelf = true;
     autoPatchelfIgnoreMissingDeps = [ "liblog.so" ];
-
+  } // {
     passthru.installSdk = ''
       ln -sf $pkgBase/ndk-build $out/bin/ndk-build
     '';
