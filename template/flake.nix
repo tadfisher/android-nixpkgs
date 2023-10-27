@@ -15,8 +15,9 @@
       };
     }
     //
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (system:
       let
+        inherit (nixpkgs) lib;
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
@@ -30,18 +31,27 @@
         packages = {
           android-sdk = android.sdk.${system} (sdkPkgs: with sdkPkgs; [
             # Useful packages for building and testing.
-            build-tools-30-0-2
+            build-tools-34-0-0
             cmdline-tools-latest
             emulator
             platform-tools
-            platforms-android-30
+            platforms-android-34
 
             # Other useful packages for a development environment.
-            # sources-android-30
-            # system-images-android-30-google-apis-x86
-            # system-images-android-30-google-apis-playstore-x86
+            # ndk-26-1-10909125
+            # skiaparser-3
+            # sources-android-34
+          ]
+          ++ lib.optionals (system == "aarch64-darwin") [
+            # system-images-android-34-google-apis-arm64-v8a
+            # system-images-android-34-google-apis-playstore-arm64-v8a
+          ]
+          ++ lib.optionals (system == "x86_64-darwin" || system == "x86_64-linux") [
+            # system-images-android-34-google-apis-x86-64
+            # system-images-android-34-google-apis-playstore-x86-64
           ]);
-
+        } // lib.optionalAttrs (system == "x86_64-linux") {
+          # Android Studio in nixpkgs is currently packaged for x86_64-linux only.
           android-studio = pkgs.androidStudioPackages.stable;
           # android-studio = pkgs.androidStudioPackages.beta;
           # android-studio = pkgs.androidStudioPackages.preview;
