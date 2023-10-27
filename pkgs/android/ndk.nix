@@ -13,6 +13,11 @@
 , zlib ? null
 }:
 
+let
+  python27Versions = [ "16" "21" ];
+
+in
+
 assert stdenv.isLinux -> autoPatchelfHook != null;
 assert stdenv.isLinux -> libxcrypt-legacy != null;
 assert stdenv.isLinux -> ncurses5 != null;
@@ -25,8 +30,6 @@ let
 in
 
 assert (stdenv.isLinux && lib.versionOlder versionMajor "18") -> libedit != null;
-assert (stdenv.isLinux && versionMajor == "16") -> openssl != null;
-assert (stdenv.isLinux && versionMajor == "16") -> sqlite != null;
 
 let
   runtimePaths = lib.makeBinPath (with pkgsHostHost; [
@@ -63,7 +66,7 @@ let
       zlib
     ] ++ lib.optionals (lib.versionOlder versionMajor "18") [
       libedit
-    ] ++ lib.optionals (versionMajor == "16") [
+    ] ++ lib.optionals (builtins.elem versionMajor python27Versions) [
       python27
     ]);
 
@@ -74,7 +77,7 @@ let
       ln -sf ${libedit}/lib/libedit.so $out/toolchains/llvm/prebuilt/linux-x86_64/lib64/libedit.so.2
       ''}
 
-      ${lib.optionalString (stdenv.isLinux && versionMajor == "16") ''
+      ${lib.optionalString (stdenv.isLinux && builtins.elem versionMajor python27Versions) ''
       rm -rf $out/prebuilt/*/lib/python2.7
       ''}
 
@@ -101,7 +104,7 @@ let
     dontPatchELF = true;
     dontAutoPatchelf = true;
     autoPatchelfIgnoreMissingDeps = [ "liblog.so" ];
-
+  } // {
     passthru.installSdk = ''
       ln -sf $pkgBase/ndk-build $out/bin/ndk-build
     '';
