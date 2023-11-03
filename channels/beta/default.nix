@@ -2611,23 +2611,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "34.1.8";
+    version = "34.1.9";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-10992497.zip";
-        sha1 = "83aec201ecb0ecfd5f0a47f893a359ede815d3cb";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-11009885.zip";
+        sha1 = "448d8bac1dfec92e822113591d5b35e5ae236cd0";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-10992497.zip";
-        sha1 = "28ffb4bdc27997c70f3550204c94abaf44544bb8";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-11009885.zip";
+        sha1 = "5d59f7b706d09c339f04dae6dc36f226c2b21381";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-10992497.zip";
-        sha1 = "6c3150b84346930623dbfc3f4f08130e25385f00";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-11009885.zip";
+        sha1 = "ba6ffcefd507be5fc14d1319a60c92c5d80c0ea3";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-10992497.zip";
-        sha1 = "8010a1e2acad027d45f3078f52b9a22fb8ba946a";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-11009885.zip";
+        sha1 = "7ef53d77d429f77952b643062947c97dac8e2167";
       };
     };
     displayName = "Android Emulator";
@@ -4535,24 +4535,6 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./ndk-26-1-10909125.xml;
-  };
-  patcher-v4 = mkSrcOnly {
-    id = "patcher;v4";
-    pname = "patcher-v4";
-    version = "1";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/3534162-studio.sdk-patcher.zip";
-        sha1 = "046699c5e2716ae11d77e0bad814f7f33fab261e";
-      };
-    };
-    displayName = "SDK Patch Applier v4";
-    path = "patcher/v4";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./patcher-v4.xml;
   };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
