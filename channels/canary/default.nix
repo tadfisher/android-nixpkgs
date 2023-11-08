@@ -9614,7 +9614,7 @@
         sha1 = "c6ab7b8655c4cd21a159b0f91463749a612f4f2d";
       };
     };
-    displayName = "Tablet Google APIs ARM 64 v8a System Image";
+    displayName = "Google APIs Tablet ARM 64 v8a System Image";
     path = "system-images/android-34/google_apis_tablet/arm64-v8a";
     license = {
       id = "android-sdk-license";
@@ -9632,7 +9632,7 @@
         sha1 = "dcfd44510b259f229a1bf869718c109401e5b7bc";
       };
     };
-    displayName = "Tablet Google APIs Intel x86_64 Atom System Image";
+    displayName = "Google APIs Tablet Intel x86_64 Atom System Image";
     path = "system-images/android-34/google_apis_tablet/x86_64";
     license = {
       id = "android-sdk-license";
@@ -9650,7 +9650,7 @@
         sha1 = "6df3072f90c98910e7d8c241d7cd3246f73395c7";
       };
     };
-    displayName = "Tablet Google Play ARM 64 v8a System Image";
+    displayName = "Google Play Tablet ARM 64 v8a System Image";
     path = "system-images/android-34/google_playstore_tablet/arm64-v8a";
     license = {
       id = "android-sdk-license";
@@ -9668,7 +9668,7 @@
         sha1 = "9f366005a9936c395c3448c29a117c349ddf8470";
       };
     };
-    displayName = "Tablet Google Play Intel x86_64 Atom System Image";
+    displayName = "Google Play Tablet Intel x86_64 Atom System Image";
     path = "system-images/android-34/google_playstore_tablet/x86_64";
     license = {
       id = "android-sdk-license";
