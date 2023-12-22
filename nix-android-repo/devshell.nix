@@ -1,6 +1,6 @@
 { lib
 , stdenv
-, devshell
+, devshellPkgs
 , gradle
 , gradle-properties
 , jdk
@@ -9,7 +9,7 @@
 
 with lib;
 
-devshell.mkShell {
+devshellPkgs.mkShell {
   name = "android-nixpkgs";
 
   env = [
