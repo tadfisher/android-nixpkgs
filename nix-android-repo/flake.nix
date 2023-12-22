@@ -8,15 +8,13 @@
   };
 
   outputs = { self, nixpkgs, devshell, flake-utils }:
-    flake-utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ] (system:
+    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ] (system:
       let
-        pkgs = import nixpkgs {
-          inherit system;
-          config.overlays = [ (devshell.overlay) ];
+        pkgs = nixpkgs.legacyPackages.${system};
+        localPkgs = pkgs.callPackage ./default.nix {
+          inherit pkgs;
+          devshellPkgs = devshell.legacyPackages.${system};
         };
-
-        localPkgs = pkgs.callPackage ./default.nix { final = pkgs; };
-
       in
       {
         apps = {
@@ -30,20 +28,14 @@
           };
         };
 
-        packages = {
+        packages = rec {
           inherit (localPkgs)
             nix-android-repo
             update-locks;
+          default = nix-android-repo;
         };
 
-        defaultPackage = self.packages.${system}.nix-android-repo;
-
-        devShell = pkgs.callPackage ./devshell.nix {
-          inherit (localPkgs)
-            gradle-properties
-            update-locks;
-          devshell = devshell.legacyPackages.${system};
-        };
+        devShells.default = localPkgs.devshell;
       }
     );
 }

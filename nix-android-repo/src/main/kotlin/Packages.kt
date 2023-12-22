@@ -135,13 +135,13 @@ fun Archive.platform(): String {
 }
 
 fun RemotePackage.attrpath(): List<String> {
-    return path.split(";").fold(mutableListOf()) { acc, p ->
+    return path.split(";").fold(emptyList()) { acc, p ->
         val sanitized = p.sanitize()
         if (acc.isNotEmpty() && (sanitized.first().isDigit() || sanitized == "latest")) {
             acc.drop(1) + "${acc.last()}-$sanitized"
         } else {
             acc + sanitized
-        } as MutableList<String>
+        }
     }
 }
 
