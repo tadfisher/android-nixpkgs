@@ -21,13 +21,15 @@ dependencies {
     runtimeOnly(libs.jaxb.impl)
 }
 
-tasks {
-    withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "17"
-        }
-    }
+val jdk = providers.gradleProperty("nix.jdk").map(JavaLanguageVersion::of)
 
+kotlin {
+    jvmToolchain {
+        languageVersion.set(jdk)
+    }
+}
+
+tasks {
     register("downloadSources") {
         doLast {
             val componentIds = configurations.filter { it.isCanBeResolved }

@@ -1,16 +1,21 @@
 package codes.tad.nixandroidrepo
 
 import com.android.prefs.AndroidLocationsSingleton
-import com.android.repository.api.*
+import com.android.repository.api.Channel
+import com.android.repository.api.Checksum
+import com.android.repository.api.Downloader
+import com.android.repository.api.ProgressIndicator
+import com.android.repository.api.ProgressIndicatorAdapter
+import com.android.repository.api.RemotePackage
+import com.android.repository.api.Repository
+import com.android.repository.api.RepositorySource
+import com.android.repository.api.SettingsController
 import com.android.repository.impl.meta.LocalPackageImpl
 import com.android.repository.impl.meta.RemotePackageImpl
 import com.android.repository.impl.meta.SchemaModuleUtil
 import com.android.sdklib.repository.AndroidSdkHandler
 import com.android.sdklib.repository.legacy.LegacyRemoteRepoLoader
 import com.android.sdklib.tool.sdkmanager.SdkManagerCli
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
 import java.io.InputStream
@@ -20,6 +25,9 @@ import java.nio.file.Path
 import kotlin.io.path.exists
 import kotlin.io.path.fileSize
 import kotlin.io.path.inputStream
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class NixDownloader : Downloader {
     override fun downloadFully(url: URL, indicator: ProgressIndicator): Path {
@@ -78,7 +86,7 @@ class NixDownloader : Downloader {
 }
 
 object NixProgressIndicator : ProgressIndicatorAdapter() {
-    var err: PrintStream = System.err
+    private var err: PrintStream = System.err
 
     override fun logWarning(s: String, e: Throwable?) {
         err.println("Warning: %s")
@@ -103,10 +111,6 @@ object NixProgressIndicator : ProgressIndicatorAdapter() {
 class NixSettings(
     private val channelId: Int
 ) : SettingsController {
-    override fun getDisableSdkPatches(): Boolean = true
-
-    override fun setDisableSdkPatches(disable: Boolean) {}
-
     override fun getForceHttp(): Boolean = false
 
     override fun setForceHttp(force: Boolean) {}

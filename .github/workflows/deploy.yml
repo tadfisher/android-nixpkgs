@@ -7,8 +7,8 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: nixbuild/nix-quick-install-action@v21
+      - uses: actions/checkout@v4
+      - uses: nixbuild/nix-quick-install-action@v26
         with:
           nix_conf: experimental-features = nix-command flakes
       - name: update flake inputs
@@ -30,22 +30,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: update
     steps:
-      - uses: actions/checkout@v2
-      - uses: nixbuild/nix-quick-install-action@v21
+      - uses: actions/checkout@v4
+      - uses: nixbuild/nix-quick-install-action@v26
         with:
           nix_conf: experimental-features = nix-command flakes
       - name: build nixexprs
         run: ./scripts/channel.sh
       - name: deploy nix channel
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.5.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
-          CLEAN: true
-          SINGLE_COMMIT: true
-          GIT_CONFIG_NAME: "github-actions"
-          GIT_CONFIG_EMAIL: "github-actions@github.com"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: pages-build
+          single-commit: true
+          git-config-name: "github-actions"
+          git-config-email: "github-actions@github.com"
   sync:
     runs-on: ubuntu-latest
     needs: update
@@ -60,7 +58,7 @@ jobs:
           from_branch: main
           target_branch: ${{ matrix.channel }}
           github_token: ${{ github.token }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ matrix.channel }}
       - name: tag ${{ matrix.channel }}
