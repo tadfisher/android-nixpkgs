@@ -2611,23 +2611,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "34.2.5";
+    version = "34.2.6";
     sources = {
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-11331898.zip";
-        sha1 = "9f00be271700fdf0b2269afe8d2e31c0ac10b167";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-11356334.zip";
+        sha1 = "0256ca258c541c077bb40036e5495b9ebffd2f08";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-11331898.zip";
-        sha1 = "26886f6569e3da5bd2da7203ab8145287950efc2";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-11356334.zip";
+        sha1 = "74df52eebe61238a5c11329f1c26108976e75f6a";
       };
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-11331898.zip";
-        sha1 = "23c744af4c027a1a49e1f9902d4d0ed6cd140dcf";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-11356334.zip";
+        sha1 = "6c967a871212608b8e0e75be7fd493f56cefe845";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-11331898.zip";
-        sha1 = "b3cd1aeb4624f3c8f79ee917d0eb70823e9c93f8";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-11356334.zip";
+        sha1 = "6f8b6a24d1032afbc8bc6a1d79e4e245e11bef9e";
       };
     };
     displayName = "Android Emulator";
@@ -8889,11 +8889,11 @@
   system-images-android-33-android-automotive-arm64-v8a = mkSrcOnly {
     id = "system-images;android-33;android-automotive;arm64-v8a";
     pname = "system-images-android-33-android-automotive-arm64-v8a";
-    version = "1";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-33_r01.zip";
-        sha1 = "06031453d064bed9b7947e644db2e9d612191c1e";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-33_r02.zip";
+        sha1 = "d265102d7ad22a0ade6f6ef607fc3b47c05bac23";
       };
     };
     displayName = "Android Automotive with Google APIs ARM 64 v8a System Image";
@@ -8907,11 +8907,11 @@
   system-images-android-33-android-automotive-x86-64 = mkSrcOnly {
     id = "system-images;android-33;android-automotive;x86_64";
     pname = "system-images-android-33-android-automotive-x86-64";
-    version = "1";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-33_r01.zip";
-        sha1 = "474ebdb6866c52a1b5e68e647d702f77e7f379fc";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-33_r02.zip";
+        sha1 = "406c4fee3f93d060933bc39ce717af28aa9eb6e9";
       };
     };
     displayName = "Android Automotive with Google APIs Intel x86_64 Atom System Image";
