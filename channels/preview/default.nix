@@ -2028,6 +2028,32 @@
     };
     xml = ./build-tools-33-0-2.xml;
   };
+  build-tools-33-0-3 = mkBuildTools {
+    id = "build-tools;33.0.3";
+    pname = "build-tools-33-0-3";
+    version = "33.0.3";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/build-tools_r33.0.3-linux.zip";
+        sha1 = "83d08ea1cdad9733cae08e33c84758835987a508";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/build-tools_r33.0.3-macosx.zip";
+        sha1 = "daaeee4fb70ae54fe03bb64e414ea88a16e66ba8";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/build-tools_r33.0.3-windows.zip";
+        sha1 = "9d93a3b5ff0497fca16739160327ec7ef44b3eff";
+      };
+    };
+    displayName = "Android SDK Build-Tools 33.0.3";
+    path = "build-tools/33.0.3";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./build-tools-33-0-3.xml;
+  };
   build-tools-34-0-0 = mkBuildTools {
     id = "build-tools;34.0.0";
     pname = "build-tools-34-0-0";
