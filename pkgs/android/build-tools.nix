@@ -1,8 +1,10 @@
 { stdenv
 , lib
+, makeWrapper
 , mkGeneric
 , autoPatchelfHook
 , coreutils
+, jdk
 , libcxx
 , ncurses5
 , zlib
@@ -11,6 +13,7 @@
 mkGeneric (lib.optionalAttrs stdenv.isLinux {
   nativeBuildInputs = [
     autoPatchelfHook
+    makeWrapper
   ];
 
   buildInputs = [
@@ -27,8 +30,9 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux {
   ];
 
   postUnpack = ''
-    for f in $(grep -l -a -r "/bin/ls" $out); do
-      substituteInPlace $f --replace "/bin/ls" "${coreutils}/bin/ls"
+    for f in apksigner d8 lld; do
+      substituteInPlace "$out/$f" --replace "/bin/ls" "ls"
+      wrapProgram "$out/$f" --set PATH ${lib.makeBinPath [coreutils jdk]}
     done
   '';
 })
