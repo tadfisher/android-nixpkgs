@@ -6884,8 +6884,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -8977,11 +8977,11 @@
   system-images-android-33-android-desktop-arm64-v8a = mkSrcOnly {
     id = "system-images;android-33;android-desktop;arm64-v8a";
     pname = "system-images-android-33-android-desktop-arm64-v8a";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-desktop/arm64-v8a-33_r02.zip";
-        sha1 = "82945b15007dab51b93d619f76a2cae48433d7be";
+        url = "https://dl.google.com/android/repository/sys-img/android-desktop/arm64-v8a-33_r03.zip";
+        sha1 = "04daca06562219b805020dec8a61c7627d4d4787";
       };
     };
     displayName = "Desktop ARM 64 v8a System Image";
@@ -8995,11 +8995,11 @@
   system-images-android-33-android-desktop-x86-64 = mkSrcOnly {
     id = "system-images;android-33;android-desktop;x86_64";
     pname = "system-images-android-33-android-desktop-x86-64";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-desktop/x86_64-33_r02.zip";
-        sha1 = "23046586869c49e8219a668ae7d6e573c992351b";
+        url = "https://dl.google.com/android/repository/sys-img/android-desktop/x86_64-33_r03.zip";
+        sha1 = "bd377a75ffa2e07ee942847791188c23ff376f2f";
       };
     };
     displayName = "Desktop Intel x86_64 Atom System Image";
