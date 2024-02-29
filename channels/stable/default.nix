@@ -2665,10 +2665,6 @@
     pname = "emulator";
     version = "34.2.9";
     sources = {
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-11491105.zip";
-        sha1 = "119207d1edc3590b6d66e0de8c9021aa8ffe47a7";
-      };
       x86_64-linux = {
         url = "https://dl.google.com/android/repository/emulator-linux_x64-11491105.zip";
         sha1 = "bf1e36763f2374f019eba641a428fa6a379d8ced";
@@ -2680,6 +2676,10 @@
       x86_64-darwin = {
         url = "https://dl.google.com/android/repository/emulator-darwin_x64-11491105.zip";
         sha1 = "8f9196b64b1b2afbeb44babf8e96dc1b4d37e961";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-11491105.zip";
+        sha1 = "119207d1edc3590b6d66e0de8c9021aa8ffe47a7";
       };
     };
     displayName = "Android Emulator";
