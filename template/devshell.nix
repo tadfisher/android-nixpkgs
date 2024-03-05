@@ -2,6 +2,12 @@
 
 with pkgs;
 
+let
+  # android-studio is not available in aarch64-darwin
+  conditionalPackages = if pkgs.system != "aarch64-darwin" then [ pkgs.android-studio ] else [];
+in
+with pkgs;
+
 # Configure your development environment.
 #
 # Documentation: https://github.com/numtide/devshell
@@ -25,9 +31,8 @@ devshell.mkShell {
     }
   ];
   packages = [
-    android-studio
     android-sdk
     gradle
     jdk
-  ];
+  ] ++ conditionalPackages;
 }
