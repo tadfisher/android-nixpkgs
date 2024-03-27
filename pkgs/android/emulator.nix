@@ -2,8 +2,6 @@
 , lib
 , mkGeneric
 , makeWrapper
-, runCommand
-, srcOnly
 , autoPatchelfHook
 , alsa-lib
 , dbus
@@ -11,6 +9,8 @@
 , freetype
 , gperftools
 , libGL
+, libICE
+, libSM
 , libX11
 , libXcomposite
 , libXcursor
@@ -20,18 +20,21 @@
 , libXi
 , libXrender
 , libXtst
+, libbsd
 , libcxx
+, libdrm
 , libpulseaudio
+, libtiff
 , libudev0-shim
 , libunwind
 , libuuid
 , libxkbcommon
+, libxkbfile
 , ncurses5
 , nss
 , nspr
 , sqlite
 , systemd
-, vulkan-loader
 , xkeyboard_config
 , zlib
 }:
@@ -49,6 +52,8 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       freetype
       gperftools
       libGL
+      libICE
+      libSM
       libX11
       libXcomposite
       libXcursor
@@ -58,12 +63,16 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       libXi
       libXrender
       libXtst
+      libbsd
       libcxx
+      libdrm
       libpulseaudio
-      libxkbcommon
+      libtiff
       libudev0-shim
       libunwind
       libuuid
+      libxkbcommon
+      libxkbfile
       ncurses5
       nss
       nspr
@@ -91,6 +100,10 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
         ]} \
         --set QT_XKB_CONFIG_ROOT ${xkeyboard_config}/share/X11/xkb \
         --set QTCOMPOSE ${libX11.out}/share/X11/locale
+
+      # Needs libtiff.so.5, but nixpkgs provides libtiff.so.6
+      patchelf --replace-needed libtiff.so.5 libtiff.so \
+        $out/lib64/qt/plugins/imageformats/libqtiffAndroidEmu.so
     '';
   } // {
   passthru.installSdk = ''
