@@ -1,6 +1,6 @@
 { pkgs, lib }:
 
-lib.makeScope pkgs.newScope (self: with self; rec {
+lib.makeScope pkgs.newScope (self: with self; {
   fetchandroid = callPackage ./fetch.nix { };
   mkGeneric = callPackage ./generic.nix { };
   mkBuildTools = callPackage ./build-tools.nix { };

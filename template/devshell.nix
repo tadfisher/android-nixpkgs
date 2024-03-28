@@ -21,13 +21,13 @@ devshell.mkShell {
     }
     {
       name = "JAVA_HOME";
-      value = jdk11.home;
+      value = jdk.home;
     }
   ];
   packages = [
     android-studio
     android-sdk
     gradle
-    jdk11
+    jdk
   ];
 }
