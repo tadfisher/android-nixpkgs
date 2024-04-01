@@ -2815,11 +2815,11 @@
   extras-google-Android-Emulator-Hypervisor-Driver = mkSrcOnly {
     id = "extras;google;Android_Emulator_Hypervisor_Driver";
     pname = "extras-google-Android-Emulator-Hypervisor-Driver";
-    version = "2";
+    version = "2.2";
     sources = {
       windows = {
-        url = "https://dl.google.com/android/repository/gvm-windows_v2_0_0.zip";
-        sha1 = "1a4ef9875cb0adfe5500632ad7140027cfb080d9";
+        url = "https://dl.google.com/android/repository/gvm-windows_v2.2.zip";
+        sha1 = "b3f53739d1395b19276195466a2fcf95d86a031e";
       };
     };
     displayName = "Android Emulator hypervisor driver (installer)";
