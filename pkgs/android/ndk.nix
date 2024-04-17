@@ -100,9 +100,6 @@ let
       wrapProgram $out/ndk-build --prefix PATH : "${runtimePaths}"
     '';
 
-    dontStrip = true;
-    dontPatchELF = true;
-    dontAutoPatchelf = true;
     autoPatchelfIgnoreMissingDeps = [ "liblog.so" ];
   } // {
     passthru.installSdk = ''

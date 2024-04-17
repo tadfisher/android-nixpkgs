@@ -13,7 +13,10 @@ let
 
 in
 stdenv.mkDerivation (rec {
-  dontStrip = args.dontStrip or false;
+  # Some executables that have been patched with patchelf may not work any longer after they have been stripped.
+  dontStrip = true;
+  dontPatchELF = true;
+  dontAutoPatchelf = true;
 
   inherit (package) pname version;
 
