@@ -106,6 +106,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
         $out/lib64/qt/plugins/imageformats/libqtiffAndroidEmu.so
     '';
   } // {
+  dontStrip = true;
   passthru.installSdk = ''
     for exe in emulator emulator-check mksdcard; do
       ln -s $pkgBase/$exe $out/bin/$exe
