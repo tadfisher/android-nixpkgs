@@ -8,12 +8,10 @@ jobs:
   test:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-13]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: nixbuild/nix-quick-install-action@v26
-        with:
-          nix_conf: experimental-features = nix-command flakes
+      - uses: nixbuild/nix-quick-install-action@v28
       - name: test
         run: nix flake check --show-trace
