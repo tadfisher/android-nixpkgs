@@ -2,18 +2,19 @@
 
 args: package:
 let
-  inherit (builtins) attrNames concatStringsSep filter hasAttr head listToAttrs replaceStrings;
-  inherit (lib) hasPrefix findFirst flatten groupBy mapAttrs nameValuePair optionalString;
+  inherit (builtins) attrNames hasAttr;
+  inherit (lib) flatten;
 
   platforms = flatten (map
     (name: if (hasAttr name lib.platforms) then lib.platforms.${name} else name)
     (attrNames package.sources));
 
-  packageXml = writeText "${package.pname}-${package.version}-package-xml" package.xml;
-
 in
-stdenv.mkDerivation (rec {
-  dontStrip = args.dontStrip or false;
+stdenv.mkDerivation ({
+  # Some executables that have been patched with patchelf may not work any longer after they have been stripped.
+  dontStrip = true;
+  dontPatchELF = true;
+  dontAutoPatchelf = true;
 
   inherit (package) pname version;
 

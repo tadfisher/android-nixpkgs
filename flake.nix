@@ -48,9 +48,7 @@
               (devshell.overlay)
               (self.overlay)
             ];
-            permittedInsecurePackages = [
-              "python-2.7.18.7"
-            ];
+            allowInsecurePredicate = pkg: pkg.pname == "python";
           };
         };
 
