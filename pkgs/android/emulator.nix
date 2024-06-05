@@ -89,6 +89,12 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       #     Segmentation fault (core dumped)
       rm -r $out/lib64/gles_mesa
 
+      # Needs libtiff.so.5, but nixpkgs provides libtiff.so.6
+      patchelf --replace-needed libtiff.so.5 libtiff.so \
+        $out/lib64/qt/plugins/imageformats/libqtiffAndroidEmu.so
+
+      autoPatchelf $out
+
       # Force XCB platform plugin as Wayland isn't supported.
       # Inject libudev0-shim to fix udev_loader error.
       wrapProgram $out/emulator \
@@ -100,10 +106,6 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
         ]} \
         --set QT_XKB_CONFIG_ROOT ${xkeyboard_config}/share/X11/xkb \
         --set QTCOMPOSE ${libX11.out}/share/X11/locale
-
-      # Needs libtiff.so.5, but nixpkgs provides libtiff.so.6
-      patchelf --replace-needed libtiff.so.5 libtiff.so \
-        $out/lib64/qt/plugins/imageformats/libqtiffAndroidEmu.so
     '';
   } // {
   passthru.installSdk = ''
