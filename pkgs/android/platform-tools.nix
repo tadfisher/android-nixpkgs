@@ -11,7 +11,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
     ];
 
     postUnpack = ''
-        autoPatchelf $out
+      autoPatchelf $out
     '';
 
   } // {
