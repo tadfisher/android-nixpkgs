@@ -9,6 +9,11 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
     buildInputs = [
       stdenv.cc.cc.lib
     ];
+
+    postUnpack = ''
+      autoPatchelf $out
+    '';
+
   } // {
   passthru.installSdk = ''
     for exe in adb dmtracedump e2fsdroid etc1tool fastboot hprof-conv make_f2fs mke2fs sload_f2fs; do
