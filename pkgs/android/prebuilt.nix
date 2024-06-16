@@ -17,6 +17,10 @@ let
       if (hasPrefix "cmake;" id || hasPrefix "skiaparser;" id) then {
         nativeBuildInputs = [ autoPatchelfHook ];
         buildInputs = [ ncurses5 stdenv.cc.cc.lib ];
+        
+        postUnpack = ''
+            autoPatchelf $out
+        '';
       }
       else { }
     );

@@ -21,6 +21,11 @@ stdenv.mkDerivation rec {
     patchelf --set-interpreter ${stdenv.cc.libc.out}/lib/ld-linux-x86-64.so.2 $out/bin/aapt2
   '';
 
+
+  postUnpack = ''
+    autoPatchelf $out
+  '';
+
   meta = with lib; {
     description = "Android Asset Packaging Tool";
     platforms = [ "x86_64-linux" ];
