@@ -38,6 +38,8 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
     ];
 
     postUnpack = ''
+      autoPatchelf $out
+
       for f in $(grep -l -a -r "/bin/ls" $out); do
         substituteInPlace $f --replace "/bin/ls" "${coreutils}/bin/ls"
       done
