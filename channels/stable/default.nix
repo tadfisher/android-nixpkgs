@@ -6660,8 +6660,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -7770,6 +7770,60 @@
     };
     xml = ./system-images-android-30-android-wear-x86.xml;
   };
+  system-images-android-30-aosp-atd-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-30;aosp_atd;arm64-v8a";
+    pname = "system-images-android-30-aosp-atd-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/arm64-v8a-30_r02.zip";
+        sha1 = "7aedf542eebcdb865ed2a03682abeb9518171556";
+      };
+    };
+    displayName = "AOSP ATD ARM 64 v8a System Image";
+    path = "system-images/android-30/aosp_atd/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-30-aosp-atd-arm64-v8a.xml;
+  };
+  system-images-android-30-aosp-atd-x86 = mkSrcOnly {
+    id = "system-images;android-30;aosp_atd;x86";
+    pname = "system-images-android-30-aosp-atd-x86";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/x86-30_r01.zip";
+        sha1 = "ee28efbcf5b1fce3de69f0f6ef232ca1356b1131";
+      };
+    };
+    displayName = "AOSP ATD Intel x86 Atom System Image";
+    path = "system-images/android-30/aosp_atd/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-aosp-atd-x86.xml;
+  };
+  system-images-android-30-aosp-atd-x86-64 = mkSrcOnly {
+    id = "system-images;android-30;aosp_atd;x86_64";
+    pname = "system-images-android-30-aosp-atd-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/x86_64-30_r02.zip";
+        sha1 = "5e115eb1dd616b7b9bb933ffdb3fa0a00630971b";
+      };
+    };
+    displayName = "AOSP ATD Intel x86_64 Atom System Image";
+    path = "system-images/android-30/aosp_atd/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-30-aosp-atd-x86-64.xml;
+  };
   system-images-android-30-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;default;arm64-v8a";
     pname = "system-images-android-30-default-arm64-v8a";
@@ -8042,6 +8096,42 @@
     };
     xml = ./system-images-android-31-android-tv-x86.xml;
   };
+  system-images-android-31-aosp-atd-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-31;aosp_atd;arm64-v8a";
+    pname = "system-images-android-31-aosp-atd-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/arm64-v8a-31_r01.zip";
+        sha1 = "4c8749b6af2f0250c16e6ed1e169cb17fd015b16";
+      };
+    };
+    displayName = "AOSP ATD ARM 64 v8a System Image";
+    path = "system-images/android-31/aosp_atd/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-31-aosp-atd-arm64-v8a.xml;
+  };
+  system-images-android-31-aosp-atd-x86-64 = mkSrcOnly {
+    id = "system-images;android-31;aosp_atd;x86_64";
+    pname = "system-images-android-31-aosp-atd-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/x86_64-31_r01.zip";
+        sha1 = "fbb32895e57df097fa94bafbbefb57dc0024014e";
+      };
+    };
+    displayName = "AOSP ATD Intel x86_64 Atom System Image";
+    path = "system-images/android-31/aosp_atd/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-31-aosp-atd-x86-64.xml;
+  };
   system-images-android-31-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-31;default;arm64-v8a";
     pname = "system-images-android-31-default-arm64-v8a";
@@ -8261,6 +8351,42 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-32-android-desktop-x86-64.xml;
+  };
+  system-images-android-32-aosp-atd-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-32;aosp_atd;arm64-v8a";
+    pname = "system-images-android-32-aosp-atd-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/arm64-v8a-32_r01.zip";
+        sha1 = "1fc9d5772e39316396b6fe035e5f96a4dc6945cb";
+      };
+    };
+    displayName = "AOSP ATD ARM 64 v8a System Image";
+    path = "system-images/android-32/aosp_atd/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-32-aosp-atd-arm64-v8a.xml;
+  };
+  system-images-android-32-aosp-atd-x86-64 = mkSrcOnly {
+    id = "system-images;android-32;aosp_atd;x86_64";
+    pname = "system-images-android-32-aosp-atd-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/x86_64-32_r01.zip";
+        sha1 = "133b8c32651df60635cb9f3ea39ae2f2344a6cbc";
+      };
+    };
+    displayName = "AOSP ATD Intel x86_64 Atom System Image";
+    path = "system-images/android-32/aosp_atd/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-32-aosp-atd-x86-64.xml;
   };
   system-images-android-32-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-32;default;arm64-v8a";
@@ -8642,6 +8768,42 @@
     };
     xml = ./system-images-android-33-android-wear-x86-64.xml;
   };
+  system-images-android-33-aosp-atd-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-33;aosp_atd;arm64-v8a";
+    pname = "system-images-android-33-aosp-atd-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/arm64-v8a-33_r02.zip";
+        sha1 = "1169bf57193024fca76f1c52470b2aab3be7d566";
+      };
+    };
+    displayName = "AOSP ATD ARM 64 v8a System Image";
+    path = "system-images/android-33/aosp_atd/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-33-aosp-atd-arm64-v8a.xml;
+  };
+  system-images-android-33-aosp-atd-x86-64 = mkSrcOnly {
+    id = "system-images;android-33;aosp_atd;x86_64";
+    pname = "system-images-android-33-aosp-atd-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/x86_64-33_r02.zip";
+        sha1 = "6f0b094b55617719294a080bc08816b4e8cb270a";
+      };
+    };
+    displayName = "AOSP ATD Intel x86_64 Atom System Image";
+    path = "system-images/android-33/aosp_atd/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-33-aosp-atd-x86-64.xml;
+  };
   system-images-android-33-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-33;default;arm64-v8a";
     pname = "system-images-android-33-default-arm64-v8a";
@@ -9005,6 +9167,42 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-34-android-tv-x86.xml;
+  };
+  system-images-android-34-aosp-atd-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-34;aosp_atd;arm64-v8a";
+    pname = "system-images-android-34-aosp-atd-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/arm64-v8a-34_r02.zip";
+        sha1 = "fd47af85c9e592ec140e1acf43a88c47e37560cd";
+      };
+    };
+    displayName = "AOSP ATD ARM 64 v8a System Image";
+    path = "system-images/android-34/aosp_atd/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-34-aosp-atd-arm64-v8a.xml;
+  };
+  system-images-android-34-aosp-atd-x86-64 = mkSrcOnly {
+    id = "system-images;android-34;aosp_atd;x86_64";
+    pname = "system-images-android-34-aosp-atd-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/aosp_atd/x86_64-34_r02.zip";
+        sha1 = "9ce4068934b26fa99ca104ffe6d10dec22abb317";
+      };
+    };
+    displayName = "AOSP ATD Intel x86_64 Atom System Image";
+    path = "system-images/android-34/aosp_atd/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-34-aosp-atd-x86-64.xml;
   };
   system-images-android-34-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;default;arm64-v8a";
