@@ -93,8 +93,6 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       patchelf --replace-needed libtiff.so.5 libtiff.so \
         $out/lib64/qt/plugins/imageformats/libqtiffAndroidEmu.so
 
-      autoPatchelf $out
-
       # Force XCB platform plugin as Wayland isn't supported.
       # Inject libudev0-shim to fix udev_loader error.
       wrapProgram $out/emulator \
