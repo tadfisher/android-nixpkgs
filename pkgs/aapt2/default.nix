@@ -11,6 +11,8 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ autoPatchelfHook patchelf unzip ];
 
+  buildInputs = [ stdenv.cc.cc.lib ];
+
   unpackCmd = "unzip $curSrc -d ${name}";
 
   installPhase = ''
