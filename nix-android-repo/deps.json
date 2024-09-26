@@ -2,11 +2,11 @@
   {
     "group": "com.android.tools",
     "name": "annotations",
-    "version": "31.3.0-alpha18",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "annotations-31.3.0-alpha18-sources.jar": "05b37dacc5d19df2caf9f9e72f752834bb0079325ade38f7a991acce49205000",
-      "annotations-31.3.0-alpha18.jar": "ee3bfd9cdb5012bdb61520f8654a785577e9bb337e5939c5c6149a446684ee16",
-      "annotations-31.3.0-alpha18.pom": "08aacc289a0a63cae604a0fdac16f8698d131334c6c0905ba447b63b1abd87ac"
+      "annotations-31.8.0-alpha03-sources.jar": "c4d630fbdedbf0694fe3f22a8708e498f6922ac8ca3e4cebc0ecd4a9eb3cff05",
+      "annotations-31.8.0-alpha03.jar": "b25995fa7b220d35fbb8e325df071f8291691bfbaff9734c98e38f45ec2a73ee",
+      "annotations-31.8.0-alpha03.pom": "818157d16e01ab91a587f9d717d6fc816dae0904ee8a097a2db577d9948d9dd4"
     }
   },
   {
@@ -20,39 +20,31 @@
   {
     "group": "com.android.tools",
     "name": "common",
-    "version": "25.5.0-alpha-preview-02",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "common-25.5.0-alpha-preview-02.pom": "2cb01874a0dc821c076b54f40045cc4f9ebc458836565dca2bcf8a8782c034de"
-    }
-  },
-  {
-    "group": "com.android.tools",
-    "name": "common",
-    "version": "31.3.0-alpha18",
-    "artifacts": {
-      "common-31.3.0-alpha18-sources.jar": "f51b015916477bb7e56fba3114ae8483afc89144bc6ccbe626221447f9db623f",
-      "common-31.3.0-alpha18.jar": "e327b5d2ed2214a11803409955f84965010ee8b423b68eac9e1963fe4d92253b",
-      "common-31.3.0-alpha18.pom": "67711da0a246ecb4874a7de85c4d6fcfd487704fba7c48f1bf5779732d8595b3"
+      "common-31.8.0-alpha03-sources.jar": "b1a5bf2880e7fb0ecc059eef17bb8ddb97fe3872943fba54d1b24401b6e6a7f7",
+      "common-31.8.0-alpha03.jar": "1c9bb3937f73a72de4eedad2e71de362b1e19041c78fc088f26710ce76962a64",
+      "common-31.8.0-alpha03.pom": "7d21358f945344c34caf8bfc086dbbc726e1ee155664b82b404ffeb2ede76089"
     }
   },
   {
     "group": "com.android.tools",
     "name": "dvlib",
-    "version": "31.3.0-alpha18",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "dvlib-31.3.0-alpha18-sources.jar": "a606cd9c24ebd26aa5243bbcc1b6d8d8ec0877b84c1e635bf4a584f715104219",
-      "dvlib-31.3.0-alpha18.jar": "0cb57c126ed95657ae1e0974af092b401a52b76d5683f7ccbe1f8f21af06794e",
-      "dvlib-31.3.0-alpha18.pom": "15060d9fa6bfa75bf43b10a61f35a5964e1cbd4e19486ac39323db0f51ea0745"
+      "dvlib-31.8.0-alpha03-sources.jar": "d2ec987769c0c8fc41e8e2c19d65bbb3581122e77e9e63a2243ce5f7cfdfda1f",
+      "dvlib-31.8.0-alpha03.jar": "f8a3e4ab2f44d85185bdc2260036f11c52b0bf1e0c91bae227b1fc0a280a73eb",
+      "dvlib-31.8.0-alpha03.pom": "691dac5d72b4b26cbe8437dc0deda12e47e814f27c19d48dbfac5ac0c51cfb8b"
     }
   },
   {
     "group": "com.android.tools",
     "name": "repository",
-    "version": "31.3.0-alpha18",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "repository-31.3.0-alpha18-sources.jar": "59aa0df42023dfabc34927b1490da798960125911bc03645a984ce237a843b3e",
-      "repository-31.3.0-alpha18.jar": "df2533e154b736a0a95e4804893aa59099552842bf9635cda3751be9e894a0e2",
-      "repository-31.3.0-alpha18.pom": "001614039357deb4f3b087c9a12d9b11c9ddaa0b56ce0f51d659f4ac50cf8e1f"
+      "repository-31.8.0-alpha03-sources.jar": "32f12ff5a300c03b26cb95875f07600e11ceb676b6bb15014b104fc3c8430cbb",
+      "repository-31.8.0-alpha03.jar": "169c2e7a77aa30978879dbf8b30436671165872fcbdfdda6c735aaddb6710340",
+      "repository-31.8.0-alpha03.pom": "4dc93afbe459d7655ee536ca5d1acab1181ef250045fcc5a3cf7e2f7b1c074db"
     }
   },
   {
@@ -66,49 +58,41 @@
   {
     "group": "com.android.tools",
     "name": "sdklib",
-    "version": "25.5.0-alpha-preview-02",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "sdklib-25.5.0-alpha-preview-02.pom": "204781cc8b8e1ce1b353bd36ff8b069d6c2a1a3d75b5fa83d83045a3423274b8"
-    }
-  },
-  {
-    "group": "com.android.tools",
-    "name": "sdklib",
-    "version": "31.3.0-alpha18",
-    "artifacts": {
-      "sdklib-31.3.0-alpha18-sources.jar": "7c55147d623dce0dc5bd7c46b069287730f6fb099bb2fe097a308eb343fb03e7",
-      "sdklib-31.3.0-alpha18.jar": "4826724b88f6c9ecbf1ad93a1b4edfd80941cef9d54093d645cf0796238dd0b2",
-      "sdklib-31.3.0-alpha18.pom": "b1d30436910f0640c4446545c72e23a5f3eb25a3154114568a3817fdafa6336f"
+      "sdklib-31.8.0-alpha03-sources.jar": "541ab9aacba990cd5136f67b570adf416facd3cd66121da99ae421468002f141",
+      "sdklib-31.8.0-alpha03.jar": "7c946db09a5633b54f0d8dd40e1be2c681f5d115cbccb1e2d6a4f183ad822f9b",
+      "sdklib-31.8.0-alpha03.pom": "9ef7c9deba549fe60f34aa00ec3947c77c3eaa00efeb0320179cfffe10c2e95d"
     }
   },
   {
     "group": "com.android.tools.analytics-library",
     "name": "protos",
-    "version": "31.3.0-alpha18",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "protos-31.3.0-alpha18-sources.jar": "684a38466293a72c8989b023e8208c758d4211f9b4a0e399ec6e36bbd1d75edd",
-      "protos-31.3.0-alpha18.jar": "21f506b407920878c5062715b49630a0212e4e129e1521c9ef50b5268e5e8f04",
-      "protos-31.3.0-alpha18.pom": "6d8b284896523c98f39d794a71cca2cf79d5e40f369a9f6c6b8c7c1faffd4db4"
+      "protos-31.8.0-alpha03-sources.jar": "e8ab341b87c88bafc1299f09dd9a9725b14fe866d13f2d210cfbb822af8d3d6a",
+      "protos-31.8.0-alpha03.jar": "8db69a044aea9374ed8b794d1be4f7a2393b2620d0bab0443e9327fc56418785",
+      "protos-31.8.0-alpha03.pom": "0f8dd5a187ae63ec9c69d79c9aa5d98087f84232508694c36d5e369c84d947f4"
     }
   },
   {
     "group": "com.android.tools.analytics-library",
     "name": "shared",
-    "version": "31.3.0-alpha18",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "shared-31.3.0-alpha18-sources.jar": "1ebbc5390041865757d62a0a7be61e45330699b92a4fffa867530ddb73fe7870",
-      "shared-31.3.0-alpha18.jar": "1ddf8b7c36aa336d8d982516b2a503c922e18e9972967b0d2a2ee43561bb97c9",
-      "shared-31.3.0-alpha18.pom": "cf671c6773edc50978745c34c24b43209ae2df4b7ee965009d1a1da4cd287bc6"
+      "shared-31.8.0-alpha03-sources.jar": "0c989b7566c7046e94e7ba446cd741aa09402701aa5fb562b4e19ef17f6b3b14",
+      "shared-31.8.0-alpha03.jar": "009062a4c3240d9eb639228ff04e6621e3c31bb054cbe5d24d4e01933256ce60",
+      "shared-31.8.0-alpha03.pom": "d3340550566dd295321fbef38d695234a9741576573d04aba61af911d6c4d51e"
     }
   },
   {
     "group": "com.android.tools.layoutlib",
     "name": "layoutlib-api",
-    "version": "31.3.0-alpha18",
+    "version": "31.8.0-alpha03",
     "artifacts": {
-      "layoutlib-api-31.3.0-alpha18-sources.jar": "3e61bd27075a3d52b438b496231a1ba60bd59036201b70288781f8f3b0b535d2",
-      "layoutlib-api-31.3.0-alpha18.jar": "3c9064c3c3ab0e73f3a5953d1c11c57dbf57a3297957c1d7d460c92e14cf34b2",
-      "layoutlib-api-31.3.0-alpha18.pom": "bd7feec948000145e3740ce1362af3484b28d46e4269de31a2fe5e9550e42619"
+      "layoutlib-api-31.8.0-alpha03-sources.jar": "778906ed916d684ee2c1a08ff49d5273a1b970e9a31e40174c16488614209b71",
+      "layoutlib-api-31.8.0-alpha03.jar": "98bae36ff051e114dd4eef5effa80fbe5e552944f4233ce892160da2cd9eeaed",
+      "layoutlib-api-31.8.0-alpha03.pom": "c718d0f7b079ac6392dbc506dcf88c4d1c9c4ba6b6448a2f9fb3a8dde0876d7d"
     }
   },
   {
@@ -988,11 +972,11 @@
   {
     "group": "org.jetbrains.kotlin",
     "name": "kotlin-stdlib-jdk7",
-    "version": "1.9.20-RC",
+    "version": "1.9.20",
     "artifacts": {
-      "kotlin-stdlib-jdk7-1.9.20-RC-sources.jar": "2534c8908432e06de73177509903d405b55f423dd4c2f747e16b92a2162611e6",
-      "kotlin-stdlib-jdk7-1.9.20-RC.jar": "10faed74893d4119e9549c0c47a1931f551d3415dd95095e6a99455a3173d013",
-      "kotlin-stdlib-jdk7-1.9.20-RC.pom": "6126207f05ea9b100abbe76ea2dcd5317cc0d42756534ed065f5c20812308107"
+      "kotlin-stdlib-jdk7-1.9.20-sources.jar": "2534c8908432e06de73177509903d405b55f423dd4c2f747e16b92a2162611e6",
+      "kotlin-stdlib-jdk7-1.9.20.jar": "c5451d67a27f33afd09913c67e1ceba3897ae70884b24ef0ff71157e55b60865",
+      "kotlin-stdlib-jdk7-1.9.20.pom": "012e1c55ed6ade417bcb824112ebea682ad625dfbee16085c379ccfa14faf033"
     }
   },
   {
@@ -1008,11 +992,11 @@
   {
     "group": "org.jetbrains.kotlin",
     "name": "kotlin-stdlib-jdk8",
-    "version": "1.9.20-RC",
+    "version": "1.9.20",
     "artifacts": {
-      "kotlin-stdlib-jdk8-1.9.20-RC-sources.jar": "3cb6895054a0985bba591c165503fe4dd63a215af53263b67a071ccdc242bf6e",
-      "kotlin-stdlib-jdk8-1.9.20-RC.jar": "33da138558a064fb369a2f5888944f04b210422548c11d85966257e2a2510916",
-      "kotlin-stdlib-jdk8-1.9.20-RC.pom": "29fcd23865796679c0398aca90eef167dc4cb58dc7117ea62207b6b0cd3dee69"
+      "kotlin-stdlib-jdk8-1.9.20-sources.jar": "3cb6895054a0985bba591c165503fe4dd63a215af53263b67a071ccdc242bf6e",
+      "kotlin-stdlib-jdk8-1.9.20.jar": "f833fcc94f0bb1c31b9e78bd4bda7ea23f579ff3408ae1a94e2eb5747086a2ab",
+      "kotlin-stdlib-jdk8-1.9.20.pom": "a3b07deb091f2aed59d6559884f44f99cff5df9b9fa35a24bcd6b8b069cff48d"
     }
   },
   {
