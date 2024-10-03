@@ -2396,6 +2396,32 @@
     };
     xml = ./cmake-3-30-3.xml;
   };
+  cmake-3-30-4 = mkPrebuilt {
+    id = "cmake;3.30.4";
+    pname = "cmake-3-30-4";
+    version = "3.30.4";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.30.4-linux.zip";
+        sha1 = "b7d4287a46737718d88611655608d567fcc07c1e";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.30.4-darwin.zip";
+        sha1 = "73e4d81d4ee1917e9b56ea6f35764c1861a52c45";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-3.30.4-windows.zip";
+        sha1 = "c4ed0e13447b94ddf548f67c6faac7e5ac878fb8";
+      };
+    };
+    displayName = "CMake 3.30.4";
+    path = "cmake/3.30.4";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-30-4.xml;
+  };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
     pname = "cmake-3-6-4111459";
