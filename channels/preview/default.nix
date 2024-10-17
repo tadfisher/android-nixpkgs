@@ -4782,6 +4782,32 @@
     };
     xml = ./ndk-27-1-12297006.xml;
   };
+  ndk-27-2-12479018 = mkNdk {
+    id = "ndk;27.2.12479018";
+    pname = "ndk-27-2-12479018";
+    version = "27.2.12479018";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r27c-linux.zip";
+        sha1 = "090e8083a715fdb1a3e402d0763c388abb03fb4e";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r27c-darwin.zip";
+        sha1 = "0217c10ffbec496bb9fbfbb3c6fc2477c6b77297";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r27c-windows.zip";
+        sha1 = "ac5f7762764b1f15341094e148ad4f847d050c38";
+      };
+    };
+    displayName = "NDK (Side by side) 27.2.12479018";
+    path = "ndk/27.2.12479018";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-27-2-12479018.xml;
+  };
   ndk-28-0-12433566 = mkNdk {
     id = "ndk;28.0.12433566";
     pname = "ndk-28-0-12433566";
