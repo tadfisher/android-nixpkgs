@@ -9448,6 +9448,42 @@
     };
     xml = ./system-images-android-34-google-atd-x86-64.xml;
   };
+  system-images-android-35-default-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-35;default;arm64-v8a";
+    pname = "system-images-android-35-default-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-35_r02.zip";
+        sha1 = "2026a06409db630b56711afdbffb457c1dbaed49";
+      };
+    };
+    displayName = "ARM 64 v8a System Image";
+    path = "system-images/android-35/default/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-default-arm64-v8a.xml;
+  };
+  system-images-android-35-default-x86-64 = mkSrcOnly {
+    id = "system-images;android-35;default;x86_64";
+    pname = "system-images-android-35-default-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android/x86_64-35_r02.zip";
+        sha1 = "2d857d170c0d1b827149565da34b3383e5306f7f";
+      };
+    };
+    displayName = "Intel x86_64 Atom System Image";
+    path = "system-images/android-35/default/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-default-x86-64.xml;
+  };
   system-images-android-35-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;google_apis;arm64-v8a";
     pname = "system-images-android-35-google-apis-arm64-v8a";
@@ -9523,14 +9559,14 @@
   system-images-android-35-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;google_apis_playstore_ps16k;arm64-v8a";
     pname = "system-images-android-35-google-apis-playstore-ps16k-arm64-v8a";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-playstore-ps16k-35_r03.zip";
-        sha1 = "5778fb1f34d4f2e2dea9864efff5ed630fb7415c";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-playstore-ps16k-35_r04.zip";
+        sha1 = "66982460c4c50e5fd9d99554e383ab85894b306c";
       };
     };
-    displayName = "Google Play Experimental 16k Page Size ARM 64 v8a System Image";
+    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-35/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -9541,14 +9577,14 @@
   system-images-android-35-google-apis-playstore-ps16k-x86-64 = mkSrcOnly {
     id = "system-images;android-35;google_apis_playstore_ps16k;x86_64";
     pname = "system-images-android-35-google-apis-playstore-ps16k-x86-64";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-playstore-ps16k-35_r03.zip";
-        sha1 = "1fc8d724268b3a4cb4e2b0706b5eaccbb6c589e8";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-playstore-ps16k-35_r04.zip";
+        sha1 = "e55983d82ca960439cbec45303eae6242171ad76";
       };
     };
-    displayName = "Google Play Experimental 16k Page Size Intel x86_64 Atom System Image";
+    displayName = "Pre-Release 16 KB Page Size Google Play ARM Intel x86_64 Atom System Image";
     path = "system-images/android-35/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -9559,11 +9595,11 @@
   system-images-android-35-google-apis-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;google_apis_ps16k;arm64-v8a";
     pname = "system-images-android-35-google-apis-ps16k-arm64-v8a";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-35_r03.zip";
-        sha1 = "bcb011c34aa3ae9f198b5adf728430d5c0cafc25";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-35_r04.zip";
+        sha1 = "3e2ebaf7539f4f31bf374cd28e31f63ddd42b26e";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
@@ -9577,11 +9613,11 @@
   system-images-android-35-google-apis-ps16k-x86-64 = mkSrcOnly {
     id = "system-images;android-35;google_apis_ps16k;x86_64";
     pname = "system-images-android-35-google-apis-ps16k-x86-64";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-35_r03.zip";
-        sha1 = "e5ba89f23ee36ec6c46bd06df332ab876f123b13";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-35_r04.zip";
+        sha1 = "44ce5b958a1dc80d3ca9cade1e62350f1470902c";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
