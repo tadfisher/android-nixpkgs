@@ -2448,6 +2448,32 @@
     };
     xml = ./cmake-3-30-5.xml;
   };
+  cmake-3-31-0 = mkPrebuilt {
+    id = "cmake;3.31.0";
+    pname = "cmake-3-31-0";
+    version = "3.31";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.0-linux.zip";
+        sha1 = "13b9505857aa3bbfc1d80ec6b587e3ba2d2929f3";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.0-darwin.zip";
+        sha1 = "d20697c5eb256dff2d29d52440e9cfe0f973538f";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.0-windows.zip";
+        sha1 = "39fa0e1898861bdef2da13f7b19ad0d0be5dac83";
+      };
+    };
+    displayName = "CMake 3.31.0";
+    path = "cmake/3.31.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-31-0.xml;
+  };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
     pname = "cmake-3-6-4111459";
@@ -5747,26 +5773,26 @@
   skiaparser-3 = mkPrebuilt {
     id = "skiaparser;3";
     pname = "skiaparser-3";
-    version = "4";
+    version = "5";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-11591181-linux-x64.zip";
-        sha1 = "caafe27824ceb1c69691766984ab287354104b50";
+        url = "https://dl.google.com/android/repository/skiaparser-12616120-linux-x64.zip";
+        sha1 = "f1f9acd490c2a94402fa5fc0a548f529acab91b1";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-11591181-darwin-x64.zip";
-        sha1 = "8043d8f669fec8a3785f95c3e22a7b753cc70c3d";
+        url = "https://dl.google.com/android/repository/skiaparser-12616120-darwin-x64.zip";
+        sha1 = "d320af2c33979fce796d436e6e68351a9d1a02d2";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-11591181-darwin-aarch64.zip";
-        sha1 = "df11c2cdc02202db4f1d769db528da263694d0d7";
+        url = "https://dl.google.com/android/repository/skiaparser-12616120-darwin-aarch64.zip";
+        sha1 = "b40c1615bacc6b8c27563c2f5dd8d1a856f20c50";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-11591181-win-x64.zip";
-        sha1 = "b1b2ca27aa2f2783dda3a7d73bb4f039513a9500";
+        url = "https://dl.google.com/android/repository/skiaparser-12616120-win-x64.zip";
+        sha1 = "afd28844313af84f7245cef5d5be8d9a9de848e1";
       };
     };
-    displayName = "Layout Inspector image server for API 31-35";
+    displayName = "Layout Inspector image server for API 31-36";
     path = "skiaparser/3";
     license = {
       id = "android-sdk-license";
@@ -7220,8 +7246,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
