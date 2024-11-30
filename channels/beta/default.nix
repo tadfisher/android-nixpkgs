@@ -5442,11 +5442,11 @@
     version = "1";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
-        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
+        url = "https://dl.google.com/android/repository/platform-35_r01.zip";
+        sha1 = "c84ed39cecaeec13bc06c67639fcf86734013d98";
       };
     };
-    displayName = "Android SDK Platform 35-ext14";
+    displayName = "Android SDK Platform 35";
     path = "platforms/android-35";
     license = {
       id = "android-sdk-license";
@@ -7204,8 +7204,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
