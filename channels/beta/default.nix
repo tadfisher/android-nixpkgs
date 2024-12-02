@@ -5442,11 +5442,11 @@
     version = "1";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-35_r01.zip";
-        sha1 = "c84ed39cecaeec13bc06c67639fcf86734013d98";
+        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
+        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
       };
     };
-    displayName = "Android SDK Platform 35";
+    displayName = "Android SDK Platform 35-ext14";
     path = "platforms/android-35";
     license = {
       id = "android-sdk-license";
@@ -10337,11 +10337,11 @@
   system-images-android-35-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-35-google-apis-playstore-arm64-v8a";
-    version = "8";
+    version = "9";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-35_r08.zip";
-        sha1 = "595117128cc21ab3166589577cf3e475b71324a5";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-35_r09.zip";
+        sha1 = "b01416bc0bca12a85295dad179f9b8a1cae3d1e6";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -10355,11 +10355,11 @@
   system-images-android-35-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-35;google_apis_playstore;x86_64";
     pname = "system-images-android-35-google-apis-playstore-x86-64";
-    version = "8";
+    version = "9";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-35_r08.zip";
-        sha1 = "e19acb15b1bec2a605bc9138d131f8bad6cdcdfb";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-35_r09.zip";
+        sha1 = "2f0054868e6aab3c098acd3decba17a82aed4176";
       };
     };
     displayName = "Google Play Intel x86_64 Atom System Image";
