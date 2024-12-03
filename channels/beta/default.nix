@@ -3001,23 +3001,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "35.4.2";
+    version = "35.4.3";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-12658423.zip";
-        sha1 = "c09ec79c1a8a79ab2ce51ba2c35e91de65702efe";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-12694320.zip";
+        sha1 = "8b5b471fe24d51e09d3c839f652b8b99eb40d99e";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12658423.zip";
-        sha1 = "16134d4520200fa55276fe46d1aee7d72bcade6f";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12694320.zip";
+        sha1 = "bfe9bc34919de018d3403b9250c72d2fb95f29cc";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12658423.zip";
-        sha1 = "88d045da40b76e9ff0893c4b477866bf0119ecd1";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12694320.zip";
+        sha1 = "87b84d4f79c51e8c8f79577b6dddc7ac7a4ce0d2";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-12658423.zip";
-        sha1 = "d35c0f3cbf5ce1ed3503f2a228a9b303b463044a";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-12694320.zip";
+        sha1 = "5c47a4124282eaed69f6a39fb975988fcb84544f";
       };
     };
     displayName = "Android Emulator";
@@ -5442,11 +5442,11 @@
     version = "1";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
-        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
+        url = "https://dl.google.com/android/repository/platform-35_r01.zip";
+        sha1 = "c84ed39cecaeec13bc06c67639fcf86734013d98";
       };
     };
-    displayName = "Android SDK Platform 35-ext14";
+    displayName = "Android SDK Platform 35";
     path = "platforms/android-35";
     license = {
       id = "android-sdk-license";
@@ -7204,8 +7204,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
