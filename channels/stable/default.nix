@@ -2500,6 +2500,32 @@
     };
     xml = ./cmake-3-31-0.xml;
   };
+  cmake-3-31-1 = mkPrebuilt {
+    id = "cmake;3.31.1";
+    pname = "cmake-3-31-1";
+    version = "3.31.1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.1-linux.zip";
+        sha1 = "477e6cd2d8094d2653464a60869aa15e0d79a24f";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.1-darwin.zip";
+        sha1 = "11b79b8908377bdd038aac0625e7d8aa32aed503";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.1-windows.zip";
+        sha1 = "3a8f1f1b33e0ed2a639b6e709ab15806648979c9";
+      };
+    };
+    displayName = "CMake 3.31.1";
+    path = "cmake/3.31.1";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-31-1.xml;
+  };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
     pname = "cmake-3-6-4111459";
@@ -4886,11 +4912,11 @@
     version = "1";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
-        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
+        url = "https://dl.google.com/android/repository/platform-35_r01.zip";
+        sha1 = "c84ed39cecaeec13bc06c67639fcf86734013d98";
       };
     };
-    displayName = "Android SDK Platform 35-ext14";
+    displayName = "Android SDK Platform 35";
     path = "platforms/android-35";
     license = {
       id = "android-sdk-license";
