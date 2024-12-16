@@ -5606,11 +5606,11 @@
     version = "1";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-35_r01.zip";
-        sha1 = "c84ed39cecaeec13bc06c67639fcf86734013d98";
+        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
+        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
       };
     };
-    displayName = "Android SDK Platform 35";
+    displayName = "Android SDK Platform 35-ext14";
     path = "platforms/android-35";
     license = {
       id = "android-sdk-license";
