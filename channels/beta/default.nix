@@ -5491,14 +5491,14 @@
   platforms-android-35 = mkSrcOnly {
     id = "platforms;android-35";
     pname = "platforms-android-35";
-    version = "1";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
-        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
+        url = "https://dl.google.com/android/repository/platform-35_r02.zip";
+        sha1 = "2a0b06a1c89b52a3d70ce5d40554b094c1c1d0ac";
       };
     };
-    displayName = "Android SDK Platform 35-ext14";
+    displayName = "Android SDK Platform 35";
     path = "platforms/android-35";
     license = {
       id = "android-sdk-license";
