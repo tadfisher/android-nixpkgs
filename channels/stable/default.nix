@@ -3079,23 +3079,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "35.4.4";
+    version = "35.4.5";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-12745630.zip";
-        sha1 = "1b8b5847989a3c4c00251ee1ce6a8637f347057e";
-      };
-      aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12745630.zip";
-        sha1 = "aa0030fde87572f5304e0fcda34a5e8409739821";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-12895296.zip";
+        sha1 = "9dde3271f1c5a1ac39ede2abe442fa0dd6f01826";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12745630.zip";
-        sha1 = "1d1e7a4e041673c3e34a4e3f4b15e704c0dbb25d";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12895296.zip";
+        sha1 = "b43c7af9097f08fb5ee829df1f15290306fcb4a6";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12895296.zip";
+        sha1 = "7d91b3a85cc578c17e4c688e1ade74a40cf4fe2c";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-12745630.zip";
-        sha1 = "4a333c2dcff1e3b6cd9b47546ef992bdf2caff20";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-12895296.zip";
+        sha1 = "06ec4d1b3bc681efe7690b0760bf2b2fabafbaae";
       };
     };
     displayName = "Android Emulator";
@@ -4347,6 +4347,32 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./ndk-28-0-12674087.xml;
+  };
+  ndk-28-0-12916984 = mkNdk {
+    id = "ndk;28.0.12916984";
+    pname = "ndk-28-0-12916984";
+    version = "28.0.12916984-rc3";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28-beta3-linux.zip";
+        sha1 = "69348e24577122339b3996d2ef1ac4e6f7f5d627";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28-beta3-darwin.zip";
+        sha1 = "cd2f13196082923d2568c9e43f08bc1cbd2f1c76";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28-beta3-windows.zip";
+        sha1 = "72e641edd8ef24b7b3c4935ac0b0340d87251450";
+      };
+    };
+    displayName = "NDK (Side by side) 28.0.12916984";
+    path = "ndk/28.0.12916984";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./ndk-28-0-12916984.xml;
   };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
@@ -6716,8 +6742,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
