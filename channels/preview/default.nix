@@ -2578,6 +2578,32 @@
     };
     xml = ./cmake-3-31-1.xml;
   };
+  cmake-3-31-4 = mkPrebuilt {
+    id = "cmake;3.31.4";
+    pname = "cmake-3-31-4";
+    version = "3.31.4";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.4-linux.zip";
+        sha1 = "329d5d23600fc7cff8ebff8136a0fd0e7994c069";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.4-darwin.zip";
+        sha1 = "4094e82ed72c994bf9c0244d71db555a7c97e693";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.4-windows.zip";
+        sha1 = "7012f994ba691ca888b0733e95ab62c3f300d7dc";
+      };
+    };
+    displayName = "CMake 3.31.4";
+    path = "cmake/3.31.4";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-31-4.xml;
+  };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
     pname = "cmake-3-6-4111459";
@@ -3131,23 +3157,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "35.4.5";
+    version = "35.4.6";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-12895296.zip";
-        sha1 = "9dde3271f1c5a1ac39ede2abe442fa0dd6f01826";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-12930357.zip";
+        sha1 = "fb077c566b882aeaed465d91b7313cd739cfc35d";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12895296.zip";
-        sha1 = "b43c7af9097f08fb5ee829df1f15290306fcb4a6";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12930357.zip";
+        sha1 = "7f337706bdb6d3da3dca20be433c3af2bc944bd1";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12895296.zip";
-        sha1 = "7d91b3a85cc578c17e4c688e1ade74a40cf4fe2c";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12930357.zip";
+        sha1 = "5f4ed2229988abb195f4afe91ce5dee0d3e71d34";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-12895296.zip";
-        sha1 = "06ec4d1b3bc681efe7690b0760bf2b2fabafbaae";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-12930357.zip";
+        sha1 = "0230221cb125140c7ce346525ca1a46e861881f9";
       };
     };
     displayName = "Android Emulator";
