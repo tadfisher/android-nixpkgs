@@ -1,2 +1,0 @@
-nix.repos=@mavenRepo@
-nix.jdk=@jdk@

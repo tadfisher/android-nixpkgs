@@ -1,13 +1,9 @@
-{ lib
-, stdenv
-, devshellPkgs
+{ devshellPkgs
 , gradle
-, gradle-properties
+, gradle2nix
 , jdk
 , update-locks
 }:
-
-with lib;
 
 devshellPkgs.mkShell {
   name = "android-nixpkgs";
@@ -21,15 +17,9 @@ devshellPkgs.mkShell {
 
   packages = [
     gradle
+    gradle2nix
     jdk
   ];
-
-  devshell.startup = {
-    gradle-properties.text = ''
-      rm -f $PRJ_ROOT/gradle.properties
-      ln -sf ${gradle-properties} $PRJ_ROOT/gradle.properties
-    '';
-  };
 
   commands = [
     {
