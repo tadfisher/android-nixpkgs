@@ -162,6 +162,7 @@ fun String.indentMiddle(): String {
 
 fun String.formatIndents(size: Int = 2) = replace("⇥", " ".repeat(size))
 
+@Suppress("DEPRECATION") // MavenType
 fun RemotePackage.builder(): String {
     return when (typeDetails) {
         is DetailsTypes.SourceDetailsType,
