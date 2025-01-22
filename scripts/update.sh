@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 
-set -ex
+set -eu -o pipefail
+
+JAVA_HOME=$(nix build --no-link --print-out-paths nixpkgs#jdk)
+export JAVA_HOME
 
 for channel in stable beta preview canary; do
     mkdir -p build/$channel
