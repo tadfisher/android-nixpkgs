@@ -20,6 +20,7 @@ import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
 import java.io.InputStream
 import java.io.PrintStream
+import java.net.URI
 import java.net.URL
 import java.nio.file.Path
 import kotlin.io.path.exists
@@ -65,7 +66,7 @@ class NixDownloader : Downloader {
     private fun openUrl(
         url: String,
     ): InputStream {
-        val connection = URL(url).openConnection()
+        val connection = URI.create(url).toURL().openConnection()
         connection.connect()
         return connection.getInputStream().ensureMarkReset()
     }
@@ -138,7 +139,10 @@ class NixRepoManager(
             for (source in sources) {
                 launch(Dispatchers.IO) {
                     try {
-                        val manifest = downloader.downloadAndStream(URL(source.url), progress)
+                        val manifest = downloader.downloadAndStream(
+                            URI.create(source.url).toURL(),
+                            progress
+                        )
                         parseSource(source, manifest, parsedPackages, legacyParsedPackages)
                     } catch (e: FileNotFoundException) {
                         progress.logWarning("Not found: ${source.url}")
