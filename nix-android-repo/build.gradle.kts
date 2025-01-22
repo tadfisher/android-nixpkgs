@@ -21,28 +21,8 @@ dependencies {
     runtimeOnly(libs.jaxb.impl)
 }
 
-val jdk = providers.gradleProperty("nix.jdk").map(JavaLanguageVersion::of)
-
-kotlin {
-    jvmToolchain {
-        languageVersion.set(jdk)
-    }
-}
-
 tasks {
-    register("downloadSources") {
-        doLast {
-            val componentIds = configurations.filter { it.isCanBeResolved }
-                .flatMap { c -> c.incoming.resolutionResult.allComponents }
-                .map { it.id }
-
-            project.dependencies.createArtifactResolutionQuery()
-                .forComponents(componentIds)
-                .withArtifacts(JvmLibrary::class.java, SourcesArtifact::class.java)
-                .execute()
-                .resolvedComponents
-                .flatMap { it.getArtifacts(SourcesArtifact::class.java) }
-                .filterIsInstance<ResolvedArtifactResult>()
-        }
+    wrapper {
+        gradleVersion = libs.versions.gradle.get()
     }
 }
