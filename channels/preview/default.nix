@@ -3183,30 +3183,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "35.4.6";
+    version = "35.4.7";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-12930357.zip";
-        sha1 = "fb077c566b882aeaed465d91b7313cd739cfc35d";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-12936821.zip";
+        sha1 = "2a5d0533a773763cce77d13138d14c39c517b849";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12930357.zip";
-        sha1 = "7f337706bdb6d3da3dca20be433c3af2bc944bd1";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-12936821.zip";
+        sha1 = "c695351971fb7eca8a205e4b1d1e0c27011b36aa";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12930357.zip";
-        sha1 = "5f4ed2229988abb195f4afe91ce5dee0d3e71d34";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-12936821.zip";
+        sha1 = "cf52d95b83ba361534f404e6309a165031d4d900";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-12930357.zip";
-        sha1 = "0230221cb125140c7ce346525ca1a46e861881f9";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-12936821.zip";
+        sha1 = "84a10a130b56faf7dadc94cc2f5597eaf9c5ca46";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -7462,8 +7462,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
