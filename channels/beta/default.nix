@@ -5625,7 +5625,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/platform-35_r02.zip";
-        sha1 = "2a0b06a1c89b52a3d70ce5d40554b094c1c1d0ac";
+        sha1 = "0bb560a90a7a2cbd0dd8348224d518b638fe7949";
       };
     };
     displayName = "Android SDK Platform 35";
@@ -7350,8 +7350,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -10447,11 +10447,11 @@
   system-images-android-35-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;google_apis;arm64-v8a";
     pname = "system-images-android-35-google-apis-arm64-v8a";
-    version = "8";
+    version = "9";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-35_r08.zip";
-        sha1 = "50b337d09eff0540022d24e5097f6df29407e7c1";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-35_r09.zip";
+        sha1 = "16f5bceca236b2737008977c4aaf826e46a8de7d";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -10465,11 +10465,11 @@
   system-images-android-35-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-35;google_apis;x86_64";
     pname = "system-images-android-35-google-apis-x86-64";
-    version = "8";
+    version = "9";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-35_r08.zip";
-        sha1 = "d79169884cabc6680cb29d32c2112ad46c858c1b";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-35_r09.zip";
+        sha1 = "0103e6dab21290c4b9d16550a3ce99476f884eef";
       };
     };
     displayName = "Google APIs Intel x86_64 Atom System Image";
@@ -10559,7 +10559,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-35_r05.zip";
-        sha1 = "435176cf71f4b67d7f97b996272d6c26fa37f1a2";
+        sha1 = "9d834fe640beff22d25025a8028b98ab4366be4d";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
@@ -10577,7 +10577,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-35_r05.zip";
-        sha1 = "33efe7306d7dd116c052b91a75b98736b6e152f0";
+        sha1 = "d709cf26b375abecfbbf5803afd20749ddfa2865";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
