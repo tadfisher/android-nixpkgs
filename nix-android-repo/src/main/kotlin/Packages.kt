@@ -197,7 +197,6 @@ fun nixPackages(packages: Map<String, RemotePackage>): List<Package> {
                 version = pkg.revision(),
                 builder = pkg.builder(),
                 sources = pkg.allArchives.map { archive ->
-                    println("${pkg.path}-${pkg.revision()}: ${archive.complete.url}")
                     Source(
                         platform = archive.platform(),
                         url = InstallerUtil.resolveUrl(archive.complete.url, pkg, NixProgressIndicator)!!.toString(),
