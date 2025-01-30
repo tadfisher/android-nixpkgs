@@ -18,7 +18,7 @@ dependencies {
     implementation(libs.sdklib)
     implementation(libs.coroutines)
     implementation(libs.jaxb.api)
-    runtimeOnly(libs.jaxb.runtime)
+    implementation(libs.jaxb.runtime)
 }
 
 tasks {
