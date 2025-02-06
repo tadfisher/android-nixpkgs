@@ -2920,6 +2920,32 @@
     };
     xml = ./cmdline-tools-17-0.xml;
   };
+  cmdline-tools-19-0-alpha01 = mkCmdlineTools {
+    id = "cmdline-tools;19.0-alpha01";
+    pname = "cmdline-tools-19-0-alpha01";
+    version = "19-rc1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-12996373_latest.zip";
+        sha1 = "f25edbe00eccf74e940abb8d9872b7120c3942a3";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-12996373_latest.zip";
+        sha1 = "de2df8ad8705f3be6de366c953e4cb3e3a0b9f6c";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-12996373_latest.zip";
+        sha1 = "26805d62669b20af583074f67926e31600e43185";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/19.0-alpha01";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./cmdline-tools-19-0-alpha01.xml;
+  };
   cmdline-tools-2-0 = mkCmdlineTools {
     id = "cmdline-tools;2.0";
     pname = "cmdline-tools-2-0";
@@ -3157,26 +3183,26 @@
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "17";
+    version = "19-rc1";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-12700392_latest.zip";
-        sha1 = "da3424ea38b72d85258174a76aa286b7d4e0b700";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-12996373_latest.zip";
+        sha1 = "f25edbe00eccf74e940abb8d9872b7120c3942a3";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-12700392_latest.zip";
-        sha1 = "625e146cf61d6b4fbdfdd9ad34105af23b0486c2";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-12996373_latest.zip";
+        sha1 = "de2df8ad8705f3be6de366c953e4cb3e3a0b9f6c";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-12700392_latest.zip";
-        sha1 = "4a0902fb473afb7ce90a0ff6181d997138a15d9c";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-12996373_latest.zip";
+        sha1 = "26805d62669b20af583074f67926e31600e43185";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
     path = "cmdline-tools/latest";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./cmdline-tools-latest.xml;
   };
@@ -5007,6 +5033,32 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./ndk-28-0-12916984.xml;
+  };
+  ndk-28-0-13004108 = mkNdk {
+    id = "ndk;28.0.13004108";
+    pname = "ndk-28-0-13004108";
+    version = "28.0.13004108";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28-linux.zip";
+        sha1 = "894f469c5192a116d21f412de27966140a530ebc";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28-darwin.zip";
+        sha1 = "da6bbb3d007095658ae61d9d85da8fcc5c0dfb66";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28-windows.zip";
+        sha1 = "f79a00c721dc5c15b2bf093d7bb2af96496a42b2";
+      };
+    };
+    displayName = "NDK (Side by side) 28.0.13004108";
+    path = "ndk/28.0.13004108";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-28-0-13004108.xml;
   };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
