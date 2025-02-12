@@ -6067,23 +6067,23 @@
   skiaparser-3 = mkPrebuilt {
     id = "skiaparser;3";
     pname = "skiaparser-3";
-    version = "5";
+    version = "6";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/skiaparser-12616120-linux-x64.zip";
-        sha1 = "f1f9acd490c2a94402fa5fc0a548f529acab91b1";
+        url = "https://dl.google.com/android/repository/skiaparser-12972467-linux-x64.zip";
+        sha1 = "0c0ba1581ecba105bd59b95c251f8a16a73e9555";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-12616120-darwin-x64.zip";
-        sha1 = "d320af2c33979fce796d436e6e68351a9d1a02d2";
+        url = "https://dl.google.com/android/repository/skiaparser-12972467-darwin-x64.zip";
+        sha1 = "7fa586b1b677db7f0af7104bb8b273bae1f05567";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/skiaparser-12616120-darwin-aarch64.zip";
-        sha1 = "b40c1615bacc6b8c27563c2f5dd8d1a856f20c50";
+        url = "https://dl.google.com/android/repository/skiaparser-12972467-darwin-aarch64.zip";
+        sha1 = "b4c308feff96c9ef112dd8959ee9d1e78c12d89b";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/skiaparser-12616120-win-x64.zip";
-        sha1 = "afd28844313af84f7245cef5d5be8d9a9de848e1";
+        url = "https://dl.google.com/android/repository/skiaparser-12972467-win-x64.zip";
+        sha1 = "6d65481e813ea9fa6447d8575b40f728bc252cd3";
       };
     };
     displayName = "Layout Inspector image server for API 31-36";
