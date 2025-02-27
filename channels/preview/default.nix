@@ -3261,23 +3261,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "35.5.4";
+    version = "35.5.5";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-13061114.zip";
-        sha1 = "4762116e3329919d0471bde4c1e186ab26a0ddc8";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-13095063.zip";
+        sha1 = "84f5bee44488090adfb09a6c5e2f22ce3e06db31";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13061114.zip";
-        sha1 = "5755b6ea204c6bd0ec479758ff68a30f0cb5fc8e";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13095063.zip";
+        sha1 = "72e0a15e942459ffd57034fd5a28a314f65d8747";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13061114.zip";
-        sha1 = "f0ef53b90aa93f2e22d802db45cc8603e55f4ba3";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13095063.zip";
+        sha1 = "5d17fbf1df2cd911df0284496caab0831a773ca9";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-13061114.zip";
-        sha1 = "e27934d50e22cf0b86b66647ab43ee8bf9143bbe";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-13095063.zip";
+        sha1 = "ca8e358fe836c4bbc0ffc5aa89af9470933d2e95";
       };
     };
     displayName = "Android Emulator";
@@ -5708,6 +5708,42 @@
     };
     xml = ./platforms-android-33.xml;
   };
+  platforms-android-33-ext4 = mkSrcOnly {
+    id = "platforms;android-33-ext4";
+    pname = "platforms-android-33-ext4";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-33-ext4_r01.zip";
+        sha1 = "422f50033523c5f934f38df520699080b59bbc7e";
+      };
+    };
+    displayName = "Android SDK Platform 33-ext4";
+    path = "platforms/android-33-ext4";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-33-ext4.xml;
+  };
+  platforms-android-33-ext5 = mkSrcOnly {
+    id = "platforms;android-33-ext5";
+    pname = "platforms-android-33-ext5";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-33-ext5_r01.zip";
+        sha1 = "a6499e158fdd7140e3e466314b273016281fefcc";
+      };
+    };
+    displayName = "Android SDK Platform 33-ext5";
+    path = "platforms/android-33-ext5";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-33-ext5.xml;
+  };
   platforms-android-34 = mkSrcOnly {
     id = "platforms;android-34";
     pname = "platforms-android-34";
@@ -5726,6 +5762,78 @@
     };
     xml = ./platforms-android-34.xml;
   };
+  platforms-android-34-ext10 = mkSrcOnly {
+    id = "platforms;android-34-ext10";
+    pname = "platforms-android-34-ext10";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-34-ext10_r01.zip";
+        sha1 = "068496419fb4f4987374fdb2989d4f13acc62377";
+      };
+    };
+    displayName = "Android SDK Platform 34-ext10";
+    path = "platforms/android-34-ext10";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-34-ext10.xml;
+  };
+  platforms-android-34-ext11 = mkSrcOnly {
+    id = "platforms;android-34-ext11";
+    pname = "platforms-android-34-ext11";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-34-ext11_r01.zip";
+        sha1 = "dfb498e3d0d97769aef5e1eb9ddff5b001e65829";
+      };
+    };
+    displayName = "Android SDK Platform 34-ext11";
+    path = "platforms/android-34-ext11";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-34-ext11.xml;
+  };
+  platforms-android-34-ext12 = mkSrcOnly {
+    id = "platforms;android-34-ext12";
+    pname = "platforms-android-34-ext12";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-34-ext12_r01.zip";
+        sha1 = "ba80ccbcc29b29f25ac926a08c0b2777f0bce842";
+      };
+    };
+    displayName = "Android SDK Platform 34-ext12";
+    path = "platforms/android-34-ext12";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-34-ext12.xml;
+  };
+  platforms-android-34-ext8 = mkSrcOnly {
+    id = "platforms;android-34-ext8";
+    pname = "platforms-android-34-ext8";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-34-ext8_r01.zip";
+        sha1 = "71877402d579127b19158f9f170f05bcd805f686";
+      };
+    };
+    displayName = "Android SDK Platform 34-ext8";
+    path = "platforms/android-34-ext8";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-34-ext8.xml;
+  };
   platforms-android-35 = mkSrcOnly {
     id = "platforms;android-35";
     pname = "platforms-android-35";
@@ -5743,6 +5851,24 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./platforms-android-35.xml;
+  };
+  platforms-android-35-ext14 = mkSrcOnly {
+    id = "platforms;android-35-ext14";
+    pname = "platforms-android-35-ext14";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-35-ext14_r01.zip";
+        sha1 = "c0e5b5511562fc8b8a61b3b3f17f6ffa811e4971";
+      };
+    };
+    displayName = "Android SDK Platform 35-ext14";
+    path = "platforms/android-35-ext14";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-35-ext14.xml;
   };
   platforms-android-4 = mkSrcOnly {
     id = "platforms;android-4";
