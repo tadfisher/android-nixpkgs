@@ -7566,8 +7566,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -10807,6 +10807,42 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-35-ext14-google-apis-playstore-x86-64.xml;
+  };
+  system-images-android-35-ext15-android-wear-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-35-ext15;android-wear;arm64-v8a";
+    pname = "system-images-android-35-ext15-android-wear-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-35-ext15_r01.zip";
+        sha1 = "85f302e4038789563b3075c744645d06762a523c";
+      };
+    };
+    displayName = "Wear OS 5.1 ARM 64 v8a System Image";
+    path = "system-images/android-35-ext15/android-wear/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-ext15-android-wear-arm64-v8a.xml;
+  };
+  system-images-android-35-ext15-android-wear-x86-64 = mkSrcOnly {
+    id = "system-images;android-35-ext15;android-wear;x86_64";
+    pname = "system-images-android-35-ext15-android-wear-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-35-ext15_r01.zip";
+        sha1 = "70b5cc9e0a070bb485113fba38df782aa3e21782";
+      };
+    };
+    displayName = "Wear OS 5.1 Intel x86_64 Atom System Image";
+    path = "system-images/android-35-ext15/android-wear/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-ext15-android-wear-x86-64.xml;
   };
   system-images-android-35-android-wear-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;android-wear;arm64-v8a";
