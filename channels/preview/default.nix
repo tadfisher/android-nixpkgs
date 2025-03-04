@@ -2682,6 +2682,32 @@
     };
     xml = ./cmake-3-31-5.xml;
   };
+  cmake-3-31-6 = mkPrebuilt {
+    id = "cmake;3.31.6";
+    pname = "cmake-3-31-6";
+    version = "3.31.6";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.6-linux.zip";
+        sha1 = "a54551dabd5daf8cc99f7f51769fd00ca759be0a";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.6-darwin.zip";
+        sha1 = "78c3bf819d7bf6144783aeef06c5f9cbd3f8f5a9";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-3.31.6-windows.zip";
+        sha1 = "1efbef168291afc5d6ae449b1a016f8bf034b0fc";
+      };
+    };
+    displayName = "CMake 3.31.6";
+    path = "cmake/3.31.6";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-3-31-6.xml;
+  };
   cmake-3-6-4111459 = mkPrebuilt {
     id = "cmake;3.6.4111459";
     pname = "cmake-3-6-4111459";
@@ -5197,6 +5223,32 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./ndk-28-0-13004108.xml;
+  };
+  ndk-29-0-13113456 = mkNdk {
+    id = "ndk;29.0.13113456";
+    pname = "ndk-29-0-13113456";
+    version = "29.0.13113456-rc1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r29-beta1-linux.zip";
+        sha1 = "ec2d8801e42009edf66be853c1bab9ba216378f9";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r29-beta1-darwin.zip";
+        sha1 = "485c42ff6a04ef0ec9612420b3226de443f46e7a";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r29-beta1-windows.zip";
+        sha1 = "90347ffa01dd1833b9ff116865958976fd66c264";
+      };
+    };
+    displayName = "NDK (Side by side) 29.0.13113456";
+    path = "ndk/29.0.13113456";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./ndk-29-0-13113456.xml;
   };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
