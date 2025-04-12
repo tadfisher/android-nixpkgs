@@ -10245,7 +10245,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_playstore_tablet/arm64-v8a-35_r09.zip";
-        sha1 = "0023d7e13abc851b874592b1e64ac0bfd19eb627";
+        sha1 = "6ce87d60c505338b8253f8f1de22547ac2a0bcb7";
       };
     };
     displayName = "Google Play Tablet ARM 64 v8a System Image";
@@ -10263,7 +10263,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_playstore_tablet/x86_64-35_r09.zip";
-        sha1 = "97b45ee880a29322224bbae2d36a979297d2e3e3";
+        sha1 = "a1254d64b76bfc001553e502eecdf66921393fbc";
       };
     };
     displayName = "Google Play Tablet Intel x86_64 Atom System Image";
@@ -10317,7 +10317,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_tablet/arm64-v8a-35_r02.zip";
-        sha1 = "0327e3d23df805efaf9f7eeac270d614f11eb441";
+        sha1 = "ee76689835d867058ecce51e6634635675c83482";
       };
     };
     displayName = "Google APIs Tablet ARM 64 v8a System Image";
@@ -10335,7 +10335,7 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/google_apis_tablet/x86_64-35_r02.zip";
-        sha1 = "985f2e6569374d50a54774d770c2bafba1f9f855";
+        sha1 = "4f497f7a4ed5965b162ab6a33b8f99e4d4163154";
       };
     };
     displayName = "Google APIs Tablet Intel x86_64 Atom System Image";
