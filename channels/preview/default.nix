@@ -7732,8 +7732,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -10701,11 +10701,11 @@
   system-images-android-34-google-xr-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;google-xr;arm64-v8a";
     pname = "system-images-android-34-google-xr-arm64-v8a";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-arm64-v8a-playstore-34_r04.zip";
-        sha1 = "3ef7800026c62ab04fff6f1a12af57902c88b8e6";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-arm64-v8a-playstore-34_r05.zip";
+        sha1 = "d488c8da3f3edaf149c5fd9a34c7e8a304fbac10";
       };
     };
     displayName = "Google Play XR ARM 64 v8a System Image";
@@ -10719,15 +10719,15 @@
   system-images-android-34-google-xr-x86-64 = mkSrcOnly {
     id = "system-images;android-34;google-xr;x86_64";
     pname = "system-images-android-34-google-xr-x86-64";
-    version = "4";
+    version = "5";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r04-linux.zip";
-        sha1 = "8d21a5d2afa0d0902578fe886c2abf6139c01436";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r05-linux.zip";
+        sha1 = "3a97a73db799e2caf5adcb79628c4ac176848d3c";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r04-windows.zip";
-        sha1 = "900fb6f084ddb3951a3f1c80410a9f453f68e520";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r05-windows.zip";
+        sha1 = "2750df5b023e31af92016c5bc6c6d020b309149c";
       };
     };
     displayName = "Google Play XR Intel x86_64 Atom System Image";
