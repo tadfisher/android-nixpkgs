@@ -2764,6 +2764,32 @@
     };
     xml = ./cmake-3-6-4111459.xml;
   };
+  cmake-4-0-2 = mkPrebuilt {
+    id = "cmake;4.0.2";
+    pname = "cmake-4-0-2";
+    version = "4.0.2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-4.0.2-linux.zip";
+        sha1 = "83295132168f6a41d6461746e1e9844583adac00";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-4.0.2-darwin.zip";
+        sha1 = "82f5dfe96433d1085f49697f7f985266ebece998";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-4.0.2-windows.zip";
+        sha1 = "337378ae8fb6b7c88b8c439dbe2714cc17a3ab04";
+      };
+    };
+    displayName = "CMake 4.0.2";
+    path = "cmake/4.0.2";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-4-0-2.xml;
+  };
   cmdline-tools-1-0 = mkCmdlineTools {
     id = "cmdline-tools;1.0";
     pname = "cmdline-tools-1-0";
@@ -9547,11 +9573,11 @@
   system-images-android-34-ext9-android-automotive-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34-ext9;android-automotive-playstore;arm64-v8a";
     pname = "system-images-android-34-ext9-android-automotive-playstore-arm64-v8a";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-34-ext9_playstore_r03.zip";
-        sha1 = "2c0b4d0ed7aa50d498fb0e31ac500343deb90b7c";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-34-ext9_playstore_r04.zip";
+        sha1 = "ce75a3152c34862f8092e31be13024693564cfa5";
       };
     };
     displayName = "Android Automotive with Google Play arm64-v8a System Image";
@@ -9565,11 +9591,11 @@
   system-images-android-34-ext9-android-automotive-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-34-ext9;android-automotive-playstore;x86_64";
     pname = "system-images-android-34-ext9-android-automotive-playstore-x86-64";
-    version = "3";
+    version = "4";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-34-ext9_playstore_r03.zip";
-        sha1 = "ccbfbf77c5b83a6bfb66032e25c1634104c66354";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-34-ext9_playstore_r04.zip";
+        sha1 = "1a52bb3dc6a1b0e7ac19b1f512047df9d0b93c1b";
       };
     };
     displayName = "Android Automotive with Google Play x86_64 System Image";
@@ -9583,11 +9609,11 @@
   system-images-android-34-ext9-android-automotive-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34-ext9;android-automotive;arm64-v8a";
     pname = "system-images-android-34-ext9-android-automotive-arm64-v8a";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-34-ext9_r04.zip";
-        sha1 = "cb44aa8dadef2653e736e35bed35b155a998c38e";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-34-ext9_r05.zip";
+        sha1 = "898559aa3c3ec2f276866e998ba074dc32c10405";
       };
     };
     displayName = "Android Automotive with Google APIs arm64-v8a System Image";
@@ -9601,11 +9627,11 @@
   system-images-android-34-ext9-android-automotive-x86-64 = mkSrcOnly {
     id = "system-images;android-34-ext9;android-automotive;x86_64";
     pname = "system-images-android-34-ext9-android-automotive-x86-64";
-    version = "4";
+    version = "5";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-34-ext9_r04.zip";
-        sha1 = "e2deec7fc6e93b674e58e75fe4880417464bc49d";
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-34-ext9_r05.zip";
+        sha1 = "a24cc4b1fb8aa31d50663b2b681ae7493a31106c";
       };
     };
     displayName = "Android Automotive with Google APIs x86_64 System Image";
