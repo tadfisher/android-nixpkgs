@@ -3365,23 +3365,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "35.6.8";
+    version = "36.1.1";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-13466586.zip";
-        sha1 = "f2ff2ebcb69eb66f0da1ca6f6da7e0c13be08b19";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-13509757.zip";
+        sha1 = "29c6f2fce7e5eaec1e83fde141c53af67a303171";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13466586.zip";
-        sha1 = "f7d1ffaaed4b2414d35fb8cf1c1ea6512d5bc8d1";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13509757.zip";
+        sha1 = "47fee8b0412874d004d5b41536d967f505efc833";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13466586.zip";
-        sha1 = "3044b86d9e14978b339c06f48d54d9d6cc445805";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13509757.zip";
+        sha1 = "da75d2551a9c563bab40578ab6bc9ebed70c5969";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-13466586.zip";
-        sha1 = "69672e586cf9987a556fd7239e38470e381397fa";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-13509757.zip";
+        sha1 = "3ff210051b1e7f6cd81e24a21eaf92b3de829ea6";
       };
     };
     displayName = "Android Emulator";
@@ -11448,6 +11448,42 @@
     };
     xml = ./system-images-android-35-google-atd-x86-64.xml;
   };
+  system-images-android-36-google-tv-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-36;google-tv;arm64-v8a";
+    pname = "system-images-android-36-google-tv-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/arm64-v8a-36_r01.zip";
+        sha1 = "03280b174bd0e68d29ee5a5538333b670c564460";
+      };
+    };
+    displayName = "Google TV ARM 64 v8a System Image";
+    path = "system-images/android-36/google-tv/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-google-tv-arm64-v8a.xml;
+  };
+  system-images-android-36-google-tv-x86 = mkSrcOnly {
+    id = "system-images;android-36;google-tv;x86";
+    pname = "system-images-android-36-google-tv-x86";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/x86-36_r01.zip";
+        sha1 = "662b4bfe7bf90e0f3d283ce3d4e7dac5604d6354";
+      };
+    };
+    displayName = "Google TV Intel x86 Atom System Image";
+    path = "system-images/android-36/google-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-google-tv-x86.xml;
+  };
   system-images-android-36-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;google_apis;arm64-v8a";
     pname = "system-images-android-36-google-apis-arm64-v8a";
@@ -11735,6 +11771,42 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-Baklava-google-apis-ps16k-x86-64.xml;
+  };
+  system-images-signed-android-36-android-wear-arm64-v8a = mkSrcOnly {
+    id = "system-images;signed;android-36;android-wear;arm64-v8a";
+    pname = "system-images-signed-android-36-android-wear-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-36_signed_r01.zip";
+        sha1 = "53f3fa2adea692b7eabf698d59fdc34d36ff08e4";
+      };
+    };
+    displayName = "Wear OS 6.0 - Preview ARM 64 v8a System Image (signed)";
+    path = "system-images/signed/android-36/android-wear/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-signed-android-36-android-wear-arm64-v8a.xml;
+  };
+  system-images-signed-android-36-android-wear-x86-64 = mkSrcOnly {
+    id = "system-images;signed;android-36;android-wear;x86_64";
+    pname = "system-images-signed-android-36-android-wear-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-36_signed_r01.zip";
+        sha1 = "7ae6c4e1c614a649f75ccb653769ccd8cdb30e4a";
+      };
+    };
+    displayName = "Wear OS 6.0 - Preview Intel x86_64 Atom System Image (signed)";
+    path = "system-images/signed/android-36/android-wear/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-signed-android-36-android-wear-x86-64.xml;
   };
   tools = mkTools {
     id = "tools";
