@@ -3365,23 +3365,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.1.2";
+    version = "36.1.3";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-13544801.zip";
-        sha1 = "74a1c093bea491f3ecbd80a027bc28dd7c184688";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-13572372.zip";
+        sha1 = "09d80bdcb5b0ee29ac273aa06bab9353416afcd8";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13544801.zip";
-        sha1 = "802bbec21bbbe151440690f65fdb24b33005ef2a";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13572372.zip";
+        sha1 = "8be6713190b1020eb89489ce6ee7b25003ff646b";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13544801.zip";
-        sha1 = "26087d0d3b70cc196c2317d24d71b02b699fc3d8";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13572372.zip";
+        sha1 = "6672e956382d9c5ae5c2d699e2bc61862ecc9037";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-13544801.zip";
-        sha1 = "8f7a97fb9d23e2c7f670bd2b03ea61215f43b25d";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-13572372.zip";
+        sha1 = "dc32706f352030bfe670fac80e906e90d32e2fec";
       };
     };
     displayName = "Android Emulator";
