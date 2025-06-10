@@ -5336,6 +5336,32 @@
     };
     xml = ./ndk-29-0-13113456.xml;
   };
+  ndk-29-0-13599879 = mkNdk {
+    id = "ndk;29.0.13599879";
+    pname = "ndk-29-0-13599879";
+    version = "29.0.13599879-rc2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r29-beta2-linux.zip";
+        sha1 = "06c29d6764526fb51407d08fcead41247ddd3b70";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r29-beta2-darwin.zip";
+        sha1 = "09be4f8fb626a9c93415198ea8e75d8d82f528fa";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r29-beta2-windows.zip";
+        sha1 = "59b665f7506f1079771393f2c90f3cb29817ecfb";
+      };
+    };
+    displayName = "NDK (Side by side) 29.0.13599879";
+    path = "ndk/29.0.13599879";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./ndk-29-0-13599879.xml;
+  };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
