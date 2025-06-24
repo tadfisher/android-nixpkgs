@@ -5261,18 +5261,18 @@
       };
       darwin = {
         url = "https://dl.google.com/android/repository/platform-tools_r36.0.0-darwin.zip";
-        sha1 = "48ebbd2fc67d894d7fd7b21679a7c8eb3fed9b28";
+        sha1 = "69ffc978ad66667c6b2eb7979a09f5af20f83aaa";
       };
       windows = {
         url = "https://dl.google.com/android/repository/platform-tools_r36.0.0-win.zip";
-        sha1 = "342b69dcbab46c9d3b802d7e21b95a91c8c9b3ff";
+        sha1 = "18bb505f9fbfbdf1e44fca4d794e74e01b63d30e";
       };
     };
     displayName = "Android SDK Platform-Tools";
     path = "platform-tools";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./platform-tools.xml;
   };
