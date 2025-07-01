@@ -144,7 +144,7 @@ for building Android apps or libraries.
   };
 
   outputs = { self, android-nixpkgs }: {
-    packages.x86_64-linux.android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
+    packages.x86_64-linux.android-sdk = android-nixpkgs.sdk.x86_64-linux (sdkPkgs: with sdkPkgs; [
       cmdline-tools-latest
       build-tools-34-0-0
       platform-tools
