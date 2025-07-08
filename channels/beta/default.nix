@@ -5198,6 +5198,32 @@
     };
     xml = ./ndk-28-1-13356709.xml;
   };
+  ndk-28-2-13676358 = mkNdk {
+    id = "ndk;28.2.13676358";
+    pname = "ndk-28-2-13676358";
+    version = "28.2.13676358";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28c-linux.zip";
+        sha1 = "a7b54a5de87fecd125a17d54f73c446199e72a64";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28c-darwin.zip";
+        sha1 = "fc20a6bf15a30fb3428c9b60a7308793a362dc6d";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r28c-windows.zip";
+        sha1 = "086bba43ff2f5eb0e387b15c8278bb4e0d89ba1d";
+      };
+    };
+    displayName = "NDK (Side by side) 28.2.13676358";
+    path = "ndk/28.2.13676358";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-28-2-13676358.xml;
+  };
   ndk-29-0-13113456 = mkNdk {
     id = "ndk;29.0.13113456";
     pname = "ndk-29-0-13113456";
@@ -7672,8 +7698,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
-        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
+        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
       };
     };
     displayName = "ARM EABI v7a System Image";
