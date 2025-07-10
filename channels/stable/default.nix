@@ -10486,6 +10486,42 @@
     };
     xml = ./system-images-android-35-google-atd-x86-64.xml;
   };
+  system-images-android-36-android-wear-signed-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-36;android-wear-signed;arm64-v8a";
+    pname = "system-images-android-36-android-wear-signed-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-36_signed_r01.zip";
+        sha1 = "68c04da635bb6cf224e651661d510b91142c9687";
+      };
+    };
+    displayName = "Wear OS 6.0 ARM 64 v8a System Image (signed)";
+    path = "system-images/android-36/android-wear-signed/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-android-wear-signed-arm64-v8a.xml;
+  };
+  system-images-android-36-android-wear-signed-x86-64 = mkSrcOnly {
+    id = "system-images;android-36;android-wear-signed;x86_64";
+    pname = "system-images-android-36-android-wear-signed-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-36_signed_r01.zip";
+        sha1 = "aafbeec62bc54dd4388022f57d981bf486211acd";
+      };
+    };
+    displayName = "Wear OS 6.0 Intel x86_64 Atom System Image (signed)";
+    path = "system-images/android-36/android-wear-signed/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-android-wear-signed-x86-64.xml;
+  };
   system-images-android-36-google-tv-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;google-tv;arm64-v8a";
     pname = "system-images-android-36-google-tv-arm64-v8a";
