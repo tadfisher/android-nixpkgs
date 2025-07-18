@@ -3339,23 +3339,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.1.6";
+    version = "36.1.7";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-13701740.zip";
-        sha1 = "18a972ec760ff61f39a0ebdedb8e106c350af589";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-13762611.zip";
+        sha1 = "bfd84cd00e7d4895e23fd8e4401784cc50c4ff7e";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13701740.zip";
-        sha1 = "b6bbf3cf6febae62cfd8f695a7d23d489bd6b7b4";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-13762611.zip";
+        sha1 = "af57f9636db618bbdb1737cf7dc0a0a8dfa86c9a";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13701740.zip";
-        sha1 = "801b533851ad5dbca1988470ba4330387075a115";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-13762611.zip";
+        sha1 = "8007cf791cda0e96f98c7517875dbc9bbda41e4b";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-13701740.zip";
-        sha1 = "70c98f0cddd6d1d3a01fc18617b2500c91451549";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-13762611.zip";
+        sha1 = "ecc4c944c7ef11cf693a3dd4801ab50b790fb15c";
       };
     };
     displayName = "Android Emulator";
@@ -5067,6 +5067,32 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./ndk-27-2-12479018.xml;
+  };
+  ndk-27-3-13750724 = mkNdk {
+    id = "ndk;27.3.13750724";
+    pname = "ndk-27-3-13750724";
+    version = "27.3.13750724";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r27d-linux.zip";
+        sha1 = "22105e410cf29afcf163760cc95522b9fb981121";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r27d-darwin.zip";
+        sha1 = "2970926d705988f79baa9b04c51b4f7914dd8c56";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r27d-windows.zip";
+        sha1 = "56607cbccd3642d4a1991f6bb3114a00f884f426";
+      };
+    };
+    displayName = "NDK (Side by side) 27.3.13750724";
+    path = "ndk/27.3.13750724";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./ndk-27-3-13750724.xml;
   };
   ndk-28-0-12433566 = mkNdk {
     id = "ndk;28.0.12433566";
@@ -10555,6 +10581,46 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-34-google-tv-x86.xml;
+  };
+  system-images-android-34-google-xr-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-34;google-xr;arm64-v8a";
+    pname = "system-images-android-34-google-xr-arm64-v8a";
+    version = "5";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-arm64-v8a-playstore-34_r05.zip";
+        sha1 = "d488c8da3f3edaf149c5fd9a34c7e8a304fbac10";
+      };
+    };
+    displayName = "Google Play XR ARM 64 v8a System Image";
+    path = "system-images/android-34/google-xr/arm64-v8a";
+    license = {
+      id = "android-googlexr-license";
+      hash = "ceff83576aac4f7f37cb98fe189e9fb3c49d3b81";
+    };
+    xml = ./system-images-android-34-google-xr-arm64-v8a.xml;
+  };
+  system-images-android-34-google-xr-x86-64 = mkSrcOnly {
+    id = "system-images;android-34;google-xr;x86_64";
+    pname = "system-images-android-34-google-xr-x86-64";
+    version = "5";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r05-linux.zip";
+        sha1 = "3a97a73db799e2caf5adcb79628c4ac176848d3c";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r05-windows.zip";
+        sha1 = "dd6a8b7c3ed448908195d4a011fa1405f403e755";
+      };
+    };
+    displayName = "Google Play XR Intel x86_64 Atom System Image";
+    path = "system-images/android-34/google-xr/x86_64";
+    license = {
+      id = "android-googlexr-license";
+      hash = "ceff83576aac4f7f37cb98fe189e9fb3c49d3b81";
+    };
+    xml = ./system-images-android-34-google-xr-x86-64.xml;
   };
   system-images-android-34-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;google_apis;arm64-v8a";
