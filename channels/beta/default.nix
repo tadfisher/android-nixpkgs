@@ -7204,6 +7204,42 @@
     };
     xml = ./system-images-android-19-google-apis-x86.xml;
   };
+  system-images-android-21-android-tv-armeabi-v7a = mkSrcOnly {
+    id = "system-images;android-21;android-tv;armeabi-v7a";
+    pname = "system-images-android-21-android-tv-armeabi-v7a";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/armeabi-v7a-21_r03.zip";
+        sha1 = "b63e28a47f11b639dd94981a458b7abfa89ac331";
+      };
+    };
+    displayName = "Android TV ARM EABI v7a System Image";
+    path = "system-images/android-21/android-tv/armeabi-v7a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-21-android-tv-armeabi-v7a.xml;
+  };
+  system-images-android-21-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-21;android-tv;x86";
+    pname = "system-images-android-21-android-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-21_r03.zip";
+        sha1 = "2f8a1988188d6abfd6c6395baeb4471a034dc1e8";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-21/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-21-android-tv-x86.xml;
+  };
   system-images-android-21-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-21;default;arm64-v8a";
     pname = "system-images-android-21-default-arm64-v8a";
@@ -7347,6 +7383,24 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-21-google-apis-x86-64.xml;
+  };
+  system-images-android-22-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-22;android-tv;x86";
+    pname = "system-images-android-22-android-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-22_r03.zip";
+        sha1 = "c78efd5a155622eb490be9d326f5783993375c35";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-22/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-22-android-tv-x86.xml;
   };
   system-images-android-22-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-22;default;arm64-v8a";
@@ -7492,6 +7546,42 @@
     };
     xml = ./system-images-android-22-google-apis-x86-64.xml;
   };
+  system-images-android-23-android-tv-armeabi-v7a = mkSrcOnly {
+    id = "system-images;android-23;android-tv;armeabi-v7a";
+    pname = "system-images-android-23-android-tv-armeabi-v7a";
+    version = "12";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/armeabi-v7a-23_r12.zip";
+        sha1 = "bd84678ae8caf71d584f5210e866b2807e7b4b52";
+      };
+    };
+    displayName = "Android TV ARM EABI v7a System Image";
+    path = "system-images/android-23/android-tv/armeabi-v7a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-23-android-tv-armeabi-v7a.xml;
+  };
+  system-images-android-23-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-23;android-tv;x86";
+    pname = "system-images-android-23-android-tv-x86";
+    version = "21";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-23_r21.zip";
+        sha1 = "094575ec634a662115a7a4c2b63d1743dfbca43c";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-23/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-23-android-tv-x86.xml;
+  };
   system-images-android-23-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-23;default;arm64-v8a";
     pname = "system-images-android-23-default-arm64-v8a";
@@ -7636,6 +7726,24 @@
     };
     xml = ./system-images-android-23-google-apis-x86-64.xml;
   };
+  system-images-android-24-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-24;android-tv;x86";
+    pname = "system-images-android-24-android-tv-x86";
+    version = "22";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-24_r22.zip";
+        sha1 = "ef7890e565f4e3544fd23613b437d4418fb10f99";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-24/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-24-android-tv-x86.xml;
+  };
   system-images-android-24-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-24;default;arm64-v8a";
     pname = "system-images-android-24-default-arm64-v8a";
@@ -7779,6 +7887,24 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-24-google-apis-playstore-x86.xml;
+  };
+  system-images-android-25-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-25;android-tv;x86";
+    pname = "system-images-android-25-android-tv-x86";
+    version = "16";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-25_r16.zip";
+        sha1 = "faae592bc991001b1880a8198d729b25855cc34b";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-25/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-25-android-tv-x86.xml;
   };
   system-images-android-25-android-wear-armeabi-v7a = mkSrcOnly {
     id = "system-images;android-25;android-wear;armeabi-v7a";
@@ -7960,6 +8086,24 @@
     };
     xml = ./system-images-android-25-google-apis-playstore-x86.xml;
   };
+  system-images-android-26-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-26;android-tv;x86";
+    pname = "system-images-android-26-android-tv-x86";
+    version = "14";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-26_r14.zip";
+        sha1 = "f908b3c81a03513a756c17a197faecfc91e437df";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-26/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-26-android-tv-x86.xml;
+  };
   system-images-android-26-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-26;android-wear;x86";
     pname = "system-images-android-26-android-wear-x86";
@@ -8104,6 +8248,24 @@
     };
     xml = ./system-images-android-26-google-apis-playstore-x86.xml;
   };
+  system-images-android-27-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-27;android-tv;x86";
+    pname = "system-images-android-27-android-tv-x86";
+    version = "9";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-27_r09.zip";
+        sha1 = "b7d2a9349cdb1da9dafbd42de7378f6f1933d193";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-27/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-27-android-tv-x86.xml;
+  };
   system-images-android-27-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-27;default;arm64-v8a";
     pname = "system-images-android-27-default-arm64-v8a";
@@ -8229,6 +8391,24 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-28-android-automotive-playstore-x86.xml;
+  };
+  system-images-android-28-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-28;android-tv;x86";
+    pname = "system-images-android-28-android-tv-x86";
+    version = "10";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-28_r10.zip";
+        sha1 = "4c13edca32c1abb899a0702fe6972087712bcb78";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-28/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-28-android-tv-x86.xml;
   };
   system-images-android-28-android-wear-x86 = mkSrcOnly {
     id = "system-images;android-28;android-wear;x86";
@@ -8428,6 +8608,24 @@
     };
     xml = ./system-images-android-29-android-automotive-playstore-x86.xml;
   };
+  system-images-android-29-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-29;android-tv;x86";
+    pname = "system-images-android-29-android-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-29_r03.zip";
+        sha1 = "736c2f6c79493b5ee4ca0d2531a25c9eb7f9c7ab";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-29/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-29-android-tv-x86.xml;
+  };
   system-images-android-29-default-arm64-v8a = mkSrcOnly {
     id = "system-images;android-29;default;arm64-v8a";
     pname = "system-images-android-29-default-arm64-v8a";
@@ -8623,6 +8821,24 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-30-android-automotive-playstore-x86-64.xml;
+  };
+  system-images-android-30-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-30;android-tv;x86";
+    pname = "system-images-android-30-android-tv-x86";
+    version = "4";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-30_r04.zip";
+        sha1 = "f4151d2390fc015ddb2a7715bea9bc69a5ee0b4e";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-30/android-tv/x86";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-30-android-tv-x86.xml;
   };
   system-images-android-30-android-wear-cn-arm64-v8a = mkSrcOnly {
     id = "system-images;android-30;android-wear-cn;arm64-v8a";
@@ -8985,6 +9201,42 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-30-google-atd-x86-64.xml;
+  };
+  system-images-android-31-android-tv-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-31;android-tv;arm64-v8a";
+    pname = "system-images-android-31-android-tv-arm64-v8a";
+    version = "4";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/arm64-v8a-31_r04.zip";
+        sha1 = "e8cec4080464d516e3f863d943c24055155f29bf";
+      };
+    };
+    displayName = "Android TV ARM 64 v8a System Image";
+    path = "system-images/android-31/android-tv/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-31-android-tv-arm64-v8a.xml;
+  };
+  system-images-android-31-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-31;android-tv;x86";
+    pname = "system-images-android-31-android-tv-x86";
+    version = "4";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-31_r04.zip";
+        sha1 = "8c0b848019afade7f2a8ddb5c361178f63ec86ca";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-31/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-31-android-tv-x86.xml;
   };
   system-images-android-31-aosp-atd-arm64-v8a = mkSrcOnly {
     id = "system-images;android-31;aosp_atd;arm64-v8a";
@@ -9654,6 +9906,42 @@
     };
     xml = ./system-images-android-33-android-desktop-x86-64.xml;
   };
+  system-images-android-33-android-tv-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-33;android-tv;arm64-v8a";
+    pname = "system-images-android-33-android-tv-arm64-v8a";
+    version = "5";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/arm64-v8a-33_r05.zip";
+        sha1 = "41b75155961eb506b492e60e8fba590ad7baa02c";
+      };
+    };
+    displayName = "Android TV ARM 64 v8a System Image";
+    path = "system-images/android-33/android-tv/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-33-android-tv-arm64-v8a.xml;
+  };
+  system-images-android-33-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-33;android-tv;x86";
+    pname = "system-images-android-33-android-tv-x86";
+    version = "5";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-33_r05.zip";
+        sha1 = "ec3fe6a450ed6aa5fec2703fca68648e7813094f";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-33/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-33-android-tv-x86.xml;
+  };
   system-images-android-33-android-wear-arm64-v8a = mkSrcOnly {
     id = "system-images;android-33;android-wear;arm64-v8a";
     pname = "system-images-android-33-android-wear-arm64-v8a";
@@ -10157,6 +10445,42 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-34-android-desktop-x86-64.xml;
+  };
+  system-images-android-34-android-tv-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-34;android-tv;arm64-v8a";
+    pname = "system-images-android-34-android-tv-arm64-v8a";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/arm64-v8a-34_r03.zip";
+        sha1 = "a31d0d8326f2c82787f95dd387614274082a96a0";
+      };
+    };
+    displayName = "Android TV ARM 64 v8a System Image";
+    path = "system-images/android-34/android-tv/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-34-android-tv-arm64-v8a.xml;
+  };
+  system-images-android-34-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-34;android-tv;x86";
+    pname = "system-images-android-34-android-tv-x86";
+    version = "3";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-34_r03.zip";
+        sha1 = "8de1dcb502b0b4080e6f363828db64e609b3aa2a";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-34/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-34-android-tv-x86.xml;
   };
   system-images-android-34-android-wear-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;android-wear;arm64-v8a";
