@@ -10681,7 +10681,7 @@
       };
       windows = {
         url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r05-windows.zip";
-        sha1 = "dd6a8b7c3ed448908195d4a011fa1405f403e755";
+        sha1 = "d207df8ff887456af9d80fe89cd1ab28348f998e";
       };
     };
     displayName = "Google Play XR Intel x86_64 Atom System Image";
