@@ -2816,6 +2816,32 @@
     };
     xml = ./cmake-4-0-3.xml;
   };
+  cmake-4-1-0 = mkPrebuilt {
+    id = "cmake;4.1.0";
+    pname = "cmake-4-1-0";
+    version = "4.1";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-4.1.0-linux.zip";
+        sha1 = "c7df7c5094f58d61a53f615cd68e6e7fd0c41a76";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-4.1.0-darwin.zip";
+        sha1 = "11ba32eb864c31fcf383456e21d9ab8e13c8d22c";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-4.1.0-windows.zip";
+        sha1 = "3bc560fd2b487841fb0bad2f3585cff8aaf40cd5";
+      };
+    };
+    displayName = "CMake 4.1.0";
+    path = "cmake/4.1.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-4-1-0.xml;
+  };
   cmdline-tools-1-0 = mkCmdlineTools {
     id = "cmdline-tools;1.0";
     pname = "cmdline-tools-1-0";
@@ -11789,42 +11815,6 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-Baklava-google-apis-ps16k-x86-64.xml;
-  };
-  system-images-signed-android-36-android-wear-arm64-v8a = mkSrcOnly {
-    id = "system-images;signed;android-36;android-wear;arm64-v8a";
-    pname = "system-images-signed-android-36-android-wear-arm64-v8a";
-    version = "1";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-36_signed_r01.zip";
-        sha1 = "53f3fa2adea692b7eabf698d59fdc34d36ff08e4";
-      };
-    };
-    displayName = "Wear OS 6.0 - Preview ARM 64 v8a System Image (signed)";
-    path = "system-images/signed/android-36/android-wear/arm64-v8a";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-signed-android-36-android-wear-arm64-v8a.xml;
-  };
-  system-images-signed-android-36-android-wear-x86-64 = mkSrcOnly {
-    id = "system-images;signed;android-36;android-wear;x86_64";
-    pname = "system-images-signed-android-36-android-wear-x86-64";
-    version = "1";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-36_signed_r01.zip";
-        sha1 = "7ae6c4e1c614a649f75ccb653769ccd8cdb30e4a";
-      };
-    };
-    displayName = "Wear OS 6.0 - Preview Intel x86_64 Atom System Image (signed)";
-    path = "system-images/signed/android-36/android-wear/x86_64";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-signed-android-36-android-wear-x86-64.xml;
   };
   tools = mkTools {
     id = "tools";
