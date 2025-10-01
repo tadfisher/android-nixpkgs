@@ -3443,23 +3443,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.3.1";
+    version = "36.3.2";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-14127940.zip";
-        sha1 = "1ab7a3e0d70b4ac2388ac9f9e7b271c1d375092a";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-14184492.zip";
+        sha1 = "f4883d190e730aa7c70a18b0a90cbee37fd4279c";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14127940.zip";
-        sha1 = "46536628861a9d14a412259b38356fd65b98d2e5";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14184492.zip";
+        sha1 = "6f1c03cfc29b1148c88f748d5668fe81a0f8c9ed";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14127940.zip";
-        sha1 = "2b2e8daf53a40a32491cb3de8595cba0fb26124e";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14184492.zip";
+        sha1 = "49c305a74ac51a69e85240ae436c475484470565";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-14127940.zip";
-        sha1 = "543e55fefcc08d78bba88280b02bb11b42eea158";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-14184492.zip";
+        sha1 = "4f49b6c48737fd45b321a27a9be7ed35240e24dd";
       };
     };
     displayName = "Android Emulator";
@@ -7440,8 +7440,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -11256,6 +11256,42 @@
     };
     xml = ./system-images-android-36-1-google-apis-ps16k-x86-64.xml;
   };
+  system-images-android-36-android-tv-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-36;android-tv;arm64-v8a";
+    pname = "system-images-android-36-android-tv-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/arm64-v8a-36_r02.zip";
+        sha1 = "fbd4dcc6127e68c99278cb341041a5036a0ff690";
+      };
+    };
+    displayName = "Android TV ARM 64 v8a System Image";
+    path = "system-images/android-36/android-tv/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-android-tv-arm64-v8a.xml;
+  };
+  system-images-android-36-android-tv-x86 = mkSrcOnly {
+    id = "system-images;android-36;android-tv;x86";
+    pname = "system-images-android-36-android-tv-x86";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-36_r02.zip";
+        sha1 = "cccbf99ffabe763c920650aba53678748c9f5f6b";
+      };
+    };
+    displayName = "Android TV Intel x86 Atom System Image";
+    path = "system-images/android-36/android-tv/x86";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-android-tv-x86.xml;
+  };
   system-images-android-36-android-wear-signed-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;android-wear-signed;arm64-v8a";
     pname = "system-images-android-36-android-wear-signed-arm64-v8a";
@@ -11295,11 +11331,11 @@
   system-images-android-36-google-tv-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;google-tv;arm64-v8a";
     pname = "system-images-android-36-google-tv-arm64-v8a";
-    version = "1";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google-tv/arm64-v8a-36_r01.zip";
-        sha1 = "03280b174bd0e68d29ee5a5538333b670c564460";
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/arm64-v8a-36_r02.zip";
+        sha1 = "79bc6e557aed25ce4da8927ebb93403c2182c1bd";
       };
     };
     displayName = "Google TV ARM 64 v8a System Image";
@@ -11313,11 +11349,11 @@
   system-images-android-36-google-tv-x86 = mkSrcOnly {
     id = "system-images;android-36;google-tv;x86";
     pname = "system-images-android-36-google-tv-x86";
-    version = "1";
+    version = "2";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google-tv/x86-36_r01.zip";
-        sha1 = "662b4bfe7bf90e0f3d283ce3d4e7dac5604d6354";
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/x86-36_r02.zip";
+        sha1 = "6898910094f8b495a4a6f0aaf6a050e843d03a23";
       };
     };
     displayName = "Google TV Intel x86 Atom System Image";
