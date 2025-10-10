@@ -2920,6 +2920,32 @@
     };
     xml = ./cmake-4-1-1.xml;
   };
+  cmake-4-1-2 = mkPrebuilt {
+    id = "cmake;4.1.2";
+    pname = "cmake-4-1-2";
+    version = "4.1.2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/cmake-4.1.2-linux.zip";
+        sha1 = "c8c4f1c19b75c56f28b9dcf1af928d25cf1a1471";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/cmake-4.1.2-darwin.zip";
+        sha1 = "a0578a0543942c7eb35822c88a516b87e5b9867a";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/cmake-4.1.2-windows.zip";
+        sha1 = "06bc3fe29aa49297dcc11a2ffe3a999445df05ae";
+      };
+    };
+    displayName = "CMake 4.1.2";
+    path = "cmake/4.1.2";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmake-4-1-2.xml;
+  };
   cmdline-tools-1-0 = mkCmdlineTools {
     id = "cmdline-tools;1.0";
     pname = "cmdline-tools-1-0";
