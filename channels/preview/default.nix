@@ -3521,23 +3521,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.3.3";
+    version = "36.3.4";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-14204996.zip";
-        sha1 = "e21c011ffadbf29413aa168786e445075249e634";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-14257411.zip";
+        sha1 = "bc4a8c9f80ad58842fe2286bf03e78e4e1292e19";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14204996.zip";
-        sha1 = "4ea7d17a22a4eb9935549e90706a8e21a1e11a03";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14257411.zip";
+        sha1 = "b40ab44776ebb18d064554bdc623a1549fc802a3";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14204996.zip";
-        sha1 = "08c0b09ba9651a2ce2c6f596efcf5592e27b5eea";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14257411.zip";
+        sha1 = "205aa614c02fc8f59be6bc1dcf7f3ec4f209f27e";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-14204996.zip";
-        sha1 = "e650e368272687e65f599424c064ee0983d9d9f3";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-14257411.zip";
+        sha1 = "edd34ac4150107b5f9a5840c1810747745d6611e";
       };
     };
     displayName = "Android Emulator";
@@ -12303,11 +12303,11 @@
   system-images-android-36-1-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36.1;google_apis;arm64-v8a";
     pname = "system-images-android-36-1-google-apis-arm64-v8a";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-36.1_r02.zip";
-        sha1 = "818b27a07b6e851ddd305139f967fa11111502a3";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-36.1_r03.zip";
+        sha1 = "4b3c296dfa125a03944317da5c3b9c852e384a95";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -12321,11 +12321,11 @@
   system-images-android-36-1-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-36.1;google_apis;x86_64";
     pname = "system-images-android-36-1-google-apis-x86-64";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-36.1_r02.zip";
-        sha1 = "269ca25dc3511e2a6bdcaf457734b585807af485";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-36.1_r03.zip";
+        sha1 = "e7c2ee3e0efcdc79e13b8c40d93629c83741c143";
       };
     };
     displayName = "Google APIs Intel x86_64 Atom System Image";
@@ -12339,11 +12339,11 @@
   system-images-android-36-1-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36.1;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-36-1-google-apis-playstore-arm64-v8a";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-36.1_r02.zip";
-        sha1 = "e829404c284fa09105b89e66e3aceeb1fac9a60c";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-36.1_r03.zip";
+        sha1 = "240c7164dd250be3c096dd62801e96f7b144bc2f";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -12357,11 +12357,11 @@
   system-images-android-36-1-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-36.1;google_apis_playstore;x86_64";
     pname = "system-images-android-36-1-google-apis-playstore-x86-64";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-36.1_r02.zip";
-        sha1 = "6c0cacff6e3e3021dedd8f80cd302d09dba354e3";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-36.1_r03.zip";
+        sha1 = "4931dd84c74db66b29c934b313d407faf3298921";
       };
     };
     displayName = "Google Play Intel x86_64 Atom System Image";
