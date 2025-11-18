@@ -3521,23 +3521,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.3.8";
+    version = "36.4.1";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-14396629.zip";
-        sha1 = "3c4da3325302251acd8194d3e73a772a3772da73";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-14433334.zip";
+        sha1 = "0227e07831f9bde3a59e760024c1a816ddfd7af6";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14396629.zip";
-        sha1 = "dcc842ee32d1b01abbc09e9deed12ad8450d438d";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14433334.zip";
+        sha1 = "2ad57f4e65d5e573e89b5e809435ac74e44ad4ef";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14396629.zip";
-        sha1 = "a2c845d67ac331b930fcaa321570c90756c87481";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14433334.zip";
+        sha1 = "a97f164ebbc1d7a2cda600cdcbff3bda6727090c";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-14396629.zip";
-        sha1 = "98a2293022471c5e8145f6b4a79a0af41b251851";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-14433334.zip";
+        sha1 = "f8b7cde483c12dacf77e65566bc7b8d7618b91b6";
       };
     };
     displayName = "Android Emulator";
@@ -6581,11 +6581,11 @@
   platforms-android-CANARY = mkSrcOnly {
     id = "platforms;android-CANARY";
     pname = "platforms-android-CANARY";
-    version = "5";
+    version = "6";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-CANARY_r05.zip";
-        sha1 = "5839c25c6f6fbe79a7ba509386008213796e67db";
+        url = "https://dl.google.com/android/repository/platform-CANARY_r06.zip";
+        sha1 = "ed45e0df0fbcedd916e362f74410b1eeac478435";
       };
     };
     displayName = "Android SDK Platform CANARY";
