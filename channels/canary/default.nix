@@ -12447,11 +12447,11 @@
   system-images-android-36-android-tv-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;android-tv;arm64-v8a";
     pname = "system-images-android-36-android-tv-arm64-v8a";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-tv/arm64-v8a-36_r02.zip";
-        sha1 = "fbd4dcc6127e68c99278cb341041a5036a0ff690";
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/arm64-v8a-36_r03.zip";
+        sha1 = "ca735f3742729a7c7d74e5ed6016373a71c38f98";
       };
     };
     displayName = "Android TV ARM 64 v8a System Image";
@@ -12465,11 +12465,11 @@
   system-images-android-36-android-tv-x86 = mkSrcOnly {
     id = "system-images;android-36;android-tv;x86";
     pname = "system-images-android-36-android-tv-x86";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-36_r02.zip";
-        sha1 = "cccbf99ffabe763c920650aba53678748c9f5f6b";
+        url = "https://dl.google.com/android/repository/sys-img/android-tv/x86-36_r03.zip";
+        sha1 = "92ea1bfc1e4eeeda14d01c9d119d4b77047562c3";
       };
     };
     displayName = "Android TV Intel x86 Atom System Image";
@@ -12555,11 +12555,11 @@
   system-images-android-36-google-tv-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;google-tv;arm64-v8a";
     pname = "system-images-android-36-google-tv-arm64-v8a";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google-tv/arm64-v8a-36_r02.zip";
-        sha1 = "79bc6e557aed25ce4da8927ebb93403c2182c1bd";
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/arm64-v8a-36_r03.zip";
+        sha1 = "01c42b0eaf6940c6737015f403b3a5ffd33fbcff";
       };
     };
     displayName = "Google TV ARM 64 v8a System Image";
@@ -12573,11 +12573,11 @@
   system-images-android-36-google-tv-x86 = mkSrcOnly {
     id = "system-images;android-36;google-tv;x86";
     pname = "system-images-android-36-google-tv-x86";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google-tv/x86-36_r02.zip";
-        sha1 = "6898910094f8b495a4a6f0aaf6a050e843d03a23";
+        url = "https://dl.google.com/android/repository/sys-img/google-tv/x86-36_r03.zip";
+        sha1 = "4b1b4c2c0e267f25d2840c949536c06ba40dd7c5";
       };
     };
     displayName = "Google TV Intel x86 Atom System Image";
