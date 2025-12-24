@@ -35,6 +35,7 @@
 , nspr
 , sqlite
 , systemd
+, waylandpp
 , xkeyboard_config
 , zlib
 }:
@@ -77,6 +78,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       nss
       nspr
       sqlite
+      waylandpp.lib
       zlib
     ];
 
@@ -84,10 +86,9 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
     dontWrapQtApps = true;
 
     postUnpack = ''
-      # Vendored gles_mesa is out of date and causes the following:
-      #     LLVM ERROR: Cannot select: intrinsic %llvm.x86.sse41.pblendvb
-      #     Segmentation fault (core dumped)
-      rm -r $out/lib64/gles_mesa
+      addAutoPatchelfSearchPath $packageBaseDir/lib
+      addAutoPatchelfSearchPath $packageBaseDir/lib64
+      addAutoPatchelfSearchPath $packageBaseDir/lib64/qt/lib
 
       # Needs libtiff.so.5, but nixpkgs provides libtiff.so.6
       patchelf --replace-needed libtiff.so.5 libtiff.so \
