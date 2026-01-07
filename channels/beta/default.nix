@@ -6469,11 +6469,11 @@
   platforms-android-CANARY = mkSrcOnly {
     id = "platforms;android-CANARY";
     pname = "platforms-android-CANARY";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/platform-CANARY_r07.zip";
-        sha1 = "26594b5886e0970aa09f2f56439cec0d6ccb2feb";
+        url = "https://dl.google.com/android/repository/platform-CANARY_r08.zip";
+        sha1 = "2067a055076b8bc84f8a45ece01fbffd1c07032a";
       };
     };
     displayName = "Android SDK Platform CANARY";
@@ -12263,11 +12263,11 @@
   system-images-android-CANARY-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis;arm64-v8a";
     pname = "system-images-android-CANARY-google-apis-arm64-v8a";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-CANARY_r07.zip";
-        sha1 = "ab38dca1cb7c4c88b54f5918b956d7a7c614deda";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-CANARY_r08.zip";
+        sha1 = "62c088dcaa932e672965ca7afb7d52fc0d055b09";
       };
     };
     displayName = "Google APIs ARM 64 v8a System Image";
@@ -12281,11 +12281,11 @@
   system-images-android-CANARY-google-apis-x86-64 = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis;x86_64";
     pname = "system-images-android-CANARY-google-apis-x86-64";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-CANARY_r07.zip";
-        sha1 = "2055606ee3c51b6cb538f9b788ce1bda6a89516f";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-CANARY_r08.zip";
+        sha1 = "fdeef6c32def084feedebc1246afe33748221434";
       };
     };
     displayName = "Google APIs Intel x86_64 Atom System Image";
@@ -12299,11 +12299,11 @@
   system-images-android-CANARY-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-CANARY-google-apis-playstore-arm64-v8a";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-CANARY_r07.zip";
-        sha1 = "5d1297d0afadb1971b6cbda2af29e78a555495bb";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-CANARY_r08.zip";
+        sha1 = "0117313b887435da0a3bbf0da3772618869c9ee3";
       };
     };
     displayName = "Google Play ARM 64 v8a System Image";
@@ -12317,11 +12317,11 @@
   system-images-android-CANARY-google-apis-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_playstore;x86_64";
     pname = "system-images-android-CANARY-google-apis-playstore-x86-64";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-CANARY_r07.zip";
-        sha1 = "047ed0b9b05d34c8a790d66686964bf0d407916a";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-CANARY_r08.zip";
+        sha1 = "ecc03097df505f3d697f15ba85bc70044bc7defe";
       };
     };
     displayName = "Google Play Intel x86_64 Atom System Image";
@@ -12335,11 +12335,11 @@
   system-images-android-CANARY-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_playstore_ps16k;arm64-v8a";
     pname = "system-images-android-CANARY-google-apis-playstore-ps16k-arm64-v8a";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-playstore-ps16k-CANARY_r07.zip";
-        sha1 = "b91e3e540b77b3d113e15a1a64e861f1edd657e3";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-playstore-ps16k-CANARY_r08.zip";
+        sha1 = "548c52fee02b6dd47bcddc5b6d9758ac1c14ca80";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
@@ -12353,11 +12353,11 @@
   system-images-android-CANARY-google-apis-playstore-ps16k-x86-64 = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_playstore_ps16k;x86_64";
     pname = "system-images-android-CANARY-google-apis-playstore-ps16k-x86-64";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-playstore-ps16k-CANARY_r07.zip";
-        sha1 = "a31fa8642c989feeb083b13990702ec564aab94a";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-playstore-ps16k-CANARY_r08.zip";
+        sha1 = "654780150d2046c15c8633a5a74d45bbe83d6301";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
@@ -12371,11 +12371,11 @@
   system-images-android-CANARY-google-apis-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_ps16k;arm64-v8a";
     pname = "system-images-android-CANARY-google-apis-ps16k-arm64-v8a";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-CANARY_r07.zip";
-        sha1 = "024623acfda144834c441ee4ff1cf87d612a170a";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-CANARY_r08.zip";
+        sha1 = "69bc46142530e3bdc6840a2c6817e1b61264d427";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
@@ -12389,11 +12389,11 @@
   system-images-android-CANARY-google-apis-ps16k-x86-64 = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_ps16k;x86_64";
     pname = "system-images-android-CANARY-google-apis-ps16k-x86-64";
-    version = "7";
+    version = "8";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-CANARY_r07.zip";
-        sha1 = "a5e308e4ef40a098af9b202a3d621dc0dbe2f9d4";
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-CANARY_r08.zip";
+        sha1 = "9b8e4de9b6fb5927d7846a3e8aff99c2f094c651";
       };
     };
     displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
