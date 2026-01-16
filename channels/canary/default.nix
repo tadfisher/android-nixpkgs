@@ -11368,42 +11368,6 @@
     };
     xml = ./system-images-android-34-google-atd-x86-64.xml;
   };
-  system-images-android-34-google-playstore-tablet-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-34;google_playstore_tablet;arm64-v8a";
-    pname = "system-images-android-34-google-playstore-tablet-arm64-v8a";
-    version = "2";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_playstore_tablet/arm64-v8a-34_r02.zip";
-        sha1 = "6f9bac7c3ce34a395ad7dee3dd09cce5df2cc194";
-      };
-    };
-    displayName = "Google Play Tablet ARM 64 v8a System Image";
-    path = "system-images/android-34/google_playstore_tablet/arm64-v8a";
-    license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
-    };
-    xml = ./system-images-android-34-google-playstore-tablet-arm64-v8a.xml;
-  };
-  system-images-android-34-google-playstore-tablet-x86-64 = mkSrcOnly {
-    id = "system-images;android-34;google_playstore_tablet;x86_64";
-    pname = "system-images-android-34-google-playstore-tablet-x86-64";
-    version = "2";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_playstore_tablet/x86_64-34_r02.zip";
-        sha1 = "5be435ac140db34d0baf1be558aa8b3e63d27d79";
-      };
-    };
-    displayName = "Google Play Tablet Intel x86_64 Atom System Image";
-    path = "system-images/android-34/google_playstore_tablet/x86_64";
-    license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
-    };
-    xml = ./system-images-android-34-google-playstore-tablet-x86-64.xml;
-  };
   system-images-android-35-ext14-google-apis-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35-ext14;google_apis_playstore;arm64-v8a";
     pname = "system-images-android-35-ext14-google-apis-playstore-arm64-v8a";
@@ -11763,42 +11727,6 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-35-google-apis-playstore-ps16k-x86-64.xml;
-  };
-  system-images-android-35-google-apis-playstore-tablet-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-35;google_apis_playstore_tablet;arm64-v8a";
-    pname = "system-images-android-35-google-apis-playstore-tablet-arm64-v8a";
-    version = "9";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_playstore_tablet/arm64-v8a-35_r09.zip";
-        sha1 = "6ce87d60c505338b8253f8f1de22547ac2a0bcb7";
-      };
-    };
-    displayName = "Google Play Tablet ARM 64 v8a System Image";
-    path = "system-images/android-35/google_apis_playstore_tablet/arm64-v8a";
-    license = {
-      id = "android-sdk-arm-dbt-license";
-      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
-    };
-    xml = ./system-images-android-35-google-apis-playstore-tablet-arm64-v8a.xml;
-  };
-  system-images-android-35-google-apis-playstore-tablet-x86-64 = mkSrcOnly {
-    id = "system-images;android-35;google_apis_playstore_tablet;x86_64";
-    pname = "system-images-android-35-google-apis-playstore-tablet-x86-64";
-    version = "9";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_playstore_tablet/x86_64-35_r09.zip";
-        sha1 = "a1254d64b76bfc001553e502eecdf66921393fbc";
-      };
-    };
-    displayName = "Google Play Tablet Intel x86_64 Atom System Image";
-    path = "system-images/android-35/google_apis_playstore_tablet/x86_64";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-35-google-apis-playstore-tablet-x86-64.xml;
   };
   system-images-android-35-google-apis-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35;google_apis_ps16k;arm64-v8a";
