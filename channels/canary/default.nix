@@ -3310,6 +3310,32 @@
     };
     xml = ./cmdline-tools-2-1.xml;
   };
+  cmdline-tools-20-0 = mkCmdlineTools {
+    id = "cmdline-tools;20.0";
+    pname = "cmdline-tools-20-0";
+    version = "20";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-14742923_latest.zip";
+        sha1 = "48833c34b761c10cb20bcd16582129395d121b27";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-14742923_latest.zip";
+        sha1 = "cc27cca4b84bfdbc7df17e3d0a01d0c640d8ee71";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-14742923_latest.zip";
+        sha1 = "16b3f45ddb3d85ea6bbe6a1c0b47146daf0db450";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/20.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-20-0.xml;
+  };
   cmdline-tools-3-0 = mkCmdlineTools {
     id = "cmdline-tools;3.0";
     pname = "cmdline-tools-3-0";
@@ -3495,19 +3521,19 @@
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "19";
+    version = "20";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip";
-        sha1 = "5fdcc763663eefb86a5b8879697aa6088b041e70";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-14742923_latest.zip";
+        sha1 = "48833c34b761c10cb20bcd16582129395d121b27";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-13114758_latest.zip";
-        sha1 = "c3e06a1959762e89167d1cbaa988605f6f7c1d24";
+        url = "https://dl.google.com/android/repository/commandlinetools-mac-14742923_latest.zip";
+        sha1 = "cc27cca4b84bfdbc7df17e3d0a01d0c640d8ee71";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip";
-        sha1 = "54a582f3bf73e04253602f2d1c80bd5868aac115";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-14742923_latest.zip";
+        sha1 = "16b3f45ddb3d85ea6bbe6a1c0b47146daf0db450";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
@@ -3521,23 +3547,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.4.6";
+    version = "36.4.7";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-14690940.zip";
-        sha1 = "526e6248e81d190ca20633f364a7bec335e5c5c1";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-14724230.zip";
+        sha1 = "152e0021e58a5513744448ac5f1316cc5ceb059d";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14690940.zip";
-        sha1 = "e9c19e8af6c8bf7f048b952f8c0e92272f2c702c";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-14724230.zip";
+        sha1 = "d8860b303a2cbc492585966de5fe31d3e0aee332";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14690940.zip";
-        sha1 = "ce7f25890de963e3cea011e66738e308a76cccd6";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-14724230.zip";
+        sha1 = "300210745512ce6904c2c85f2c80990b8030c99b";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-14690940.zip";
-        sha1 = "c4d545ee31d230b350ff26870bd7a5557dc7b014";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-14724230.zip";
+        sha1 = "fa367a0ff0ce4e9737c3628967dbc115d16f2716";
       };
     };
     displayName = "Android Emulator";
