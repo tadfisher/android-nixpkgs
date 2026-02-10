@@ -11466,6 +11466,78 @@
     };
     xml = ./system-images-android-35-ext14-google-apis-playstore-x86-64.xml;
   };
+  system-images-android-35-ext15-android-automotive-playstore-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-35-ext15;android-automotive-playstore;arm64-v8a";
+    pname = "system-images-android-35-ext15-android-automotive-playstore-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-35-ext15_playstore_r02.zip";
+        sha1 = "7062de5c4d849728d9e5e06b1f189c1dd1e341e4";
+      };
+    };
+    displayName = "Android Automotive with Google Play arm64-v8a System Image";
+    path = "system-images/android-35-ext15/android-automotive-playstore/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-ext15-android-automotive-playstore-arm64-v8a.xml;
+  };
+  system-images-android-35-ext15-android-automotive-playstore-x86-64 = mkSrcOnly {
+    id = "system-images;android-35-ext15;android-automotive-playstore;x86_64";
+    pname = "system-images-android-35-ext15-android-automotive-playstore-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-35-ext15_playstore_r02.zip";
+        sha1 = "7487c1fca63109186fdbce4f50e67c228b6a0db1";
+      };
+    };
+    displayName = "Android Automotive with Google Play x86_64 System Image";
+    path = "system-images/android-35-ext15/android-automotive-playstore/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-ext15-android-automotive-playstore-x86-64.xml;
+  };
+  system-images-android-35-ext15-android-automotive-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-35-ext15;android-automotive;arm64-v8a";
+    pname = "system-images-android-35-ext15-android-automotive-arm64-v8a";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/arm64-v8a-35-ext15_r02.zip";
+        sha1 = "064b45a3f9d6f5c3ea1596fd58f070401bc006d9";
+      };
+    };
+    displayName = "Android Automotive with Google APIs arm64-v8a System Image";
+    path = "system-images/android-35-ext15/android-automotive/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-ext15-android-automotive-arm64-v8a.xml;
+  };
+  system-images-android-35-ext15-android-automotive-x86-64 = mkSrcOnly {
+    id = "system-images;android-35-ext15;android-automotive;x86_64";
+    pname = "system-images-android-35-ext15-android-automotive-x86-64";
+    version = "2";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-automotive/x86_64-35-ext15_r02.zip";
+        sha1 = "8f001c192a680ae783d99bda8e12b52395014511";
+      };
+    };
+    displayName = "Android Automotive with Google APIs x86_64 System Image";
+    path = "system-images/android-35-ext15/android-automotive/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-35-ext15-android-automotive-x86-64.xml;
+  };
   system-images-android-35-ext15-android-wear-arm64-v8a = mkSrcOnly {
     id = "system-images;android-35-ext15;android-wear;arm64-v8a";
     pname = "system-images-android-35-ext15-android-wear-arm64-v8a";
