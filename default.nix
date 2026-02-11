@@ -9,7 +9,7 @@ let
 
   isSupported = _: pkg:
     (!lib.isDerivation pkg) ||
-    lib.meta.availableOn hostPlatform pkg ||
+    lib.meta.availableOn pkgs.stdenv.hostPlatform pkg ||
     config.allowUnsupportedSystem ||
     builtins.getEnv "NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM" == "1";
 
