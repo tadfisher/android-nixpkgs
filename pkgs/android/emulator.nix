@@ -23,6 +23,7 @@
 , libbsd
 , libcxx
 , libdrm
+, libgbm
 , libpulseaudio
 , libtiff
 , libudev0-shim
@@ -67,6 +68,7 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       libbsd
       libcxx
       libdrm
+      libgbm
       libpulseaudio
       libtiff
       libudev0-shim
