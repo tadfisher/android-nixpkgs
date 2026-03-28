@@ -1,5 +1,4 @@
 { pkgs ? import <nixpkgs> { }
-, system ? pkgs.stdenv.system
 , channel ? "stable"
 }:
 
@@ -9,13 +8,13 @@ let
 
   isSupported = _: pkg:
     (!lib.isDerivation pkg) ||
-    lib.meta.availableOn hostPlatform pkg ||
+    lib.meta.availableOn stdenv.hostPlatform pkg ||
     config.allowUnsupportedSystem ||
     builtins.getEnv "NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM" == "1";
 
   filterIsSupported = lib.filterAttrs isSupported;
 
-  channelPkgs = rec {
+  channelPkgs = {
     stable = filterIsSupported (androidSdk.callPackage ./channels/stable { });
     beta = filterIsSupported (androidSdk.callPackage ./channels/beta { });
     preview = filterIsSupported (androidSdk.callPackage ./channels/preview { });
