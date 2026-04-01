@@ -8344,8 +8344,8 @@
     version = "7";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/armeabi-v7a-24_r07.zip";
-        sha1 = "e22c47afd06398b35f2705ca2e7fa85323351568";
+        url = "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip";
+        sha1 = "3454546b4eed2d6c3dd06d47757d6da9f4176033";
       };
     };
     displayName = "ARM EABI v7a System Image";
@@ -12577,6 +12577,42 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./system-images-android-36-0-CANARY-google-apis-ps16k-x86-64.xml;
+  };
+  system-images-android-36-1-android-wear-signed-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-36.1;android-wear-signed;arm64-v8a";
+    pname = "system-images-android-36-1-android-wear-signed-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-36.1_signed_r01.zip";
+        sha1 = "745dd39a3a18e59b7636b9cdfc8326de3c42f989";
+      };
+    };
+    displayName = "Wear OS 6.1 ARM 64 v8a System Image (signed)";
+    path = "system-images/android-36.1/android-wear-signed/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-1-android-wear-signed-arm64-v8a.xml;
+  };
+  system-images-android-36-1-android-wear-signed-x86-64 = mkSrcOnly {
+    id = "system-images;android-36.1;android-wear-signed;x86_64";
+    pname = "system-images-android-36-1-android-wear-signed-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-36.1_signed_r01.zip";
+        sha1 = "4cf09d620a70295b46de2ad16c0104589f0a4737";
+      };
+    };
+    displayName = "Wear OS 6.1 Intel x86_64 Atom System Image (signed)";
+    path = "system-images/android-36.1/android-wear-signed/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-36-1-android-wear-signed-x86-64.xml;
   };
   system-images-android-36-1-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36.1;google_apis;arm64-v8a";
