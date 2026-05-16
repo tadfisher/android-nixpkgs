@@ -2574,6 +2574,24 @@
     };
     xml = ./build-tools-37-0-0-rc2.xml;
   };
+  build-templates = mkSrcOnly {
+    id = "build;templates";
+    pname = "build-templates";
+    version = "0.1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/templates-sdk-package-15429553.zip";
+        sha1 = "126fdb3e284f850fd617ba89ddae918620a73e0f";
+      };
+    };
+    displayName = "Android Project Templates";
+    path = "build/templates";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./build-templates.xml;
+  };
   cmake-3-10-2-4988404 = mkPrebuilt {
     id = "cmake;3.10.2.4988404";
     pname = "cmake-3-10-2-4988404";
