@@ -2574,6 +2574,36 @@
     };
     xml = ./build-tools-37-0-0-rc2.xml;
   };
+  lightbuild-lightbuild-0-0-10-alpha01 = mkSrcOnly {
+    id = "build;lightbuild;0.0.10-alpha01";
+    pname = "build-lightbuild-0-0-10-alpha01";
+    version = "0.0.10-rc1";
+    sources = {
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/lume-daemon-linux_x64-15462315.zip";
+        sha1 = "bbaecf0ed6ed984f39a46ecf03806b4eba008552";
+      };
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/lume-daemon-darwin_x64-15462315.zip";
+        sha1 = "6c8aa92efdc874379bcb3d0e638488aa3b73c55a";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/lume-daemon-darwin_aarch64-15462315.zip";
+        sha1 = "f551b20c7e350ecef16c904fe924c158c3bbf407";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/lume-daemon-windows_x64-15462315.zip";
+        sha1 = "5188f24c7bdabbabebb1bc0bbf29d8c29abe6488";
+      };
+    };
+    displayName = "Lightbuild";
+    path = "build/lightbuild/0.0.10-alpha01";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./build-lightbuild-0-0-10-alpha01.xml;
+  };
   build-templates = mkSrcOnly {
     id = "build;templates";
     pname = "build-templates";
