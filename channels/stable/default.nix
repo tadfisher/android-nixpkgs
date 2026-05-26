@@ -3621,23 +3621,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "36.6.9";
+    version = "37.1.1";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-15442530.zip";
-        sha1 = "ab4680f37109d1d3615cd23908f4d42b3a5eba91";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-15469576.zip";
+        sha1 = "6b0a44b0683e9bcdb565b5ea7c32bc6b675fb8fa";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-15442530.zip";
-        sha1 = "a4776c5879fdd96d2237243404e2bbab4e445a14";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-15469576.zip";
+        sha1 = "aa6c648f510d1d5cfc8d1f5471ff972b094e652d";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-15442530.zip";
-        sha1 = "843bb2181a480fc303303209d47d630c5ff7d4dd";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-15469576.zip";
+        sha1 = "70d7299111db1ba9ddc01832f4bf92981aa6d778";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-15442530.zip";
-        sha1 = "0031c469a804eb08a4e238b07327c4fed90a469e";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-15469576.zip";
+        sha1 = "edcc131234f98077f37c613bdf1bf3f44aca5e68";
       };
     };
     displayName = "Android Emulator";
@@ -11046,7 +11046,7 @@
         sha1 = "106d90f480a5e9619062944271b94eaf5b22ffb6";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-35/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -11064,7 +11064,7 @@
         sha1 = "921af95f9566e79cd2e2c9d08fd253c58d18595e";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-35/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -11118,7 +11118,7 @@
         sha1 = "9d834fe640beff22d25025a8028b98ab4366be4d";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-35/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -11136,7 +11136,7 @@
         sha1 = "d709cf26b375abecfbbf5803afd20749ddfa2865";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-35/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -11442,7 +11442,7 @@
         sha1 = "dfd829e7efb9fd8f548be2f9c5610d79f7f41e21";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-36.0-Baklava/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -11460,7 +11460,7 @@
         sha1 = "492f339f3767a4a2cd1a428ac5ed99c8ccf249aa";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-36.0-Baklava/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -11478,7 +11478,7 @@
         sha1 = "be5b296182430de959ea41b18f73a5c2dd9d9c8f";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-36.0-Baklava/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -11496,7 +11496,7 @@
         sha1 = "04ee7906d8add46e8ddfe38909627a7c8426e31c";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-36.0-Baklava/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -11622,7 +11622,7 @@
         sha1 = "4fd077b3c01003442ec2024558d7d5ae204f0fc3";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-36.1/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -11640,7 +11640,7 @@
         sha1 = "3bf3e0826ff7bf1825fc68bdad40ffa29e714920";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-36.1/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -11658,7 +11658,7 @@
         sha1 = "a48079a4c1c7781d157ff9ff1c0fc9d5ab3ffc58";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-36.1/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -11676,7 +11676,7 @@
         sha1 = "d812164d3704c2d5846d34e0a4d2c61cb1224a02";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-36.1/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -11982,7 +11982,7 @@
         sha1 = "ddc41c615cf57cb91c9646d208e29234d92f881c";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-36/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12000,7 +12000,7 @@
         sha1 = "3814a7b029c3b8aa0a9c8f110459f412a20882e7";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-36/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12018,7 +12018,7 @@
         sha1 = "dda632745023567113d9954101709c6526a3c250";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-36/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12036,7 +12036,7 @@
         sha1 = "dd783282e84bf475a02eba6777c79fc5695e1583";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-36/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12054,7 +12054,7 @@
         sha1 = "d7756dd1e4e2d93b774be1624cf73037d0259d7d";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-37.0/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12072,7 +12072,7 @@
         sha1 = "e187789f6e20c728636bc99fa0b384c6965bf17a";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-37.0/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12090,7 +12090,7 @@
         sha1 = "ab0e60335152d75d3fabaaa23438190d0a66be51";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-37.0/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12108,7 +12108,7 @@
         sha1 = "d8754fe51083e036070dc7b58c1f297e244deff1";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-37.0/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12198,7 +12198,7 @@
         sha1 = "eb5228932e0006e832f456d73ae9c69a358b914c";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-CANARY/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12216,7 +12216,7 @@
         sha1 = "c2dd8f6b55eb9dfca947b77dfc53b72fb42af0eb";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-CANARY/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12234,7 +12234,7 @@
         sha1 = "16bdc24f9e863887ffbaa38a9398166f4ca0a474";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-CANARY/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12252,7 +12252,7 @@
         sha1 = "51e4edeef3cb1c6454889a2c1c0b1282f8e1d013";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-CANARY/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12270,7 +12270,7 @@
         sha1 = "b40a5a2447d25c674defd1ec66565170a4c7b994";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
     path = "system-images/android-CinnamonBun/google_apis_playstore_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12288,7 +12288,7 @@
         sha1 = "351236f16aacc5130b34640a20b84c22e7ea39cb";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
     path = "system-images/android-CinnamonBun/google_apis_playstore_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
@@ -12306,7 +12306,7 @@
         sha1 = "e551eb79e394c92b1e0c85d1652c854eac1d5f1e";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image";
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
     path = "system-images/android-CinnamonBun/google_apis_ps16k/arm64-v8a";
     license = {
       id = "android-sdk-arm-dbt-license";
@@ -12324,7 +12324,7 @@
         sha1 = "465447b3734cb2f0303bf1bcf12896c56748cc96";
       };
     };
-    displayName = "Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
     path = "system-images/android-CinnamonBun/google_apis_ps16k/x86_64";
     license = {
       id = "android-sdk-license";
