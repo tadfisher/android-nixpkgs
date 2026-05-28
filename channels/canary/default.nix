@@ -2607,11 +2607,11 @@
   build-templates = mkSrcOnly {
     id = "build;templates";
     pname = "build-templates";
-    version = "0.1";
+    version = "0.1.1";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/templates-sdk-package-15429553.zip";
-        sha1 = "126fdb3e284f850fd617ba89ddae918620a73e0f";
+        url = "https://dl.google.com/android/repository/templates-sdk-package-15508551.zip";
+        sha1 = "e8f0cca1fad5ab0411ef315fb9cb2274c30f6415";
       };
     };
     displayName = "Android Project Templates";
