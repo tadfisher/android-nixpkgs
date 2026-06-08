@@ -1,23 +1,16 @@
-{ lib
-, stdenv
-, mkGeneric
-, makeWrapper
-, pkgsHostHost
-, autoPatchelfHook ? null
-, bzip2 ? null
-, libedit ? null
-, libxcrypt-legacy ? null
-, ncurses5 ? null
-, openssl ? null
-, sqlite ? null
-, python27 ? null
-, zlib ? null
+{
+  lib,
+  stdenv,
+  mkGeneric,
+  makeWrapper,
+  pkgsHostHost,
+  autoPatchelfHook ? null,
+  bzip2 ? null,
+  libedit ? null,
+  libxcrypt-legacy ? null,
+  ncurses5 ? null,
+  zlib ? null,
 }:
-
-let
-  python27Versions = [ "16" "21" ];
-
-in
 
 assert stdenv.isLinux -> autoPatchelfHook != null;
 assert stdenv.isLinux -> bzip2 != null;
@@ -34,17 +27,20 @@ in
 assert (stdenv.isLinux && lib.versionOlder versionMajor "18") -> libedit != null;
 
 let
-  runtimePaths = lib.makeBinPath (with pkgsHostHost; [
-    coreutils
-    file
-    findutils
-    gawk
-    gnugrep
-    gnused
-    jdk
-    python3
-    which
-  ]);
+  runtimePaths = lib.makeBinPath (
+    with pkgsHostHost;
+    [
+      coreutils
+      file
+      findutils
+      gawk
+      gnugrep
+      gnused
+      jdk
+      python3
+      which
+    ]
+  );
 
   searchPaths = [
     "prebuilt/linux-x86_64/lib"
@@ -57,44 +53,42 @@ let
   buildArgs = {
     nativeBuildInputs = [
       makeWrapper
-    ] ++ lib.optionals stdenv.isLinux [
+    ]
+    ++ lib.optionals stdenv.isLinux [
       autoPatchelfHook
     ];
 
-    buildInputs = lib.optionals stdenv.isLinux ([
-      bzip2
-      libxcrypt-legacy
-      ncurses5
-      stdenv.cc.cc.lib
-      zlib
-    ] ++ lib.optionals (lib.versionOlder versionMajor "18") [
-      libedit
-    ] ++ lib.optionals (builtins.elem versionMajor python27Versions) [
-      python27
-    ]);
+    buildInputs = lib.optionals stdenv.isLinux (
+      [
+        bzip2
+        libxcrypt-legacy
+        ncurses5
+        stdenv.cc.cc.lib
+        zlib
+      ]
+      ++ lib.optionals (lib.versionOlder versionMajor "18") [
+        libedit
+      ]
+    );
 
     postFixup = ''
       patchShebangs .
 
       ${lib.optionalString (stdenv.isLinux && lib.versionOlder versionMajor "18") ''
-      ln -sf ${libedit}/lib/libedit.so $out/toolchains/llvm/prebuilt/linux-x86_64/lib64/libedit.so.2
-      ''}
-
-      ${lib.optionalString (stdenv.isLinux && builtins.elem versionMajor python27Versions) ''
-      rm -rf $out/prebuilt/*/lib/python2.7
+        ln -sf ${libedit}/lib/libedit.so $out/toolchains/llvm/prebuilt/linux-x86_64/lib64/libedit.so.2
       ''}
 
       ${lib.optionalString (stdenv.isLinux) ''
-      for path in ${toString searchPaths}; do
-        addAutoPatchelfSearchPath "$out/$path"
-      done
-      find $out/toolchains -type d -name bin -or -name lib64 | while read dir; do
-        autoPatchelf "$dir"
-      done
-      # Patch executables
-      if [ -d $out/prebuilt/linux-x86_64 ]; then
-         autoPatchelf $out/prebuilt/linux-x86_64
-      fi
+        for path in ${toString searchPaths}; do
+          addAutoPatchelfSearchPath "$out/$path"
+        done
+        find $out/toolchains -type d -name bin -or -name lib64 | while read dir; do
+          autoPatchelf "$dir"
+        done
+        # Patch executables
+        if [ -d $out/prebuilt/linux-x86_64 ]; then
+           autoPatchelf $out/prebuilt/linux-x86_64
+        fi
       ''}
 
       # fix ineffective PROGDIR / MYNDKDIR determination
@@ -104,7 +98,8 @@ let
     '';
 
     autoPatchelfIgnoreMissingDeps = [ "liblog.so" ];
-  } // {
+  }
+  // {
     passthru.installSdk = ''
       ln -sf $pkgBase/ndk-build $out/bin/ndk-build
     '';

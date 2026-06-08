@@ -1,6 +1,11 @@
-{ stdenv, lib, fetchurl, unzip }:
+{
+  stdenv,
+  lib,
+  fetchurl,
+  unzip,
+}:
 
-{ sources, ... } @ args:
+{ sources, ... }@args:
 let
   # Keys by which to search the package's "sources" set for the host platform.
   hostOsKeys = with stdenv.hostPlatform; [
@@ -10,14 +15,16 @@ let
     "all"
   ];
 
-  platformKey = lib.findFirst
-    (k: builtins.hasAttr k sources)
-    (throw "Unsupported system: ${stdenv.hostPlatform.system}")
-    hostOsKeys;
+  platformKey = lib.findFirst (
+    k: builtins.hasAttr k sources
+  ) (throw "Unsupported system: ${stdenv.hostPlatform.system}") hostOsKeys;
 
   src = sources.${platformKey};
 
 in
-(fetchurl ({
-  inherit (src) url sha1;
-} // removeAttrs args [ "sources" ]))
+(fetchurl (
+  {
+    inherit (src) url sha1;
+  }
+  // removeAttrs args [ "sources" ]
+))
