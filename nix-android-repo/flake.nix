@@ -11,8 +11,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, devshell, flake-utils, gradle2nix }:
-    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ] (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      devshell,
+      flake-utils,
+      gradle2nix,
+    }:
+    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ] (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         localPkgs = pkgs.callPackage ./default.nix {
@@ -37,7 +45,8 @@
         packages = {
           inherit (localPkgs)
             nix-android-repo
-            update-locks;
+            update-locks
+            ;
           inherit (gradle2nix.packages.${system}) gradle2nix;
           default = self.packages.${system}.nix-android-repo;
         };

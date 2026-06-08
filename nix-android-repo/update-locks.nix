@@ -1,9 +1,10 @@
-{ lib
-, writeShellScriptBin
-, git
-, gradle2nix
-, gradle
-, jdk
+{
+  lib,
+  writeShellScriptBin,
+  git,
+  gradle2nix,
+  gradle,
+  jdk,
 }:
 
 writeShellScriptBin "update-locks" ''

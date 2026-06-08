@@ -1,48 +1,49 @@
-{ stdenv
-, lib
-, mkGeneric
-, makeWrapper
-, autoPatchelfHook
-, alsa-lib
-, dbus
-, fontconfig
-, freetype
-, gperftools
-, libGL
-, libICE
-, libSM
-, libX11
-, libXcomposite
-, libXcursor
-, libXdamage
-, libXext
-, libXfixes
-, libXi
-, libXrender
-, libXtst
-, libbsd
-, libcxx
-, libdrm
-, libgbm
-, libpulseaudio
-, libtiff
-, libudev0-shim
-, libunwind
-, libuuid
-, libxkbcommon
-, libxkbfile
-, ncurses5
-, nss
-, nspr
-, sqlite
-, systemd
-, waylandpp
-, xkeyboard_config
-, zlib
+{
+  stdenv,
+  lib,
+  mkGeneric,
+  makeWrapper,
+  autoPatchelfHook,
+  alsa-lib,
+  dbus,
+  fontconfig,
+  freetype,
+  gperftools,
+  libGL,
+  libICE,
+  libSM,
+  libX11,
+  libXcomposite,
+  libXcursor,
+  libXdamage,
+  libXext,
+  libXfixes,
+  libXi,
+  libXrender,
+  libXtst,
+  libbsd,
+  libcxx,
+  libdrm,
+  libgbm,
+  libpulseaudio,
+  libtiff,
+  libudev0-shim,
+  libunwind,
+  libuuid,
+  libxkbcommon,
+  libxkbfile,
+  ncurses5,
+  nss,
+  nspr,
+  sqlite,
+  systemd,
+  waylandpp,
+  xkeyboard_config,
+  zlib,
 }:
 
-mkGeneric (lib.optionalAttrs stdenv.isLinux
-  {
+mkGeneric (
+  lib.optionalAttrs stdenv.isLinux {
     nativeBuildInputs = [
       autoPatchelfHook
       makeWrapper
@@ -100,18 +101,22 @@ mkGeneric (lib.optionalAttrs stdenv.isLinux
       # Inject libudev0-shim to fix udev_loader error.
       wrapProgram $out/emulator \
         --set QT_QPA_PLATFORM xcb \
-        --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [
-          libudev0-shim
-          dbus
-          systemd
-        ]} \
+        --prefix LD_LIBRARY_PATH : ${
+          lib.makeLibraryPath [
+            libudev0-shim
+            dbus
+            systemd
+          ]
+        } \
         --set QT_XKB_CONFIG_ROOT ${xkeyboard_config}/share/X11/xkb \
         --set QTCOMPOSE ${libX11.out}/share/X11/locale
     '';
-  } // {
-  passthru.installSdk = ''
-    for exe in emulator emulator-check mksdcard; do
-      ln -s $pkgBase/$exe $out/bin/$exe
-    done
-  '';
-})
+  }
+  // {
+    passthru.installSdk = ''
+      for exe in emulator emulator-check mksdcard; do
+        ln -s $pkgBase/$exe $out/bin/$exe
+      done
+    '';
+  }
+)

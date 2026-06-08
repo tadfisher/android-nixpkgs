@@ -10,12 +10,20 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, devshell, flake-utils }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      devshell,
+      flake-utils,
+    }:
     let
-      sdkPkgsFor = pkgs: import ./default.nix {
-        inherit pkgs;
-        channel = builtins.readFile ./channel;
-      };
+      sdkPkgsFor =
+        pkgs:
+        import ./default.nix {
+          inherit pkgs;
+          channel = builtins.readFile ./channel;
+        };
     in
     {
 
@@ -23,7 +31,8 @@
 
       hmModule = self.hmModules.android;
 
-      overlays.default = final: prev:
+      overlays.default =
+        final: prev:
         let
           android = sdkPkgsFor final;
         in
@@ -37,8 +46,8 @@
         description = "Android application or library";
       };
     }
-    //
-    flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (system:
+    // flake-utils.lib.eachSystem [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" ] (
+      system:
       let
         pkgs = import nixpkgs {
           inherit system;
@@ -65,23 +74,28 @@
         };
 
         checks = {
-          lint = with pkgs; runCommandLocal "lint" { } ''
-            cd ${./.}
-            ${nixpkgs-fmt}/bin/nixpkgs-fmt --check *.nix pkgs/android/*.nix template/*.nix nix-android-repo/*.nix
-            echo "checked" > $out
-          '';
+          lint =
+            with pkgs;
+            runCommandLocal "lint" { } ''
+              cd ${./.}
+              ${nixfmt}/bin/nixfmt --check *.nix pkgs/android/*.nix template/*.nix nix-android-repo/*.nix
+              echo "checked" > $out
+            '';
 
-          sdk = self.sdk.${system} (sdkPkgs: with sdkPkgs; [
-            cmdline-tools-latest
-            build-tools-34-0-0
-            emulator
-            ndk-26-1-10909125
-            platform-tools
-            platforms-android-34
-            tools
-          ]);
+          sdk = self.sdk.${system} (
+            sdkPkgs: with sdkPkgs; [
+              cmdline-tools-latest
+              build-tools-34-0-0
+              emulator
+              ndk-26-1-10909125
+              platform-tools
+              platforms-android-34
+              tools
+            ]
+          );
         };
 
         packages = flake-utils.lib.flattenTree sdkPkgs.packages;
-      });
+      }
+    );
 }
