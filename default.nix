@@ -1,16 +1,18 @@
-{ pkgs ? import <nixpkgs> { }
-, channel ? "stable"
+{
+  pkgs ? import <nixpkgs> { },
+  channel ? "stable",
 }:
 
 with pkgs;
 let
   androidSdk = callPackage ./pkgs/android { };
 
-  isSupported = _: pkg:
-    (!lib.isDerivation pkg) ||
-    lib.meta.availableOn stdenv.hostPlatform pkg ||
-    config.allowUnsupportedSystem ||
-    builtins.getEnv "NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM" == "1";
+  isSupported =
+    _: pkg:
+    (!lib.isDerivation pkg)
+    || lib.meta.availableOn stdenv.hostPlatform pkg
+    || config.allowUnsupportedSystem
+    || builtins.getEnv "NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM" == "1";
 
   filterIsSupported = lib.filterAttrs isSupported;
 

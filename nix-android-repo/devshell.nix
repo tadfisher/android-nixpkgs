@@ -1,8 +1,9 @@
-{ devshellPkgs
-, gradle
-, gradle2nix
-, jdk
-, update-locks
+{
+  devshellPkgs,
+  gradle,
+  gradle2nix,
+  jdk,
+  update-locks,
 }:
 
 devshellPkgs.mkShell {
