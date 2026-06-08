@@ -1,6 +1,7 @@
-{ buildGradlePackage
-, makeWrapper
-, jdk
+{
+  buildGradlePackage,
+  makeWrapper,
+  jdk,
 }:
 
 buildGradlePackage {
