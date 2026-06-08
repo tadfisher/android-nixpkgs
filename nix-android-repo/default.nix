@@ -1,7 +1,8 @@
-{ devshellPkgs
-, gradle2nixBuilders
-, gradle2nixPkgs
-, pkgs
+{
+  devshellPkgs,
+  gradle2nixBuilders,
+  gradle2nixPkgs,
+  pkgs,
 }:
 
 let
@@ -11,7 +12,12 @@ let
 in
 rec {
   devshell = callPackage ./devshell.nix {
-    inherit devshellPkgs gradle2nix jdk update-locks;
+    inherit
+      devshellPkgs
+      gradle2nix
+      jdk
+      update-locks
+      ;
   };
 
   nix-android-repo = callPackage ./nix-android-repo.nix {
