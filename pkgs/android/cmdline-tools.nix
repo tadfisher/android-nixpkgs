@@ -1,7 +1,10 @@
-{ mkGeneric, openjdk, jdk ? openjdk }:
-
-mkGeneric
 {
+  mkGeneric,
+  openjdk,
+  jdk ? openjdk,
+}:
+
+mkGeneric {
   pname = "cmdline-tools";
 
   passthru.installSdk = ''
