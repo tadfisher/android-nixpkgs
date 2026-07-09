@@ -5184,29 +5184,55 @@
     };
     xml = ./ndk-30-0-14904198.xml;
   };
+  ndk-30-0-15729638 = mkNdk {
+    id = "ndk;30.0.15729638";
+    pname = "ndk-30-0-15729638";
+    version = "30.0.15729638-rc2";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r30-beta2-linux.zip";
+        sha1 = "069427047d18cc6e44369cd7b8e711bfc2c7a3b5";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r30-beta2-darwin.zip";
+        sha1 = "8742eb5075240884f74ed29ccd99d7a1f6852a6b";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r30-beta2-windows.zip";
+        sha1 = "5b5e308db4cfd7a51f5524f464dedec20682b5ed";
+      };
+    };
+    displayName = "NDK (Side by side) 30.0.15729638";
+    path = "ndk/30.0.15729638";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./ndk-30-0-15729638.xml;
+  };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "37";
+    version = "37.0.1";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r37.0.0-linux.zip";
-        sha1 = "bcf323933980a59dccc3f14c339aed5fb2171163";
+        url = "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip";
+        sha1 = "477254aa5f903c15cf51001717bdf347fb6b53e0";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/platform-tools_r37.0.0-darwin.zip";
-        sha1 = "8c4c926d0ca192376b2a04b0318484724319e67c";
+        url = "https://dl.google.com/android/repository/platform-tools_r37.0.1-darwin.zip";
+        sha1 = "a5d4918c3ccf58e1ca443d106411fe0ff8a6b83f";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r37.0.0-win.zip";
-        sha1 = "f29bfb58d0d6f9a57d7dbcba6cc259f9ca6f58f1";
+        url = "https://dl.google.com/android/repository/platform-tools_r37.0.1-win.zip";
+        sha1 = "10f2ef5325bc5705d48d38a0aa900c7babda24fa";
       };
     };
     displayName = "Android SDK Platform-Tools";
     path = "platform-tools";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./platform-tools.xml;
   };
