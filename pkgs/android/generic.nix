@@ -54,6 +54,14 @@ stdenv.mkDerivation (
       unzip-strip "$curSrc" "$out"
     '';
 
+    # Remove Android SDK manager metadata that would conflict when multiple
+    # packages are installed in the same Nix profile.  Each Android SDK
+    # component zip ships a source.properties at its root with revision info;
+    # Nix manages package versions itself so this file is not needed.
+    postUnpack = ''
+      rm -f "$out/source.properties"
+    '';
+
     installPhase =
       args.installPhase or ''
         runHook preInstall
