@@ -3436,6 +3436,36 @@
     };
     xml = ./cmdline-tools-21-0.xml;
   };
+  cmdline-tools-22-0 = mkCmdlineTools {
+    id = "cmdline-tools;22.0";
+    pname = "cmdline-tools-22-0";
+    version = "22";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-15859902_latest.zip";
+        sha1 = "040d3996a65543d22ec4bf73e4c37aa37a8d4af4";
+      };
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac_x86_64-15859902_latest.zip";
+        sha1 = "1a79e61677b99cb0ce622792713cbea7ff2dc5de";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac_arm64-15859902_latest.zip";
+        sha1 = "c4e0dbc53f1a4ce04fc2b11d4e2c4675001a95af";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/commandlinetools-win-15859902_latest.zip";
+        sha1 = "b9862337a13e2809a5159dc3a08d058091bd59f6";
+      };
+    };
+    displayName = "Android SDK Command-line Tools";
+    path = "cmdline-tools/22.0";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./cmdline-tools-22-0.xml;
+  };
   cmdline-tools-3-0 = mkCmdlineTools {
     id = "cmdline-tools;3.0";
     pname = "cmdline-tools-3-0";
@@ -3621,19 +3651,23 @@
   cmdline-tools-latest = mkCmdlineTools {
     id = "cmdline-tools;latest";
     pname = "cmdline-tools-latest";
-    version = "21";
+    version = "22";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/commandlinetools-linux-15641748_latest.zip";
-        sha1 = "63523a02a975a81102238566f2a16c057d52301e";
+        url = "https://dl.google.com/android/repository/commandlinetools-linux-15859902_latest.zip";
+        sha1 = "040d3996a65543d22ec4bf73e4c37aa37a8d4af4";
       };
-      darwin = {
-        url = "https://dl.google.com/android/repository/commandlinetools-mac-15641748_latest.zip";
-        sha1 = "b62a5d8cf63ded173b47be867be4ee058ceda6df";
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac_x86_64-15859902_latest.zip";
+        sha1 = "1a79e61677b99cb0ce622792713cbea7ff2dc5de";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/commandlinetools-mac_arm64-15859902_latest.zip";
+        sha1 = "c4e0dbc53f1a4ce04fc2b11d4e2c4675001a95af";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/commandlinetools-win-15641748_latest.zip";
-        sha1 = "2bea1388b8a248040a340a08ca0638138633f687";
+        url = "https://dl.google.com/android/repository/commandlinetools-win-15859902_latest.zip";
+        sha1 = "b9862337a13e2809a5159dc3a08d058091bd59f6";
       };
     };
     displayName = "Android SDK Command-line Tools (latest)";
@@ -3647,30 +3681,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "37.1.8";
+    version = "37.1.9";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-15828024.zip";
-        sha1 = "3f2fb7b31bcca8b54ef752aaac32e66fe703d65a";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-15834520.zip";
+        sha1 = "779cca98b9fae3543d80511ac42adb9d0274bbd0";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-15828024.zip";
-        sha1 = "a30f53e21032f908f3c0eb7adb48788210f44ac5";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-15834520.zip";
+        sha1 = "1ad4e9b2844f636790807dad59b8eca499216506";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-15828024.zip";
-        sha1 = "406f7d6eaa9a30d6fc96a507ca8499edd81ede22";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-15834520.zip";
+        sha1 = "3a4080432a4252083c8c6d366b99169d4e5d5dc6";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-15828024.zip";
-        sha1 = "ca808899920a1d2e4d0fce81d1d42968da67e486";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-15834520.zip";
+        sha1 = "83a44f454d6838acc3cb7da9904540c69ab5b5b0";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./emulator.xml;
   };
@@ -6157,42 +6191,6 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./platforms-android-CANARY.xml;
-  };
-  platforms-android-CinnamonBun = mkSrcOnly {
-    id = "platforms;android-CinnamonBun";
-    pname = "platforms-android-CinnamonBun";
-    version = "5";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/platform-CinnamonBun_r05.zip";
-        sha1 = "e2b204742c79147f694281af9e30fa8d8b7e96eb";
-      };
-    };
-    displayName = "Android SDK Platform CinnamonBun";
-    path = "platforms/android-CinnamonBun";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./platforms-android-CinnamonBun.xml;
-  };
-  platforms-android-CinnamonBun-ext23 = mkSrcOnly {
-    id = "platforms;android-CinnamonBun-ext23";
-    pname = "platforms-android-CinnamonBun-ext23";
-    version = "3";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/platform-CinnamonBun-ext23_r03.zip";
-        sha1 = "41e650dcf701655a1a76974c7a5b64f592d2cc1c";
-      };
-    };
-    displayName = "Android SDK Platform CinnamonBun-ext23";
-    path = "platforms/android-CinnamonBun-ext23";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./platforms-android-CinnamonBun-ext23.xml;
   };
   platforms-android-UpsideDownCake = mkSrcOnly {
     id = "platforms;android-UpsideDownCake";
@@ -12207,78 +12205,6 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-CANARY-google-apis-ps16k-x86-64.xml;
-  };
-  system-images-android-CinnamonBun-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-CinnamonBun;google_apis_playstore_ps16k;arm64-v8a";
-    pname = "system-images-android-CinnamonBun-google-apis-playstore-ps16k-arm64-v8a";
-    version = "5";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-playstore-ps16k-CinnamonBun_r05.zip";
-        sha1 = "a7609b48a497a992e87bdeb94a945cf92993f1bb";
-      };
-    };
-    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
-    path = "system-images/android-CinnamonBun/google_apis_playstore_ps16k/arm64-v8a";
-    license = {
-      id = "android-sdk-arm-dbt-license";
-      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
-    };
-    xml = ./system-images-android-CinnamonBun-google-apis-playstore-ps16k-arm64-v8a.xml;
-  };
-  system-images-android-CinnamonBun-google-apis-playstore-ps16k-x86-64 = mkSrcOnly {
-    id = "system-images;android-CinnamonBun;google_apis_playstore_ps16k;x86_64";
-    pname = "system-images-android-CinnamonBun-google-apis-playstore-ps16k-x86-64";
-    version = "5";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-playstore-ps16k-CinnamonBun_r05.zip";
-        sha1 = "cdf42021f5938c76ce368cee7674d8dc34bd7fce";
-      };
-    };
-    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
-    path = "system-images/android-CinnamonBun/google_apis_playstore_ps16k/x86_64";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-CinnamonBun-google-apis-playstore-ps16k-x86-64.xml;
-  };
-  system-images-android-CinnamonBun-google-apis-ps16k-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-CinnamonBun;google_apis_ps16k;arm64-v8a";
-    pname = "system-images-android-CinnamonBun-google-apis-ps16k-arm64-v8a";
-    version = "5";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-CinnamonBun_r05.zip";
-        sha1 = "d40b3a56fab1d15b280000a04be4dde8050e5fd3";
-      };
-    };
-    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
-    path = "system-images/android-CinnamonBun/google_apis_ps16k/arm64-v8a";
-    license = {
-      id = "android-sdk-arm-dbt-license";
-      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
-    };
-    xml = ./system-images-android-CinnamonBun-google-apis-ps16k-arm64-v8a.xml;
-  };
-  system-images-android-CinnamonBun-google-apis-ps16k-x86-64 = mkSrcOnly {
-    id = "system-images;android-CinnamonBun;google_apis_ps16k;x86_64";
-    pname = "system-images-android-CinnamonBun-google-apis-ps16k-x86-64";
-    version = "5";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-CinnamonBun_r05.zip";
-        sha1 = "d879c8113d89d202f1cbc2796c2372fa737ab565";
-      };
-    };
-    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
-    path = "system-images/android-CinnamonBun/google_apis_ps16k/x86_64";
-    license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
-    };
-    xml = ./system-images-android-CinnamonBun-google-apis-ps16k-x86-64.xml;
   };
   tools = mkTools {
     id = "tools";
