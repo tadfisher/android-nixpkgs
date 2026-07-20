@@ -6042,6 +6042,24 @@
     };
     xml = ./platforms-android-37-1.xml;
   };
+  platforms-android-37-2-beta1 = mkSrcOnly {
+    id = "platforms;android-37.2-beta1";
+    pname = "platforms-android-37-2-beta1";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/platform-37.2-beta1_r01.zip";
+        sha1 = "ea5c02c184a299263943047fb6b83fa21654ce60";
+      };
+    };
+    displayName = "Android SDK Platform 37.2-beta1";
+    path = "platforms/android-37.2-beta1";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./platforms-android-37-2-beta1.xml;
+  };
   platforms-android-4 = mkSrcOnly {
     id = "platforms;android-4";
     pname = "platforms-android-4";
@@ -12133,6 +12151,78 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-37-1-google-apis-ps16k-x86-64.xml;
+  };
+  system-images-android-37-2-beta1-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-37.2-beta1;google_apis_playstore_ps16k;arm64-v8a";
+    pname = "system-images-android-37-2-beta1-google-apis-playstore-ps16k-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-playstore-ps16k-37.2-beta1_r01.zip";
+        sha1 = "a9bb45a77b7254f3aba40fac1a332e6e569d5f37";
+      };
+    };
+    displayName = "16 KB Page Size Google Play ARM 64 v8a System Image";
+    path = "system-images/android-37.2-beta1/google_apis_playstore_ps16k/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-37-2-beta1-google-apis-playstore-ps16k-arm64-v8a.xml;
+  };
+  system-images-android-37-2-beta1-google-apis-playstore-ps16k-x86-64 = mkSrcOnly {
+    id = "system-images;android-37.2-beta1;google_apis_playstore_ps16k;x86_64";
+    pname = "system-images-android-37-2-beta1-google-apis-playstore-ps16k-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-playstore-ps16k-37.2-beta1_r01.zip";
+        sha1 = "52fd1982de4a4cef933fe1a90467daeb58ba876a";
+      };
+    };
+    displayName = "16 KB Page Size Google Play Intel x86_64 Atom System Image";
+    path = "system-images/android-37.2-beta1/google_apis_playstore_ps16k/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-37-2-beta1-google-apis-playstore-ps16k-x86-64.xml;
+  };
+  system-images-android-37-2-beta1-google-apis-ps16k-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-37.2-beta1;google_apis_ps16k;arm64-v8a";
+    pname = "system-images-android-37-2-beta1-google-apis-ps16k-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/arm64-v8a-ps16k-37.2-beta1_r01.zip";
+        sha1 = "5bc2a62ef9885fefaff8c98b9fa739a97b45f577";
+      };
+    };
+    displayName = "16 KB Page Size Google APIs ARM 64 v8a System Image";
+    path = "system-images/android-37.2-beta1/google_apis_ps16k/arm64-v8a";
+    license = {
+      id = "android-sdk-arm-dbt-license";
+      hash = "859f317696f67ef3d7f30a50a5560e7834b43903";
+    };
+    xml = ./system-images-android-37-2-beta1-google-apis-ps16k-arm64-v8a.xml;
+  };
+  system-images-android-37-2-beta1-google-apis-ps16k-x86-64 = mkSrcOnly {
+    id = "system-images;android-37.2-beta1;google_apis_ps16k;x86_64";
+    pname = "system-images-android-37-2-beta1-google-apis-ps16k-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-ps16k-37.2-beta1_r01.zip";
+        sha1 = "12ad6acabf3ab7a51f618776b94713665f5a3e18";
+      };
+    };
+    displayName = "16 KB Page Size Google APIs Intel x86_64 Atom System Image";
+    path = "system-images/android-37.2-beta1/google_apis_ps16k/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-37-2-beta1-google-apis-ps16k-x86-64.xml;
   };
   system-images-android-CANARY-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-CANARY;google_apis_playstore_ps16k;arm64-v8a";
