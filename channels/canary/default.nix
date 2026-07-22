@@ -3760,6 +3760,58 @@
     };
     xml = ./emulator.xml;
   };
+  emulators-15885905 = mkSrcOnly {
+    id = "emulators;15885905";
+    pname = "emulators-15885905";
+    version = "0.0.1-rc15885905";
+    sources = {
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/emulator_linux_x64-15885905.zip";
+        sha1 = "aa279c7f75f76c376146aea7735fdf4166943ca9";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-15885905.zip";
+        sha1 = "fe966af23653c134f0526f130a71f91d26a81e7e";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/emulator_windows_x64-15885905.zip";
+        sha1 = "a9129e2aa5bd4df3877e634dcddbe5a414c72c5c";
+      };
+    };
+    displayName = "Android Emulator (Preview)";
+    path = "emulators/15885905";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./emulators-15885905.xml;
+  };
+  emulators-latest = mkSrcOnly {
+    id = "emulators;latest";
+    pname = "emulators-latest";
+    version = "0.0.1-rc15885905";
+    sources = {
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/emulator_linux_x64-15885905.zip";
+        sha1 = "aa279c7f75f76c376146aea7735fdf4166943ca9";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-15885905.zip";
+        sha1 = "fe966af23653c134f0526f130a71f91d26a81e7e";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/emulator_windows_x64-15885905.zip";
+        sha1 = "a9129e2aa5bd4df3877e634dcddbe5a414c72c5c";
+      };
+    };
+    displayName = "Android Emulator (Preview) (latest)";
+    path = "emulators/latest";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./emulators-latest.xml;
+  };
   extras-android-m2repository = mkSrcOnly {
     id = "extras;android;m2repository";
     pname = "extras-android-m2repository";
