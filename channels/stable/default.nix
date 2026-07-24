@@ -12008,6 +12008,42 @@
     };
     xml = ./system-images-android-36-google-apis-ps16k-x86-64.xml;
   };
+  system-images-android-37-0-android-wear-signed-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-37.0;android-wear-signed;arm64-v8a";
+    pname = "system-images-android-37-0-android-wear-signed-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-37.0_signed_r01.zip";
+        sha1 = "a74d43edd784a46ceaf04c4aaceab4bbd5961118";
+      };
+    };
+    displayName = "Wear OS 7.0 ARM 64 v8a System Image (signed)";
+    path = "system-images/android-37.0/android-wear-signed/arm64-v8a";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-37-0-android-wear-signed-arm64-v8a.xml;
+  };
+  system-images-android-37-0-android-wear-signed-x86-64 = mkSrcOnly {
+    id = "system-images;android-37.0;android-wear-signed;x86_64";
+    pname = "system-images-android-37-0-android-wear-signed-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-37.0_signed_r01.zip";
+        sha1 = "2838029c692df14784a0f0a3b509e187fd5eac2c";
+      };
+    };
+    displayName = "Wear OS 7.0 Intel x86_64 Atom System Image (signed)";
+    path = "system-images/android-37.0/android-wear-signed/x86_64";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./system-images-android-37-0-android-wear-signed-x86-64.xml;
+  };
   system-images-android-37-0-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-37.0;google_apis_playstore_ps16k;arm64-v8a";
     pname = "system-images-android-37-0-google-apis-playstore-ps16k-arm64-v8a";
