@@ -13229,14 +13229,14 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-37.0_signed_r01.zip";
-        sha1 = "08d0809c491cc76c1b5058bc00f3ba50fae15f24";
+        sha1 = "a74d43edd784a46ceaf04c4aaceab4bbd5961118";
       };
     };
-    displayName = "Wear OS 7.0 - Preview ARM 64 v8a System Image (signed)";
+    displayName = "Wear OS 7.0 ARM 64 v8a System Image (signed)";
     path = "system-images/android-37.0/android-wear-signed/arm64-v8a";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-37-0-android-wear-signed-arm64-v8a.xml;
   };
@@ -13247,14 +13247,14 @@
     sources = {
       all = {
         url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-37.0_signed_r01.zip";
-        sha1 = "64f6853e0c366b37463a200266bce8a33786e50b";
+        sha1 = "2838029c692df14784a0f0a3b509e187fd5eac2c";
       };
     };
-    displayName = "Wear OS 7.0 - Preview Intel x86_64 Atom System Image (signed)";
+    displayName = "Wear OS 7.0 Intel x86_64 Atom System Image (signed)";
     path = "system-images/android-37.0/android-wear-signed/x86_64";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-37-0-android-wear-signed-x86-64.xml;
   };
