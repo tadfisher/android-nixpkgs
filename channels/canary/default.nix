@@ -3733,23 +3733,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "37.2.1";
+    version = "37.2.2";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-15875889.zip";
-        sha1 = "1c39ceb4bca042b973344d252a051189d367ab83";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-15937705.zip";
+        sha1 = "fc2166a8864005432a91c2360b8f97c35cd59fc2";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-15875889.zip";
-        sha1 = "92a0e64420eb712b5ccaef526894478455dee4aa";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-15937705.zip";
+        sha1 = "8ce9c95a4206cb9c36f29249505f27c433464ef0";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-15875889.zip";
-        sha1 = "b959066bf27e9262d74ee81d33fd1a9f6bc9c72c";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-15937705.zip";
+        sha1 = "bae68e1a8c89731b18a7d0c91a98a6faccb9121c";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-15875889.zip";
-        sha1 = "467df0f9c597df052991d8e22c422749bb354a43";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-15937705.zip";
+        sha1 = "ef54972d76a467b7abc7402e5f8def549aff4f5f";
       };
     };
     displayName = "Android Emulator";
@@ -12875,8 +12875,8 @@
     displayName = "AOSP ATD Intel x86_64 Atom System Image";
     path = "system-images/android-36/aosp_atd/x86_64";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-36-aosp-atd-x86-64.xml;
   };
@@ -13181,8 +13181,8 @@
     displayName = "Google APIs ATD Intel x86_64 Atom System Image";
     path = "system-images/android-36/google_atd/x86_64";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-36-google-atd-x86-64.xml;
   };
