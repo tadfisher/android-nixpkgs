@@ -3711,23 +3711,23 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "37.2.5";
+    version = "37.2.6";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-16079175.zip";
-        sha1 = "5b9cbbc6735bb4f01b342df03284613a9281c9f9";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-16138043.zip";
+        sha1 = "81e80c2763d752350a650f4bab0a7bf74f08c152";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-16079175.zip";
-        sha1 = "a9c0fe20248c5d581aa060c3a914abd7a3b3b40a";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-16138043.zip";
+        sha1 = "b42be584ce37f7b18ed548100ef5eb5fbe012b70";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-16079175.zip";
-        sha1 = "b6eefd94ba7a89129dffddef8007e17d45b5d954";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-16138043.zip";
+        sha1 = "20bf22ca367dd92be388096cd8f5732b59d0b32e";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-16079175.zip";
-        sha1 = "e05e0ccef11dbf88d20be62837de294c3a2ec1de";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-16138043.zip";
+        sha1 = "526f76bd8e0c82eca6c64ac43b3854ae4207eed3";
       };
     };
     displayName = "Android Emulator";
@@ -5273,6 +5273,32 @@
       hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./ndk-30-0-15729638.xml;
+  };
+  ndk-30-0-16138531 = mkNdk {
+    id = "ndk;30.0.16138531";
+    pname = "ndk-30-0-16138531";
+    version = "30.0.16138531-rc3";
+    sources = {
+      linux = {
+        url = "https://dl.google.com/android/repository/android-ndk-r30-beta3-linux.zip";
+        sha1 = "f66e852ac01a57f74bcf6fd96dcea04dda5ea392";
+      };
+      darwin = {
+        url = "https://dl.google.com/android/repository/android-ndk-r30-beta3-darwin.zip";
+        sha1 = "f92d3e9526d0a62ab48bab66c0b942ee094e9f2c";
+      };
+      windows = {
+        url = "https://dl.google.com/android/repository/android-ndk-r30-beta3-windows.zip";
+        sha1 = "b89c9a0d141382a8311669a01db4af88b4067a8d";
+      };
+    };
+    displayName = "NDK (Side by side) 30.0.16138531";
+    path = "ndk/30.0.16138531";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./ndk-30-0-16138531.xml;
   };
   platform-tools = mkPlatformTools {
     id = "platform-tools";
