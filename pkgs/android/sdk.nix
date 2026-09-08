@@ -24,7 +24,6 @@ let
     groupBy'
     mapAttrs
     mapAttrsToList
-    optionalString
     unique
     versionOlder
     ;
@@ -68,15 +67,24 @@ let
 
   cmdlineTools = findFirst (p: p.pname == "cmdline-tools") null pkgs;
 
-  # Sanity-check the assembled SDK by listing packages. cmdline-tools 23 replaced
-  # sdkmanager with a shim over the 'android' CLI, which downloads its real
-  # implementation from dl.google.com on first run; there is no offline mode, so
-  # nothing it provides can run in the build sandbox.
-  smokeTest = optionalString (versionOlder cmdlineTools.version "23") ''
-    export ANDROID_SDK_HOME=$(mktemp -d)
-    touch $ANDROID_SDK_HOME/repositories.cfg
-    $out/bin/sdkmanager --list --verbose
-  '';
+  # Sanity-check the assembled SDK. cmdline-tools 23 replaced sdkmanager with a
+  # shim over the 'android' CLI, which reaches the network for anything that
+  # touches the package repository, so there we can only check that both entry
+  # points resolve to the packaged CLI and run. Both want a writable home for
+  # their analytics directory.
+  smokeTest =
+    if versionOlder cmdlineTools.version "23" then
+      ''
+        export ANDROID_SDK_HOME=$(mktemp -d)
+        touch $ANDROID_SDK_HOME/repositories.cfg
+        $out/bin/sdkmanager --list --verbose
+      ''
+    else
+      ''
+        export HOME=$(mktemp -d)
+        $out/bin/android --version
+        $out/bin/sdkmanager --version
+      '';
 
   sdk =
     runCommand "android-sdk-env"

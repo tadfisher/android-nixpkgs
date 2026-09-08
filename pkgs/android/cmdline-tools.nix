@@ -1,14 +1,28 @@
 {
   stdenv,
   lib,
+  autoPatchelfHook,
   mkGeneric,
   openjdk,
   jdk ? openjdk,
-  autoPatchelfHook,
+  android-cli ? null,
 }:
 
 pkg:
 
+let
+  # cmdline-tools 23 deprecated the sdkmanager tool, so it's now a shim around the 'android' binary.
+  # 'android' is a bootstrapper: on first run it downloads 'android-cli' from dl.google.com into
+  # $ANDROID_USER_HOME/bin, which then extracts its own embedded copy of sdklib and a bundled JRE.
+  # This is _not_ likely to work on NixOS without nix-ld or a FHS wrapper for android-cli.
+  bootstrapsAndroidCli = lib.versionAtLeast pkg.version "23";
+
+  useNixpkgsAndroidCli =
+    bootstrapsAndroidCli && android-cli != null && lib.meta.availableOn stdenv.hostPlatform android-cli;
+
+  patchBootstrapper = bootstrapsAndroidCli && !useNixpkgsAndroidCli && stdenv.hostPlatform.isLinux;
+
+in
 mkGeneric (
   {
     pname = "cmdline-tools";
@@ -27,7 +41,12 @@ mkGeneric (
       chmod -w $pkgBase/bin
     '';
   }
-  // lib.optionalAttrs (stdenv.hostPlatform.isLinux && lib.versionAtLeast pkg.version "23") {
+  // lib.optionalAttrs useNixpkgsAndroidCli {
+    postFixup = ''
+      ln -sf ${lib.getExe android-cli} $out/bin/android
+    '';
+  }
+  // lib.optionalAttrs patchBootstrapper {
     nativeBuildInputs = [
       autoPatchelfHook
     ];
