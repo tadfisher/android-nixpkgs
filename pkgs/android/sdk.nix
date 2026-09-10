@@ -19,11 +19,13 @@ let
     assertMsg
     concatMapStringsSep
     filterAttrs
+    findFirst
     groupBy
     groupBy'
     mapAttrs
     mapAttrsToList
     unique
+    versionOlder
     ;
 
   packages' = filterAttrs (_: p: lib.isDerivation p) packages;
@@ -63,6 +65,27 @@ let
     ${pkg.installSdk or ""}
   '') pkgs;
 
+  cmdlineTools = findFirst (p: p.pname == "cmdline-tools") null pkgs;
+
+  # Sanity-check the assembled SDK. cmdline-tools 23 replaced sdkmanager with a
+  # shim over the 'android' CLI, which reaches the network for anything that
+  # touches the package repository, so there we can only check that both entry
+  # points resolve to the packaged CLI and run. Both want a writable home for
+  # their analytics directory.
+  smokeTest =
+    if versionOlder cmdlineTools.version "23" then
+      ''
+        export ANDROID_SDK_HOME=$(mktemp -d)
+        touch $ANDROID_SDK_HOME/repositories.cfg
+        $out/bin/sdkmanager --list --verbose
+      ''
+    else
+      ''
+        export HOME=$(mktemp -d)
+        $out/bin/android --version
+        $out/bin/sdkmanager --version
+      '';
+
   sdk =
     runCommand "android-sdk-env"
       {
@@ -94,9 +117,7 @@ let
         mkdir -p "$ANDROID_SDK_ROOT/licenses"
         cp -as ${licenses}/* "$ANDROID_SDK_ROOT/licenses"
 
-        export ANDROID_SDK_HOME=$(mktemp -d)
-        touch $ANDROID_SDK_HOME/repositories.cfg
-        $out/bin/sdkmanager --list --verbose
+        ${smokeTest}
 
         # Normally done in fixupPhase
         source ${stdenv.setup}
@@ -115,7 +136,7 @@ assert (
 
 assert (
   assertMsg (all (
-    p: p.name != "tools"
+    p: p.pname != "tools"
   ) pkgs) "The 'tools' package is obsolete. Use 'cmdline-tools' instead."
 );
 
