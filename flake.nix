@@ -90,7 +90,6 @@
               ndk-26-1-10909125
               platform-tools
               platforms-android-34
-              tools
             ]
           );
         };

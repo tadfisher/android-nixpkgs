@@ -11288,46 +11288,6 @@
     };
     xml = ./system-images-android-34-android-wear-x86-64.xml;
   };
-  system-images-android-34-android-xr-preview-playstore-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-34;android-xr-preview-playstore;arm64-v8a";
-    pname = "system-images-android-34-android-xr-preview-playstore-arm64-v8a";
-    version = "3";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-preview-arm64-v8a-playstore-34_r03.zip";
-        sha1 = "160292be06e7557a549b9d4504267f4ca8e4de8e";
-      };
-    };
-    displayName = "Google Play XR Preview API v4 ARM 64 v8a System Image (Developer Preview)";
-    path = "system-images/android-34/android-xr-preview-playstore/arm64-v8a";
-    license = {
-      id = "android-googlexr-license";
-      hash = "ceff83576aac4f7f37cb98fe189e9fb3c49d3b81";
-    };
-    xml = ./system-images-android-34-android-xr-preview-playstore-arm64-v8a.xml;
-  };
-  system-images-android-34-android-xr-preview-playstore-x86-64 = mkSrcOnly {
-    id = "system-images;android-34;android-xr-preview-playstore;x86_64";
-    pname = "system-images-android-34-android-xr-preview-playstore-x86-64";
-    version = "3";
-    sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-preview-x86_64-playstore-34_r03-linux.zip";
-        sha1 = "d2e1aec8bf48ac53ec5e417396e95e9b3788e96e";
-      };
-      windows = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-preview-x86_64-playstore-34_r03-windows.zip";
-        sha1 = "ccdefe4a7b19e660a051e3799a3fc8df1dfb516d";
-      };
-    };
-    displayName = "Google Play XR Preview API v4 Intel x86_64 Atom System Image (Developer Preview)";
-    path = "system-images/android-34/android-xr-preview-playstore/x86_64";
-    license = {
-      id = "android-googlexr-license";
-      hash = "ceff83576aac4f7f37cb98fe189e9fb3c49d3b81";
-    };
-    xml = ./system-images-android-34-android-xr-preview-playstore-x86-64.xml;
-  };
   system-images-android-34-aosp-atd-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;aosp_atd;arm64-v8a";
     pname = "system-images-android-34-aosp-atd-arm64-v8a";
@@ -11435,46 +11395,6 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-34-google-tv-x86.xml;
-  };
-  system-images-android-34-google-xr-arm64-v8a = mkSrcOnly {
-    id = "system-images;android-34;google-xr;arm64-v8a";
-    pname = "system-images-android-34-google-xr-arm64-v8a";
-    version = "7";
-    sources = {
-      all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-arm64-v8a-playstore-34_r07.zip";
-        sha1 = "ffde19d738e893c247024c840316f5c663e2f9d7";
-      };
-    };
-    displayName = "Google Play XR ARM 64 v8a System Image (Developer Preview)";
-    path = "system-images/android-34/google-xr/arm64-v8a";
-    license = {
-      id = "android-googlexr-license";
-      hash = "ceff83576aac4f7f37cb98fe189e9fb3c49d3b81";
-    };
-    xml = ./system-images-android-34-google-xr-arm64-v8a.xml;
-  };
-  system-images-android-34-google-xr-x86-64 = mkSrcOnly {
-    id = "system-images;android-34;google-xr;x86_64";
-    pname = "system-images-android-34-google-xr-x86-64";
-    version = "7";
-    sources = {
-      linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r07-linux.zip";
-        sha1 = "6aa60987ca3c714a8d7a902320a19913122d5aca";
-      };
-      windows = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-x86_64-playstore-34_r07-windows.zip";
-        sha1 = "fb4dbb99a2ccd75099bb0e0a6237ae4df429b9d2";
-      };
-    };
-    displayName = "Google Play XR Intel x86_64 Atom System Image (Developer Preview)";
-    path = "system-images/android-34/google-xr/x86_64";
-    license = {
-      id = "android-googlexr-license";
-      hash = "ceff83576aac4f7f37cb98fe189e9fb3c49d3b81";
-    };
-    xml = ./system-images-android-34-google-xr-x86-64.xml;
   };
   system-images-android-34-google-apis-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;google_apis;arm64-v8a";
