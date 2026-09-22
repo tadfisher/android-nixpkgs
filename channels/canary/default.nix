@@ -3793,30 +3793,30 @@
   emulator = mkEmulator {
     id = "emulator";
     pname = "emulator";
-    version = "37.2.10";
+    version = "37.3.1";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator-linux_x64-16349944.zip";
-        sha1 = "d33c8e6c6d5dfa3a3d0e4b8329e14c2ef7e9c715";
+        url = "https://dl.google.com/android/repository/emulator-linux_x64-16373887.zip";
+        sha1 = "07431598c6a52d971f63ef4c76b4f1217ce6b64c";
       };
       x86_64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_x64-16349944.zip";
-        sha1 = "68cf0ffd25663f6e44bff19d0e961ece792689c1";
+        url = "https://dl.google.com/android/repository/emulator-darwin_x64-16373887.zip";
+        sha1 = "10db0325570f9aebef3205a93cb773f010473daf";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-16349944.zip";
-        sha1 = "cb9552f57c2c3f012e73dee51fda0d59b15941cf";
+        url = "https://dl.google.com/android/repository/emulator-darwin_aarch64-16373887.zip";
+        sha1 = "d491bbf4f4c9aa3a2586f9559f58583993a3c3fd";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator-windows_x64-16349944.zip";
-        sha1 = "99e809fc3e5e13bd5e552de24c7de79c6f911027";
+        url = "https://dl.google.com/android/repository/emulator-windows_x64-16373887.zip";
+        sha1 = "c25096ff6e98d7667ea6aa9676824bf5ce5e313f";
       };
     };
     displayName = "Android Emulator";
     path = "emulator";
     license = {
-      id = "android-sdk-license";
-      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
     };
     xml = ./emulator.xml;
   };
@@ -3872,22 +3872,48 @@
     };
     xml = ./emulators-16173978.xml;
   };
+  emulators-16373346 = mkSrcOnly {
+    id = "emulators;16373346";
+    pname = "emulators-16373346";
+    version = "37.1.3";
+    sources = {
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/emulator_linux_x64-16373346.zip";
+        sha1 = "8010cd7cf4220b14fafbd5b0fb3904564594f9fa";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-16373346.zip";
+        sha1 = "a1f31ad23a69680319a4eedd0abe524e5b883e11";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/emulator_windows_x64-16373346.zip";
+        sha1 = "3a26aa55c372d9bd74ebfa8ad9c39d377da03a83";
+      };
+    };
+    displayName = "Android Emulator (Preview)";
+    path = "emulators/16373346";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./emulators-16373346.xml;
+  };
   emulators-latest = mkSrcOnly {
     id = "emulators;latest";
     pname = "emulators-latest";
-    version = "37.1.2";
+    version = "37.1.3";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator_linux_x64-16173978.zip";
-        sha1 = "7dfd1a95ce66f950b78bb1b7c7edd48a9cb28f54";
+        url = "https://dl.google.com/android/repository/emulator_linux_x64-16373346.zip";
+        sha1 = "8010cd7cf4220b14fafbd5b0fb3904564594f9fa";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-16173978.zip";
-        sha1 = "2442cfa47774682b371a7ac9add304c8f4b8e953";
+        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-16373346.zip";
+        sha1 = "a1f31ad23a69680319a4eedd0abe524e5b883e11";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator_windows_x64-16173978.zip";
-        sha1 = "b69bfb9315c068b7451772014cc4d0cb7590e9d5";
+        url = "https://dl.google.com/android/repository/emulator_windows_x64-16373346.zip";
+        sha1 = "3a26aa55c372d9bd74ebfa8ad9c39d377da03a83";
       };
     };
     displayName = "Android Emulator (Preview) (latest)";
