@@ -13019,11 +13019,11 @@
   system-images-android-36-ai-glasses-arm64-v8a = mkSrcOnly {
     id = "system-images;android-36;ai-glasses;arm64-v8a";
     pname = "system-images-android-36-ai-glasses-arm64-v8a";
-    version = "5";
+    version = "6";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/microxr-arm64-v8a-36_r05.zip";
-        sha1 = "46320e8242d498a1a9567debee90fed8738cfc0f";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/microxr-arm64-v8a-36_r06.zip";
+        sha1 = "e5fc876895200234432927e4a5394b078e574d7e";
       };
     };
     displayName = "AI Glasses ARM 64 v8a System Image (Developer Preview)";
@@ -13037,15 +13037,15 @@
   system-images-android-36-ai-glasses-x86-64 = mkSrcOnly {
     id = "system-images;android-36;ai-glasses;x86_64";
     pname = "system-images-android-36-ai-glasses-x86-64";
-    version = "5";
+    version = "6";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/microxr-x86_64-36_r05-linux.zip";
-        sha1 = "c9fbbe41d639708a18b4172f510683076138289c";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/microxr-x86_64-36_r06-linux.zip";
+        sha1 = "ecf3e720596158b5abea425e122759efa8c9b0f5";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/microxr-x86_64-36_r05-windows.zip";
-        sha1 = "97fb0824ca62a2c55eaf396f8a07809cae2d6172";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/microxr-x86_64-36_r06-windows.zip";
+        sha1 = "467d7b302c58242984c967e305dc1de888f05e9b";
       };
     };
     displayName = "AI Glasses Intel x86_64 Atom System Image (Developer Preview)";
