@@ -2664,6 +2664,36 @@
     };
     xml = ./build-lightbuild-0-0-20-alpha02.xml;
   };
+  lightbuild-lightbuild-0-0-30 = mkSrcOnly {
+    id = "build;lightbuild;0.0.30";
+    pname = "build-lightbuild-0-0-30";
+    version = "0.0.30";
+    sources = {
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/lume-daemon-linux_x64-16707469.zip";
+        sha1 = "110c0ee6b9d1f12227230b99c7901f5a1f2860c8";
+      };
+      x86_64-darwin = {
+        url = "https://dl.google.com/android/repository/lume-daemon-darwin_x64-16707469.zip";
+        sha1 = "222855058bc4b69d9a2789af4b7bd80dcaa68905";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/lume-daemon-darwin_aarch64-16707469.zip";
+        sha1 = "be6f46c95e2c5d9e54ce62f3cdfa1231f6cd3d1d";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/lume-daemon-windows_x64-16707469.zip";
+        sha1 = "0939b82ca369349e042529dc61695c5c85a51a93";
+      };
+    };
+    displayName = "Lightbuild";
+    path = "build/lightbuild/0.0.30";
+    license = {
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
+    };
+    xml = ./build-lightbuild-0-0-30.xml;
+  };
   build-templates = mkSrcOnly {
     id = "build;templates";
     pname = "build-templates";
@@ -3980,22 +4010,48 @@
     };
     xml = ./emulators-16606167.xml;
   };
+  emulators-16680254 = mkSrcOnly {
+    id = "emulators;16680254";
+    pname = "emulators-16680254";
+    version = "37.1.6";
+    sources = {
+      x86_64-linux = {
+        url = "https://dl.google.com/android/repository/emulator_linux_x64-16680254.zip";
+        sha1 = "cf5a6d03051eaec8b711f9029e5abe6711d20bc3";
+      };
+      aarch64-darwin = {
+        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-16680254.zip";
+        sha1 = "547fb4adb58a2e3cbb686587fcc9985c5bf699d3";
+      };
+      x86_64-windows = {
+        url = "https://dl.google.com/android/repository/emulator_windows_x64-16680254.zip";
+        sha1 = "50eebe243450f9e6c9ae96a3dd3d03bd23c78d57";
+      };
+    };
+    displayName = "Android Emulator (Preview)";
+    path = "emulators/16680254";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./emulators-16680254.xml;
+  };
   emulators-latest = mkSrcOnly {
     id = "emulators;latest";
     pname = "emulators-latest";
-    version = "37.1.5";
+    version = "37.1.6";
     sources = {
       x86_64-linux = {
-        url = "https://dl.google.com/android/repository/emulator_linux_x64-16606167.zip";
-        sha1 = "7299e98f7bd4d8be890091c0a06c0c4123166e16";
+        url = "https://dl.google.com/android/repository/emulator_linux_x64-16680254.zip";
+        sha1 = "cf5a6d03051eaec8b711f9029e5abe6711d20bc3";
       };
       aarch64-darwin = {
-        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-16606167.zip";
-        sha1 = "8e8e39dded674a915bb3b88fe9227920b7ac20e8";
+        url = "https://dl.google.com/android/repository/emulator_darwin_aarch64-16680254.zip";
+        sha1 = "547fb4adb58a2e3cbb686587fcc9985c5bf699d3";
       };
       x86_64-windows = {
-        url = "https://dl.google.com/android/repository/emulator_windows_x64-16606167.zip";
-        sha1 = "fadd0e83e468f3a0803eabf3abebd8d6137b5eff";
+        url = "https://dl.google.com/android/repository/emulator_windows_x64-16680254.zip";
+        sha1 = "50eebe243450f9e6c9ae96a3dd3d03bd23c78d57";
       };
     };
     displayName = "Android Emulator (Preview) (latest)";
@@ -13971,6 +14027,42 @@
       hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./system-images-android-37-1-google-apis-ps16k-x86-64.xml;
+  };
+  system-images-android-37-2-beta1-android-wear-signed-arm64-v8a = mkSrcOnly {
+    id = "system-images;android-37.2-beta1;android-wear-signed;arm64-v8a";
+    pname = "system-images-android-37-2-beta1-android-wear-signed-arm64-v8a";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/arm64-v8a-37.2-beta1_signed_r01.zip";
+        sha1 = "fb21aa7161ac062b522e33c6fc10a55e848e1de5";
+      };
+    };
+    displayName = "Wear OS 7.1 ARM 64 v8a System Image (signed)";
+    path = "system-images/android-37.2-beta1/android-wear-signed/arm64-v8a";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-37-2-beta1-android-wear-signed-arm64-v8a.xml;
+  };
+  system-images-android-37-2-beta1-android-wear-signed-x86-64 = mkSrcOnly {
+    id = "system-images;android-37.2-beta1;android-wear-signed;x86_64";
+    pname = "system-images-android-37-2-beta1-android-wear-signed-x86-64";
+    version = "1";
+    sources = {
+      all = {
+        url = "https://dl.google.com/android/repository/sys-img/android-wear/x86_64-37.2-beta1_signed_r01.zip";
+        sha1 = "d60704911377768b35833f17266f3c078c8fd277";
+      };
+    };
+    displayName = "Wear OS 7.1 Intel x86_64 Atom System Image (signed)";
+    path = "system-images/android-37.2-beta1/android-wear-signed/x86_64";
+    license = {
+      id = "android-sdk-preview-license";
+      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+    };
+    xml = ./system-images-android-37-2-beta1-android-wear-signed-x86-64.xml;
   };
   system-images-android-37-2-beta1-google-apis-playstore-ps16k-arm64-v8a = mkSrcOnly {
     id = "system-images;android-37.2-beta1;google_apis_playstore_ps16k;arm64-v8a";
