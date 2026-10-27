@@ -2697,11 +2697,11 @@
   build-templates = mkSrcOnly {
     id = "build;templates";
     pname = "build-templates";
-    version = "0.1.2";
+    version = "0.1.3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/templates-sdk-package-16716255.zip";
-        sha1 = "38dfae1b4ed8f61ef976fbb83987f55d48480836";
+        url = "https://dl.google.com/android/repository/templates-sdk-package-16732273.zip";
+        sha1 = "4aa3ad1d16f8af53ed2bd1653f2b578ae3fb7384";
       };
     };
     displayName = "Android Project Templates";
@@ -11823,11 +11823,11 @@
   system-images-android-34-android-xr-v3-playstore-arm64-v8a = mkSrcOnly {
     id = "system-images;android-34;android-xr-v3-playstore;arm64-v8a";
     pname = "system-images-android-34-android-xr-v3-playstore-arm64-v8a";
-    version = "2";
+    version = "3";
     sources = {
       all = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-v3-arm64-v8a-playstore-34_r02.zip";
-        sha1 = "b628e55a2c9fb4444a4e0164dbca15dab00a7ee3";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-v3-arm64-v8a-playstore-34_r03.zip";
+        sha1 = "3a839c1915b83067e0086fe690b52fc70a92c208";
       };
     };
     displayName = "Google Play XR API v3 ARM 64 v8a System Image (Developer Preview)";
@@ -11841,15 +11841,15 @@
   system-images-android-34-android-xr-v3-playstore-x86-64 = mkSrcOnly {
     id = "system-images;android-34;android-xr-v3-playstore;x86_64";
     pname = "system-images-android-34-android-xr-v3-playstore-x86-64";
-    version = "2";
+    version = "3";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-v3-x86_64-playstore-34_r02-linux.zip";
-        sha1 = "093c06158d0d581676af603fa215c91f9f39ff42";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-v3-x86_64-playstore-34_r03-linux.zip";
+        sha1 = "1ce13cf16364e6b0379ccf936120a54fc9faaa70";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-v3-x86_64-playstore-34_r02-windows.zip";
-        sha1 = "96bff6234fa0bd4d2fba5ca9d13936300e4dddd1";
+        url = "https://dl.google.com/android/repository/sys-img/google_xr/xr-v3-x86_64-playstore-34_r03-windows.zip";
+        sha1 = "1b4b453a2c2c75b0547e54e5d63b87dd56d115b4";
       };
     };
     displayName = "Google Play XR API v3 Intel x86_64 Atom System Image (Developer Preview)";
