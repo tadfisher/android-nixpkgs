@@ -6333,26 +6333,26 @@
   platform-tools = mkPlatformTools {
     id = "platform-tools";
     pname = "platform-tools";
-    version = "37.0.2";
+    version = "37.0.1";
     sources = {
       linux = {
-        url = "https://dl.google.com/android/repository/platform-tools_r37.0.2-linux.zip";
-        sha1 = "736a08af10515674e40d8b754fe87390d698da2b";
+        url = "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip";
+        sha1 = "477254aa5f903c15cf51001717bdf347fb6b53e0";
       };
       darwin = {
-        url = "https://dl.google.com/android/repository/platform-tools_r37.0.2-darwin.zip";
-        sha1 = "6f86aa58ba42dd4bfe27477f3f11c09edc3ebe3f";
+        url = "https://dl.google.com/android/repository/platform-tools_r37.0.1-darwin.zip";
+        sha1 = "6ae73f4de6452dc57e62ec02b68eed92a4c21661";
       };
       windows = {
-        url = "https://dl.google.com/android/repository/platform-tools_r37.0.2-win.zip";
-        sha1 = "d7ee482b3874f1e0d6d5dca135f6bd58f5716db0";
+        url = "https://dl.google.com/android/repository/platform-tools_r37.0.1-win.zip";
+        sha1 = "e03e78b1d80b396f1c3358e31251cb31740e1110";
       };
     };
     displayName = "Android SDK Platform-Tools";
     path = "platform-tools";
     license = {
-      id = "android-sdk-preview-license";
-      hash = "84831b9409646a918e30573bab4c9c91346d8abd";
+      id = "android-sdk-license";
+      hash = "24333f8a63b6825ea9c5514f83c2829b004d1fee";
     };
     xml = ./platform-tools.xml;
   };
